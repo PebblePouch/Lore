@@ -1,0 +1,20 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Unity generated
+Library/** linguist-vendored
+Temp/** linguist-vendored
+Obj/** linguist-vendored
+Build/** linguist-generated
+Builds/** linguist-generated
+
+# Unity metadata
+*.meta linguist-generated
+*.unity  text
+*.prefab text
+*.asset  text
+
+# Force correct language detection
+*.cs linguist-language=C#
+*.shader linguist-language=ShaderLab
+*.hlsl linguist-language=HLSL

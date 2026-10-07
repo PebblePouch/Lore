@@ -1,0 +1,51 @@
+# Learn more about .gitignore:
+# https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# [ Unity ] #  (root folders only: a plain "Build/" also matched Packages/.../Editor/Build)
+/.utmp/
+.vs/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ibrary/
+/[Ll]ogs/
+/[Oo]bj/
+/[Rr]ecordings/
+/Sources/
+/[Tt]emp/
+/UnityGenerated/
+/[Uu]serSettings/
+
+# [ Layouts ] #
+default-2021.dwlt
+ProjectSettings/EditorSettings.asset
+/[Uu]serSettings/Layouts/default-2021.dwlt
+ 
+# [ Visual Studio / MonoDevelop ] #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.slnx
+*.user
+*.unityproj
+*.booproj
+ 
+# [ Operating System ] #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+Thumbs.db.meta
+
+# [ Local Lore Data ] #
+/Assets/Lore/
+/Assets/Lore.meta
+/Assets/Samples/
+/Assets/Samples.meta

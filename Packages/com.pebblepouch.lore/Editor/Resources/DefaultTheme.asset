@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561e6f436d66fce498d00d8ec39f4526, type: 3}
+  m_Name: DefaultTheme
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::PebblePouch.Lore.Editor.LoreTheme
+  Menu:
+    Name: Menu
+    Glyph: "\u22EE"
+    Tooltip: More Actions
+  Create:
+    Name: Create
+    Glyph: "\u2728"
+    Tooltip: Create Content
+  Delete:
+    Name: Delete
+    Glyph: "\u274C"
+    Tooltip: Delete Content
+  Add:
+    Name: Add
+    Glyph: "\u2795"
+    Tooltip: Add Field
+  Remove:
+    Name: Remove
+    Glyph: "\u2796"
+    Tooltip: Remove Field
+  Edit:
+    Name: Edit
+    Glyph: "\u2712\uFE0F"
+    Tooltip: Edit Item
+  Clear:
+    Name: Clear
+    Glyph: "\u2716\uFE0F"
+    Tooltip: Clear Search
+  Duplicate:
+    Name: Duplicate
+    Glyph: "\U0001FA9E"
+    Tooltip: Duplicate Content
+  Save:
+    Name: Save
+    Glyph: "\U0001F4BE"
+    Tooltip: Save Changes
+  Open:
+    Name: Open
+    Glyph: "↗️"
+    Tooltip: Open Link
+  ExportCsv:
+    Name: "Export CSV…"
+    Glyph: "\U0001F4E4"
+    Tooltip: Export Entries as CSV
+  ImportCsv:
+    Name: "Import CSV…"
+    Glyph: "\U0001F4E5"
+    Tooltip: Import Entries from CSV
+  AddTag:
+    Name: Add Tag
+    Glyph: "➕"
+    Tooltip: Add a Tag to the selected Entries
+  RemoveTag:
+    Name: Remove Tag
+    Glyph: "➖"
+    Tooltip: Remove a Tag from the selected Entries
+  ClearTags:
+    Name: Clear All Tags
+    Glyph: "✖️"
+    Tooltip: Remove all Tags from the selected Entries
+  DeleteSelected:
+    Name: Delete Selected
+    Glyph: "❌"
+    Tooltip: Delete the selected Entries
+  Added:
+    Name: Added
+    Glyph: "\u2714"
+    Tooltip: Already Added
