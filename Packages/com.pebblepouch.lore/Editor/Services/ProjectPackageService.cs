@@ -13,7 +13,7 @@ namespace PebblePouch.Lore.Editor
     public static class ProjectPackageService
     {
         #region Constants
-        private const string PackageExtension = "unitypackage";
+        public const string PackageExtension = "unitypackage";
         private const string DefaultPackageName = "Lore";
         #endregion
 
@@ -45,7 +45,12 @@ namespace PebblePouch.Lore.Editor
         }
 
         [MenuItem(LoreMenu.ImportProject, false, LoreMenu.ImportProjectPriority)]
-        private static void ImportFromMenu()
+        private static void ImportFromMenu() => Import();
+        #endregion
+
+        #region Public API
+        // Asks for a package and opens Unity's import window (also the Welcome page's "Import Unity Package").
+        public static void Import()
         {
             string path = EditorUtility.OpenFilePanel(
                 LoreText.ProjectPackage.OpenTitle,
@@ -68,9 +73,31 @@ namespace PebblePouch.Lore.Editor
             // Unity's import window: shows every file and lets the user deselect some.
             AssetDatabase.ImportPackage(path, true);
         }
-        #endregion
 
-        #region Public API
+        // One of several Projects (Multiple Projects window): only its own folder, Libraries inside it included.
+        // Returns false when the export failed.
+        public static bool ExportFolder(
+            string folder,
+            string path)
+        {
+            LoreRefreshService.SaveLoreAssets();
+
+            try
+            {
+                AssetDatabase.ExportPackage(folder, path, ExportPackageOptions.Recurse);
+            }
+            catch (System.Exception exception)
+            {
+                Debug.LogError($"Lore: Could not export {folder} to {path}: {exception.Message}");
+
+                return false;
+            }
+
+            Debug.Log($"Lore: Exported {folder} to {path}.");
+
+            return File.Exists(path);
+        }
+
         public static void Export(
             string path,
             bool includeReferencedAssets)
@@ -112,9 +139,9 @@ namespace PebblePouch.Lore.Editor
 
             List<string> paths = new() { root };
 
-            AddOutsideRoot(paths, root, GetPath(FolderService.FindAsset<TagCollection>()));
-            AddOutsideRoot(paths, root, GetPath(FolderService.FindAsset<GlyphLibraryCollection>()));
-            AddOutsideRoot(paths, root, GetPath(FolderService.FindAsset<ColorLibraryCollection>()));
+            AddOutsideRoot(paths, root, GetPath(FolderService.FindLibraryAsset<TagCollection>()));
+            AddOutsideRoot(paths, root, GetPath(FolderService.FindLibraryAsset<GlyphLibraryCollection>()));
+            AddOutsideRoot(paths, root, GetPath(FolderService.FindLibraryAsset<ColorLibraryCollection>()));
 
             string constantsPath = LoreSettings.instance.LastFieldConstantsPath;
 
@@ -149,8 +176,14 @@ namespace PebblePouch.Lore.Editor
         {
             LoreProject project = LoreRepository.Instance.Project;
 
-            string title = project != null && !string.IsNullOrWhiteSpace(project.Title)
-                ? project.Title.Trim()
+            return GetFileName(project != null ? project.Title : null);
+        }
+
+        // "<title>.unitypackage" (default name for an empty title).
+        public static string GetFileName(string title)
+        {
+            title = !string.IsNullOrWhiteSpace(title)
+                ? title.Trim()
                 : DefaultPackageName;
 
             char[] invalid = Path.GetInvalidFileNameChars();

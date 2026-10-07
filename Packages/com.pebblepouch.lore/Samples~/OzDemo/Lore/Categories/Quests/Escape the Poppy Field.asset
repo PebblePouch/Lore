@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Escape the Poppy Field
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 2f9711e0-f70d-4a64-987e-8ff6ec9de5b7
+  _createdTicks: 639270064462281222
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
+  _glyph: 
+  _subtitle: Chapters 8 and 9
+  _description: Get the sleeping friends out of the [[54a5f756-efe8-4ac6-a232-8cff167ed1f5|Deadly
+    Poppy Field]], with the help of the [[ab5894cd-ed67-4773-b899-fed5b1de6d98|Queen
+    of the Field Mice]].
+  _sortOrder: 2
+  _fields:
+  - _field: {fileID: 11400000, guid: 489df0844b845b24db67f903f9fedfc1, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 8
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: b6997e5b4ce250f4a90eb4dd8037f0e6, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 3cb10b75431136640bcd0f591329abc3, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 4a6477d8b8ac7dc42a4527cadf3849f4, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 4149e107eb1f29243bbe3a7f6a4d8470, type: 2}
+    - {fileID: 11400000, guid: 3cb10b75431136640bcd0f591329abc3, type: 2}
+    - {fileID: 11400000, guid: 1524fe54531a5ea498b2cc69eab023fd, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 2d6b29cef3269724aa0afd33970c1790, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 8c76081b6071ac9448c60c91dced32be, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 0a46d17a0f6b4104e98df4eaac852f4d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: d62320180120d3046866119b7722e980, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 31e0b5c545d330a449b3cd35b3314c75, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - d7e3109f-efa0-4deb-a981-6559168fccf8
+  - bb199402-95de-469d-8bb9-eeb881d1f4b0

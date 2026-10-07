@@ -16,7 +16,7 @@ namespace PebblePouch.Lore.Editor
         #region Fields
         public const string DefaultRoot = "Assets/Lore";
 
-        private const string ProjectAssetName = "Lore.asset";
+        public const string ProjectAssetName = "Lore.asset";
 
         // Resolved data root; reset on every repository rebuild (the Project may have been moved).
         private static string _root;
@@ -108,18 +108,22 @@ namespace PebblePouch.Lore.Editor
         }
 
         // Library asset (Colors, Glyphs, Tags): found by type wherever the user keeps it, else at its default path
-        // (also when the type search is not ready yet, e.g. during an import), else created there.
-        // initialize fills a new asset (e.g. default colors) before it is saved.
+        // (also when the type search is not ready yet, e.g. during an import), else created there; without a
+        // Project, null (nothing is created). initialize fills a new asset (e.g. default colors) before it is saved.
         public static T GetOrCreateLibraryAsset<T>(
             string assetName,
             System.Action<T> initialize = null)
             where T : ScriptableObject
         {
             T asset =
-                FindAsset<T>();
+                FindLibraryAsset<T>();
 
             if (asset != null)
                 return asset;
+
+            // No Project yet (Welcome page): nothing is created until the user starts or imports one.
+            if (FindAsset<LoreProject>() == null)
+                return null;
 
             string path =
                 GetLibraryPath(
@@ -147,14 +151,32 @@ namespace PebblePouch.Lore.Editor
             return asset;
         }
 
-        // First asset of this type under Assets (Libraries are found wherever the user keeps them).
-        public static T FindAsset<T>()
+        // Library asset (Tags, Glyphs, Colors): the one under the data root wins (e.g. an imported example Project
+        // next to Libraries created earlier elsewhere), else the first one anywhere under Assets.
+        public static T FindLibraryAsset<T>()
+            where T : Object
+        {
+            string root = Root;
+
+            if (AssetDatabase.IsValidFolder(root))
+            {
+                T asset = FindAsset<T>(root);
+
+                if (asset != null)
+                    return asset;
+            }
+
+            return FindAsset<T>();
+        }
+
+        // First asset of this type under folder (default: Assets).
+        public static T FindAsset<T>(string folder = "Assets")
             where T : Object
         {
             foreach (string guid in
                      AssetDatabase.FindAssets(
                          $"t:{typeof(T).Name}",
-                         new[] { "Assets" }))
+                         new[] { folder }))
             {
                 T asset =
                     AssetDatabase.LoadAssetAtPath<T>(

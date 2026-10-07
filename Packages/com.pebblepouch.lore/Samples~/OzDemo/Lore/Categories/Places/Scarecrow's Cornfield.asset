@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Scarecrow's Cornfield
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: d6cda5a4-5ca7-4383-93be-3fb6e9634ea5
+  _createdTicks: 639270064457644890
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
+  _glyph: "\U0001F33D\uFE0F"
+  _subtitle: Crows welcome
+  _description: A field of ripe corn beside the [[62857579-d4dc-417a-be03-d5d89488756b|Yellow
+    Brick Road]], guarded by the [[5ff39499-2fcd-41a8-9b85-b171e6d0f529|Scarecrow]].
+  _sortOrder: 3
+  _fields:
+  - _field: {fileID: 11400000, guid: 419368dbf1388304bb96247032c6ee7d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 2665a703-50ee-49c9-82cc-e5a89560639c
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 4149e107eb1f29243bbe3a7f6a4d8470, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - faeb49f4-c046-40b7-a124-2042759992dd

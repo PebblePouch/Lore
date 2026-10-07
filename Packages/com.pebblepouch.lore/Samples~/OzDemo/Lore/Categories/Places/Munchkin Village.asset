@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Munchkin Village
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 1983fc3c-0dd1-4793-b86e-44da1b0c2f17
+  _createdTicks: 639270064457143428
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
+  _glyph: "\U0001F3D8\uFE0F"
+  _subtitle: Where the house came down
+  _description: Round blue houses with domes for roofs, in the east of Oz. [[9c79817b-2d7c-4f18-ae09-022d6e5a62f9|Boq]]
+    lives here, and the [[7375feb9-ad39-4200-bcbe-2311429fd74a|Silver Shoes]] were
+    found here.
+  _sortOrder: 1
+  _fields:
+  - _field: {fileID: 11400000, guid: 419368dbf1388304bb96247032c6ee7d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 2665a703-50ee-49c9-82cc-e5a89560639c
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: e985470f5ba84514aa5d3d3ddb6bc1a9, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: d885a270c3397da4f935b981b74a973c, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 102900000, guid: 2a608bdd7d0975849af4225ddfffc497, type: 3}
+    _scenePath: Assets/Samples/Lore/0.1.1/Oz Demo/Scenes/Locations/Munchkin Village.unity
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - faeb49f4-c046-40b7-a124-2042759992dd

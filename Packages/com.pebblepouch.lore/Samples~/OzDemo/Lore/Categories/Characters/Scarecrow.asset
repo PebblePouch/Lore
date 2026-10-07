@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Scarecrow
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 5ff39499-2fcd-41a8-9b85-b171e6d0f529
+  _createdTicks: 639270064453196548
+  _modifiedTicks: 639270064500622637
+  _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
+  _glyph: "\U0001F33D\uFE0F"
+  _subtitle: Hopes for brains
+  _description: Stuffed with straw and set up in a [[d6cda5a4-5ca7-4383-93be-3fb6e9634ea5|Scarecrow's
+    Cornfield]] to frighten the crows, who were not frightened at all. [[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy
+    Gale]] lifts him off his pole, and he joins her to ask the Wizard for [[70399c5c-c0fa-4233-8ba9-8fc25f39f6a7|Brains]].
+    Later he rules the [[8953e80a-34c8-4e3a-8c5f-7164c508be78|Emerald City]].
+  _sortOrder: 2
+  _fields:
+  - _field: {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 4b8b2ff8-f6ca-442d-96a6-756e8ba2e535
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: e5cab09675a052a449be1dfe8b163337, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 09f2e4a80e65d664eab6d0393ed6dabb, type: 2}
+    _stringValue: Brains, so he is no longer a fool.
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 12ad387df892474488f665fa5846b727, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
+    - {fileID: 11400000, guid: 3cb10b75431136640bcd0f591329abc3, type: 2}
+    - {fileID: 11400000, guid: 774fc032a3997e244979a6b6ae3867ea, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: ed70ad7a9283ab648b5cba13b1a77804, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 1
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 6e7e496fb8307a84282da8927df4556d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 60
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 7ddaaef6c8413e444a44c4022ba730e8, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 1.8
+  - _field: {fileID: 11400000, guid: b5c1b345b8e3b9348b370ef2d0c8fd10, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 21300000, guid: b80a7fc8d887ffb498830abfbff28abb, type: 3}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 3172993436388280941, guid: 9f53b837bd9b2484091209ddd86d3e82, type: 3}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 36ba00c5a52f528449161ba7f78196e4, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 11400000, guid: 84720c1dc3e35be40b7f3292d141a936, type: 2}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: c2825688cc864a74f955f2866c7afd40, type: 2}
+    _stringValue: https://en.wikipedia.org/wiki/Scarecrow_(Oz)
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - cf204576-c760-41d2-b3cd-a15fbeb88e54
+  - 3a023770-2ffd-44ed-b184-408e55729ea9

@@ -73,7 +73,8 @@ namespace PebblePouch.Lore.Editor
                     text,
                     placeholder,
                     settings,
-                    textChanged);
+                    textChanged,
+                    readOnly: false);
 
             if (drawEditor)
             {
@@ -119,6 +120,26 @@ namespace PebblePouch.Lore.Editor
                 () => _isEditing);
 
             return result;
+        }
+
+        // View mode only (e.g. Welcome page texts): same look and scrolling, a click never starts editing.
+        public void DrawReadOnly(
+            string text,
+            LoreInlineTextAreaSettings settings)
+        {
+            Rect rect =
+                GUILayoutUtility.GetRect(
+                    0,
+                    settings.ViewportHeight,
+                    GUILayout.ExpandWidth(true));
+
+            DrawViewer(
+                rect,
+                text,
+                string.Empty,
+                settings,
+                null,
+                readOnly: true);
         }
 
         public void CommitEditing()
@@ -170,7 +191,8 @@ namespace PebblePouch.Lore.Editor
             string text,
             string placeholder,
             LoreInlineTextAreaSettings settings,
-            Action<string> textChanged)
+            Action<string> textChanged,
+            bool readOnly)
         {
             string displayText =
                 string.IsNullOrWhiteSpace(text)
@@ -182,7 +204,10 @@ namespace PebblePouch.Lore.Editor
                     ? settings.PlaceholderContent
                     : settings.ViewerContent;
 
+            // Read-only texts (Welcome page) have no Lore links; "[[" there is plain text, and the link flow draws
+            // word by word, which would break rich text tags.
             bool hasLinks =
+                !readOnly &&
                 DescriptionLinkParser.ContainsLinks(text);
 
             // Another text (e.g. another Entry): start at the top again.
@@ -267,7 +292,8 @@ namespace PebblePouch.Lore.Editor
             else
                 GUI.EndClip();
 
-            if (Event.current.type ==
+            if (!readOnly &&
+                Event.current.type ==
                     EventType.MouseDown &&
                 rect.Contains(
                     Event.current.mousePosition))

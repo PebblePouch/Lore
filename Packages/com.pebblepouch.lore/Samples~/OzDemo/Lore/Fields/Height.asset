@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
+  m_Name: Height
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
+  _id: 713f8323-cad1-4a22-88e4-b6e9320748de
+  _createdTicks: 639270064431940951
+  _modifiedTicks: 639270064431940951
+  _type: 6
+  _glyph: "\U0001F446\uFE0F"
+  _objectTypeName: 
+  _objectScriptGuid: 
+  _enumOptions: []
+  _allowedCategories: []

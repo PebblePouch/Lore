@@ -9,7 +9,8 @@ namespace PebblePouch.Lore.Editor
     {
         #region Fields
         private readonly TagLibraryService _tagService = new();
-        private readonly TagCollection _tagCollection;
+        // Asked on use (cached by the service): never in the constructor, which runs before a Project may exist.
+        private TagCollection TagCollection => _tagService.GetCollection();
 
         private readonly EntryService _entryService = new();
         private readonly EntryTagsHeaderSection _header = new();
@@ -38,9 +39,6 @@ namespace PebblePouch.Lore.Editor
             _repaint = repaint;
             _browseRequested = browseRequested;
             _editRequested = editRequested;
-
-            _tagCollection =
-                _tagService.GetCollection();
         }
         #endregion
 
@@ -55,7 +53,7 @@ namespace PebblePouch.Lore.Editor
             {
                 int removed =
                     _entry.RemoveInvalidTags(
-                        _tagCollection);
+                        TagCollection);
 
                 if (removed > 0)
                 {
@@ -137,7 +135,7 @@ namespace PebblePouch.Lore.Editor
                      _entry.TagIds.ToArray())
             {
                 TagDefinition tag =
-                    _tagCollection.FindById(
+                    TagCollection.FindById(
                         tagId);
 
                 if (tag == null)

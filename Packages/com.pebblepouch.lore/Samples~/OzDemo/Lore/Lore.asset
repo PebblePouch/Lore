@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b57f865bf957a4d9e538b7b6f1f870, type: 3}
+  m_Name: Lore
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.LoreProject
+  _id: 10733c79-7394-427b-a329-1d5a89b73d77
+  _createdTicks: 639270064409141699
+  _modifiedTicks: 639270064510925462
+  _title: The Wonderful Wizard of Oz
+  _description: 'A demo for Lore: the world of L. Frank Baum''s novel "The Wonderful
+    Wizard of Oz" (1900, public domain), set up as the lore of a small adventure
+    game.
+
+
+    Browse the Categories on the left, open the Insights below, and follow
+    the links in the descriptions. Some Entries are deliberately unfinished or broken,
+    so Health and Integrity have something to show.
+
+
+    Start with [[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy
+    Gale]], or follow the story from its first Quest, [[c92055ef-e991-44e1-9ea4-08f9061a924f|The
+    Council with the Munchkins]].'
+  _links:
+  - _label: The book on Project Gutenberg
+    _url: https://www.gutenberg.org/ebooks/55
+  - _label: The book on Wikipedia
+    _url: https://en.wikipedia.org/wiki/The_Wonderful_Wizard_of_Oz
+  _categories:
+  - {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
+  - {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
+  - {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
+  - {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
+  _entries:
+  - {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
+  - {fileID: 11400000, guid: 1d352d409d6074d4193b73893cef5748, type: 2}
+  - {fileID: 11400000, guid: 4149e107eb1f29243bbe3a7f6a4d8470, type: 2}
+  - {fileID: 11400000, guid: 3cb10b75431136640bcd0f591329abc3, type: 2}
+  - {fileID: 11400000, guid: 774fc032a3997e244979a6b6ae3867ea, type: 2}
+  - {fileID: 11400000, guid: 92acfce3b0a3e6b46a1fe8623fcd1d40, type: 2}
+  - {fileID: 11400000, guid: 0dbfee5c054618f4cb53480eb76185ea, type: 2}
+  - {fileID: 11400000, guid: 50b5591c91f44eb4999735e98a437de7, type: 2}
+  - {fileID: 11400000, guid: e985470f5ba84514aa5d3d3ddb6bc1a9, type: 2}
+  - {fileID: 11400000, guid: 2ed160dd6478e074cbf88edc5ad24094, type: 2}
+  - {fileID: 11400000, guid: d885a270c3397da4f935b981b74a973c, type: 2}
+  - {fileID: 11400000, guid: 1524fe54531a5ea498b2cc69eab023fd, type: 2}
+  - {fileID: 11400000, guid: 823670a5c37591045a32a3651fa28d91, type: 2}
+  - {fileID: 11400000, guid: 4ff9c4a2f91df7147827573417ef77b2, type: 2}
+  - {fileID: 11400000, guid: bc3ec914c5e0f4c4fa0d855fe2ace3f5, type: 2}
+  - {fileID: 11400000, guid: 361c38187cbc10e48808229d9fbef446, type: 2}
+  - {fileID: 11400000, guid: 76836327adc90f445b1921fb06e1f79e, type: 2}
+  - {fileID: 11400000, guid: b41fe06b536f49a40bc49f530dcc119d, type: 2}
+  - {fileID: 11400000, guid: 10a5036a1c487824eaba56f86775b9aa, type: 2}
+  - {fileID: 11400000, guid: e5cab09675a052a449be1dfe8b163337, type: 2}
+  - {fileID: 11400000, guid: 8ae9763ea33c607428afce101b672196, type: 2}
+  - {fileID: 11400000, guid: 2d6b29cef3269724aa0afd33970c1790, type: 2}
+  - {fileID: 11400000, guid: 4a0d97c4f9bb4c141b461cac3956069c, type: 2}
+  - {fileID: 11400000, guid: 4fde004efe2f45d42b71ccd9cf46c422, type: 2}
+  - {fileID: 11400000, guid: 6d845ad69f39904449d63e6dcca49ae1, type: 2}
+  - {fileID: 11400000, guid: 5ba44c4a047451b4ebd55d8e2c4263e1, type: 2}
+  - {fileID: 11400000, guid: 316926d992242754f94c97d0211f5de2, type: 2}
+  - {fileID: 11400000, guid: c6d6cb2e12e2ba346b1155b46579f611, type: 2}
+  - {fileID: 11400000, guid: 79cb932d1e1cf194aa6c54161d855da1, type: 2}
+  - {fileID: 11400000, guid: 744b1330a5b082e46a41797d539441ff, type: 2}
+  - {fileID: 11400000, guid: 5240e432090e93c4e9837e118b47c2db, type: 2}
+  - {fileID: 11400000, guid: f90014832f6b0fd4d9b8e3ce5d153929, type: 2}
+  - {fileID: 11400000, guid: 230c3684b56c25449babba5b877d674c, type: 2}
+  - {fileID: 11400000, guid: f9eac4e3a2d4e794c867ab5021dfbcd0, type: 2}
+  - {fileID: 11400000, guid: 377c7db93765213439faf848cdffe3e4, type: 2}
+  - {fileID: 11400000, guid: f735e7de929f78c40860e0de4e2c8730, type: 2}
+  - {fileID: 11400000, guid: 2c9215dd08819b240842f7f949d3bd9c, type: 2}
+  - {fileID: 11400000, guid: 20e1143533783a646a7a19b6b914a6d8, type: 2}
+  - {fileID: 11400000, guid: d62320180120d3046866119b7722e980, type: 2}
+  - {fileID: 11400000, guid: 67d9da53063f07148b689025332633f1, type: 2}
+  - {fileID: 11400000, guid: 24eb8638847c4914f9e4b3c998aa8391, type: 2}
+  - {fileID: 11400000, guid: e1a06528a7e5c6843b663961cf229465, type: 2}
+  _tagLibrary: {fileID: 11400000, guid: f1461177bb121f046b745d441850abee, type: 2}

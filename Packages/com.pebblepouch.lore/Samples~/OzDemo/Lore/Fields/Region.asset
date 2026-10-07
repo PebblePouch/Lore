@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
+  m_Name: Region
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
+  _id: 26c311a5-8bad-4ff6-9990-0b4a41e74449
+  _createdTicks: 639270064435561946
+  _modifiedTicks: 639270064436191489
+  _type: 10
+  _glyph: "\U0001F9ED\uFE0F"
+  _objectTypeName: 
+  _objectScriptGuid: 
+  _enumOptions:
+  - _id: b49ea65a-9fa5-4cd7-93de-1dd46ac4fc2c
+    _label: Kansas
+  - _id: 2665a703-50ee-49c9-82cc-e5a89560639c
+    _label: Munchkin Country
+  - _id: 1b1592ed-8ffa-4509-a464-7ab8613d91ea
+    _label: Emerald City
+  - _id: 2b58616f-85ab-4cf1-aeb4-ed68e270cde6
+    _label: Winkie Country
+  - _id: 13a281fb-0650-42d4-8c9b-299532d59892
+    _label: Quadling Country
+  - _id: cbfa457c-3e4a-48c7-9d6b-b4549ceac312
+    _label: Gillikin Country
+  _allowedCategories: []

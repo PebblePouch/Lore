@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Silver Shoes
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 7375feb9-ad39-4200-bcbe-2311429fd74a
+  _createdTicks: 639270064459495156
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
+  _glyph: "\U0001F462\uFE0F"
+  _subtitle: Three knocks of the heels
+  _description: Once worn by the [[edd8b2fe-2ca8-4008-9126-ac6b8b28fba1|Wicked Witch
+    of the East]]. Whoever knocks the heels together three times can go anywhere
+    in three steps. Only [[6f0182d3-fe6b-4296-abaf-141a1dbbc1ff|Glinda]] knows their
+    secret.
+  _sortOrder: 0
+  _fields:
+  - _field: {fileID: 11400000, guid: 1f1d65ec568392d4090afe5305c2c2cf, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 33a364e7-019a-40dc-b3b8-04472126eac1
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: f361c22cbd427e54b83e0d563c2678c6, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: b41fe06b536f49a40bc49f530dcc119d, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: de2363fa2e4fefc409ce1a732b0b7b21, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 1000
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 7fea3134e82906c4dab794c8b338037d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 21300000, guid: c6a652b93a7aefa4a9f5e0d6f74bf02b, type: 3}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 1477256626256923045, guid: 4e7fdee5e9fbacf4e864768ca973c286, type: 3}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - 43a83426-33d0-4763-bcd7-dfb36c8bb2ef

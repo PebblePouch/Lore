@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
+  m_Name: Rarity
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
+  _id: fea86f51-83b9-435e-ac81-d1043dbdfa8a
+  _createdTicks: 639270064439470012
+  _modifiedTicks: 639270064440200903
+  _type: 10
+  _glyph: "\U0001F48E\uFE0F"
+  _objectTypeName: 
+  _objectScriptGuid: 
+  _enumOptions:
+  - _id: 1feaac8b-62e5-45c9-bee6-055c758214d0
+    _label: Common
+  - _id: 5deeea33-529c-49f7-a6e0-f4230a19bdc5
+    _label: Rare
+  - _id: 9bc4d870-b5c3-478b-b058-9048e6db29ec
+    _label: Magical
+  - _id: 33a364e7-019a-40dc-b3b8-04472126eac1
+    _label: Unique
+  _allowedCategories: []

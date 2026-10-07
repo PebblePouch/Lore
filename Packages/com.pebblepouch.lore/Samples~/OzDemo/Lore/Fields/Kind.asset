@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
+  m_Name: Kind
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
+  _id: bac2bbb9-cd0f-4069-b0aa-38b78c4c03c6
+  _createdTicks: 639270064427108588
+  _modifiedTicks: 639270064427722360
+  _type: 10
+  _glyph: "\U0001F464\uFE0F"
+  _objectTypeName: 
+  _objectScriptGuid: 
+  _enumOptions:
+  - _id: 06478c75-a9a7-4d33-953a-37c6816edcf9
+    _label: Human
+  - _id: af5c8536-6ea6-4671-8807-6bc12bc63091
+    _label: Witch
+  - _id: 15ae8714-f221-4736-a047-9e2718ced569
+    _label: Animal
+  - _id: 4b8b2ff8-f6ca-442d-96a6-756e8ba2e535
+    _label: Enchanted
+  - _id: 53757774-8bf5-4ac9-9a2d-5945d9a9d0ce
+    _label: Creature
+  _allowedCategories: []

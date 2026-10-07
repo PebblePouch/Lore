@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Emerald City
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 8953e80a-34c8-4e3a-8c5f-7164c508be78
+  _createdTicks: 639270064458438697
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
+  _glyph: "\U0001F3D9\uFE0F"
+  _subtitle: Everything is green
+  _description: The city of [[c06656b6-d555-4649-8f9a-90f3906eafc3|Oz, the Great
+    and Terrible]], glowing green behind its walls. Everybody wears [[4d16ba28-f773-4fea-bfe7-b1cd9588f3a4|Green
+    Spectacles]] here, which may be why it looks so green.
+  _sortOrder: 6
+  _fields:
+  - _field: {fileID: 11400000, guid: 419368dbf1388304bb96247032c6ee7d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 1b1592ed-8ffa-4509-a464-7ab8613d91ea
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 92acfce3b0a3e6b46a1fe8623fcd1d40, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 92acfce3b0a3e6b46a1fe8623fcd1d40, type: 2}
+    - {fileID: 11400000, guid: 4ff9c4a2f91df7147827573417ef77b2, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 102900000, guid: 7691bf1da03f41149a49f933e9ccf57e, type: 3}
+    _scenePath: Assets/Samples/Lore/0.1.1/Oz Demo/Scenes/Locations/Emerald City.unity
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - 43a83426-33d0-4763-bcd7-dfb36c8bb2ef

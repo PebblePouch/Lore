@@ -76,6 +76,18 @@ MonoBehaviour:
     Name: Delete Selected
     Glyph: "❌"
     Tooltip: Delete the selected Entries
+  StartLore:
+    Name: Start your Lore
+    Glyph: "\U0001F331"
+    Tooltip: Create a new Lore Project in a folder of your choice
+  ImportProject:
+    Name: "Import Unity Package…"
+    Glyph: "\U0001F4E6"
+    Tooltip: Import a Lore Project exported as .unitypackage
+  CreateDemo:
+    Name: Create Example Project
+    Glyph: "\U0001F4D6"
+    Tooltip: Import the example Project (The Wonderful Wizard of Oz)
   Added:
     Name: Added
     Glyph: "\u2714"

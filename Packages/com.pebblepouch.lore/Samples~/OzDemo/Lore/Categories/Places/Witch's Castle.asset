@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Witch's Castle
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: ffa77939-deea-4fa0-912f-51a9cb2bd141
+  _createdTicks: 639270064458697900
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
+  _glyph: "\U0001F3F0\uFE0F"
+  _subtitle: In the yellow country of the Winkies
+  _description: The yellow castle of the [[435afc3a-0611-401c-8267-920193da9c7f|Wicked
+    Witch of the West]], in the west of Oz. The final dungeon of the game.
+  _sortOrder: 7
+  _fields:
+  - _field: {fileID: 11400000, guid: 419368dbf1388304bb96247032c6ee7d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 2b58616f-85ab-4cf1-aeb4-ed68e270cde6
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 50b5591c91f44eb4999735e98a437de7, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 50b5591c91f44eb4999735e98a437de7, type: 2}
+    - {fileID: 11400000, guid: 823670a5c37591045a32a3651fa28d91, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 1
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 102900000, guid: 220d50a8c5a762e40ac092f14d1a6b57, type: 3}
+    _scenePath: Assets/Samples/Lore/0.1.1/Oz Demo/Scenes/Locations/Witch's Castle.unity
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - d7e3109f-efa0-4deb-a981-6559168fccf8

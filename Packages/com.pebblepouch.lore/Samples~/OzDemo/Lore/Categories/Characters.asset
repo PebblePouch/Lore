@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
+  m_Name: Characters
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
+  _id: 41dd53cb-222a-489d-8bad-7e250e79fe3c
+  _createdTicks: 639270064419228025
+  _modifiedTicks: 639270064451023941
+  _glyph: "\U0001F9D9\uFE0F"
+  _color: {r: 0.18, g: 0.45, b: 0.75, a: 1}
+  _description: Everyone Dorothy meets on her way through Oz, friend or foe.
+  _sortOrder: 0
+  _fields:
+  - {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
+  - {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
+  - {fileID: 11400000, guid: 09f2e4a80e65d664eab6d0393ed6dabb, type: 2}
+  - {fileID: 11400000, guid: 12ad387df892474488f665fa5846b727, type: 2}
+  - {fileID: 11400000, guid: ed70ad7a9283ab648b5cba13b1a77804, type: 2}
+  - {fileID: 11400000, guid: 6e7e496fb8307a84282da8927df4556d, type: 2}
+  - {fileID: 11400000, guid: 7ddaaef6c8413e444a44c4022ba730e8, type: 2}
+  - {fileID: 11400000, guid: b5c1b345b8e3b9348b370ef2d0c8fd10, type: 2}
+  - {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
+  - {fileID: 11400000, guid: 36ba00c5a52f528449161ba7f78196e4, type: 2}
+  - {fileID: 11400000, guid: c2825688cc864a74f955f2866c7afd40, type: 2}
+  _requiredFields:
+  - {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
+  - {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}

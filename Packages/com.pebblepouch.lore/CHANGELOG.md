@@ -4,10 +4,24 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.2.0] - 2026-10-08
+
+### Added
+
+- Welcome page: without a Lore Project, the Lore window shows "Welcome to Lore" instead of Home, with Getting
+  Started, the manual, links and credits. Start your Lore (pick a folder inside Assets), import an exported Project
+  (Import Unity Package) or create the example Project. Lore no longer creates folders or Libraries on its own
+  before a Project exists.
+- Example Project "Oz Demo" (package sample): "The Wonderful Wizard of Oz" as the lore of a small game. Import it
+  from the Welcome page or Package Manager > Lore > Samples.
+- Multiple Projects window: opens when the Unity project contains more than one Lore Project, lists them (title,
+  folder, Category and Entry counts) and exports + removes the selected one until one is left.
 
 ### Changed
 
+- Libraries (Tags, Glyphs, Colors) next to the Project win over Libraries elsewhere in Assets.
+- Project Insights no longer recalculate on every asset import in the Unity project, only on Lore-relevant changes
+  (including deleted or moved assets that field values reference).
 - Broken description links that can be repaired are now yellow (still struck through) instead of link blue, so
   they stand apart from working links.
 - Category > Fields: a Field whose type is missing gets a red type cell, like other integrity marks.
@@ -17,7 +31,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Confirmation dialogs grow with their message, so the last line is no longer cut off.
 - Closing a Library through History, Home or a click elsewhere now also ends a running Entry, Glyph or Color pick,
   so its target no longer stays highlighted.
-
 - Delete confirmations (Entry and Delete Selected) now say how many Field references and description links will
   break, instead of wrongly saying that references are cleared (they stay as broken references).
 

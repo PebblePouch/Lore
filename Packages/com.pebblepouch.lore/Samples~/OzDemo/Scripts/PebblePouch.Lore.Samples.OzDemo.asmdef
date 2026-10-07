@@ -1,0 +1,16 @@
+{
+    "name": "PebblePouch.Lore.Samples.OzDemo",
+    "rootNamespace": "PebblePouch.Lore.Samples.OzDemo",
+    "references": [
+        "PebblePouch.Lore"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -18,6 +18,11 @@ namespace PebblePouch.Lore.Editor
         ProjectDescription,
         ProjectLinks,
         ProjectHubs,
-        ProjectRecent
+        ProjectRecent,
+
+        WelcomeGettingStarted,
+        WelcomeActions,
+        WelcomeManual,
+        WelcomeAbout
     }
 }

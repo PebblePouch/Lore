@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
+  m_Name: Scene
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
+  _id: 70f94648-b85d-4626-834b-f52882717315
+  _createdTicks: 639270064438792342
+  _modifiedTicks: 639270064438792342
+  _type: 7
+  _glyph: "\U0001F3AC\uFE0F"
+  _objectTypeName: 
+  _objectScriptGuid: 
+  _enumOptions: []
+  _allowedCategories: []

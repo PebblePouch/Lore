@@ -15,8 +15,13 @@ namespace PebblePouch.Lore.Editor
         private ProjectInspectorPanel _projectInspector;
         private CategoryInspectorPanel _categoryInspector;
         private EntryInspectorPanel _entryInspector;
+        private WelcomeInspectorPanel _welcomeInspector;
 
         private LibraryHost _libraryHost;
+
+        // No Lore Project: the Welcome page replaces toolbar, browser and Home. Decided during Layout only, so
+        // Layout and the following events draw the same controls.
+        private bool _showWelcome;
 
         private const string DefaultSizeInitializedKey = "Lore.DefaultSizeInitialized";
         #endregion
@@ -102,6 +107,11 @@ namespace PebblePouch.Lore.Editor
                 _libraryHost.ShowTags,
                 _libraryHost.ShowTagForEdit);
 
+            _welcomeInspector = new WelcomeInspectorPanel(
+                _state);
+
+            _showWelcome = LoreRepository.Instance.Project == null;
+
             // LISTENERS
             SelectionService.CategoryChanged += OnCategoryChanged;
             SelectionService.EntryChanged += OnEntryChanged;
@@ -164,6 +174,20 @@ namespace PebblePouch.Lore.Editor
                     0f,
                     position.width,
                     position.height);
+
+            if (Event.current.type == EventType.Layout)
+                _showWelcome = LoreRepository.Instance.Project == null;
+
+            MultipleProjectsWindow.OpenIfNeeded();
+
+            if (_showWelcome)
+            {
+                DrawWelcomePanel();
+
+                LoreHover.EndGUI();
+
+                return;
+            }
 
             HandleFindCommand();
 
@@ -313,6 +337,25 @@ namespace PebblePouch.Lore.Editor
             {
                 _projectInspector.Draw();
             }
+
+            EditorGUILayout.EndVertical();
+        }
+
+        // The whole window: no toolbar (nothing to navigate) and no browser (nothing to browse yet).
+        private void DrawWelcomePanel()
+        {
+            Rect rect =
+                EditorGUILayout.BeginVertical(
+                    WindowStyle.InspectorPanel,
+                    GUILayout.MinWidth(0f),
+                    GUILayout.ExpandWidth(true),
+                    GUILayout.ExpandHeight(true));
+
+            EditorGUI.DrawRect(
+                rect,
+                WindowStyle.InspectorBackground);
+
+            _welcomeInspector.Draw(position.width);
 
             EditorGUILayout.EndVertical();
         }

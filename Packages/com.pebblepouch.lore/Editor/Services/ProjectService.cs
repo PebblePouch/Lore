@@ -8,6 +8,49 @@ namespace PebblePouch.Lore.Editor
 {
     public sealed class ProjectService
     {
+        #region Create
+        // Welcome page "Start your Lore": a new Project in root (e.g. "Assets/Game/Lore") with its folders and
+        // Libraries. Returns null when a Project already exists or the asset could not be created.
+        public LoreProject CreateProject(string root)
+        {
+            if (FolderService.FindAsset<LoreProject>() != null)
+            {
+                Debug.LogError("Lore: This Unity project already has a Lore Project.");
+
+                return null;
+            }
+
+            FolderService.EnsureFolderPath(root);
+
+            var project = ScriptableObject.CreateInstance<LoreProject>();
+
+            project.name = "Lore";
+
+            LoreChangeTracker.MarkCreated(project);
+
+            AssetDatabase.CreateAsset(project, root + "/" + FolderService.ProjectAssetName);
+
+            if (!AssetDatabase.Contains(project))
+            {
+                Debug.LogError($"Failed to create Lore Project in:\n{root}");
+
+                return null;
+            }
+
+            // The data root follows the Project asset: folders and Libraries are created next to it.
+            FolderService.InvalidateRoot();
+            FolderService.EnsureStructure();
+
+            new TagLibraryService().GetCollection();
+            new GlyphLibraryService().GetCollection();
+            new ColorLibraryService().GetCollection();
+
+            Save();
+
+            return project;
+        }
+        #endregion
+
         #region Read
         public string GetDisplayTitle()
         {

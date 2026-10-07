@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: The Council with the Munchkins
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: c92055ef-e991-44e1-9ea4-08f9061a924f
+  _createdTicks: 639270064461760761
+  _modifiedTicks: 639270064500632728
+  _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
+  _glyph: 
+  _subtitle: Chapter 2
+  _description: '[[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy Gale]] wakes up in
+    the land of the Munchkins. The [[9c8ffaf6-c8f9-43c6-9977-a38c78b8b4ed|Good Witch
+    of the North]] sends her to the Wizard and gives her the [[7375feb9-ad39-4200-bcbe-2311429fd74a|Silver
+    Shoes]].'
+  _sortOrder: 0
+  _fields:
+  - _field: {fileID: 11400000, guid: 489df0844b845b24db67f903f9fedfc1, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 2
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: b6997e5b4ce250f4a90eb4dd8037f0e6, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 2ed160dd6478e074cbf88edc5ad24094, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 4a6477d8b8ac7dc42a4527cadf3849f4, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
+    - {fileID: 11400000, guid: 1d352d409d6074d4193b73893cef5748, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: b41fe06b536f49a40bc49f530dcc119d, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 8c76081b6071ac9448c60c91dced32be, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue:
+    - {fileID: 11400000, guid: 316926d992242754f94c97d0211f5de2, type: 2}
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 0a46d17a0f6b4104e98df4eaac852f4d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 11400000, guid: 2c9215dd08819b240842f7f949d3bd9c, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+  - _field: {fileID: 11400000, guid: 31e0b5c545d330a449b3cd35b3314c75, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _boolValue: 1
+    _intValue: 0
+    _floatValue: 0
+  _tagIds:
+  - faeb49f4-c046-40b7-a124-2042759992dd
+  - 65522580-8e97-4c88-983f-24c493a8f0d8

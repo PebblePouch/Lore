@@ -7,8 +7,8 @@ read everything at runtime.
 ## Installation
 
 - **Git URL:** Package Manager > + > *Install package from git URL…* >
-  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.1.1`
-  (the `#0.1.1` tag pins a version; without it, the package follows the latest state of `main`).
+  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.2.0`
+  (the `#0.2.0` tag pins a version; without it, the package follows the latest state of `main`).
 - **From disk:** Package Manager > + > *Install package from disk…* > select this folder's `package.json`.
 
 Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.
@@ -18,9 +18,23 @@ Before updating Lore or Unity, commit your project to version control or back up
 
 ## Getting started
 
-Open **Tools > Lore > Open Lore**. Your data is stored under `Assets/Lore` (the Project asset `Lore.asset`,
-Categories, Entries, Fields and Libraries). You can move that folder anywhere under `Assets` and rename the Project
-asset; Lore finds the data through it.
+Open **Tools > Lore > Open Lore**. Without a Lore Project, the window shows the **Welcome** page with a short manual
+and three ways to start:
+
+- **Create:** pick a folder inside `Assets`; Lore creates a `Lore` folder there with your Project asset (`Lore.asset`),
+  Categories, Entries, Fields and Libraries.
+- **Continue:** import a Project exported from another Unity project (see below).
+- **Demo:** import the example Project (see below).
+
+You can move the data folder anywhere under `Assets` and rename the Project asset; Lore finds the data through it.
+A Unity project holds one Lore Project; if it contains more, Lore helps you export and remove the extra ones.
+
+## Example Project
+
+The **Oz Demo** sample turns "The Wonderful Wizard of Oz" into the lore of a small game: Categories, Entries, Tags,
+description links and field values that point to sprites, prefabs, scenes and ScriptableObjects. Import it from the
+Welcome page or Package Manager > Lore > Samples, into a Unity project without a Lore Project of its own. Delete the
+imported sample folder (`Assets/Samples/Lore/…`) before you start your own Lore.
 
 ## Tabular Editing & bulk editing
 

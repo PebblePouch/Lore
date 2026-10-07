@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9323c964033142da8f6195d7ab13d981, type: 3}
+  m_Name: The Great and Terrible
+  m_EditorClassIdentifier: PebblePouch.Lore.Samples.OzDemo::PebblePouch.Lore.Samples.OzDemo.OzDialogue
+  _lines:
+  - _speaker: Oz
+    _text: I am Oz, the Great and Terrible. Who are you, and why do you seek me?
+  - _speaker: Dorothy
+    _text: I am Dorothy, the Small and Meek. I have come to you for help.

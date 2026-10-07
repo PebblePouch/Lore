@@ -65,8 +65,9 @@ namespace PebblePouch.Lore.Editor
         {
             _state = state;
 
+            // No projectChanged (fires for every import in the game project): deleted/moved Unity assets bump
+            // LoreDataVersion (LoreAssetPostprocessor), see EnsureSnapshot.
             LoreRefreshService.Refreshed += MarkSnapshotDirty;
-            EditorApplication.projectChanged += MarkSnapshotDirty;
 
             _relationshipIndex.Refreshed += MarkSnapshotDirty;
 
@@ -1429,12 +1430,23 @@ namespace PebblePouch.Lore.Editor
         private ProjectInsightsSnapshot _snapshot;
         private bool _snapshotDirty = true;
 
+        // Data version of the snapshot: changes without an event (e.g. a referenced sprite was deleted, which can
+        // turn field values into missing references) recalculate it too.
+        private int _snapshotVersion;
+
         private void EnsureSnapshot()
         {
-            if (!_snapshotDirty && _snapshot != null)
+            if (!_snapshotDirty &&
+                _snapshot != null &&
+                _snapshotVersion == LoreDataVersion.Current)
             {
                 return;
             }
+
+            if (_snapshotVersion != LoreDataVersion.Current)
+                _latestEntriesDirty = true;
+
+            _snapshotVersion = LoreDataVersion.Current;
 
             RefreshSnapshot();
         }
@@ -1550,7 +1562,6 @@ namespace PebblePouch.Lore.Editor
         public void Dispose()
         {
             LoreRefreshService.Refreshed -= MarkSnapshotDirty;
-            EditorApplication.projectChanged -= MarkSnapshotDirty;
 
             _relationshipIndex.Refreshed -= MarkSnapshotDirty;
 

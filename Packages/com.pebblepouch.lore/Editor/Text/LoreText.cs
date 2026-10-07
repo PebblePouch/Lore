@@ -262,6 +262,90 @@ namespace PebblePouch.Lore.Editor
             public static readonly string ForwardTooltip = "Forward (Alt+Right)";
         }
 
+        // Welcome page: shown instead of Home while the Unity project has no Lore Project.
+        public static class Welcome
+        {
+            public static readonly string Title = "Welcome to Lore";
+
+            public static readonly string GettingStartedHeader = "Getting Started";
+            public static readonly string GettingStartedText =
+                "Hello and welcome! Lore keeps the world of your game in one place: Categories, Entries, Fields, " +
+                "Tags and the links between them, right inside the Unity Editor.\n\n" +
+                "Let's set you up. Start a new Lore, continue with a Project you exported before, or explore the " +
+                "example Project first. Nothing is created until you choose.";
+
+            public static readonly string CreateHeader = "Create";
+            public static readonly string CreateInfo =
+                "Pick a folder inside Assets. Lore creates a \"Lore\" folder there with your Project, Categories, " +
+                "Fields and Libraries.";
+
+            public static readonly string ContinueHeader = "Continue";
+            public static readonly string ContinueInfo =
+                "Pick a Project exported with Tools > Lore > Export Project. Unity's import window shows every " +
+                "file before it is added.";
+
+            public static readonly string DemoHeader = "Demo";
+            public static readonly string DemoInfo =
+                "Imports the example Project \"The Wonderful Wizard of Oz\". Remove it again (delete its sample " +
+                "folder) before you start your own Lore.";
+
+            public static readonly string ManualHeader = "Manual";
+            public static readonly string ManualMissing = "The manual could not be found in the Lore package.";
+
+            public static readonly string LinksHeader = "Links";
+            public static readonly string GitHubLink = "Lore on GitHub";
+            public static readonly string ChangelogLink = "Changelog";
+            public static readonly string LicenseLink = "License";
+            public static readonly string PatreonLink = "Support Lore on Patreon";
+
+            public static readonly string CreditsHeader = "Credits";
+            public static readonly string CreditsText =
+                "Lore is made by Pebble Pouch.\n\n" +
+                "Glyphs are emoji of your system font. The example Project is based on \"The Wonderful Wizard of " +
+                "Oz\" by L. Frank Baum (1900, public domain).";
+
+            // Start your Lore
+            public static readonly string ChooseFolderTitle = "Choose the Folder for Your Lore";
+            public static readonly string FolderOutsideAssetsTitle = "Lore: Start Your Lore";
+            public static readonly string FolderOutsideAssetsMessage =
+                "Please choose a folder inside the Assets folder of this Unity project.";
+
+            // Create Example Project
+            public static readonly string DemoFailedTitle = "Lore: Create Example Project";
+            public static readonly string DemoNotFoundMessage =
+                "The example Project was not found in the Lore package. Please reinstall Lore.";
+        }
+
+        // Shown when the Unity project contains more than one Lore Project.
+        public static class MultipleProjects
+        {
+            public static readonly string WindowTitle = "Lore: Multiple Projects";
+            public static readonly string Message =
+                "This Unity project contains {0} Lore Projects, but Lore works with exactly one. Export the " +
+                "Projects you want to keep elsewhere, then remove them until one is left.";
+
+            public static readonly string TitleColumn = "Project";
+            public static readonly string PathColumn = "Folder";
+            public static readonly string CategoriesColumn = "Categories";
+            public static readonly string EntriesColumn = "Entries";
+
+            public static readonly string UntitledProject = "Untitled Project";
+
+            public static readonly string ExportAndRemoveButton = "Export and Remove…";
+            public static readonly string ExportAndRemoveTooltip =
+                "Exports the selected Project as a .unitypackage, then deletes its folder";
+
+            public static readonly string ConfirmTitle = "Lore: Remove Project";
+            public static readonly string ConfirmMessage =
+                "The Project \"{0}\" was exported to:\n{1}\n\nDelete its folder now?\n{2}\n\n" +
+                "This cannot be undone.";
+            public static readonly string RemoveButton = "Delete Folder";
+
+            public static readonly string CannotRemoveMessage =
+                "The Project \"{0}\" lies directly in {1}. Lore only removes Project folders; move it into its own " +
+                "folder first.";
+        }
+
         // CSV export / import of a Category's Entries.
         public static class Csv
         {

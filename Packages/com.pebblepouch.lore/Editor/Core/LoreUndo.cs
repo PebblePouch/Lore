@@ -136,7 +136,7 @@ namespace PebblePouch.Lore.Editor
             foreach (Entry entry in repository.Entries)
                 Forget(entry);
 
-            Forget(FolderService.FindAsset<TagCollection>());
+            Forget(FolderService.FindLibraryAsset<TagCollection>());
         }
         #endregion
 

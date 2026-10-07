@@ -30,12 +30,16 @@ namespace PebblePouch.Lore.Editor
         private readonly List<Category> _categories = new();
         private readonly List<Entry> _entries = new();
         private readonly List<CategoryEntryGroup> _groups = new();
+        private readonly List<LoreProject> _projects = new();
 
         private bool _fieldTimestampsEnsured;
         #endregion
 
         #region Properties
         public LoreProject Project { get; private set; }
+
+        // Every Project asset found; more than one opens the Multiple Projects window (Lore uses the first).
+        public IReadOnlyList<LoreProject> Projects => _projects;
 
         public IReadOnlyList<Category> Categories => _categories;
         public IEnumerable<Entry> Entries => _entries;
@@ -45,9 +49,11 @@ namespace PebblePouch.Lore.Editor
         #region Constructor
         private LoreRepository()
         {
-            FolderService.EnsureStructure();
-
             Rebuild();
+
+            // Without a Project nothing is created (the window shows the Welcome page until the user starts one).
+            if (Project != null)
+                FolderService.EnsureStructure();
 
             // No projectChanged subscription: it fires for every import in the game project. Lore asset changes
             // arrive through LoreAssetPostprocessor (LoreRefreshService.RequestExternalRefresh).
@@ -214,12 +220,11 @@ namespace PebblePouch.Lore.Editor
 
         private LoreProject FindProject()
         {
+            _projects.Clear();
+
             string[] assetGuids =
                 AssetDatabase.FindAssets(
                     "t:LoreProject");
-
-            if (assetGuids.Length > 1)
-                Debug.LogWarning("Multiple Lore Projects found. Using the first one.");
 
             foreach (string assetGuid in
                      assetGuids)
@@ -231,10 +236,12 @@ namespace PebblePouch.Lore.Editor
                 var project = AssetDatabase.LoadAssetAtPath<LoreProject>(path);
 
                 if (project != null)
-                    return project;
+                    _projects.Add(project);
             }
 
-            return null;
+            return _projects.Count > 0
+                ? _projects[0]
+                : null;
         }
 
         private List<Category> FindCategories()

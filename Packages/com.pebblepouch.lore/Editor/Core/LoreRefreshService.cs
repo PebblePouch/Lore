@@ -74,9 +74,9 @@ namespace PebblePouch.Lore.Editor
                 }
             }
 
-            SaveIfDirty(FolderService.FindAsset<TagCollection>());
-            SaveIfDirty(FolderService.FindAsset<GlyphLibraryCollection>());
-            SaveIfDirty(FolderService.FindAsset<ColorLibraryCollection>());
+            SaveIfDirty(FolderService.FindLibraryAsset<TagCollection>());
+            SaveIfDirty(FolderService.FindLibraryAsset<GlyphLibraryCollection>());
+            SaveIfDirty(FolderService.FindLibraryAsset<ColorLibraryCollection>());
         }
         #endregion
 

@@ -32,6 +32,11 @@ namespace PebblePouch.Lore.Editor
         public ButtonDefinition ClearTags;
         public ButtonDefinition DeleteSelected;
 
+        // Welcome page (no Lore Project yet).
+        public ButtonDefinition StartLore;
+        public ButtonDefinition ImportProject;
+        public ButtonDefinition CreateDemo;
+
         [Header("Badges")]
         public ButtonDefinition Added;
     }
