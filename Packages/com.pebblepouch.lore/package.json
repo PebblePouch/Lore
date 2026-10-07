@@ -1,12 +1,14 @@
 {
   "name": "com.pebblepouch.lore",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Lore",
   "description": "Worldbuilding inside the Unity Editor: organize your game's lore in Categories, Entries and Fields, link Entries in descriptions, track integrity and content health, and read everything at runtime through a small read-only API.",
   "unity": "6000.0",
   "author": {
-    "name": "Pebble Pouch"
+    "name": "Pebble Pouch",
+    "email": "pebblepouchproductions@gmail.com"
   },
+  "license": "PolyForm-Noncommercial-1.0.0",
   "keywords": [
     "lore",
     "worldbuilding",

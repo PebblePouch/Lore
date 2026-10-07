@@ -7,11 +7,14 @@ read everything at runtime.
 ## Installation
 
 - **Git URL:** Package Manager > + > *Install package from git URL…* >
-  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.1.0`
-  (the `#0.1.0` tag pins a version; without it, the package follows the latest state of `main`).
+  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.1.1`
+  (the `#0.1.1` tag pins a version; without it, the package follows the latest state of `main`).
 - **From disk:** Package Manager > + > *Install package from disk…* > select this folder's `package.json`.
 
-Requires Unity 6000.0 or newer.
+Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.
+
+Before updating Lore or Unity, commit your project to version control or back up your Lore data (the data folder,
+`Assets/Lore` by default, and your Libraries).
 
 ## Getting started
 
@@ -43,3 +46,10 @@ Project Settings > Lore are not part of the package.
 
 Game code reads Lore data through a small read-only API (namespace `PebblePouch.Lore`). See
 `Documentation~/RuntimeAPI.md` and the **Runtime API** sample (Package Manager > Lore > Samples).
+
+## License
+
+Free for noncommercial use under the PolyForm Noncommercial License 1.0.0 (`LICENSE.md`). Commercial use needs the
+Lore Commercial License (`LICENSE-COMMERCIAL.md`), included with the **Supporter** tier on Patreon
+(https://www.patreon.com/c/pebblepouch). Details and examples: [repository README](https://github.com/PebblePouch/Lore#license).
+Contact: pebblepouchproductions@gmail.com
