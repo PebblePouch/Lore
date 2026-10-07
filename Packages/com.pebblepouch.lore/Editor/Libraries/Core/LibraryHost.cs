@@ -512,6 +512,13 @@ namespace PebblePouch.Lore.Editor
 
             MissingFieldAssignmentContext.EndAssignment();
             TagAssignmentContext.End();
+            GlyphAssignmentContext.EndAssignment();
+            ColorAssignmentContext.EndAssignment();
+
+            // A pick without its Library would keep its target cell highlighted (History, Home, clicks
+            // outside). Guarded: EndAssignment closes the Library itself, which re-enters here.
+            if (EntryAssignmentContext.IsActive)
+                EntryAssignmentContext.EndAssignment();
 
             Show(LibraryMode.None);
 

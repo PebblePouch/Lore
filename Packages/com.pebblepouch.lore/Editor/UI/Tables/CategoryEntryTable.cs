@@ -1274,6 +1274,7 @@ namespace PebblePouch.Lore.Editor
                 LoreText.Common.Paragraphs(
                     LoreText.Dialogs.EntriesDeleteWarning.Format(targets.Count),
                     string.Join("\n", lines),
+                    new EntryDeleteImpactAnalyzer().Describe(targets),
                     LoreText.Common.CannotBeUndone),
                 LoreText.Common.DeleteButton,
                 () =>

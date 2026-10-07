@@ -4,6 +4,23 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Broken description links that can be repaired are now yellow (still struck through) instead of link blue, so
+  they stand apart from working links.
+- Category > Fields: a Field whose type is missing gets a red type cell, like other integrity marks.
+
+### Fixed
+
+- Confirmation dialogs grow with their message, so the last line is no longer cut off.
+- Closing a Library through History, Home or a click elsewhere now also ends a running Entry, Glyph or Color pick,
+  so its target no longer stays highlighted.
+
+- Delete confirmations (Entry and Delete Selected) now say how many Field references and description links will
+  break, instead of wrongly saying that references are cleared (they stay as broken references).
+
 ## [0.1.1] - 2026-10-07
 
 ### Changed

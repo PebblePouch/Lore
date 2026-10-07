@@ -16,6 +16,9 @@ namespace PebblePouch.Lore.Editor
         public static readonly Color TextHidden = new Color(1f, 1f, 1f, 0f);
 
         public static readonly Color Danger = new Color(1f, 0.25f, 0.25f);
+
+        // Text counterpart of WarningSurface (e.g. repairable description links).
+        public static readonly Color Warning = new Color(1f, 0.8f, 0.25f);
         #endregion
 
         #region Surfaces (dark to light)

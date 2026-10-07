@@ -38,7 +38,8 @@ namespace PebblePouch.Lore.Editor
 
             Rect dialogRect =
                 GetDialogRect(
-                    windowRect);
+                    windowRect,
+                    request);
 
             Rect confirmRect =
                 GetConfirmButtonRect(
@@ -93,7 +94,8 @@ namespace PebblePouch.Lore.Editor
 
             Rect dialogRect =
                 GetDialogRect(
-                    windowRect);
+                    windowRect,
+                    request);
 
             DrawBorder(
                 GetBorderRect(
@@ -270,15 +272,45 @@ namespace PebblePouch.Lore.Editor
         #endregion
 
         #region Helpers
-        private static Rect GetDialogRect(Rect windowRect)
+        private static Rect GetDialogRect(
+            Rect windowRect,
+            LoreDialogRequest request)
         {
+            float height =
+                Mathf.Min(
+                    Mathf.Max(
+                        DialogStyle.Height,
+                        GetContentHeight(
+                            request)),
+                    windowRect.height
+                        - DialogStyle.EdgeMargin * 2f);
+
             return new Rect(
                 windowRect.center.x
                     - DialogStyle.Width * 0.5f,
                 windowRect.center.y
-                    - DialogStyle.Height * 0.5f,
+                    - height * 0.5f,
                 DialogStyle.Width,
-                DialogStyle.Height);
+                height);
+        }
+
+        // Title, message (wrapped at the dialog width) and buttons, so long messages are not cut off.
+        private static float GetContentHeight(
+            LoreDialogRequest request)
+        {
+            float messageHeight =
+                DialogStyle.Message.CalcHeight(
+                    new GUIContent(
+                        request.Message),
+                    DialogStyle.Width
+                        - DialogStyle.EdgeMargin * 2f);
+
+            return DialogStyle.TitleHeight
+                + DialogStyle.EdgeMargin
+                + messageHeight
+                + DialogStyle.SectionSpacing
+                + DialogStyle.ButtonHeight
+                + DialogStyle.EdgeMargin;
         }
 
         private static Rect GetBorderRect(Rect dialogRect)

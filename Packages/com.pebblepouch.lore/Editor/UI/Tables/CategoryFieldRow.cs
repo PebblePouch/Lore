@@ -40,9 +40,7 @@ namespace PebblePouch.Lore.Editor
                 field.name,
                 InspectorStyle.FieldTitle,
                 ScriptableObjectTypeService.GetFieldTypeContent(field),
-                FieldTypeIntegrityAnalyzer.HasMissingType(field)
-                    ? InspectorStyle.FieldTypeLabelBroken
-                    : InspectorStyle.FieldTypeLabel);
+                FieldTypeIntegrityAnalyzer.HasMissingType(field));
 
             GUILayout.Space(InspectorStyle.FieldTableColumnSpacing);
 
@@ -76,7 +74,7 @@ namespace PebblePouch.Lore.Editor
                 LoreText.Inspector.MissingFieldTitle,
                 InspectorStyle.MissingFieldTitleStyle,
                 GUIContent.none,
-                InspectorStyle.FieldTypeLabel);
+                false);
 
             GUILayout.Space(InspectorStyle.FieldTableColumnSpacing);
 
@@ -110,7 +108,7 @@ namespace PebblePouch.Lore.Editor
             string title,
             GUIStyle titleStyle,
             GUIContent type,
-            GUIStyle typeStyle)
+            bool typeBroken)
         {
             Rect rect =
                 GUILayoutUtility.GetRect(
@@ -149,10 +147,21 @@ namespace PebblePouch.Lore.Editor
                 title,
                 titleStyle);
 
+            // Missing type (integrity): red value cell, like broken values in the Entry Fields table.
+            if (typeBroken &&
+                Event.current.type == EventType.Repaint)
+            {
+                EditorGUI.DrawRect(
+                    typeRect,
+                    InspectorStyle.FieldBrokenBackground);
+            }
+
             GUI.Label(
                 typeRect,
                 type,
-                typeStyle);
+                typeBroken
+                    ? InspectorStyle.FieldTypeLabelBroken
+                    : InspectorStyle.FieldTypeLabel);
         }
 
         private static void DrawRequiredToggle(

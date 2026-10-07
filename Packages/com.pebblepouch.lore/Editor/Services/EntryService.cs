@@ -504,7 +504,7 @@ namespace PebblePouch.Lore.Editor
                 return false;
             }
 
-            // Confirmed as "cannot be undone" (other Entries' references to it were cleared too).
+            // Confirmed as "cannot be undone" (references to it stay as broken references).
             LoreUndo.ForgetAll();
 
             LoreRefreshService.Refresh();

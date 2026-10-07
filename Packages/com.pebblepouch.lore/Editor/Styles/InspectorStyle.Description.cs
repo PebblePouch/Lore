@@ -65,12 +65,15 @@ namespace PebblePouch.Lore.Editor
             active = { textColor = DescriptionBrokenLinkColor },
         };
 
-        // Broken but repairable (a candidate Entry exists): link blue with strikethrough, click shows repair options.
+        // Broken but repairable (a candidate Entry exists): yellow with strikethrough (unlike working blue links),
+        // click shows repair options.
+        public static readonly Color DescriptionRepairableLinkColor = LorePalette.Warning;
+
         public static readonly GUIStyle DescriptionRepairableLinkContent = new GUIStyle(DescriptionBrokenLinkContent)
         {
-            normal = { textColor = DescriptionLinkContent.normal.textColor },
-            hover = { textColor = DescriptionLinkContent.normal.textColor },
-            active = { textColor = DescriptionLinkContent.normal.textColor },
+            normal = { textColor = DescriptionRepairableLinkColor },
+            hover = { textColor = DescriptionRepairableLinkColor },
+            active = { textColor = DescriptionRepairableLinkColor },
         };
 
         // Glyphs of the broken link menu: link to a candidate, remove link (keep text).

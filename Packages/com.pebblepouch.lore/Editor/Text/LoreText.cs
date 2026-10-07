@@ -454,12 +454,29 @@ namespace PebblePouch.Lore.Editor
                 "This will <b>remove</b> the link <b>permanently</b>.";
 
             public static readonly string EntryDeleteWarning =
-                "This will <b>delete</b> the Entry <b>permanently</b>. All <b>references</b> to this Entry <b>will be cleared</b>.";
+                "This will <b>delete</b> the Entry <b>permanently</b>.";
 
             // Delete Selected (Tabular Editing), followed by the list. {0} = Entry count
             public static readonly LorePlural EntriesDeleteWarning = new(
-                "This will <b>delete</b> this Entry <b>permanently</b>. All <b>references</b> to it <b>will be cleared</b>.",
-                "This will <b>delete</b> these <b>{0} Entries permanently</b>. All <b>references</b> to them <b>will be cleared</b>.");
+                "This will <b>delete</b> this Entry <b>permanently</b>.",
+                "This will <b>delete</b> these <b>{0} Entries permanently</b>.");
+
+            // Delete Entry / Delete Selected: references that break. {0} = Entry count (only picks the form)
+            public static readonly LorePlural DeleteNoReferences = new(
+                "Nothing else references this Entry.",
+                "Nothing else references these Entries.");
+
+            // {0} = "2 Field references", "1 description link" or both joined by JoinList
+            public static readonly string DeleteBreaksReferences =
+                "<b>{0}</b> will <b>break</b> and be marked red until fixed.";
+
+            public static readonly LorePlural DeleteFieldReferences = new(
+                "{0} Field reference",
+                "{0} Field references");
+
+            public static readonly LorePlural DeleteDescriptionLinks = new(
+                "{0} description link",
+                "{0} description links");
 
             // One line per Entry ({0} glyph + title); more than the listed Entries: {0} = count not listed.
             public static readonly string DeleteListItem = "• {0}";

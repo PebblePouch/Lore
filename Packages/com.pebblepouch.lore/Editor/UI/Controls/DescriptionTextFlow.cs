@@ -8,7 +8,7 @@ namespace PebblePouch.Lore.Editor
 {
     // Draws description text with [[Entry]] links in a word-wrapped flow (view mode only).
     // Resolved links show "Glyph Title" in link blue and navigate on click.
-    // Broken links show their label with a strikethrough: in link blue when a repair candidate exists
+    // Broken links show their label with a strikethrough: in yellow when a repair candidate exists
     // (DescriptionLinkRepair), otherwise in red. Clicking a broken link opens the repair menu
     // (link to a candidate, remove the link but keep the text) when the caller passes textChanged;
     // without it the click falls through to description editing.
