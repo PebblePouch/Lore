@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Allies
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: bf89d8ff-92e3-45b8-823a-99da2ea57811
-  _createdTicks: 639270064429479866
-  _modifiedTicks: 639270064430167479
+  _id: 4361b776-a1e6-4a30-b978-9b495be5f070
+  _createdTicks: 639272563430647746
+  _modifiedTicks: 639272563431461722
   _type: 11
   _glyph: "\U0001F91D\uFE0F"
   _objectTypeName: 
@@ -22,3 +22,4 @@ MonoBehaviour:
   _enumOptions: []
   _allowedCategories:
   - {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
+  _vectorDimension: 3

@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Dialogue
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 6b297bac-4bb0-484d-bae9-79814c1201c2
-  _createdTicks: 639270064433977834
-  _modifiedTicks: 639270064434667599
+  _id: 1d852d48-e6b1-4dde-a91f-5c6b5dabdef5
+  _createdTicks: 639272563434864787
+  _modifiedTicks: 639272563435482706
   _type: 9
   _glyph: "\U0001F4AC\uFE0F"
   _objectTypeName: PebblePouch.Lore.Samples.OzDemo.OzDialogue, PebblePouch.Lore.Samples.OzDemo
   _objectScriptGuid: 9323c964033142da8f6195d7ab13d981
   _enumOptions: []
   _allowedCategories: []
+  _vectorDimension: 3

@@ -376,13 +376,6 @@ namespace PebblePouch.Lore.Editor
                 return;
             }
 
-            bool hasSelection =
-                SelectionService.CurrentCategory != null
-                || SelectionService.CurrentEntry != null;
-
-            if (!hasSelection)
-                return;
-
             // A click inside the inline editor being edited must keep its keyboard focus, or Unity treats it
             // as a first click and selects all text (no caret placement). Every other click still clears
             // focus, which prevents Unity's shared text editor from carrying text into the next field.

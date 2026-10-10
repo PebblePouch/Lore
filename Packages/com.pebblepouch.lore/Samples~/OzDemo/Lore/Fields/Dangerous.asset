@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Dangerous
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 740d4062-3b31-49d4-afe5-91cbae67526a
-  _createdTicks: 639270064437892210
-  _modifiedTicks: 639270064437892210
+  _id: 666393e9-1cf9-4a17-ba65-55d12ca00ccd
+  _createdTicks: 639272563441055081
+  _modifiedTicks: 639272563441055081
   _type: 4
   _glyph: "\u26A0\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions: []
   _allowedCategories: []
+  _vectorDimension: 3

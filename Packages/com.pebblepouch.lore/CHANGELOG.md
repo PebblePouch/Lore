@@ -34,6 +34,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   The type picker groups the types by function (Animation, Physics, Rendering, Textures, UI, ...), with the types
   already used by Object Fields and the project's own types on top; the search covers all groups.
 - Field and Tag Library menus: "References" has a glyph (🔗), like the other menu items.
+- Manual (Welcome page, `Documentation~/Manual.md`): replaces the placeholder with the full user manual, starting
+  with ten First Steps for a new Project, then every part of Lore from Categories to the Runtime API and the
+  keyboard shortcuts.
+- Project glyph: the Project page header shows a glyph before the title (📜 by default), changed like Category and
+  Entry glyphs; glyph and title line up with the Category and Entry headers. Runtime API: `LoreProject.Glyph`.
 
 ### Changed
 
@@ -41,6 +46,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Changing a Field between Enum and Enums or between Entry and Entries keeps the values: a single value becomes a
   list, a list with one value becomes the single value. Only lists with several values are cleared (the confirmation
   says how many Entries). Switching Enum ↔ Enums keeps the options.
+- Oz Demo: shows the new Field types and features. Characters have Weaknesses (Enums), Places a region Color, a
+  Banner (Object, Texture2D) and a Map Position (Vector2), Items a Pickup Sound (Audio, a chime per Rarity). The
+  Project has a glyph (🌪️, the cyclone), and some descriptions use bold and italic.
 
 ## [0.2.1] - 2026-10-10
 

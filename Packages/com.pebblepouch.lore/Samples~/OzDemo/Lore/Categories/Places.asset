@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
   m_Name: Places
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
-  _id: 34c9f7ca-8533-4bfb-9ea2-9b6750efc93a
-  _createdTicks: 639270064421303907
-  _modifiedTicks: 639270064451408264
+  _id: 26bbdb64-ca7d-430c-8d86-a49964b72323
+  _createdTicks: 639272563421657480
+  _modifiedTicks: 639272563453250224
   _glyph: "\U0001F3F0\uFE0F"
   _color: {r: 0.15, g: 0.55, b: 0.3, a: 1}
   _description: Locations of the game, from the gray Kansas prairie to the Emerald
-    City. Every Place belongs to one region of Oz, and every region has its own color.
+    City. Every Place belongs to one region of Oz, and every region has its own color
+    and banner.
   _sortOrder: 1
   _fields:
   - {fileID: 11400000, guid: 419368dbf1388304bb96247032c6ee7d, type: 2}
+  - {fileID: 11400000, guid: 98820417f1081624f82c0d68a599d90e, type: 2}
+  - {fileID: 11400000, guid: dc9ab21b02998644485259c277b5ac1d, type: 2}
+  - {fileID: 11400000, guid: eb825b437a3996448a8db5a9225817a7, type: 2}
   - {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
   - {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
   - {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}

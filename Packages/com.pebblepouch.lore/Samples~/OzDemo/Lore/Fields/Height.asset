@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Height
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 713f8323-cad1-4a22-88e4-b6e9320748de
-  _createdTicks: 639270064431940951
-  _modifiedTicks: 639270064431940951
+  _id: e13ff0bd-cc54-4f55-b653-413cdd8fd409
+  _createdTicks: 639272563432920368
+  _modifiedTicks: 639272563432920368
   _type: 6
   _glyph: "\U0001F446\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions: []
   _allowedCategories: []
+  _vectorDimension: 3

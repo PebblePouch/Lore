@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Witch's Castle
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: ffa77939-deea-4fa0-912f-51a9cb2bd141
-  _createdTicks: 639270064458697900
-  _modifiedTicks: 639270064500632728
+  _id: 3f267a62-4f5b-4d34-90de-b6a5946ace7d
+  _createdTicks: 639272563460668185
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3F0\uFE0F"
   _subtitle: In the yellow country of the Winkies
-  _description: The yellow castle of the [[435afc3a-0611-401c-8267-920193da9c7f|Wicked
+  _description: The yellow castle of the [[ff5f930a-90ca-414d-88d2-e61557e01160|Wicked
     Witch of the West]], in the west of Oz. The final dungeon of the game.
   _sortOrder: 7
   _fields:
@@ -29,12 +29,71 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2b58616f-85ab-4cf1-aeb4-ed68e270cde6
+    _enumValue: eaa46170-30a5-427b-a464-8bb9406d4355
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 98820417f1081624f82c0d68a599d90e, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0.95, g: 0.8, b: 0.15, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: dc9ab21b02998644485259c277b5ac1d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 2800000, guid: dcde9e5a1d3021045b8260b05fb93c75, type: 3}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: eb825b437a3996448a8db5a9225817a7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 12, y: 55, z: 0}
   - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 50b5591c91f44eb4999735e98a437de7, type: 2}
@@ -42,12 +101,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -55,14 +119,19 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue:
     - {fileID: 11400000, guid: 50b5591c91f44eb4999735e98a437de7, type: 2}
     - {fileID: 11400000, guid: 823670a5c37591045a32a3651fa28d91, type: 2}
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -70,24 +139,34 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 1
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: 220d50a8c5a762e40ac092f14d1a6b57, type: 3}
-    _scenePath: Assets/Samples/Lore/0.1.1/Oz Demo/Scenes/Locations/Witch's Castle.unity
+    _scenePath: Assets/Samples/Lore/0.3.0/Oz Demo/Scenes/Locations/Witch's Castle.unity
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - d7e3109f-efa0-4deb-a981-6559168fccf8
+  - 78b6a0ac-dbf9-4e93-8a7e-e0c1dfb831e2

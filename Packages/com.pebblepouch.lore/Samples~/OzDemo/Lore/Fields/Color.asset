@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
+  m_Name: Color
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
+  _id: 00f75b80-07b4-4a25-a019-496730f24e04
+  _createdTicks: 639272563436979021
+  _modifiedTicks: 639272563436979021
+  _type: 13
+  _glyph: "\U0001F58C\uFE0F"
+  _objectTypeName: 
+  _objectScriptGuid: 
+  _enumOptions: []
+  _allowedCategories: []
+  _vectorDimension: 3

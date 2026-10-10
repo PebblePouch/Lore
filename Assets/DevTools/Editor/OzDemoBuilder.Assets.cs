@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 using UnityEditor;
 using UnityEngine;
@@ -11,11 +12,13 @@ using Object = UnityEngine.Object;
 namespace PebblePouch.Lore.Editor.Dev
 {
     // Entries, their values and the Unity assets the values point to (generated, so the sample needs no art):
-    // Portraits/Icons = colored discs, Prefabs = primitives, Scenes = empty scenes, Dialogues = OzDialogue assets.
+    // Portraits/Icons = colored discs, Banners = colored pennants (Texture2D), Pickup sounds = short chimes,
+    // Prefabs = primitives, Scenes = empty scenes, Dialogues = OzDialogue assets.
     internal static partial class OzDemoBuilder
     {
         #region Fields
         private const string ArtFolder = "Art";
+        private const string AudioFolder = "Audio";
         private const string PrefabsFolder = "Prefabs";
         private const string DialoguesFolder = "Dialogues";
         private const string LocationScenesFolder = "Scenes/Locations";
@@ -23,13 +26,43 @@ namespace PebblePouch.Lore.Editor.Dev
         private const int SpriteSize = 128;
         private const float SpriteBorder = 6f;
 
+        private const int BannerWidth = 64;
+        private const int BannerHeight = 96;
+        private const int BannerNotch = 24;
+
+        private const int SoundSampleRate = 22050;
+        private const float SoundNoteLength = 0.12f;
+        private const float SoundVolume = 0.4f;
+
         // A scene file needs nothing but the YAML header; Unity fills in the default settings when it is opened.
         private const string EmptySceneYaml = "%YAML 1.1\n%TAG !u! tag:unity3d.com,2011:\n";
 
         private static readonly Dictionary<string, Sprite> Sprites = new();
+        private static readonly Dictionary<string, Texture2D> Banners = new();
+        private static readonly Dictionary<string, AudioClip> Sounds = new();
         private static readonly Dictionary<string, GameObject> Prefabs = new();
         private static readonly Dictionary<string, Object> Scenes = new();
         private static readonly Dictionary<string, ScriptableObject> Dialogues = new();
+
+        // The colors of the countries of Oz, as in the book.
+        private static readonly Dictionary<string, Color> RegionColors = new()
+        {
+            ["Kansas"] = new Color(0.55f, 0.55f, 0.55f),
+            ["Munchkin Country"] = new Color(0.20f, 0.40f, 0.85f),
+            ["Emerald City"] = new Color(0.10f, 0.65f, 0.35f),
+            ["Winkie Country"] = new Color(0.95f, 0.80f, 0.15f),
+            ["Quadling Country"] = new Color(0.85f, 0.20f, 0.20f),
+            ["Gillikin Country"] = new Color(0.55f, 0.25f, 0.75f),
+        };
+
+        // Notes (Hz) of the pickup chime per Rarity: rarer items play longer arpeggios.
+        private static readonly Dictionary<string, float[]> RaritySounds = new()
+        {
+            ["Common"] = new[] { 880.00f },
+            ["Rare"] = new[] { 659.25f, 987.77f },
+            ["Magical"] = new[] { 523.25f, 659.25f, 783.99f },
+            ["Unique"] = new[] { 523.25f, 659.25f, 783.99f, 1046.50f },
+        };
 
         private static readonly Dictionary<string, Color> KindColors = new()
         {
@@ -137,6 +170,16 @@ namespace PebblePouch.Lore.Editor.Dev
                 {
                     GetFieldValue(entry, "Icon").SetSprite(Lookup(Sprites, data.Title, "Sprite"));
                     GetFieldValue(entry, "Prefab").SetGameObject(Lookup(Prefabs, data.Title, "Prefab"));
+
+                    GetFieldValue(entry, "Pickup Sound")
+                        .SetAudioClip(Lookup(Sounds, (string)data.Values["Rarity"], "Sound"));
+                }
+                else if (data.Category == "Places")
+                {
+                    var region = (string)data.Values["Region"];
+
+                    GetFieldValue(entry, "Color").SetColor(Lookup(RegionColors, region, "Region color"));
+                    GetFieldValue(entry, "Banner").SetObject(Lookup(Banners, region, "Banner"));
                 }
 
                 LoreChangeTracker.MarkModified(entry);
@@ -172,11 +215,11 @@ namespace PebblePouch.Lore.Editor.Dev
                     break;
 
                 case FieldType.Enum:
-                    EnumOption option =
-                        field.EnumOptions.FirstOrDefault(candidate => candidate.Label == (string)value) ??
-                        throw new InvalidOperationException($"Field '{field.Title}' has no option '{value}'.");
+                    fieldValue.SetEnum(EnumOptionId(field, (string)value));
+                    break;
 
-                    fieldValue.SetEnum(option.Id);
+                case FieldType.Enums:
+                    fieldValue.SetEnumValues(((string[])value).Select(label => EnumOptionId(field, label)));
                     break;
 
                 case FieldType.Entry:
@@ -199,6 +242,10 @@ namespace PebblePouch.Lore.Editor.Dev
                     fieldValue.SetFloat((float)value);
                     break;
 
+                case FieldType.Vector:
+                    fieldValue.SetVector((Vector2)value);
+                    break;
+
                 case FieldType.Scene:
                     Object scene = Lookup(Scenes, (string)value, "Scene");
 
@@ -212,6 +259,15 @@ namespace PebblePouch.Lore.Editor.Dev
                 default:
                     throw new InvalidOperationException($"No value conversion for Field '{field.Title}' ({field.Type}).");
             }
+        }
+
+        private static string EnumOptionId(Field field, string label)
+        {
+            EnumOption option =
+                field.EnumOptions.FirstOrDefault(candidate => candidate.Label == label) ??
+                throw new InvalidOperationException($"Field '{field.Title}' has no option '{label}'.");
+
+            return option.Id;
         }
 
         private static FieldValue GetFieldValue(Entry entry, string fieldName)
@@ -235,9 +291,28 @@ namespace PebblePouch.Lore.Editor.Dev
         private static void CreateAssets(string sampleRoot)
         {
             Sprites.Clear();
+            Banners.Clear();
+            Sounds.Clear();
             Prefabs.Clear();
             Scenes.Clear();
             Dialogues.Clear();
+
+            // One banner per region and one chime per Rarity, shared by their Entries.
+            foreach (KeyValuePair<string, Color> region in RegionColors)
+            {
+                Banners[region.Key] =
+                    CreateBanner(
+                        $"{sampleRoot}/{ArtFolder}/Banners/{region.Key}.png",
+                        region.Value);
+            }
+
+            foreach (KeyValuePair<string, float[]> rarity in RaritySounds)
+            {
+                Sounds[rarity.Key] =
+                    CreateSound(
+                        $"{sampleRoot}/{AudioFolder}/Pickup {rarity.Key}.wav",
+                        rarity.Value);
+            }
 
             foreach (EntryData data in Content)
             {
@@ -289,7 +364,10 @@ namespace PebblePouch.Lore.Editor.Dev
 
         private static void DeleteGeneratedAssets(string sampleRoot)
         {
-            foreach (string folder in new[] { ArtFolder, PrefabsFolder, DialoguesFolder, LocationScenesFolder })
+            foreach (string folder in new[]
+                     {
+                         ArtFolder, AudioFolder, PrefabsFolder, DialoguesFolder, LocationScenesFolder,
+                     })
             {
                 string path = $"{sampleRoot}/{folder}";
 
@@ -342,6 +420,110 @@ namespace PebblePouch.Lore.Editor.Dev
 
             return AssetDatabase.LoadAssetAtPath<Sprite>(path) ??
                    throw new InvalidOperationException($"Could not create sprite {path}.");
+        }
+
+        // A pennant with a V-notch at the bottom and a darker border, imported as a plain texture (Object Field).
+        private static Texture2D CreateBanner(string path, Color color)
+        {
+            EnsureParentFolder(path);
+
+            var texture = new Texture2D(BannerWidth, BannerHeight, TextureFormat.RGBA32, false);
+
+            Color border = Color.Lerp(color, Color.black, 0.4f);
+            float center = (BannerWidth - 1) / 2f;
+
+            for (int y = 0; y < BannerHeight; y++)
+            {
+                for (int x = 0; x < BannerWidth; x++)
+                {
+                    // Bottom edge: deepest at the center.
+                    float notch = BannerNotch * (1f - Mathf.Abs(x - center) / center);
+
+                    bool inside = y >= notch;
+
+                    bool onBorder =
+                        x < SpriteBorder ||
+                        x >= BannerWidth - SpriteBorder ||
+                        y >= BannerHeight - SpriteBorder ||
+                        y < notch + SpriteBorder;
+
+                    texture.SetPixel(
+                        x,
+                        y,
+                        !inside
+                            ? Color.clear
+                            : onBorder
+                                ? border
+                                : color);
+                }
+            }
+
+            File.WriteAllBytes(path, texture.EncodeToPNG());
+
+            Object.DestroyImmediate(texture);
+
+            AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceSynchronousImport);
+
+            var importer = (TextureImporter)AssetImporter.GetAtPath(path);
+
+            importer.textureType = TextureImporterType.Default;
+            importer.alphaIsTransparency = true;
+            importer.mipmapEnabled = false;
+            importer.wrapMode = TextureWrapMode.Clamp;
+            importer.SaveAndReimport();
+
+            return AssetDatabase.LoadAssetAtPath<Texture2D>(path) ??
+                   throw new InvalidOperationException($"Could not create banner {path}.");
+        }
+
+        // 16-bit mono WAV: one sine note per frequency, each fading out.
+        private static AudioClip CreateSound(string path, float[] frequencies)
+        {
+            EnsureParentFolder(path);
+
+            int noteSamples = (int)(SoundSampleRate * SoundNoteLength);
+            int dataBytes = noteSamples * frequencies.Length * sizeof(short);
+
+            using (var stream = new MemoryStream())
+            {
+                using (var writer = new BinaryWriter(stream))
+                {
+                    writer.Write(Encoding.ASCII.GetBytes("RIFF"));
+                    writer.Write(36 + dataBytes);
+                    writer.Write(Encoding.ASCII.GetBytes("WAVE"));
+
+                    writer.Write(Encoding.ASCII.GetBytes("fmt "));
+                    writer.Write(16);                               // Chunk size
+                    writer.Write((short)1);                         // PCM
+                    writer.Write((short)1);                         // Mono
+                    writer.Write(SoundSampleRate);
+                    writer.Write(SoundSampleRate * sizeof(short));  // Bytes per second
+                    writer.Write((short)sizeof(short));             // Block align
+                    writer.Write((short)16);                        // Bits per sample
+
+                    writer.Write(Encoding.ASCII.GetBytes("data"));
+                    writer.Write(dataBytes);
+
+                    foreach (float frequency in frequencies)
+                    {
+                        for (int i = 0; i < noteSamples; i++)
+                        {
+                            float time = (float)i / SoundSampleRate;
+                            float fade = 1f - (float)i / noteSamples;
+                            float sample = Mathf.Sin(2f * Mathf.PI * frequency * time) * fade * SoundVolume;
+
+                            writer.Write((short)(sample * short.MaxValue));
+                        }
+                    }
+                }
+
+                File.WriteAllBytes(path, stream.ToArray());
+            }
+
+            AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceSynchronousImport);
+
+            return AssetDatabase.LoadAssetAtPath<AudioClip>(path) ??
+                   throw new InvalidOperationException($"Could not create sound {path}.");
         }
 
         private static GameObject CreatePrefab(string path, PrimitiveType primitive, Vector3 scale)

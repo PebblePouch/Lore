@@ -6,6 +6,7 @@ namespace PebblePouch.Lore.Editor
     public sealed class ProjectHeaderSection
     {
         #region Fields
+        private readonly ProjectGlyphElement _glyphElement = new();
         private readonly ProjectTitleElement _titleElement;
         private readonly TimestampsElement _timestampsElement = new();
         #endregion
@@ -47,6 +48,11 @@ namespace PebblePouch.Lore.Editor
                 GUILayout.Height(
                     InspectorStyle.HeaderHeight));
 
+            // No color here: keep the color strip's width so glyph and title line up with Category/Entry headers.
+            GUILayout.Space(
+                InspectorStyle.ColorPicker.Width);
+
+            _glyphElement.Draw();
             _titleElement.Draw();
 
             // The Project asset is created lazily (on the first edit): no timestamps until it exists.

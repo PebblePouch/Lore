@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Munchkin Village
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 1983fc3c-0dd1-4793-b86e-44da1b0c2f17
-  _createdTicks: 639270064457143428
-  _modifiedTicks: 639270064500632728
+  _id: 4afa4d10-195b-4b78-8315-5517131fcf9c
+  _createdTicks: 639272563459099418
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3D8\uFE0F"
   _subtitle: Where the house came down
-  _description: Round blue houses with domes for roofs, in the east of Oz. [[9c79817b-2d7c-4f18-ae09-022d6e5a62f9|Boq]]
-    lives here, and the [[7375feb9-ad39-4200-bcbe-2311429fd74a|Silver Shoes]] were
+  _description: Round blue houses with domes for roofs, in the east of Oz. [[e77fbaef-2953-4c5c-bcad-ca0cbb1fef5c|Boq]]
+    lives here, and the [[3cbd0685-ef92-4b23-a0b9-dac72c467ecb|Silver Shoes]] were
     found here.
   _sortOrder: 1
   _fields:
@@ -30,12 +30,71 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2665a703-50ee-49c9-82cc-e5a89560639c
+    _enumValue: 66161abe-0f1b-4478-9481-457ae85e99c6
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 98820417f1081624f82c0d68a599d90e, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0.2, g: 0.4, b: 0.85, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: dc9ab21b02998644485259c277b5ac1d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 2800000, guid: c65ea455f337b3d4c959962fd640c302, type: 3}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: eb825b437a3996448a8db5a9225817a7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 90, y: 50, z: 0}
   - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: e985470f5ba84514aa5d3d3ddb6bc1a9, type: 2}
@@ -43,12 +102,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -56,13 +120,18 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue:
     - {fileID: 11400000, guid: d885a270c3397da4f935b981b74a973c, type: 2}
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -70,24 +139,34 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: 2a608bdd7d0975849af4225ddfffc497, type: 3}
-    _scenePath: Assets/Samples/Lore/0.1.1/Oz Demo/Scenes/Locations/Munchkin Village.unity
+    _scenePath: Assets/Samples/Lore/0.3.0/Oz Demo/Scenes/Locations/Munchkin Village.unity
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - faeb49f4-c046-40b7-a124-2042759992dd
+  - 8b17c662-d7ca-4d07-8a8e-1ebce46581b1

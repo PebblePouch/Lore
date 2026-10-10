@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
   m_Name: Items
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
-  _id: 01abf1d6-2e82-4cbb-8272-aa7b27a45d54
-  _createdTicks: 639270064423241952
-  _modifiedTicks: 639270064451811682
+  _id: 61bcae44-f842-460e-8412-f70d5086f7e7
+  _createdTicks: 639272563423672065
+  _modifiedTicks: 639272563453660730
   _glyph: "\U0001F392\uFE0F"
   _color: {r: 0.8, g: 0.6, b: 0.1, a: 1}
   _description: Things the player can find, earn or be given.
@@ -25,6 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
   - {fileID: 11400000, guid: de2363fa2e4fefc409ce1a732b0b7b21, type: 2}
   - {fileID: 11400000, guid: 7fea3134e82906c4dab794c8b338037d, type: 2}
+  - {fileID: 11400000, guid: 9c6ea20181337d24eaa162e865c569d1, type: 2}
   - {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
   _requiredFields:
   - {fileID: 11400000, guid: 1f1d65ec568392d4090afe5305c2c2cf, type: 2}

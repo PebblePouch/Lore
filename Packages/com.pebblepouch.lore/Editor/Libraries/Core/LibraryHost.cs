@@ -655,14 +655,8 @@ namespace PebblePouch.Lore.Editor
                 return;
             }
 
-            bool hasSelection =
-                SelectionService.CurrentCategory != null ||
-                SelectionService.CurrentEntry != null;
-
-            LoreKeyboardFocus.SetOwner(
-                hasSelection
-                    ? LoreKeyboardOwner.Inspector
-                    : LoreKeyboardOwner.Content);
+            // Without a selection the Inspector shows the Project page (editable like Category/Entry pages).
+            LoreKeyboardFocus.SetOwner(LoreKeyboardOwner.Inspector);
         }
 
         private void HandleEscape()

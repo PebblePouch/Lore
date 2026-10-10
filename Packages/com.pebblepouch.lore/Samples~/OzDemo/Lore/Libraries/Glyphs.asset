@@ -58,6 +58,18 @@ MonoBehaviour:
   - Title: Family
     Glyph: "\U0001F46A\uFE0F"
     Category: Character
+  - Title: People Hugging
+    Glyph: "\U0001FAC2\uFE0F"
+    Category: Character
+  - Title: Couple
+    Glyph: "\U0001F46B\uFE0F"
+    Category: Character
+  - Title: Couple with Heart
+    Glyph: "\U0001F491\uFE0F"
+    Category: Character
+  - Title: Couple Kiss
+    Glyph: "\U0001F48F\uFE0F"
+    Category: Character
   - Title: Hero
     Glyph: "\U0001F9B8\uFE0F"
     Category: Character, Fantasy
@@ -102,6 +114,9 @@ MonoBehaviour:
     Category: Character, Fantasy
   - Title: Imp
     Glyph: "\U0001F47F\uFE0F"
+    Category: Character, Fantasy
+  - Title: Angel
+    Glyph: "\U0001F47C\uFE0F"
     Category: Character, Fantasy
   - Title: Alien
     Glyph: "\U0001F47D\uFE0F"
@@ -151,6 +166,51 @@ MonoBehaviour:
   - Title: Worker
     Glyph: "\U0001F477\uFE0F"
     Category: Character, Role
+  - Title: Standing
+    Glyph: "\U0001F9CD\uFE0F"
+    Category: Character, Activity
+  - Title: Kneeling
+    Glyph: "\U0001F9CE\uFE0F"
+    Category: Character, Activity
+  - Title: Walking
+    Glyph: "\U0001F6B6\uFE0F"
+    Category: Character, Activity
+  - Title: Running
+    Glyph: "\U0001F3C3\uFE0F"
+    Category: Character, Activity
+  - Title: Dancer
+    Glyph: "\U0001F483\uFE0F"
+    Category: Character, Activity
+  - Title: Dancing Man
+    Glyph: "\U0001F57A\uFE0F"
+    Category: Character, Activity
+  - Title: Meditating
+    Glyph: "\U0001F9D8\uFE0F"
+    Category: Character, Activity
+  - Title: Bowing
+    Glyph: "\U0001F647\uFE0F"
+    Category: Character, Activity
+  - Title: Shrugging
+    Glyph: "\U0001F937\uFE0F"
+    Category: Character, Activity
+  - Title: Climbing
+    Glyph: "\U0001F9D7\uFE0F"
+    Category: Character, Activity
+  - Title: Swimming
+    Glyph: "\U0001F3CA\uFE0F"
+    Category: Character, Activity
+  - Title: Rowing
+    Glyph: "\U0001F6A3\uFE0F"
+    Category: Character, Activity
+  - Title: Horse Riding
+    Glyph: "\U0001F3C7\uFE0F"
+    Category: Character, Activity
+  - Title: Bathing
+    Glyph: "\U0001F6C0\uFE0F"
+    Category: Character, Activity
+  - Title: In Bed
+    Glyph: "\U0001F6CC\uFE0F"
+    Category: Character, Activity
   - Title: Turban
     Glyph: "\U0001F473\uFE0F"
     Category: Character, Outfit
@@ -181,8 +241,68 @@ MonoBehaviour:
   - Title: Panties
     Glyph: "\U0001FA72\uFE0F"
     Category: Clothes
+  - Title: Necktie
+    Glyph: "\U0001F454\uFE0F"
+    Category: Clothes
+  - Title: Jeans
+    Glyph: "\U0001F456\uFE0F"
+    Category: Clothes
+  - Title: Blouse
+    Glyph: "\U0001F45A\uFE0F"
+    Category: Clothes
+  - Title: Shorts
+    Glyph: "\U0001FA73\uFE0F"
+    Category: Clothes
+  - Title: Swimsuit
+    Glyph: "\U0001FA71\uFE0F"
+    Category: Clothes
+  - Title: Kimono
+    Glyph: "\U0001F458\uFE0F"
+    Category: Clothes
+  - Title: Sari
+    Glyph: "\U0001F97B\uFE0F"
+    Category: Clothes
+  - Title: Lab Coat
+    Glyph: "\U0001F97C\uFE0F"
+    Category: Clothes
+  - Title: Safety Vest
+    Glyph: "\U0001F9BA\uFE0F"
+    Category: Clothes
+  - Title: Scarf
+    Glyph: "\U0001F9E3\uFE0F"
+    Category: Clothes
+  - Title: Gloves
+    Glyph: "\U0001F9E4\uFE0F"
+    Category: Clothes
+  - Title: Socks
+    Glyph: "\U0001F9E6\uFE0F"
+    Category: Clothes
   - Title: Boot
     Glyph: "\U0001F462\uFE0F"
+    Category: Clothes
+  - Title: Shoe
+    Glyph: "\U0001F45E\uFE0F"
+    Category: Clothes
+  - Title: Sneaker
+    Glyph: "\U0001F45F\uFE0F"
+    Category: Clothes
+  - Title: Hiking Boot
+    Glyph: "\U0001F97E\uFE0F"
+    Category: Clothes
+  - Title: Flat Shoe
+    Glyph: "\U0001F97F\uFE0F"
+    Category: Clothes
+  - Title: High Heel
+    Glyph: "\U0001F460\uFE0F"
+    Category: Clothes
+  - Title: Sandal
+    Glyph: "\U0001F461\uFE0F"
+    Category: Clothes
+  - Title: Thong Sandal
+    Glyph: "\U0001FA74\uFE0F"
+    Category: Clothes
+  - Title: Ballet Shoes
+    Glyph: "\U0001FA70\uFE0F"
     Category: Clothes
   - Title: Hat
     Glyph: "\U0001F452\uFE0F"
@@ -196,11 +316,20 @@ MonoBehaviour:
   - Title: Military Helmet
     Glyph: "\U0001FA96\uFE0F"
     Category: Clothes, Headwear
+  - Title: Billed Cap
+    Glyph: "\U0001F9E2\uFE0F"
+    Category: Clothes, Headwear
   - Title: Crown
     Glyph: "\U0001F451\uFE0F"
     Category: Clothes, Fantasy
   - Title: Glasses
     Glyph: "\U0001F453\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Sunglasses
+    Glyph: "\U0001F576\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Goggles
+    Glyph: "\U0001F97D\uFE0F"
     Category: Clothes, Accessory
   - Title: Backpack
     Glyph: "\U0001F392\uFE0F"
@@ -208,8 +337,35 @@ MonoBehaviour:
   - Title: Luggage
     Glyph: "\U0001F9F3\uFE0F"
     Category: Clothes, Accessory
+  - Title: Umbrella
+    Glyph: "\u2602\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Purse
+    Glyph: "\U0001F45B\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Handbag
+    Glyph: "\U0001F45C\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Clutch Bag
+    Glyph: "\U0001F45D\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Shopping Bags
+    Glyph: "\U0001F6CD\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Lipstick
+    Glyph: "\U0001F484\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Folding Fan
+    Glyph: "\U0001FAAD\uFE0F"
+    Category: Clothes, Accessory
+  - Title: Hair Pick
+    Glyph: "\U0001FAAE\uFE0F"
+    Category: Clothes, Accessory
   - Title: Eye
     Glyph: "\U0001F441\uFE0F"
+    Category: Body
+  - Title: Eyes
+    Glyph: "\U0001F440\uFE0F"
     Category: Body
   - Title: Ear
     Glyph: "\U0001F442\uFE0F"
@@ -220,6 +376,12 @@ MonoBehaviour:
   - Title: Mouth
     Glyph: "\U0001F444\uFE0F"
     Category: Body
+  - Title: Tongue
+    Glyph: "\U0001F445\uFE0F"
+    Category: Body
+  - Title: Tooth
+    Glyph: "\U0001F9B7\uFE0F"
+    Category: Body
   - Title: Arm
     Glyph: "\U0001F4AA\uFE0F"
     Category: Body
@@ -229,11 +391,29 @@ MonoBehaviour:
   - Title: Foot
     Glyph: "\U0001F9B6\uFE0F"
     Category: Body
+  - Title: Mechanical Arm
+    Glyph: "\U0001F9BE\uFE0F"
+    Category: Body
+  - Title: Mechanical Leg
+    Glyph: "\U0001F9BF\uFE0F"
+    Category: Body
   - Title: Footprints
     Glyph: "\U0001F463\uFE0F"
     Category: Body
   - Title: Fingerprint
     Glyph: "\U0001FAC6\uFE0F"
+    Category: Body
+  - Title: Brain
+    Glyph: "\U0001F9E0\uFE0F"
+    Category: Body
+  - Title: Anatomical Heart
+    Glyph: "\U0001FAC0\uFE0F"
+    Category: Body
+  - Title: Lungs
+    Glyph: "\U0001FAC1\uFE0F"
+    Category: Body
+  - Title: Blood Drop
+    Glyph: "\U0001FA78\uFE0F"
     Category: Body
   - Title: Raise
     Glyph: "\u270B\uFE0F"
@@ -286,6 +466,30 @@ MonoBehaviour:
   - Title: Write
     Glyph: "\u270D\uFE0F"
     Category: Body, Hand
+  - Title: Victory
+    Glyph: "\u270C\uFE0F"
+    Category: Body, Hand
+  - Title: Crossed Fingers
+    Glyph: "\U0001F91E\uFE0F"
+    Category: Body, Hand
+  - Title: Horns
+    Glyph: "\U0001F918\uFE0F"
+    Category: Body, Hand
+  - Title: OK Hand
+    Glyph: "\U0001F44C\uFE0F"
+    Category: Body, Hand
+  - Title: Index Up
+    Glyph: "\u261D\uFE0F"
+    Category: Body, Hand
+  - Title: Raising Hands
+    Glyph: "\U0001F64C\uFE0F"
+    Category: Body, Hand
+  - Title: Palms Up
+    Glyph: "\U0001F932\uFE0F"
+    Category: Body, Hand
+  - Title: Heart Hands
+    Glyph: "\U0001FAF6\uFE0F"
+    Category: Body, Hand
   - Title: Skull
     Glyph: "\U0001F480\uFE0F"
     Category: Body, Death
@@ -331,6 +535,24 @@ MonoBehaviour:
   - Title: Shushing
     Glyph: "\U0001F92B\uFE0F"
     Category: Smiley, Emotion
+  - Title: Zipper Mouth
+    Glyph: "\U0001F910\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Lying
+    Glyph: "\U0001F925\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Smirking
+    Glyph: "\U0001F60F\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Saluting
+    Glyph: "\U0001FAE1\uFE0F"
+    Category: Smiley, Emotion
+  - Title: No Mouth
+    Glyph: "\U0001F636\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Melting
+    Glyph: "\U0001FAE0\uFE0F"
+    Category: Smiley, Emotion
   - Title: Thinking
     Glyph: "\U0001F914\uFE0F"
     Category: Smiley, Emotion
@@ -355,6 +577,15 @@ MonoBehaviour:
   - Title: Nauseated
     Glyph: "\U0001F922\uFE0F"
     Category: Smiley, Emotion
+  - Title: Mask
+    Glyph: "\U0001F637\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Thermometer Face
+    Glyph: "\U0001F912\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Sneezing
+    Glyph: "\U0001F927\uFE0F"
+    Category: Smiley, Emotion
   - Title: Hot
     Glyph: "\U0001F975\uFE0F"
     Category: Smiley, Emotion
@@ -370,6 +601,21 @@ MonoBehaviour:
   - Title: Cool
     Glyph: "\U0001F60E\uFE0F"
     Category: Smiley, Emotion
+  - Title: Nerd
+    Glyph: "\U0001F913\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Monocle
+    Glyph: "\U0001F9D0\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Disguised
+    Glyph: "\U0001F978\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Party
+    Glyph: "\U0001F973\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Star-Struck
+    Glyph: "\U0001F929\uFE0F"
+    Category: Smiley, Emotion
   - Title: Frown
     Glyph: "\u2639\uFE0F"
     Category: Smiley, Emotion
@@ -379,17 +625,41 @@ MonoBehaviour:
   - Title: Crying
     Glyph: "\U0001F622\uFE0F"
     Category: Smiley, Emotion
+  - Title: Pleading
+    Glyph: "\U0001F97A\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Holding Back Tears
+    Glyph: "\U0001F979\uFE0F"
+    Category: Smiley, Emotion
   - Title: Fear
     Glyph: "\U0001F628\uFE0F"
     Category: Smiley, Emotion
   - Title: Scream
     Glyph: "\U0001F631\uFE0F"
     Category: Smiley, Emotion
+  - Title: Angry
+    Glyph: "\U0001F620\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Steaming
+    Glyph: "\U0001F624\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Cursing
+    Glyph: "\U0001F92C\uFE0F"
+    Category: Smiley, Emotion
   - Title: Enraged Red
     Glyph: "\U0001F621\uFE0F"
     Category: Smiley, Emotion
   - Title: Poo
     Glyph: "\U0001F4A9\uFE0F"
+    Category: Smiley, Emotion
+  - Title: See-No-Evil Monkey
+    Glyph: "\U0001F648\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Hear-No-Evil Monkey
+    Glyph: "\U0001F649\uFE0F"
+    Category: Smiley, Emotion
+  - Title: Speak-No-Evil Monkey
+    Glyph: "\U0001F64A\uFE0F"
     Category: Smiley, Emotion
   - Title: Baby Chick
     Glyph: "\U0001F425\uFE0F"
@@ -487,6 +757,12 @@ MonoBehaviour:
   - Title: Rooster
     Glyph: "\U0001F413\uFE0F"
     Category: Animal
+  - Title: Chick
+    Glyph: "\U0001F424\uFE0F"
+    Category: Animal
+  - Title: Hatching Chick
+    Glyph: "\U0001F423\uFE0F"
+    Category: Animal
   - Title: Chicken
     Glyph: "\U0001F414\uFE0F"
     Category: Animal
@@ -495,6 +771,21 @@ MonoBehaviour:
     Category: Animal
   - Title: Rat
     Glyph: "\U0001F400\uFE0F"
+    Category: Animal
+  - Title: Mouse Body
+    Glyph: "\U0001F401\uFE0F"
+    Category: Animal
+  - Title: Rabbit Body
+    Glyph: "\U0001F407\uFE0F"
+    Category: Animal
+  - Title: Dog Body
+    Glyph: "\U0001F415\uFE0F"
+    Category: Animal
+  - Title: Poodle
+    Glyph: "\U0001F429\uFE0F"
+    Category: Animal
+  - Title: Cat Body
+    Glyph: "\U0001F408\uFE0F"
     Category: Animal
   - Title: Chipmunk
     Glyph: "\U0001F43F\uFE0F"
@@ -526,6 +817,9 @@ MonoBehaviour:
   - Title: Gorilla
     Glyph: "\U0001F98D\uFE0F"
     Category: Animal
+  - Title: Orangutan
+    Glyph: "\U0001F9A7\uFE0F"
+    Category: Animal
   - Title: Kangaroo
     Glyph: "\U0001F998\uFE0F"
     Category: Animal
@@ -541,6 +835,9 @@ MonoBehaviour:
   - Title: Boar
     Glyph: "\U0001F417\uFE0F"
     Category: Animal
+  - Title: Pig Body
+    Glyph: "\U0001F416\uFE0F"
+    Category: Animal
   - Title: Deer
     Glyph: "\U0001F98C\uFE0F"
     Category: Animal
@@ -550,8 +847,20 @@ MonoBehaviour:
   - Title: Bison
     Glyph: "\U0001F9AC\uFE0F"
     Category: Animal
+  - Title: Ox
+    Glyph: "\U0001F402\uFE0F"
+    Category: Animal
+  - Title: Water Buffalo
+    Glyph: "\U0001F403\uFE0F"
+    Category: Animal
+  - Title: Cow Body
+    Glyph: "\U0001F404\uFE0F"
+    Category: Animal
   - Title: Donkey
     Glyph: "\U0001FACF\uFE0F"
+    Category: Animal
+  - Title: Horse Body
+    Glyph: "\U0001F40E\uFE0F"
     Category: Animal
   - Title: Llama
     Glyph: "\U0001F999\uFE0F"
@@ -559,8 +868,14 @@ MonoBehaviour:
   - Title: Camel
     Glyph: "\U0001F42A\uFE0F"
     Category: Animal
+  - Title: Two-Hump Camel
+    Glyph: "\U0001F42B\uFE0F"
+    Category: Animal
   - Title: Leopard
     Glyph: "\U0001F406\uFE0F"
+    Category: Animal
+  - Title: Tiger Body
+    Glyph: "\U0001F405\uFE0F"
     Category: Animal
   - Title: Zebra
     Glyph: "\U0001F993\uFE0F"
@@ -643,6 +958,9 @@ MonoBehaviour:
   - Title: Dragon
     Glyph: "\U0001F409\uFE0F"
     Category: Animal, Fantasy
+  - Title: Dragon Face
+    Glyph: "\U0001F432\uFE0F"
+    Category: Animal, Fantasy
   - Title: Unicorn
     Glyph: "\U0001F984\uFE0F"
     Category: Animal, Fantasy
@@ -660,6 +978,9 @@ MonoBehaviour:
     Category: Animal, Marine
   - Title: Whale
     Glyph: "\U0001F40B\uFE0F"
+    Category: Animal, Marine
+  - Title: Spouting Whale
+    Glyph: "\U0001F433\uFE0F"
     Category: Animal, Marine
   - Title: Dolphin
     Glyph: "\U0001F42C\uFE0F"
@@ -712,6 +1033,9 @@ MonoBehaviour:
   - Title: Bird Nest
     Glyph: "\U0001FABA\uFE0F"
     Category: Animal, Trace
+  - Title: Empty Nest
+    Glyph: "\U0001FAB9\uFE0F"
+    Category: Animal, Trace
   - Title: EMEA
     Glyph: "\U0001F30D\uFE0F"
     Category: World
@@ -733,11 +1057,17 @@ MonoBehaviour:
   - Title: Snowy Mountain
     Glyph: "\U0001F3D4\uFE0F"
     Category: World, Landscape
+  - Title: Mount Fuji
+    Glyph: "\U0001F5FB\uFE0F"
+    Category: World, Landscape
   - Title: Volcano
     Glyph: "\U0001F30B\uFE0F"
     Category: World, Landscape
   - Title: Desert
     Glyph: "\U0001F3DC\uFE0F"
+    Category: World, Landscape
+  - Title: Beach
+    Glyph: "\U0001F3D6\uFE0F"
     Category: World, Landscape
   - Title: Island
     Glyph: "\U0001F3DD\uFE0F"
@@ -747,6 +1077,24 @@ MonoBehaviour:
     Category: World, Landscape
   - Title: National Park
     Glyph: "\U0001F3DE\uFE0F"
+    Category: World, Landscape
+  - Title: Foggy City
+    Glyph: "\U0001F301\uFE0F"
+    Category: World, Landscape
+  - Title: Starry Night
+    Glyph: "\U0001F303\uFE0F"
+    Category: World, Landscape
+  - Title: Mountain Sunrise
+    Glyph: "\U0001F304\uFE0F"
+    Category: World, Landscape
+  - Title: Sunrise
+    Glyph: "\U0001F305\uFE0F"
+    Category: World, Landscape
+  - Title: Dusk
+    Glyph: "\U0001F306\uFE0F"
+    Category: World, Landscape
+  - Title: Sunset
+    Glyph: "\U0001F307\uFE0F"
     Category: World, Landscape
   - Title: House
     Glyph: "\U0001F3E0\uFE0F"
@@ -777,6 +1125,12 @@ MonoBehaviour:
     Category: Structure
   - Title: Bridge
     Glyph: "\U0001F309\uFE0F"
+    Category: Structure
+  - Title: Railway Track
+    Glyph: "\U0001F6E4\uFE0F"
+    Category: Structure
+  - Title: Motorway
+    Glyph: "\U0001F6E3\uFE0F"
     Category: Structure
   - Title: Cityscape
     Glyph: "\U0001F3D9\uFE0F"
@@ -856,6 +1210,9 @@ MonoBehaviour:
   - Title: Shinto Shrine
     Glyph: "\u26E9\uFE0F"
     Category: Structure, Faith
+  - Title: Place of Worship
+    Glyph: "\U0001F6D0\uFE0F"
+    Category: Structure, Faith
   - Title: Circus Tent
     Glyph: "\U0001F3AA\uFE0F"
     Category: Structure, Leisure
@@ -871,17 +1228,32 @@ MonoBehaviour:
   - Title: Playground Slide
     Glyph: "\U0001F6DD\uFE0F"
     Category: Structure, Leisure
+  - Title: Beach Umbrella
+    Glyph: "\u26F1\uFE0F"
+    Category: Structure, Leisure
   - Title: Door
     Glyph: "\U0001F6AA\uFE0F"
     Category: Furniture
   - Title: Window
     Glyph: "\U0001FA9F\uFE0F"
     Category: Furniture
+  - Title: Mirror
+    Glyph: "\U0001FA9E\uFE0F"
+    Category: Furniture
   - Title: Bed
     Glyph: "\U0001F6CF\uFE0F"
     Category: Furniture
   - Title: Chair
     Glyph: "\U0001FA91\uFE0F"
+    Category: Furniture
+  - Title: Couch & Lamp
+    Glyph: "\U0001F6CB\uFE0F"
+    Category: Furniture
+  - Title: Ladder
+    Glyph: "\U0001FA9C\uFE0F"
+    Category: Furniture
+  - Title: Elevator
+    Glyph: "\U0001F6D7\uFE0F"
     Category: Furniture
   - Title: Picture
     Glyph: "\U0001F5BC\uFE0F"
@@ -895,17 +1267,62 @@ MonoBehaviour:
   - Title: Potted Plant
     Glyph: "\U0001FAB4\uFE0F"
     Category: Furniture
+  - Title: Bathtub
+    Glyph: "\U0001F6C1\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Shower
+    Glyph: "\U0001F6BF\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Toilet
+    Glyph: "\U0001F6BD\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Toilet Paper
+    Glyph: "\U0001F9FB\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Plunger
+    Glyph: "\U0001FAA0\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Soap
+    Glyph: "\U0001F9FC\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Bubbles
+    Glyph: "\U0001FAE7\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Toothbrush
+    Glyph: "\U0001FAA5\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Razor
+    Glyph: "\U0001FA92\uFE0F"
+    Category: Furniture, Bathroom
+  - Title: Lotion Bottle
+    Glyph: "\U0001F9F4\uFE0F"
+    Category: Furniture, Bathroom
   - Title: Sun
     Glyph: "\u2600\uFE0F"
     Category: Nature, Sky
+  - Title: Sun Face
+    Glyph: "\U0001F31E\uFE0F"
+    Category: Nature, Sky
   - Title: Moon
     Glyph: "\U0001F311\uFE0F"
+    Category: Nature, Sky
+  - Title: Full Moon
+    Glyph: "\U0001F315\uFE0F"
+    Category: Nature, Sky
+  - Title: Full Moon Face
+    Glyph: "\U0001F31D\uFE0F"
     Category: Nature, Sky
   - Title: Crescent Moon
     Glyph: "\U0001F319\uFE0F"
     Category: Nature, Sky
   - Title: Star
     Glyph: "\u2B50\uFE0F"
+    Category: Nature, Sky
+  - Title: Glowing Star
+    Glyph: "\U0001F31F\uFE0F"
+    Category: Nature, Sky
+  - Title: Shooting Star
+    Glyph: "\U0001F320\uFE0F"
     Category: Nature, Sky
   - Title: Cloud
     Glyph: "\u2601\uFE0F"
@@ -915,6 +1332,9 @@ MonoBehaviour:
     Category: Nature, Space
   - Title: Planet
     Glyph: "\U0001FA90\uFE0F"
+    Category: Nature, Space
+  - Title: Milky Way
+    Glyph: "\U0001F30C\uFE0F"
     Category: Nature, Space
   - Title: Fire
     Glyph: "\U0001F525\uFE0F"
@@ -940,6 +1360,36 @@ MonoBehaviour:
   - Title: Rainbow
     Glyph: "\U0001F308\uFE0F"
     Category: Nature, Weather
+  - Title: Partly Sunny
+    Glyph: "\u26C5\uFE0F"
+    Category: Nature, Weather
+  - Title: Rain Cloud
+    Glyph: "\U0001F327\uFE0F"
+    Category: Nature, Weather
+  - Title: Thunderstorm
+    Glyph: "\u26C8\uFE0F"
+    Category: Nature, Weather
+  - Title: Snow Cloud
+    Glyph: "\U0001F328\uFE0F"
+    Category: Nature, Weather
+  - Title: Fog
+    Glyph: "\U0001F32B\uFE0F"
+    Category: Nature, Weather
+  - Title: Wind Face
+    Glyph: "\U0001F32C\uFE0F"
+    Category: Nature, Weather
+  - Title: Gust
+    Glyph: "\U0001F4A8\uFE0F"
+    Category: Nature, Weather
+  - Title: Rain Umbrella
+    Glyph: "\u2614\uFE0F"
+    Category: Nature, Weather
+  - Title: Snowman
+    Glyph: "\u2603\uFE0F"
+    Category: Nature, Weather
+  - Title: Thermometer
+    Glyph: "\U0001F321\uFE0F"
+    Category: Nature, Weather
   - Title: Seedling
     Glyph: "\U0001F331\uFE0F"
     Category: Nature, Plant
@@ -948,6 +1398,9 @@ MonoBehaviour:
     Category: Nature, Plant
   - Title: Rose
     Glyph: "\U0001F339\uFE0F"
+    Category: Nature, Plant
+  - Title: Hibiscus
+    Glyph: "\U0001F33A\uFE0F"
     Category: Nature, Plant
   - Title: Wilted Flower
     Glyph: "\U0001F940\uFE0F"
@@ -960,6 +1413,12 @@ MonoBehaviour:
     Category: Nature, Plant
   - Title: Cherry Blossom
     Glyph: "\U0001F338\uFE0F"
+    Category: Nature, Plant
+  - Title: White Flower
+    Glyph: "\U0001F4AE\uFE0F"
+    Category: Nature, Plant
+  - Title: Rosette
+    Glyph: "\U0001F3F5\uFE0F"
     Category: Nature, Plant
   - Title: Tulip
     Glyph: "\U0001F337\uFE0F"
@@ -985,8 +1444,17 @@ MonoBehaviour:
   - Title: Leafless Tree
     Glyph: "\U0001FABE\uFE0F"
     Category: Nature, Tree
+  - Title: Tanabata Tree
+    Glyph: "\U0001F38B\uFE0F"
+    Category: Nature, Tree
+  - Title: Pine Decoration
+    Glyph: "\U0001F38D\uFE0F"
+    Category: Nature, Tree
   - Title: Clover
     Glyph: "\U0001F340\uFE0F"
+    Category: Nature, Leaf
+  - Title: Shamrock
+    Glyph: "\u2618\uFE0F"
     Category: Nature, Leaf
   - Title: Maple
     Glyph: "\U0001F341\uFE0F"
@@ -1026,6 +1494,9 @@ MonoBehaviour:
     Category: Weapon, Ranged
   - Title: Boomerang
     Glyph: "\U0001FA83\uFE0F"
+    Category: Weapon, Ranged
+  - Title: Water Pistol
+    Glyph: "\U0001F52B\uFE0F"
     Category: Weapon, Ranged
   - Title: Bomb
     Glyph: "\U0001F4A3\uFE0F"
@@ -1072,12 +1543,66 @@ MonoBehaviour:
   - Title: Books
     Glyph: "\U0001F4DA\uFE0F"
     Category: Item, Knowledge
+  - Title: Red Book
+    Glyph: "\U0001F4D5\uFE0F"
+    Category: Item, Knowledge
+  - Title: Green Book
+    Glyph: "\U0001F4D7\uFE0F"
+    Category: Item, Knowledge
+  - Title: Blue Book
+    Glyph: "\U0001F4D8\uFE0F"
+    Category: Item, Knowledge
+  - Title: Orange Book
+    Glyph: "\U0001F4D9\uFE0F"
+    Category: Item, Knowledge
+  - Title: Notebook
+    Glyph: "\U0001F4D3\uFE0F"
+    Category: Item, Knowledge
+  - Title: Ledger
+    Glyph: "\U0001F4D2\uFE0F"
+    Category: Item, Knowledge
+  - Title: Bookmark
+    Glyph: "\U0001F516\uFE0F"
+    Category: Item, Knowledge
+  - Title: Newspaper
+    Glyph: "\U0001F4F0\uFE0F"
+    Category: Item, Knowledge
+  - Title: Rolled Newspaper
+    Glyph: "\U0001F5DE\uFE0F"
+    Category: Item, Knowledge
   - Title: Telescope
     Glyph: "\U0001F52D\uFE0F"
     Category: Item, Knowledge
   - Title: Microscope
     Glyph: "\U0001F52C\uFE0F"
     Category: Item, Knowledge
+  - Title: Abacus
+    Glyph: "\U0001F9EE\uFE0F"
+    Category: Item, Knowledge
+  - Title: DNA
+    Glyph: "\U0001F9EC\uFE0F"
+    Category: Item, Knowledge
+  - Title: Petri Dish
+    Glyph: "\U0001F9EB\uFE0F"
+    Category: Item, Knowledge
+  - Title: Syringe
+    Glyph: "\U0001F489\uFE0F"
+    Category: Item, Medicine
+  - Title: Adhesive Bandage
+    Glyph: "\U0001FA79\uFE0F"
+    Category: Item, Medicine
+  - Title: Stethoscope
+    Glyph: "\U0001FA7A\uFE0F"
+    Category: Item, Medicine
+  - Title: X-Ray
+    Glyph: "\U0001FA7B\uFE0F"
+    Category: Item, Medicine
+  - Title: Crutch
+    Glyph: "\U0001FA7C\uFE0F"
+    Category: Item, Medicine
+  - Title: White Cane
+    Glyph: "\U0001F9AF\uFE0F"
+    Category: Item, Medicine
   - Title: Hammer
     Glyph: "\U0001F528\uFE0F"
     Category: Item, Tool
@@ -1086,6 +1611,33 @@ MonoBehaviour:
     Category: Item, Tool
   - Title: Hammer & Wrench
     Glyph: "\U0001F6E0\uFE0F"
+    Category: Item, Tool
+  - Title: Hammer & Pick
+    Glyph: "\u2692\uFE0F"
+    Category: Item, Tool
+  - Title: Screwdriver
+    Glyph: "\U0001FA9B\uFE0F"
+    Category: Item, Tool
+  - Title: Nut & Bolt
+    Glyph: "\U0001F529\uFE0F"
+    Category: Item, Tool
+  - Title: Clamp
+    Glyph: "\U0001F5DC\uFE0F"
+    Category: Item, Tool
+  - Title: Hook
+    Glyph: "\U0001FA9D\uFE0F"
+    Category: Item, Tool
+  - Title: Saw
+    Glyph: "\U0001FA9A\uFE0F"
+    Category: Item, Tool
+  - Title: Shovel
+    Glyph: "\U0001FA8F\uFE0F"
+    Category: Item, Tool
+  - Title: Toolbox
+    Glyph: "\U0001F9F0\uFE0F"
+    Category: Item, Tool
+  - Title: Fire Extinguisher
+    Glyph: "\U0001F9EF\uFE0F"
     Category: Item, Tool
   - Title: Pick
     Glyph: "\u26CF\uFE0F"
@@ -1111,11 +1663,38 @@ MonoBehaviour:
   - Title: Sponge
     Glyph: "\U0001F9FD\uFE0F"
     Category: Item, Tool
+  - Title: Thread
+    Glyph: "\U0001F9F5\uFE0F"
+    Category: Item, Craft
+  - Title: Yarn
+    Glyph: "\U0001F9F6\uFE0F"
+    Category: Item, Craft
+  - Title: Sewing Needle
+    Glyph: "\U0001FAA1\uFE0F"
+    Category: Item, Craft
+  - Title: Knot
+    Glyph: "\U0001FAA2\uFE0F"
+    Category: Item, Craft
+  - Title: Safety Pin
+    Glyph: "\U0001F9F7\uFE0F"
+    Category: Item, Craft
   - Title: Hourglass
     Glyph: "\u231B\uFE0F"
     Category: Item, Time
   - Title: Alarm Clock
     Glyph: "\u23F0\uFE0F"
+    Category: Item, Time
+  - Title: Flowing Hourglass
+    Glyph: "\u23F3\uFE0F"
+    Category: Item, Time
+  - Title: Stopwatch
+    Glyph: "\u23F1\uFE0F"
+    Category: Item, Time
+  - Title: Watch
+    Glyph: "\u231A\uFE0F"
+    Category: Item, Time
+  - Title: Mantelpiece Clock
+    Glyph: "\U0001F570\uFE0F"
     Category: Item, Time
   - Title: Justice Scales
     Glyph: "\u2696\uFE0F"
@@ -1125,6 +1704,18 @@ MonoBehaviour:
     Category: Item, Reward
   - Title: Medal
     Glyph: "\U0001F3C5\uFE0F"
+    Category: Item, Reward
+  - Title: 1st Place
+    Glyph: "\U0001F947\uFE0F"
+    Category: Item, Reward
+  - Title: 2nd Place
+    Glyph: "\U0001F948\uFE0F"
+    Category: Item, Reward
+  - Title: 3rd Place
+    Glyph: "\U0001F949\uFE0F"
+    Category: Item, Reward
+  - Title: Military Medal
+    Glyph: "\U0001F396\uFE0F"
     Category: Item, Reward
   - Title: Gem
     Glyph: "\U0001F48E\uFE0F"
@@ -1155,6 +1746,15 @@ MonoBehaviour:
     Category: Item, Economy
   - Title: Banknote
     Glyph: "\U0001F4B5\uFE0F"
+    Category: Item, Economy
+  - Title: Credit Card
+    Glyph: "\U0001F4B3\uFE0F"
+    Category: Item, Economy
+  - Title: Receipt
+    Glyph: "\U0001F9FE\uFE0F"
+    Category: Item, Economy
+  - Title: Flying Money
+    Glyph: "\U0001F4B8\uFE0F"
     Category: Item, Economy
   - Title: Chart Up
     Glyph: "\U0001F4C8\uFE0F"
@@ -1192,6 +1792,12 @@ MonoBehaviour:
   - Title: Flashlight
     Glyph: "\U0001F526\uFE0F"
     Category: Item, Light
+  - Title: Red Lantern
+    Glyph: "\U0001F3EE\uFE0F"
+    Category: Item, Light
+  - Title: Diya Lamp
+    Glyph: "\U0001FA94\uFE0F"
+    Category: Item, Light
   - Title: Envelope
     Glyph: "\u2709\uFE0F"
     Category: Item, Office
@@ -1206,6 +1812,45 @@ MonoBehaviour:
     Category: Item, Office
   - Title: Spiral Notepad
     Glyph: "\U0001F5D2\uFE0F"
+    Category: Item, Office
+  - Title: Page
+    Glyph: "\U0001F4C3\uFE0F"
+    Category: Item, Office
+  - Title: Memo
+    Glyph: "\U0001F4DD\uFE0F"
+    Category: Item, Office
+  - Title: Pencil
+    Glyph: "\u270F\uFE0F"
+    Category: Item, Office
+  - Title: Nib
+    Glyph: "\u2712\uFE0F"
+    Category: Item, Office
+  - Title: Fountain Pen
+    Glyph: "\U0001F58B\uFE0F"
+    Category: Item, Office
+  - Title: Ruler
+    Glyph: "\U0001F4CF\uFE0F"
+    Category: Item, Office
+  - Title: Triangular Ruler
+    Glyph: "\U0001F4D0\uFE0F"
+    Category: Item, Office
+  - Title: Scissors
+    Glyph: "\u2702\uFE0F"
+    Category: Item, Office
+  - Title: Paperclip
+    Glyph: "\U0001F4CE\uFE0F"
+    Category: Item, Office
+  - Title: Label
+    Glyph: "\U0001F3F7\uFE0F"
+    Category: Item, Office
+  - Title: File Cabinet
+    Glyph: "\U0001F5C4\uFE0F"
+    Category: Item, Office
+  - Title: Ballot Box
+    Glyph: "\U0001F5F3\uFE0F"
+    Category: Item, Office
+  - Title: Postbox
+    Glyph: "\U0001F4EE\uFE0F"
     Category: Item, Office
   - Title: Pushpin
     Glyph: "\U0001F4CC\uFE0F"
@@ -1231,6 +1876,9 @@ MonoBehaviour:
   - Title: Open Padlock
     Glyph: "\U0001F513\uFE0F"
     Category: Item, Access
+  - Title: Locked with Key
+    Glyph: "\U0001F510\uFE0F"
+    Category: Item, Access
   - Title: Alarm
     Glyph: "\U0001F6A8\uFE0F"
     Category: Item, Access
@@ -1239,6 +1887,9 @@ MonoBehaviour:
     Category: Item, Death
   - Title: Headstone
     Glyph: "\U0001FAA6\uFE0F"
+    Category: Item, Death
+  - Title: Urn
+    Glyph: "\u26B1\uFE0F"
     Category: Item, Death
   - Title: Wrapped Gift
     Glyph: "\U0001F381\uFE0F"
@@ -1252,6 +1903,51 @@ MonoBehaviour:
   - Title: Bell
     Glyph: "\U0001F514\uFE0F"
     Category: Item, Leisure
+  - Title: Bellhop Bell
+    Glyph: "\U0001F6CE\uFE0F"
+    Category: Item, Leisure
+  - Title: Christmas Tree
+    Glyph: "\U0001F384\uFE0F"
+    Category: Item, Leisure
+  - Title: Jack-O-Lantern
+    Glyph: "\U0001F383\uFE0F"
+    Category: Item, Leisure
+  - Title: Fireworks
+    Glyph: "\U0001F386\uFE0F"
+    Category: Item, Leisure
+  - Title: Sparkler
+    Glyph: "\U0001F387\uFE0F"
+    Category: Item, Leisure
+  - Title: Confetti Ball
+    Glyph: "\U0001F38A\uFE0F"
+    Category: Item, Leisure
+  - Title: Carp Streamer
+    Glyph: "\U0001F38F\uFE0F"
+    Category: Item, Leisure
+  - Title: Wind Chime
+    Glyph: "\U0001F390\uFE0F"
+    Category: Item, Leisure
+  - Title: Red Envelope
+    Glyph: "\U0001F9E7\uFE0F"
+    Category: Item, Leisure
+  - Title: Japanese Dolls
+    Glyph: "\U0001F38E\uFE0F"
+    Category: Item, Leisure
+  - Title: Pinata
+    Glyph: "\U0001FA85\uFE0F"
+    Category: Item, Leisure
+  - Title: Nesting Dolls
+    Glyph: "\U0001FA86\uFE0F"
+    Category: Item, Leisure
+  - Title: Teddy Bear
+    Glyph: "\U0001F9F8\uFE0F"
+    Category: Item, Leisure
+  - Title: Mirror Ball
+    Glyph: "\U0001FAA9\uFE0F"
+    Category: Item, Leisure
+  - Title: Cigarette
+    Glyph: "\U0001F6AC\uFE0F"
+    Category: Item, Leisure
   - Title: Die
     Glyph: "\U0001F3B2\uFE0F"
     Category: Play, Game
@@ -1261,8 +1957,35 @@ MonoBehaviour:
   - Title: Joker
     Glyph: "\U0001F0CF\uFE0F"
     Category: Play, Game
+  - Title: Spades
+    Glyph: "\u2660\uFE0F"
+    Category: Play, Game
+  - Title: Hearts
+    Glyph: "\u2665\uFE0F"
+    Category: Play, Game
+  - Title: Diamonds
+    Glyph: "\u2666\uFE0F"
+    Category: Play, Game
+  - Title: Clubs
+    Glyph: "\u2663\uFE0F"
+    Category: Play, Game
+  - Title: Mahjong
+    Glyph: "\U0001F004\uFE0F"
+    Category: Play, Game
+  - Title: Flower Cards
+    Glyph: "\U0001F3B4\uFE0F"
+    Category: Play, Game
+  - Title: Slot Machine
+    Glyph: "\U0001F3B0\uFE0F"
+    Category: Play, Game
   - Title: Puzzle
     Glyph: "\U0001F9E9\uFE0F"
+    Category: Play, Game
+  - Title: Yo-Yo
+    Glyph: "\U0001FA80\uFE0F"
+    Category: Play, Game
+  - Title: Kite
+    Glyph: "\U0001FA81\uFE0F"
     Category: Play, Game
   - Title: Video Game
     Glyph: "\U0001F3AE\uFE0F"
@@ -1273,8 +1996,47 @@ MonoBehaviour:
   - Title: Goal
     Glyph: "\U0001F945\uFE0F"
     Category: Play, Game
+  - Title: Soccer Ball
+    Glyph: "\u26BD\uFE0F"
+    Category: Play, Sport
+  - Title: Basketball
+    Glyph: "\U0001F3C0\uFE0F"
+    Category: Play, Sport
+  - Title: Tennis
+    Glyph: "\U0001F3BE\uFE0F"
+    Category: Play, Sport
+  - Title: Boxing Glove
+    Glyph: "\U0001F94A\uFE0F"
+    Category: Play, Sport
+  - Title: Martial Arts Uniform
+    Glyph: "\U0001F94B\uFE0F"
+    Category: Play, Sport
+  - Title: Golf Flag
+    Glyph: "\u26F3\uFE0F"
+    Category: Play, Sport
+  - Title: Fishing Pole
+    Glyph: "\U0001F3A3\uFE0F"
+    Category: Play, Sport
+  - Title: Diving Mask
+    Glyph: "\U0001F93F\uFE0F"
+    Category: Play, Sport
+  - Title: Sled
+    Glyph: "\U0001F6F7\uFE0F"
+    Category: Play, Sport
+  - Title: Ice Skate
+    Glyph: "\u26F8\uFE0F"
+    Category: Play, Sport
+  - Title: Skis
+    Glyph: "\U0001F3BF\uFE0F"
+    Category: Play, Sport
   - Title: Music Note
     Glyph: "\U0001F3B5\uFE0F"
+    Category: Play, Music
+  - Title: Music Notes
+    Glyph: "\U0001F3B6\uFE0F"
+    Category: Play, Music
+  - Title: Musical Score
+    Glyph: "\U0001F3BC\uFE0F"
     Category: Play, Music
   - Title: Guitar
     Glyph: "\U0001F3B8\uFE0F"
@@ -1282,11 +2044,50 @@ MonoBehaviour:
   - Title: Drum
     Glyph: "\U0001F941\uFE0F"
     Category: Play, Music
+  - Title: Long Drum
+    Glyph: "\U0001FA98\uFE0F"
+    Category: Play, Music
+  - Title: Saxophone
+    Glyph: "\U0001F3B7\uFE0F"
+    Category: Play, Music
+  - Title: Trumpet
+    Glyph: "\U0001F3BA\uFE0F"
+    Category: Play, Music
+  - Title: Violin
+    Glyph: "\U0001F3BB\uFE0F"
+    Category: Play, Music
+  - Title: Banjo
+    Glyph: "\U0001FA95\uFE0F"
+    Category: Play, Music
+  - Title: Accordion
+    Glyph: "\U0001FA97\uFE0F"
+    Category: Play, Music
+  - Title: Piano
+    Glyph: "\U0001F3B9\uFE0F"
+    Category: Play, Music
+  - Title: Flute
+    Glyph: "\U0001FA88\uFE0F"
+    Category: Play, Music
+  - Title: Maracas
+    Glyph: "\U0001FA87\uFE0F"
+    Category: Play, Music
+  - Title: Harp
+    Glyph: "\U0001FA89\uFE0F"
+    Category: Play, Music
+  - Title: Postal Horn
+    Glyph: "\U0001F4EF\uFE0F"
+    Category: Play, Music
   - Title: Performing Arts
     Glyph: "\U0001F3AD\uFE0F"
     Category: Play, Art
   - Title: Artist Palette
     Glyph: "\U0001F3A8\uFE0F"
+    Category: Play, Art
+  - Title: Paintbrush
+    Glyph: "\U0001F58C\uFE0F"
+    Category: Play, Art
+  - Title: Crayon
+    Glyph: "\U0001F58D\uFE0F"
     Category: Play, Art
   - Title: Computer
     Glyph: "\U0001F4BB\uFE0F"
@@ -1294,11 +2095,23 @@ MonoBehaviour:
   - Title: Desktop
     Glyph: "\U0001F5A5\uFE0F"
     Category: Tech
+  - Title: Keyboard
+    Glyph: "\u2328\uFE0F"
+    Category: Tech
+  - Title: Printer
+    Glyph: "\U0001F5A8\uFE0F"
+    Category: Tech
   - Title: Computer Mouse
     Glyph: "\U0001F5B1\uFE0F"
     Category: Tech
   - Title: Floppy Disk
     Glyph: "\U0001F4BE\uFE0F"
+    Category: Tech
+  - Title: Optical Disc
+    Glyph: "\U0001F4BF\uFE0F"
+    Category: Tech
+  - Title: Videocassette
+    Glyph: "\U0001F4FC\uFE0F"
     Category: Tech
   - Title: Joystick
     Glyph: "\U0001F579\uFE0F"
@@ -1324,11 +2137,26 @@ MonoBehaviour:
   - Title: Camera
     Glyph: "\U0001F4F7\uFE0F"
     Category: Tech
+  - Title: Video Camera
+    Glyph: "\U0001F4F9\uFE0F"
+    Category: Tech
+  - Title: Movie Camera
+    Glyph: "\U0001F3A5\uFE0F"
+    Category: Tech
+  - Title: Film Projector
+    Glyph: "\U0001F4FD\uFE0F"
+    Category: Tech
+  - Title: Film Frames
+    Glyph: "\U0001F39E\uFE0F"
+    Category: Tech
   - Title: Clapperboard
     Glyph: "\U0001F3AC\uFE0F"
     Category: Tech
   - Title: Microphone
     Glyph: "\U0001F3A4\uFE0F"
+    Category: Tech
+  - Title: Studio Microphone
+    Glyph: "\U0001F399\uFE0F"
     Category: Tech
   - Title: Headphone
     Glyph: "\U0001F3A7\uFE0F"
@@ -1336,8 +2164,20 @@ MonoBehaviour:
   - Title: Loudspeaker
     Glyph: "\U0001F4E2\uFE0F"
     Category: Tech
+  - Title: Megaphone
+    Glyph: "\U0001F4E3\uFE0F"
+    Category: Tech
+  - Title: Speaker
+    Glyph: "\U0001F50A\uFE0F"
+    Category: Tech
+  - Title: Muted Speaker
+    Glyph: "\U0001F507\uFE0F"
+    Category: Tech
   - Title: Apple
     Glyph: "\U0001F34E\uFE0F"
+    Category: Food, Fruit
+  - Title: Green Apple
+    Glyph: "\U0001F34F\uFE0F"
     Category: Food, Fruit
   - Title: Pear
     Glyph: "\U0001F350\uFE0F"
@@ -1501,6 +2341,15 @@ MonoBehaviour:
   - Title: Stew
     Glyph: "\U0001F372\uFE0F"
     Category: Food
+  - Title: Shallow Pan
+    Glyph: "\U0001F958\uFE0F"
+    Category: Food
+  - Title: Fondue
+    Glyph: "\U0001FAD5\uFE0F"
+    Category: Food
+  - Title: Salad
+    Glyph: "\U0001F957\uFE0F"
+    Category: Food
   - Title: Noodle Soup
     Glyph: "\U0001F35C\uFE0F"
     Category: Food
@@ -1510,14 +2359,35 @@ MonoBehaviour:
   - Title: Cooked Rice
     Glyph: "\U0001F35A\uFE0F"
     Category: Food
+  - Title: Rice Ball
+    Glyph: "\U0001F359\uFE0F"
+    Category: Food
+  - Title: Rice Cracker
+    Glyph: "\U0001F358\uFE0F"
+    Category: Food
+  - Title: Curry Rice
+    Glyph: "\U0001F35B\uFE0F"
+    Category: Food
+  - Title: Bento Box
+    Glyph: "\U0001F371\uFE0F"
+    Category: Food
   - Title: Sushi
     Glyph: "\U0001F363\uFE0F"
+    Category: Food
+  - Title: Fried Shrimp
+    Glyph: "\U0001F364\uFE0F"
     Category: Food
   - Title: Dumpling
     Glyph: "\U0001F95F\uFE0F"
     Category: Food
   - Title: Falafel
     Glyph: "\U0001F9C6\uFE0F"
+    Category: Food
+  - Title: Stuffed Flatbread
+    Glyph: "\U0001F959\uFE0F"
+    Category: Food
+  - Title: Tamale
+    Glyph: "\U0001FAD4\uFE0F"
     Category: Food
   - Title: Pizza
     Glyph: "\U0001F355\uFE0F"
@@ -1543,6 +2413,9 @@ MonoBehaviour:
   - Title: Cake
     Glyph: "\U0001F382\uFE0F"
     Category: Food, Sweet
+  - Title: Shortcake
+    Glyph: "\U0001F370\uFE0F"
+    Category: Food, Sweet
   - Title: Cupcake
     Glyph: "\U0001F9C1\uFE0F"
     Category: Food, Sweet
@@ -1551,6 +2424,12 @@ MonoBehaviour:
     Category: Food, Sweet
   - Title: Moon Cake
     Glyph: "\U0001F96E\uFE0F"
+    Category: Food, Sweet
+  - Title: Fortune Cookie
+    Glyph: "\U0001F960\uFE0F"
+    Category: Food, Sweet
+  - Title: Dango
+    Glyph: "\U0001F361\uFE0F"
     Category: Food, Sweet
   - Title: Pancakes
     Glyph: "\U0001F95E\uFE0F"
@@ -1627,6 +2506,9 @@ MonoBehaviour:
   - Title: Glas
     Glyph: "\U0001F95B\uFE0F"
     Category: Drink
+  - Title: Baby Bottle
+    Glyph: "\U0001F37C\uFE0F"
+    Category: Drink
   - Title: Cup With Straw
     Glyph: "\U0001F964\uFE0F"
     Category: Drink
@@ -1642,17 +2524,26 @@ MonoBehaviour:
   - Title: Beer
     Glyph: "\U0001F37A\uFE0F"
     Category: Drink
+  - Title: Clinking Beers
+    Glyph: "\U0001F37B\uFE0F"
+    Category: Drink
   - Title: Wine
     Glyph: "\U0001F377\uFE0F"
     Category: Drink
   - Title: Champagne
     Glyph: "\U0001F37E\uFE0F"
     Category: Drink
+  - Title: Clinking Glasses
+    Glyph: "\U0001F942\uFE0F"
+    Category: Drink
   - Title: Sake
     Glyph: "\U0001F376\uFE0F"
     Category: Drink
   - Title: Tumbler
     Glyph: "\U0001F943\uFE0F"
+    Category: Drink
+  - Title: Pouring Liquid
+    Glyph: "\U0001FAD7\uFE0F"
     Category: Drink
   - Title: Cocktail
     Glyph: "\U0001F378\uFE0F"
@@ -1750,6 +2641,18 @@ MonoBehaviour:
   - Title: Station
     Glyph: "\U0001F689\uFE0F"
     Category: Mobility, Land
+  - Title: Mountain Railway
+    Glyph: "\U0001F69E\uFE0F"
+    Category: Mobility, Land
+  - Title: Suspension Railway
+    Glyph: "\U0001F69F\uFE0F"
+    Category: Mobility, Land
+  - Title: Mountain Cableway
+    Glyph: "\U0001F6A0\uFE0F"
+    Category: Mobility, Land
+  - Title: Aerial Tramway
+    Glyph: "\U0001F6A1\uFE0F"
+    Category: Mobility, Land
   - Title: Bicycle
     Glyph: "\U0001F6B2\uFE0F"
     Category: Mobility, Land
@@ -1819,6 +2722,21 @@ MonoBehaviour:
   - Title: Airplane
     Glyph: "\u2708\uFE0F"
     Category: Mobility, Air
+  - Title: Small Airplane
+    Glyph: "\U0001F6E9\uFE0F"
+    Category: Mobility, Air
+  - Title: Departure
+    Glyph: "\U0001F6EB\uFE0F"
+    Category: Mobility, Air
+  - Title: Arrival
+    Glyph: "\U0001F6EC\uFE0F"
+    Category: Mobility, Air
+  - Title: Parachute
+    Glyph: "\U0001FA82\uFE0F"
+    Category: Mobility, Air
+  - Title: Seat
+    Glyph: "\U0001F4BA\uFE0F"
+    Category: Mobility, Air
   - Title: Helicopter
     Glyph: "\U0001F681\uFE0F"
     Category: Mobility, Air
@@ -1840,17 +2758,62 @@ MonoBehaviour:
   - Title: Hot Springs
     Glyph: "\u2668\uFE0F"
     Category: Symbol, Sign
+  - Title: Restroom
+    Glyph: "\U0001F6BB\uFE0F"
+    Category: Symbol, Sign
+  - Title: Men's Room
+    Glyph: "\U0001F6B9\uFE0F"
+    Category: Symbol, Sign
+  - Title: Women's Room
+    Glyph: "\U0001F6BA\uFE0F"
+    Category: Symbol, Sign
+  - Title: Baby Symbol
+    Glyph: "\U0001F6BC\uFE0F"
+    Category: Symbol, Sign
+  - Title: Water Closet
+    Glyph: "\U0001F6BE\uFE0F"
+    Category: Symbol, Sign
+  - Title: Wheelchair Symbol
+    Glyph: "\u267F\uFE0F"
+    Category: Symbol, Sign
+  - Title: Potable Water
+    Glyph: "\U0001F6B0\uFE0F"
+    Category: Symbol, Sign
+  - Title: Children Crossing
+    Glyph: "\U0001F6B8\uFE0F"
+    Category: Symbol, Sign
+  - Title: No Smoking
+    Glyph: "\U0001F6AD\uFE0F"
+    Category: Symbol, Sign
+  - Title: No One Under 18
+    Glyph: "\U0001F51E\uFE0F"
+    Category: Symbol, Sign
   - Title: Check
     Glyph: "\u2705\uFE0F"
     Category: Symbol, Status
+  - Title: Check Mark
+    Glyph: "\u2714\uFE0F"
+    Category: Symbol, Status
   - Title: Cross Mark
     Glyph: "\u274C\uFE0F"
+    Category: Symbol, Status
+  - Title: Multiply
+    Glyph: "\u2716\uFE0F"
+    Category: Symbol, Status
+  - Title: Hollow Circle
+    Glyph: "\u2B55\uFE0F"
     Category: Symbol, Status
   - Title: Question
     Glyph: "\u2753\uFE0F"
     Category: Symbol, Status
   - Title: Exclamation
     Glyph: "\u2757\uFE0F"
+    Category: Symbol, Status
+  - Title: Double Exclamation
+    Glyph: "\u203C\uFE0F"
+    Category: Symbol, Status
+  - Title: Exclamation Question
+    Glyph: "\u2049\uFE0F"
     Category: Symbol, Status
   - Title: Warning
     Glyph: "\u26A0\uFE0F"
@@ -1870,6 +2833,15 @@ MonoBehaviour:
   - Title: Medical
     Glyph: "\u2695\uFE0F"
     Category: Symbol, Status
+  - Title: Information
+    Glyph: "\u2139\uFE0F"
+    Category: Symbol, Status
+  - Title: SOS
+    Glyph: "\U0001F198\uFE0F"
+    Category: Symbol, Status
+  - Title: New
+    Glyph: "\U0001F195\uFE0F"
+    Category: Symbol, Status
   - Title: Red Circle
     Glyph: "\U0001F534\uFE0F"
     Category: Symbol, Marker
@@ -1888,14 +2860,59 @@ MonoBehaviour:
   - Title: Purple Circle
     Glyph: "\U0001F7E3\uFE0F"
     Category: Symbol, Marker
+  - Title: Brown Circle
+    Glyph: "\U0001F7E4\uFE0F"
+    Category: Symbol, Marker
   - Title: Black Circle
     Glyph: "\u26AB\uFE0F"
     Category: Symbol, Marker
   - Title: White Circle
     Glyph: "\u26AA\uFE0F"
     Category: Symbol, Marker
+  - Title: Red Square
+    Glyph: "\U0001F7E5\uFE0F"
+    Category: Symbol, Marker
+  - Title: Orange Square
+    Glyph: "\U0001F7E7\uFE0F"
+    Category: Symbol, Marker
+  - Title: Yellow Square
+    Glyph: "\U0001F7E8\uFE0F"
+    Category: Symbol, Marker
+  - Title: Green Square
+    Glyph: "\U0001F7E9\uFE0F"
+    Category: Symbol, Marker
+  - Title: Blue Square
+    Glyph: "\U0001F7E6\uFE0F"
+    Category: Symbol, Marker
+  - Title: Purple Square
+    Glyph: "\U0001F7EA\uFE0F"
+    Category: Symbol, Marker
+  - Title: Brown Square
+    Glyph: "\U0001F7EB\uFE0F"
+    Category: Symbol, Marker
+  - Title: Black Square
+    Glyph: "\u2B1B\uFE0F"
+    Category: Symbol, Marker
+  - Title: White Square
+    Glyph: "\u2B1C\uFE0F"
+    Category: Symbol, Marker
+  - Title: Red Triangle Up
+    Glyph: "\U0001F53A\uFE0F"
+    Category: Symbol, Marker
+  - Title: Red Triangle Down
+    Glyph: "\U0001F53B\uFE0F"
+    Category: Symbol, Marker
+  - Title: Orange Diamond
+    Glyph: "\U0001F536\uFE0F"
+    Category: Symbol, Marker
+  - Title: Blue Diamond
+    Glyph: "\U0001F537\uFE0F"
+    Category: Symbol, Marker
   - Title: Speech Bubble
     Glyph: "\U0001F4AC\uFE0F"
+    Category: Symbol
+  - Title: Left Speech Bubble
+    Glyph: "\U0001F5E8\uFE0F"
     Category: Symbol
   - Title: Thought Bubble
     Glyph: "\U0001F4AD\uFE0F"
@@ -1912,6 +2929,45 @@ MonoBehaviour:
   - Title: Heart
     Glyph: "\u2764\uFE0F"
     Category: Symbol
+  - Title: Pink Heart
+    Glyph: "\U0001FA77\uFE0F"
+    Category: Symbol
+  - Title: Orange Heart
+    Glyph: "\U0001F9E1\uFE0F"
+    Category: Symbol
+  - Title: Yellow Heart
+    Glyph: "\U0001F49B\uFE0F"
+    Category: Symbol
+  - Title: Green Heart
+    Glyph: "\U0001F49A\uFE0F"
+    Category: Symbol
+  - Title: Light Blue Heart
+    Glyph: "\U0001FA75\uFE0F"
+    Category: Symbol
+  - Title: Blue Heart
+    Glyph: "\U0001F499\uFE0F"
+    Category: Symbol
+  - Title: Purple Heart
+    Glyph: "\U0001F49C\uFE0F"
+    Category: Symbol
+  - Title: Brown Heart
+    Glyph: "\U0001F90E\uFE0F"
+    Category: Symbol
+  - Title: Black Heart
+    Glyph: "\U0001F5A4\uFE0F"
+    Category: Symbol
+  - Title: Grey Heart
+    Glyph: "\U0001FA76\uFE0F"
+    Category: Symbol
+  - Title: White Heart
+    Glyph: "\U0001F90D\uFE0F"
+    Category: Symbol
+  - Title: Heart Exclamation
+    Glyph: "\u2763\uFE0F"
+    Category: Symbol
+  - Title: Two Hearts
+    Glyph: "\U0001F495\uFE0F"
+    Category: Symbol
   - Title: Broken Heart
     Glyph: "\U0001F494\uFE0F"
     Category: Symbol
@@ -1927,8 +2983,17 @@ MonoBehaviour:
   - Title: Collision
     Glyph: "\U0001F4A5\uFE0F"
     Category: Symbol
+  - Title: Anger Symbol
+    Glyph: "\U0001F4A2\uFE0F"
+    Category: Symbol
+  - Title: Hole
+    Glyph: "\U0001F573\uFE0F"
+    Category: Symbol
   - Title: Droplets
     Glyph: "\U0001F4A6\uFE0F"
+    Category: Symbol
+  - Title: Splatter
+    Glyph: "\U0001FADF\uFE0F"
     Category: Symbol
   - Title: Infinity
     Glyph: "\u267E\uFE0F"
@@ -1939,8 +3004,14 @@ MonoBehaviour:
   - Title: Recycling Symbol
     Glyph: "\u267B\uFE0F"
     Category: Symbol
+  - Title: Atom
+    Glyph: "\u269B\uFE0F"
+    Category: Symbol
   - Title: Latin Cross
     Glyph: "\u271D\uFE0F"
+    Category: Symbol, Faith
+  - Title: Orthodox Cross
+    Glyph: "\u2626\uFE0F"
     Category: Symbol, Faith
   - Title: Star & Crescent
     Glyph: "\u262A\uFE0F"
@@ -1948,8 +3019,14 @@ MonoBehaviour:
   - Title: Star of David
     Glyph: "\u2721\uFE0F"
     Category: Symbol, Faith
+  - Title: Dotted Six-Pointed Star
+    Glyph: "\U0001F52F\uFE0F"
+    Category: Symbol, Faith
   - Title: Om
     Glyph: "\U0001F549\uFE0F"
+    Category: Symbol, Faith
+  - Title: Khanda
+    Glyph: "\U0001FAAF\uFE0F"
     Category: Symbol, Faith
   - Title: Dharma Wheel
     Glyph: "\u2638\uFE0F"
@@ -1960,6 +3037,45 @@ MonoBehaviour:
   - Title: Peace
     Glyph: "\u262E\uFE0F"
     Category: Symbol, Faith
+  - Title: Aries
+    Glyph: "\u2648\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Taurus
+    Glyph: "\u2649\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Gemini
+    Glyph: "\u264A\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Cancer
+    Glyph: "\u264B\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Leo
+    Glyph: "\u264C\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Virgo
+    Glyph: "\u264D\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Libra
+    Glyph: "\u264E\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Scorpio
+    Glyph: "\u264F\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Sagittarius
+    Glyph: "\u2650\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Capricorn
+    Glyph: "\u2651\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Aquarius
+    Glyph: "\u2652\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Pisces
+    Glyph: "\u2653\uFE0F"
+    Category: Symbol, Zodiac
+  - Title: Ophiuchus
+    Glyph: "\u26CE\uFE0F"
+    Category: Symbol, Zodiac
   - Title: Female
     Glyph: "\u2640\uFE0F"
     Category: Symbol, Gender
@@ -1983,6 +3099,42 @@ MonoBehaviour:
     Category: Symbol, Sign
   - Title: Stop Button
     Glyph: "\u23F9\uFE0F"
+    Category: Symbol, Sign
+  - Title: Fast-Forward Button
+    Glyph: "\u23E9\uFE0F"
+    Category: Symbol, Sign
+  - Title: Fast Reverse Button
+    Glyph: "\u23EA\uFE0F"
+    Category: Symbol, Sign
+  - Title: Next Track Button
+    Glyph: "\u23ED\uFE0F"
+    Category: Symbol, Sign
+  - Title: Last Track Button
+    Glyph: "\u23EE\uFE0F"
+    Category: Symbol, Sign
+  - Title: Repeat Button
+    Glyph: "\U0001F501\uFE0F"
+    Category: Symbol, Sign
+  - Title: Arrows Circle
+    Glyph: "\U0001F504\uFE0F"
+    Category: Symbol, Sign
+  - Title: Up Arrow
+    Glyph: "\u2B06\uFE0F"
+    Category: Symbol, Sign
+  - Title: Right Arrow
+    Glyph: "\u27A1\uFE0F"
+    Category: Symbol, Sign
+  - Title: Down Arrow
+    Glyph: "\u2B07\uFE0F"
+    Category: Symbol, Sign
+  - Title: Left Arrow
+    Glyph: "\u2B05\uFE0F"
+    Category: Symbol, Sign
+  - Title: Plus
+    Glyph: "\u2795\uFE0F"
+    Category: Symbol, Sign
+  - Title: Minus
+    Glyph: "\u2796\uFE0F"
     Category: Symbol, Sign
   - Title: Triangular Flag
     Glyph: "\U0001F6A9\uFE0F"

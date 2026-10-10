@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Queen of the Field Mice
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: ab5894cd-ed67-4773-b899-fed5b1de6d98
-  _createdTicks: 639270064455588582
-  _modifiedTicks: 639270064500622637
+  _id: 4fc76d3c-1120-407c-9c00-6776ab4c6793
+  _createdTicks: 639272563457327861
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F42D\uFE0F"
   _subtitle: Saved from a wildcat
-  _description: The [[d66a2c64-124c-4313-8911-f67c5e0e7b01|Tin Woodman]] saves her
-    from a wildcat. In return her mice pull the sleeping [[d2eb523f-1396-4e40-91d2-4927aa29cf9b|Cowardly
-    Lion]] out of the [[54a5f756-efe8-4ac6-a232-8cff167ed1f5|Deadly Poppy Field]]
+  _description: The [[5fa1b2c9-d6af-4624-a28a-bb96064706e6|Tin Woodman]] saves her
+    from a wildcat. In return her mice pull the sleeping [[cebed64d-0745-4442-a719-09ba8e20401e|Cowardly
+    Lion]] out of the [[ba69a581-8516-409c-b993-4802f3562380|Deadly Poppy Field]]
     on a little wooden truck.
   _sortOrder: 11
   _fields:
@@ -31,12 +31,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 15ae8714-f221-4736-a047-9e2718ced569
+    _enumValue: dcaed794-6905-4d4f-a523-a64a16061a9b
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -44,12 +49,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 09f2e4a80e65d664eab6d0393ed6dabb, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -57,12 +67,35 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 87c800d7a1234da4db6d287009a6c92a, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 12ad387df892474488f665fa5846b727, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -70,12 +103,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: ed70ad7a9283ab648b5cba13b1a77804, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -83,12 +121,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 1
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 6e7e496fb8307a84282da8927df4556d, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -96,12 +139,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 5
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 7ddaaef6c8413e444a44c4022ba730e8, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -109,12 +157,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0.1
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b5c1b345b8e3b9348b370ef2d0c8fd10, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -122,25 +175,35 @@ MonoBehaviour:
     _spriteValue: {fileID: 21300000, guid: ce791b07410a7ad4dbbf3c96ab2787b7, type: 3}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 1584471413718853131, guid: b6a17fc427cc7da4c9541d4e551f1f60, type: 3}
+    _gameObjectValue: {fileID: 9066056515023184508, guid: b6a17fc427cc7da4c9541d4e551f1f60, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 36ba00c5a52f528449161ba7f78196e4, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -148,12 +211,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c2825688cc864a74f955f2866c7afd40, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -161,12 +229,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - bb199402-95de-469d-8bb9-eeb881d1f4b0
-  - 3a023770-2ffd-44ed-b184-408e55729ea9
+  - ca97c1fd-9a2e-4efc-8836-09fd311d7080
+  - 24bb0e67-43dc-4781-bb21-89570e53451c

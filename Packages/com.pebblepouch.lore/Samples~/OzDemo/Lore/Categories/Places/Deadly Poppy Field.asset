@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Deadly Poppy Field
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 54a5f756-efe8-4ac6-a232-8cff167ed1f5
-  _createdTicks: 639270064458195132
-  _modifiedTicks: 639270064500632728
+  _id: ba69a581-8516-409c-b993-4802f3562380
+  _createdTicks: 639272563460146117
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F33C\uFE0F"
   _subtitle: Sleep forever
   _description: Scarlet poppies whose scent puts anyone who breathes it to sleep.
-    The [[5ff39499-2fcd-41a8-9b85-b171e6d0f529|Scarecrow]] and the [[d66a2c64-124c-4313-8911-f67c5e0e7b01|Tin
-    Woodman]] do not breathe, so they carry [[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy
+    The [[507cd04b-cb2f-4fbe-aa08-4037a1d120c8|Scarecrow]] and the [[5fa1b2c9-d6af-4624-a28a-bb96064706e6|Tin
+    Woodman]] do not breathe, so they carry [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy
     Gale]] out.
   _sortOrder: 5
   _fields:
@@ -31,12 +31,71 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 1b1592ed-8ffa-4509-a464-7ab8613d91ea
+    _enumValue: 17cea4a4-5660-42c9-b97d-492e821c2d81
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 98820417f1081624f82c0d68a599d90e, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0.1, g: 0.65, b: 0.35, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: dc9ab21b02998644485259c277b5ac1d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 2800000, guid: 5843d157c08585a4c8ccfb5bec18d2ef, type: 3}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: eb825b437a3996448a8db5a9225817a7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 58, y: 52, z: 0}
   - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -44,12 +103,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -57,13 +121,18 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue:
     - {fileID: 11400000, guid: 1524fe54531a5ea498b2cc69eab023fd, type: 2}
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -71,12 +140,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 1
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -84,12 +158,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - d7e3109f-efa0-4deb-a981-6559168fccf8
-  - 43a83426-33d0-4763-bcd7-dfb36c8bb2ef
+  - 78b6a0ac-dbf9-4e93-8a7e-e0c1dfb831e2
+  - 7bfb42de-1228-43ad-b784-200475ade4bc

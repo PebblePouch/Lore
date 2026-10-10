@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Yellow Brick Road
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 62857579-d4dc-417a-be03-d5d89488756b
-  _createdTicks: 639270064457406120
-  _modifiedTicks: 639270064500632728
+  _id: 22517d6a-af9c-4981-8a3e-d8094cd6507c
+  _createdTicks: 639272563459361094
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F463\uFE0F"
   _subtitle: The road to the Emerald City
-  _description: Leads from the [[1983fc3c-0dd1-4793-b86e-44da1b0c2f17|Munchkin Village]]
-    to the [[8953e80a-34c8-4e3a-8c5f-7164c508be78|Emerald City]], past the [[d6cda5a4-5ca7-4383-93be-3fb6e9634ea5|Scarecrow's
-    Cornfield]] and through the [[b81b64f6-f7f5-4ea1-a687-db1a43c4151c|Tin Woodman's
+  _description: Leads from the [[4afa4d10-195b-4b78-8315-5517131fcf9c|Munchkin Village]]
+    to the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald City]], past the [[357ea1cd-74bf-410f-a1a4-f3210c673bd5|Scarecrow's
+    Cornfield]] and through the [[5f1c8c7f-e38d-43c7-9e1f-218f4d2a3b6f|Tin Woodman's
     Forest]].
   _sortOrder: 2
   _fields:
@@ -31,12 +31,71 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2665a703-50ee-49c9-82cc-e5a89560639c
+    _enumValue: 66161abe-0f1b-4478-9481-457ae85e99c6
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 98820417f1081624f82c0d68a599d90e, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0.2, g: 0.4, b: 0.85, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: dc9ab21b02998644485259c277b5ac1d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 2800000, guid: c65ea455f337b3d4c959962fd640c302, type: 3}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: eb825b437a3996448a8db5a9225817a7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 75, y: 50, z: 0}
   - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -44,12 +103,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -57,12 +121,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -70,12 +139,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 1
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -83,11 +157,16 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - faeb49f4-c046-40b7-a124-2042759992dd
+  - 8b17c662-d7ca-4d07-8a8e-1ebce46581b1

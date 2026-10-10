@@ -12,24 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Region
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 26c311a5-8bad-4ff6-9990-0b4a41e74449
-  _createdTicks: 639270064435561946
-  _modifiedTicks: 639270064436191489
+  _id: 58abf3e3-6504-4664-9eaf-57ba8b1eb9fd
+  _createdTicks: 639272563436341150
+  _modifiedTicks: 639272563436968932
   _type: 10
   _glyph: "\U0001F9ED\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions:
-  - _id: b49ea65a-9fa5-4cd7-93de-1dd46ac4fc2c
+  - _id: 6cf45379-3635-4696-8eb3-6e7170201e39
     _label: Kansas
-  - _id: 2665a703-50ee-49c9-82cc-e5a89560639c
+  - _id: 66161abe-0f1b-4478-9481-457ae85e99c6
     _label: Munchkin Country
-  - _id: 1b1592ed-8ffa-4509-a464-7ab8613d91ea
+  - _id: 17cea4a4-5660-42c9-b97d-492e821c2d81
     _label: Emerald City
-  - _id: 2b58616f-85ab-4cf1-aeb4-ed68e270cde6
+  - _id: eaa46170-30a5-427b-a464-8bb9406d4355
     _label: Winkie Country
-  - _id: 13a281fb-0650-42d4-8c9b-299532d59892
+  - _id: 7e5df387-3868-41f5-88e7-46d60322492b
     _label: Quadling Country
-  - _id: cbfa457c-3e4a-48c7-9d6b-b4549ceac312
+  - _id: 05245826-c89a-413a-9f8b-3d6ac2540a84
     _label: Gillikin Country
   _allowedCategories: []
+  _vectorDimension: 3

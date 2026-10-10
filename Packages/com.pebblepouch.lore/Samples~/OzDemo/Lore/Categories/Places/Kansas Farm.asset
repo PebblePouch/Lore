@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Kansas Farm
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: f7c2a512-96b6-48fc-bdc1-f5ffbc653fc1
-  _createdTicks: 639270064456905510
-  _modifiedTicks: 639270064500632728
+  _id: acf20060-43b1-47ec-be19-57d2cf572e8f
+  _createdTicks: 639272563458822953
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3E0\uFE0F"
   _subtitle: A small house on the gray prairie
@@ -29,12 +29,71 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: b49ea65a-9fa5-4cd7-93de-1dd46ac4fc2c
+    _enumValue: 6cf45379-3635-4696-8eb3-6e7170201e39
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 98820417f1081624f82c0d68a599d90e, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0.55, g: 0.55, b: 0.55, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: dc9ab21b02998644485259c277b5ac1d, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 2800000, guid: 2f096eaa546253a4b8de8f2999d88be2, type: 3}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: eb825b437a3996448a8db5a9225817a7, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: a372bdf16b0727f4993ed1f6f262ebf5, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -42,12 +101,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: be2dc08d5f21f3a4bbd3ba51722455b7, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -55,6 +119,8 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue:
     - {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
@@ -62,9 +128,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: bc3ec914c5e0f4c4fa0d855fe2ace3f5, type: 2}
     - {fileID: 11400000, guid: 361c38187cbc10e48808229d9fbef446, type: 2}
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b565e795f01cb184e91ed343a5a02097, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -72,24 +141,34 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c56c8a96e3533d84783ec750345df058, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: f712dee565cd04b418d163a7c6a6b07c, type: 3}
-    _scenePath: Assets/Samples/Lore/0.1.1/Oz Demo/Scenes/Locations/Kansas Farm.unity
+    _scenePath: Assets/Samples/Lore/0.3.0/Oz Demo/Scenes/Locations/Kansas Farm.unity
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 7a72544b-bb92-4dc4-9e43-e23be4f90d01
+  - c125b128-40b1-46ca-bf89-aeb35087174d

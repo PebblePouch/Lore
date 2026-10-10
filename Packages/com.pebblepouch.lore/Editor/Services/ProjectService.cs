@@ -65,6 +65,15 @@ namespace PebblePouch.Lore.Editor
             return PlayerSettings.productName;
         }
 
+        public string GetGlyph()
+        {
+            LoreProject project = LoreRepository.Instance.Project;
+
+            return project != null
+                ? project.Glyph
+                : LoreProject.DefaultGlyph;
+        }
+
         public string GetDescription()
         {
             LoreProject project = LoreRepository.Instance.Project;
@@ -91,6 +100,25 @@ namespace PebblePouch.Lore.Editor
             LoreUndo.Record(project, LoreText.Undo.EditTitle);
 
             project.SetTitle(title);
+
+            Save(project);
+
+            return true;
+        }
+
+        public bool UpdateGlyph(string glyph)
+        {
+            if (glyph == GetGlyph())
+                return true;
+
+            LoreProject project = GetOrCreateProject();
+
+            if (project == null)
+                return false;
+
+            LoreUndo.Record(project, LoreText.Undo.ChangeGlyph);
+
+            project.SetGlyph(glyph);
 
             Save(project);
 

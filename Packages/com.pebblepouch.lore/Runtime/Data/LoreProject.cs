@@ -7,9 +7,18 @@ namespace PebblePouch.Lore
 {
     public class LoreProject : LoreAsset
     {
+        #region Constants
+        // Shown while the Project has no glyph of its own (also for Projects from before Project glyphs).
+        // Same form as in the default Glyph library (with emoji variation selector), so the picker finds it.
+        public const string DefaultGlyph = "\U0001F4DC\uFE0F"; // Scroll
+        #endregion
+
         #region Fields
         [SerializeField, HideInInspector]
         private string _title;
+
+        [SerializeField, HideInInspector]
+        private string _glyph;
 
         [SerializeField, HideInInspector]
         private string _description;
@@ -39,6 +48,10 @@ namespace PebblePouch.Lore
 
         #region Properties
         public string Title => _title;
+
+        public string Glyph => string.IsNullOrWhiteSpace(_glyph)
+            ? DefaultGlyph
+            : _glyph;
 
         // Stored form with [[id|Title]] links; games use GetPlainText / FormatDescription.
         public string Description => _description;
@@ -330,6 +343,11 @@ namespace PebblePouch.Lore
         internal void SetTitle(string title)
         {
             _title = title ?? string.Empty;
+        }
+
+        internal void SetGlyph(string glyph)
+        {
+            _glyph = glyph ?? string.Empty;
         }
 
         internal void SetDescription(string description)

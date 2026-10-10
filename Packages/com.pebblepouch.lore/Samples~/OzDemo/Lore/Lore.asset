@@ -12,22 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b57f865bf957a4d9e538b7b6f1f870, type: 3}
   m_Name: Lore
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.LoreProject
-  _id: 10733c79-7394-427b-a329-1d5a89b73d77
-  _createdTicks: 639270064409141699
-  _modifiedTicks: 639270064510925462
+  _id: 801348c8-9972-4383-b539-04b5af719b9c
+  _createdTicks: 639272563408831126
+  _modifiedTicks: 639272563521029038
   _title: The Wonderful Wizard of Oz
+  _glyph: "\U0001F32A\uFE0F"
   _description: 'A demo for Lore: the world of L. Frank Baum''s novel "The Wonderful
     Wizard of Oz" (1900, public domain), set up as the lore of a small adventure
     game.
 
 
     Browse the Categories on the left, open the Insights below, and follow
-    the links in the descriptions. Some Entries are deliberately unfinished or broken,
-    so Health and Integrity have something to show.
+    the links in the descriptions. Some Entries are **deliberately unfinished or
+    broken**, so Health and Integrity have something to show.
 
 
-    Start with [[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy
-    Gale]], or follow the story from its first Quest, [[c92055ef-e991-44e1-9ea4-08f9061a924f|The
+    Start with [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy
+    Gale]], or follow the story from its first Quest, [[ea56a44b-1fac-4d8f-a604-1e5eb58cfc5e|The
     Council with the Munchkins]].'
   _links:
   - _label: The book on Project Gutenberg

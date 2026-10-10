@@ -44,9 +44,9 @@ Entry/Entries Fields can be limited to Categories; Categories can mark Fields as
 ## Example Project
 
 The **Oz Demo** sample turns "The Wonderful Wizard of Oz" into the lore of a small game: Categories, Entries, Tags,
-description links and field values that point to sprites, prefabs, scenes and ScriptableObjects. Import it from the
-Welcome page or Package Manager > Lore > Samples, into a Unity project without a Lore Project of its own. Delete the
-imported sample folder (`Assets/Samples/Lore/…`) before you start your own Lore.
+description links and field values from colors and map positions to sprites, textures, sounds, prefabs, scenes and
+ScriptableObjects. Import it from the Welcome page or Package Manager > Lore > Samples, into a Unity project without a
+Lore Project of its own. Delete the imported sample folder (`Assets/Samples/Lore/…`) before you start your own Lore.
 
 ## Tabular Editing & bulk editing
 

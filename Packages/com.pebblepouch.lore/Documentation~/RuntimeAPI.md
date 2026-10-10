@@ -85,7 +85,7 @@ Basic properties:
 
 | Type | Properties |
 |---|---|
-| `LoreProject` | `Title`, `Description`, `Links` (`Label`, `Url`), `TagLibrary` |
+| `LoreProject` | `Title`, `Glyph` (📜 until one is chosen), `Description`, `Links` (`Label`, `Url`), `TagLibrary` |
 | `Category` | `Id`, `Title`, `Glyph`, `Color`, `Description`, `Fields`, `RequiredFields` / `IsRequired(field)` |
 | `Entry` | `Id`, `Title`, `Glyph` (falls back to the Category glyph), `Subtitle`, `Description`, `Category`, `Fields`, `TagIds` |
 | `Field` | `Id`, `Title`, `Type`, `Glyph`, `ObjectType` (ScriptableObject and Object fields), `EnumOptions` (Enum fields: `Id`, `Label`), `AllowedCategories` (Entry / Entries fields, empty = all) |

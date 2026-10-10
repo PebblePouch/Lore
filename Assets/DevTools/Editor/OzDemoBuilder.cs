@@ -77,6 +77,7 @@ namespace PebblePouch.Lore.Editor.Dev
             {
                 CreateProject(loreRoot);
                 CreateLibraries();
+                SetProjectGlyph();
                 CreateTags();
                 CreateSchema();
 
@@ -122,7 +123,7 @@ namespace PebblePouch.Lore.Editor.Dev
 
             foreach (string folder in new[]
                      {
-                         LoreFolderName, ArtFolder, PrefabsFolder, DialoguesFolder, LocationScenesFolder,
+                         LoreFolderName, ArtFolder, AudioFolder, PrefabsFolder, DialoguesFolder, LocationScenesFolder,
                      })
             {
                 string source = System.IO.Path.Combine(sampleRoot, folder);
@@ -242,7 +243,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 "A demo for Lore: the world of L. Frank Baum's novel \"The Wonderful Wizard of Oz\" (1900, public " +
                 "domain), set up as the lore of a small adventure game.\n\n" +
                 "Browse the Categories on the left, open the Insights below, and follow the links in the " +
-                "descriptions. Some Entries are deliberately unfinished or broken, so Health and Integrity have " +
+                "descriptions. Some Entries are **deliberately unfinished or broken**, so Health and Integrity have " +
                 "something to show.");
 
             project.AddLink(
@@ -278,6 +279,16 @@ namespace PebblePouch.Lore.Editor.Dev
             _glyphs = new GlyphLibraryService().GetCollection();
         }
 
+        // The cyclone that carries Dorothy's house to Oz.
+        private static void SetProjectGlyph()
+        {
+            LoreProject project = LoreRepository.Instance.Project;
+
+            project.SetGlyph(Glyph("Tornado"));
+
+            LoreChangeTracker.MarkModified(project);
+        }
+
         private static void CreateTags()
         {
             CreateTag("Witch", new Color(0.50f, 0.25f, 0.70f));
@@ -308,7 +319,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 "Castle",
                 new Color(0.15f, 0.55f, 0.30f),
                 "Locations of the game, from the gray Kansas prairie to the Emerald City. Every Place belongs to " +
-                "one region of Oz, and every region has its own color.");
+                "one region of Oz, and every region has its own color and banner.");
 
             CreateCategory(
                 "Items",
@@ -327,18 +338,23 @@ namespace PebblePouch.Lore.Editor.Dev
                 Options("Human", "Witch", "Animal", "Enchanted", "Creature"));
             CreateField("Characters", "Home", FieldType.Entry, "House", Allow("Places"));
             CreateField("Characters", "Wish", FieldType.Text, "Thought Bubble");
+            CreateField("Characters", "Weaknesses", FieldType.Enums, "Shield",
+                Options("Water", "Fire", "Rain", "Poppies", "Darkness"));
             CreateField("Characters", "Allies", FieldType.Entries, "Shake", Allow("Characters"));
             CreateField("Characters", "Alive", FieldType.Boolean, "Heart");
             CreateField("Characters", "Health", FieldType.Integer, "Bandage");
             CreateField("Characters", "Height", FieldType.Float, "Up");
             CreateField("Characters", "Portrait", FieldType.Sprite, "Picture");
             CreateField("Characters", "Prefab", FieldType.GameObject, "Package");
-            CreateField("Characters", "Dialogue", FieldType.ScriptableObject, "Speech Bubble", ObjectType(DialogueTypeName));
+            CreateField("Characters", "Dialogue", FieldType.ScriptableObject, "Speech Bubble", ObjectType(Type.GetType(DialogueTypeName, true)));
             CreateField("Characters", "Wiki", FieldType.Url, "Link");
 
             // Places
             CreateField("Places", "Region", FieldType.Enum, "Compass",
                 Options("Kansas", "Munchkin Country", "Emerald City", "Winkie Country", "Quadling Country", "Gillikin Country"));
+            CreateField("Places", "Color", FieldType.Color, "Paintbrush");
+            CreateField("Places", "Banner", FieldType.Object, "Triangular Flag", ObjectType(typeof(Texture2D)));
+            CreateField("Places", "Map Position", FieldType.Vector, "Map", Dimension(2));
             CreateField("Places", "Ruler", FieldType.Entry, "Crown", Allow("Characters"));
             CreateField("Places", "Inhabitants", FieldType.Entries, "Group", Allow("Characters"));
             CreateField("Places", "Dangerous", FieldType.Boolean, "Warning");
@@ -350,6 +366,7 @@ namespace PebblePouch.Lore.Editor.Dev
             CreateField("Items", "Location", FieldType.Entry, "Round Map Pin", Allow("Places"));
             CreateField("Items", "Value", FieldType.Integer, "Coin");
             CreateField("Items", "Icon", FieldType.Sprite, "Artist Palette");
+            CreateField("Items", "Pickup Sound", FieldType.Audio, "Bell");
             CreateField("Items", "Prefab", FieldType.GameObject, "Package");
 
             // Quests (Location is shared with Items)
@@ -463,16 +480,20 @@ namespace PebblePouch.Lore.Editor.Dev
             return field => field.SetAllowedCategories(categoryNames.Select(name => Categories[name]));
         }
 
-        private static Action<Field> ObjectType(string typeName)
+        // Script GUID: empty for Unity's own types (no script asset).
+        private static Action<Field> ObjectType(Type type)
         {
             return field =>
             {
-                Type type = Type.GetType(typeName, true);
-
                 field.SetObjectType(
                     Field.GetTypeName(type),
                     ScriptableObjectTypeService.FindScriptGuid(type));
             };
+        }
+
+        private static Action<Field> Dimension(int dimension)
+        {
+            return field => field.SetVectorDimension(dimension);
         }
 
         private static void SetRequired(string categoryName, params string[] fieldNames)

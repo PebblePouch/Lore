@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+using UnityEngine;
+
 namespace PebblePouch.Lore.Editor.Dev
 {
     // The demo's Entries: "The Wonderful Wizard of Oz" (L. Frank Baum, 1900, public domain) as the lore of a small
@@ -12,9 +14,12 @@ namespace PebblePouch.Lore.Editor.Dev
     //   Yellow:    Yellow Brick Road has no Inhabitants (empty Entries list).
     //   Integrity: Glinda's Palace links [[Hammer-Heads]], an Entry nobody has written yet (broken link).
     //
-    // Value types per Field type: Text/Url/Enum = string (Enum: option label), Entry = title, Entries = titles,
-    // Boolean/Integer/Float = bool/int/float, Scene = generated scene name, ScriptableObject = generated dialogue name.
-    // Portrait, Icon and Prefab are generated for every Character and Item (see OzDemoBuilder.Assets).
+    // Value types per Field type: Text/Url/Enum = string (Enum: option label), Enums = option labels, Entry = title,
+    // Entries = titles, Boolean/Integer/Float = bool/int/float, Vector = Vector2, Scene = generated scene name,
+    // ScriptableObject = generated dialogue name.
+    // Portrait, Icon, Prefab and Pickup Sound are generated for every Character and Item, Color and Banner follow the
+    // Region of every Place (see OzDemoBuilder.Assets). Map Position: Oz is 100 × 100 with the Emerald City in the
+    // middle (east = +x, north = +y); Kansas is not on the map.
     internal static partial class OzDemoBuilder
     {
         #region Types
@@ -50,12 +55,13 @@ namespace PebblePouch.Lore.Editor.Dev
                     "Lives on the gray Kansas prairie with [[Aunt Em]], [[Uncle Henry]] and her dog [[Toto]]. A " +
                     "cyclone carries her house into the land of the Munchkins, where it falls on the [[Wicked Witch " +
                     "of the East]]. To find her way home she follows the [[Yellow Brick Road]] to the [[Emerald " +
-                    "City]].\n\nThe player character.",
+                    "City]].\n\n*The player character.*",
                 Values =
                 {
                     ["Kind"] = "Human",
                     ["Home"] = "Kansas Farm",
                     ["Wish"] = "To go home to Aunt Em and Uncle Henry.",
+                    ["Weaknesses"] = new[] { "Poppies" },
                     ["Allies"] = new[] { "Toto", "Scarecrow", "Tin Woodman", "Cowardly Lion" },
                     ["Alive"] = true,
                     ["Health"] = 100,
@@ -77,6 +83,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 {
                     ["Kind"] = "Animal",
                     ["Home"] = "Kansas Farm",
+                    ["Weaknesses"] = new[] { "Poppies" },
                     ["Allies"] = new[] { "Dorothy Gale" },
                     ["Alive"] = true,
                     ["Health"] = 30,
@@ -98,6 +105,7 @@ namespace PebblePouch.Lore.Editor.Dev
                     ["Kind"] = "Enchanted",
                     ["Home"] = "Scarecrow's Cornfield",
                     ["Wish"] = "Brains, so he is no longer a fool.",
+                    ["Weaknesses"] = new[] { "Fire" },
                     ["Allies"] = new[] { "Dorothy Gale", "Tin Woodman", "Cowardly Lion" },
                     ["Alive"] = true,
                     ["Health"] = 60,
@@ -120,6 +128,7 @@ namespace PebblePouch.Lore.Editor.Dev
                     ["Kind"] = "Enchanted",
                     ["Home"] = "Tin Woodman's Forest",
                     ["Wish"] = "A heart, so he can love again.",
+                    ["Weaknesses"] = new[] { "Rain" },
                     ["Allies"] = new[] { "Dorothy Gale", "Scarecrow", "Cowardly Lion" },
                     ["Alive"] = true,
                     ["Health"] = 120,
@@ -141,6 +150,7 @@ namespace PebblePouch.Lore.Editor.Dev
                     ["Kind"] = "Animal",
                     ["Home"] = "Tin Woodman's Forest",
                     ["Wish"] = "Courage, to be a real King of Beasts.",
+                    ["Weaknesses"] = new[] { "Poppies" },
                     ["Allies"] = new[] { "Dorothy Gale", "Scarecrow", "Tin Woodman" },
                     ["Alive"] = true,
                     ["Health"] = 150,
@@ -155,8 +165,8 @@ namespace PebblePouch.Lore.Editor.Dev
                 Tags = new[] { "Ruler" },
                 Description =
                     "Rules the [[Emerald City]] and appears to every visitor in a different shape. In truth he is a " +
-                    "balloonist from Omaha who drifted into Oz and was taken for a great wizard. He leaves in his " +
-                    "[[Balloon]].",
+                    "*humbug*, a balloonist from Omaha who drifted into Oz and was taken for a great wizard. He " +
+                    "leaves in his [[Balloon]].",
                 Values =
                 {
                     ["Kind"] = "Human",
@@ -196,11 +206,13 @@ namespace PebblePouch.Lore.Editor.Dev
                 Tags = new[] { "Witch", "Magic", "Ruler", "Danger" },
                 Description =
                     "Has only one eye, but it is as powerful as a telescope. She enslaves the Winkies and commands " +
-                    "the [[King of the Winged Monkeys]] with the [[Golden Cap]]. Water is the only thing she fears.",
+                    "the [[King of the Winged Monkeys]] with the [[Golden Cap]]. Water is the **only** thing she " +
+                    "fears, apart from the dark.",
                 Values =
                 {
                     ["Kind"] = "Witch",
                     ["Home"] = "Witch's Castle",
+                    ["Weaknesses"] = new[] { "Water", "Darkness" },
                     ["Allies"] = new[] { "King of the Winged Monkeys" },
                     ["Alive"] = false,
                     ["Health"] = 300,
@@ -378,6 +390,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Munchkin Country",
+                    ["Map Position"] = new Vector2(90f, 50f),
                     ["Ruler"] = "Wicked Witch of the East",
                     ["Inhabitants"] = new[] { "Boq" },
                     ["Dangerous"] = false,
@@ -396,6 +409,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Munchkin Country",
+                    ["Map Position"] = new Vector2(75f, 50f),
                     ["Dangerous"] = true,
                 },
             },
@@ -408,6 +422,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Munchkin Country",
+                    ["Map Position"] = new Vector2(82f, 54f),
                     ["Inhabitants"] = new[] { "Scarecrow" },
                     ["Dangerous"] = false,
                 },
@@ -423,6 +438,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Munchkin Country",
+                    ["Map Position"] = new Vector2(68f, 47f),
                     ["Inhabitants"] = new[] { "Tin Woodman", "Cowardly Lion" },
                     ["Dangerous"] = true,
                 },
@@ -438,6 +454,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Emerald City",
+                    ["Map Position"] = new Vector2(58f, 52f),
                     ["Inhabitants"] = new[] { "Queen of the Field Mice" },
                     ["Dangerous"] = true,
                 },
@@ -453,6 +470,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Emerald City",
+                    ["Map Position"] = new Vector2(50f, 50f),
                     ["Ruler"] = "Oz, the Great and Terrible",
                     ["Inhabitants"] = new[] { "Oz, the Great and Terrible", "Guardian of the Gates" },
                     ["Dangerous"] = false,
@@ -470,6 +488,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Winkie Country",
+                    ["Map Position"] = new Vector2(12f, 55f),
                     ["Ruler"] = "Wicked Witch of the West",
                     ["Inhabitants"] = new[] { "Wicked Witch of the West", "King of the Winged Monkeys" },
                     ["Dangerous"] = true,
@@ -488,6 +507,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Quadling Country",
+                    ["Map Position"] = new Vector2(50f, 10f),
                     ["Ruler"] = "Glinda",
                     ["Inhabitants"] = new[] { "Glinda" },
                     ["Dangerous"] = false,
@@ -502,6 +522,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Region"] = "Gillikin Country",
+                    ["Map Position"] = new Vector2(50f, 90f),
                     ["Ruler"] = "Good Witch of the North",
                     ["Inhabitants"] = new[] { "Good Witch of the North" },
                     ["Dangerous"] = false,

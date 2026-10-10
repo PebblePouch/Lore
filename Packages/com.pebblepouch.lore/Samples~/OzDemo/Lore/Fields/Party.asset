@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Party
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: e21c79b0-8236-41a0-8d78-bcccfe51223a
-  _createdTicks: 639270064445972934
-  _modifiedTicks: 639270064447070389
+  _id: 02f8c9e3-c071-4669-9a22-eb7c7aff74ae
+  _createdTicks: 639272563448699961
+  _modifiedTicks: 639272563449564226
   _type: 11
   _glyph: "\U0001F463\uFE0F"
   _objectTypeName: 
@@ -22,3 +22,4 @@ MonoBehaviour:
   _enumOptions: []
   _allowedCategories:
   - {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
+  _vectorDimension: 3

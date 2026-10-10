@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Icon
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 780129ed-c5ec-4dc2-b226-a5756cf62c09
-  _createdTicks: 639270064443067976
-  _modifiedTicks: 639270064443067976
+  _id: 7f8b31ef-c525-42c4-ac44-81202fc0cbd1
+  _createdTicks: 639272563445754488
+  _modifiedTicks: 639272563445754488
   _type: 3
   _glyph: "\U0001F3A8\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions: []
   _allowedCategories: []
+  _vectorDimension: 3

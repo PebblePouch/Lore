@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Balloon
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: a3d3ab26-213a-4f1f-8bf5-a9075758d024
-  _createdTicks: 639270064461489132
-  _modifiedTicks: 639270064500632728
+  _id: 539d1f4f-0db4-4f06-b83f-208a3c05696b
+  _createdTicks: 639272563463498999
+  _modifiedTicks: 639272563511165479
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F388\uFE0F"
   _subtitle: Made of green silk
-  _description: Sewn from strips of silk, it carries [[c06656b6-d555-4649-8f9a-90f3906eafc3|Oz,
-    the Great and Terrible]] away from the [[8953e80a-34c8-4e3a-8c5f-7164c508be78|Emerald
-    City]]. It leaves without [[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy Gale]].
+  _description: Sewn from strips of silk, it carries [[7eb16235-e75e-478b-ad67-91e628752e8c|Oz,
+    the Great and Terrible]] away from the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald
+    City]]. It leaves without [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]].
   _sortOrder: 8
   _fields:
   - _field: {fileID: 11400000, guid: 1f1d65ec568392d4090afe5305c2c2cf, type: 2}
@@ -30,12 +30,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 5deeea33-529c-49f7-a6e0-f4230a19bdc5
+    _enumValue: 642afe3f-69f5-4a0c-81ea-7aaf1869e010
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: f361c22cbd427e54b83e0d563c2678c6, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 92acfce3b0a3e6b46a1fe8623fcd1d40, type: 2}
@@ -43,12 +48,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 4a0d97c4f9bb4c141b461cac3956069c, type: 2}
@@ -56,12 +66,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: de2363fa2e4fefc409ce1a732b0b7b21, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -69,12 +84,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 500
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 7fea3134e82906c4dab794c8b338037d, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -82,24 +102,52 @@ MonoBehaviour:
     _spriteValue: {fileID: 21300000, guid: 2ba1f1f859ae3d74f934ef22e24ad43f, type: 3}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
-  - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 9c6ea20181337d24eaa162e865c569d1, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 5261860897162248839, guid: b81da3284ddf3df428ee3bc04b359ab5, type: 3}
+    _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
-    _objectValue: {fileID: 0}
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 8300000, guid: b490ad8a7afcb4648be51c3cf4b09cd0, type: 3}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 4405505773412312850, guid: b81da3284ddf3df428ee3bc04b359ab5, type: 3}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - d1675df3-7f0a-42da-b091-1ba9a9c5adc3
+  - dc765760-0a24-4dae-8f47-9e7e9ac44afc

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Glinda
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 6f0182d3-fe6b-4296-abaf-141a1dbbc1ff
-  _createdTicks: 639270064454274108
-  _modifiedTicks: 639270064500622637
+  _id: 892f668e-60c1-4771-9d58-d72eab998d00
+  _createdTicks: 639272563456011297
+  _modifiedTicks: 639272563511155314
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F9DA\uFE0F"
   _subtitle: The Good Witch of the South
-  _description: The most powerful of the witches. She rules the Quadlings from [[9b9e0723-12b8-42dc-ba64-6644d3101c96|Glinda's
-    Palace]] and tells [[397fd117-a8f8-4702-a3f6-36373425de00|Dorothy Gale]] the
-    secret of the [[7375feb9-ad39-4200-bcbe-2311429fd74a|Silver Shoes]].
+  _description: The most powerful of the witches. She rules the Quadlings from [[0185e89b-fbd0-40a6-a066-8b886f3534be|Glinda's
+    Palace]] and tells [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] the
+    secret of the [[3cbd0685-ef92-4b23-a0b9-dac72c467ecb|Silver Shoes]].
   _sortOrder: 6
   _fields:
   - _field: {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
@@ -30,12 +30,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: af5c8536-6ea6-4671-8807-6bc12bc63091
+    _enumValue: b9988e90-e829-4537-b671-3f379fc8eeda
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 6d845ad69f39904449d63e6dcca49ae1, type: 2}
@@ -43,12 +48,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 09f2e4a80e65d664eab6d0393ed6dabb, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -56,12 +66,35 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 87c800d7a1234da4db6d287009a6c92a, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 12ad387df892474488f665fa5846b727, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -69,13 +102,18 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue:
     - {fileID: 11400000, guid: 2ed160dd6478e074cbf88edc5ad24094, type: 2}
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: ed70ad7a9283ab648b5cba13b1a77804, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -83,12 +121,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 1
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 6e7e496fb8307a84282da8927df4556d, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -96,12 +139,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 500
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 7ddaaef6c8413e444a44c4022ba730e8, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -109,12 +157,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 1.7
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: b5c1b345b8e3b9348b370ef2d0c8fd10, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -122,25 +175,35 @@ MonoBehaviour:
     _spriteValue: {fileID: 21300000, guid: c4c822bd0cde13f418324defb3a9b3f8, type: 3}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 5411233186716937956, guid: 5f27af8175e2a3c4484beae86a029b38, type: 3}
+    _gameObjectValue: {fileID: 1151183020271900471, guid: 5f27af8175e2a3c4484beae86a029b38, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 36ba00c5a52f528449161ba7f78196e4, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
@@ -148,12 +211,17 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: c2825688cc864a74f955f2866c7afd40, type: 2}
     _stringValue: https://en.wikipedia.org/wiki/Glinda
     _entryValue: {fileID: 0}
@@ -161,13 +229,18 @@ MonoBehaviour:
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
     _enumValue: 
+    _enumValues: []
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 65522580-8e97-4c88-983f-24c493a8f0d8
-  - 43a83426-33d0-4763-bcd7-dfb36c8bb2ef
-  - 3a023770-2ffd-44ed-b184-408e55729ea9
+  - 9c97f94e-7ac9-471a-bfbc-9ad701564b29
+  - 7bfb42de-1228-43ad-b784-200475ade4bc
+  - 24bb0e67-43dc-4781-bb21-89570e53451c
