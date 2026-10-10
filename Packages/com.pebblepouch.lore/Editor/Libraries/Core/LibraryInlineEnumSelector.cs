@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,13 +9,15 @@ namespace PebblePouch.Lore.Editor
     {
         #region Public API
         // label: shown instead of the value's name (the menu still lists the names).
+        // groups: menu order with separators between groups (see LoreChoiceMenu).
         public void Draw<T>(
             Rect rect,
             T value,
             GUIStyle viewer,
             Action<T> onSelected,
             Func<T, string> getName = null,
-            string label = null)
+            string label = null,
+            IReadOnlyList<IReadOnlyList<T>> groups = null)
             where T : Enum
         {
             GUI.Label(
@@ -39,7 +42,8 @@ namespace PebblePouch.Lore.Editor
                 rect,
                 value,
                 onSelected,
-                getName);
+                getName,
+                groups);
 
             Event.current.Use();
         }

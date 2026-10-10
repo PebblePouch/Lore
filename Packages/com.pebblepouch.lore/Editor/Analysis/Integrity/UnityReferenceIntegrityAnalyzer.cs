@@ -4,7 +4,7 @@ using UnityEditor;
 
 namespace PebblePouch.Lore.Editor
 {
-    // Finds GameObject/Sprite/Scene/ScriptableObject field values that still store a reference,
+    // Finds GameObject/Sprite/Scene/Folder/ScriptableObject/Audio/Object field values that still store a reference,
     // but whose Unity asset was deleted ("Missing" in Unity's object fields).
     // Mirrors RelationshipIntegrityAnalyzer, which does the same for Entry references.
     public sealed class UnityReferenceIntegrityAnalyzer
@@ -130,7 +130,9 @@ namespace PebblePouch.Lore.Editor
                 FieldType.GameObject => "_gameObjectValue",
                 FieldType.Sprite => "_spriteValue",
                 FieldType.Scene => "_sceneValue",
+                FieldType.Folder => "_folderValue",
                 FieldType.ScriptableObject => "_objectValue",
+                FieldType.Object => "_objectValue",
                 FieldType.Audio => "_objectValue",
                 _ => null
             };

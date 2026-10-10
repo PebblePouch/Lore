@@ -20,6 +20,9 @@ namespace PebblePouch.Lore.Editor
         // Sub-assets (e.g. a Sprite of a sprite sheet): "Assets/Art/Sheet.png#Wolf_0".
         public const char SubAssetSeparator = '#';
 
+        // Vector cells: "1.5;2;0".
+        public const char VectorSeparator = ';';
+
         public const string True = "TRUE";
         public const string False = "FALSE";
         #endregion
@@ -76,6 +79,82 @@ namespace PebblePouch.Lore.Editor
 
         // "R": shortest text that reads back as the same float.
         public static string FormatFloat(float value) => value.ToString("R", CultureInfo.InvariantCulture);
+
+        // "x;y" (2D) or "x;y;z" (3D).
+        public static string FormatVector(
+            UnityEngine.Vector3 value,
+            int dimension)
+        {
+            string text = FormatFloat(value.x) + VectorSeparator + FormatFloat(value.y);
+
+            return dimension == 2
+                ? text
+                : text + VectorSeparator + FormatFloat(value.z);
+        }
+
+        // Exactly dimension numbers separated by ";"; empty = zero.
+        public static bool TryParseVector(
+            string text,
+            int dimension,
+            out UnityEngine.Vector3 value)
+        {
+            value = UnityEngine.Vector3.zero;
+
+            if (text.Length == 0)
+                return true;
+
+            string[] parts = text.Split(VectorSeparator);
+
+            if (parts.Length != dimension)
+                return false;
+
+            for (int i = 0; i < parts.Length; i++)
+            {
+                if (!float.TryParse(
+                        parts[i].Trim(),
+                        NumberStyles.Float,
+                        CultureInfo.InvariantCulture,
+                        out float number))
+                {
+                    return false;
+                }
+
+                value[i] = number;
+            }
+
+            return true;
+        }
+
+        // "#RRGGBBAA".
+        public static string FormatColor(UnityEngine.Color value) =>
+            "#" + UnityEngine.ColorUtility.ToHtmlStringRGBA(value);
+
+        // "#RRGGBB" or "#RRGGBBAA" (the "#" is optional); empty = black.
+        public static bool TryParseColor(
+            string text,
+            out UnityEngine.Color value)
+        {
+            value = UnityEngine.Color.black;
+
+            if (text.Length == 0)
+                return true;
+
+            string hex =
+                text.StartsWith("#")
+                    ? text.Substring(1)
+                    : text;
+
+            // Hex only: ColorUtility also accepts color names ("red"), which would not round-trip.
+            if ((hex.Length != 6 && hex.Length != 8) ||
+                !uint.TryParse(hex, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out _))
+            {
+                return false;
+            }
+
+            return UnityEngine.ColorUtility.TryParseHtmlString(
+                "#" + hex,
+                out value);
+        }
         #endregion
     }
 }

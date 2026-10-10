@@ -212,8 +212,17 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.Float:
                     return CsvFormat.FormatFloat(value.FloatValue);
 
+                case FieldType.Color:
+                    return CsvFormat.FormatColor(value.ColorValue);
+
+                case FieldType.Vector:
+                    return CsvFormat.FormatVector(value.VectorValue, field.VectorDimension);
+
                 case FieldType.Enum:
                     return FormatEnum(field, value.EnumValue, ref brokenReferenceCount);
+
+                case FieldType.Enums:
+                    return FormatEnums(field, value.EnumValues, ref brokenReferenceCount);
 
                 case FieldType.Entry:
                     return FormatEntry(value.EntryValue, ref brokenReferenceCount);
@@ -230,7 +239,11 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.Scene:
                     return FormatAsset(value.SceneValue, ref brokenReferenceCount);
 
+                case FieldType.Folder:
+                    return FormatAsset(value.FolderValue, ref brokenReferenceCount);
+
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                 case FieldType.Audio:
                     return FormatAsset(value.ObjectValue, ref brokenReferenceCount);
 
@@ -259,6 +272,28 @@ namespace PebblePouch.Lore.Editor
             brokenReferenceCount++;
 
             return string.Empty;
+        }
+
+        // Labels in option order, joined by "|"; removed options count as broken references.
+        private static string FormatEnums(
+            Field field,
+            IReadOnlyList<string> optionIds,
+            ref int brokenReferenceCount)
+        {
+            List<string> labels = new();
+
+            foreach (EnumOption option in field.EnumOptions)
+            {
+                if (option != null &&
+                    optionIds.Contains(option.Id))
+                {
+                    labels.Add(option.Label);
+                }
+            }
+
+            brokenReferenceCount += optionIds.Count(optionId => field.FindEnumOption(optionId) == null);
+
+            return string.Join(CsvFormat.ListSeparator.ToString(), labels);
         }
 
         private static string FormatEntries(

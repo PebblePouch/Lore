@@ -64,7 +64,10 @@ namespace PebblePouch.Lore.Editor
             public bool Bool;
             public int Int;
             public float Float;
+            public UnityEngine.Color Color;
+            public UnityEngine.Vector3 Vector;
             public string EnumOptionId;
+            public List<string> EnumOptionIds;
             public UnityEngine.Object Asset;
             public List<EntryReference> Entries;
             public List<string> TagIds;

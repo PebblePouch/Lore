@@ -11,6 +11,49 @@ namespace PebblePouch.Lore.Editor
             type == FieldType.Entry ||
             type == FieldType.Entries;
 
+        // Field types with options defined on the Field (Field.EnumOptions).
+        public static bool HasEnumOptions(FieldType type) =>
+            type == FieldType.Enum ||
+            type == FieldType.Enums;
+
+        // Type changes that keep values (see FieldValue.ConvertValue): single value ↔ list of the same kind.
+        public static bool KeepsValues(
+            FieldType from,
+            FieldType to) =>
+            from == FieldType.Enum && to == FieldType.Enums ||
+            from == FieldType.Enums && to == FieldType.Enum ||
+            from == FieldType.Entry && to == FieldType.Entries ||
+            from == FieldType.Entries && to == FieldType.Entry;
+
+        // True if changing the Field type from → to loses this value (type changes clear values, except those that
+        // keep them; a list with several values cannot become a single value). Same type
+        // (ScriptableObject / Object type change): any set value is lost.
+        public static bool LosesValue(
+            FieldValue fieldValue,
+            FieldType from,
+            FieldType to)
+        {
+            if (!IsPopulated(fieldValue, from))
+                return false;
+
+            if (!KeepsValues(from, to))
+                return true;
+
+            return from switch
+            {
+                FieldType.Enums => fieldValue.EnumValues.Count > 1,
+                FieldType.Entries => fieldValue.EntriesValue.Count > 1,
+                _ => false
+            };
+        }
+
+        // Field types whose default is a valid value (false, black, zero vector): such values are never "missing"
+        // (Required Fields).
+        public static bool CanBeMissing(FieldType type) =>
+            type != FieldType.Boolean &&
+            type != FieldType.Color &&
+            type != FieldType.Vector;
+
         // Existing Entries referenced by an Entry or Entries value (empty for other types and missing Entries).
         public static System.Collections.Generic.IEnumerable<Entry> GetReferencedEntries(FieldValue fieldValue)
         {
@@ -65,7 +108,13 @@ namespace PebblePouch.Lore.Editor
                 FieldType.Scene =>
                     fieldValue.SceneValue != null,
 
+                FieldType.Folder =>
+                    fieldValue.FolderValue != null,
+
                 FieldType.ScriptableObject =>
+                    fieldValue.ObjectValue != null,
+
+                FieldType.Object =>
                     fieldValue.ObjectValue != null,
 
                 FieldType.Audio =>
@@ -80,6 +129,11 @@ namespace PebblePouch.Lore.Editor
                     fieldValue.Field != null &&
                     fieldValue.Field.FindEnumOption(fieldValue.EnumValue) != null,
 
+                // Removed options do not count.
+                FieldType.Enums =>
+                    fieldValue.Field != null &&
+                    fieldValue.EnumValues.Any(optionId => fieldValue.Field.FindEnumOption(optionId) != null),
+
                 FieldType.Boolean =>
                     fieldValue.BoolValue,
 
@@ -88,6 +142,12 @@ namespace PebblePouch.Lore.Editor
 
                 FieldType.Float =>
                     fieldValue.FloatValue != 0f,
+
+                FieldType.Color =>
+                    fieldValue.ColorValue != UnityEngine.Color.black,
+
+                FieldType.Vector =>
+                    fieldValue.VectorValue != UnityEngine.Vector3.zero,
 
                 _ => false
             };

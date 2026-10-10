@@ -94,7 +94,8 @@ namespace PebblePouch.Lore.Editor
             return false;
         }
 
-        // What a value looks like to the user (Booleans are left out: "true" is not something to search for).
+        // What a value looks like to the user (Booleans, Colors and Vectors are left out: "true", a hex code or
+        // coordinates are not something to search for).
         private static IEnumerable<string> GetSearchableTexts(FieldValue fieldValue)
         {
             switch (fieldValue.Field.Type)
@@ -116,6 +117,11 @@ namespace PebblePouch.Lore.Editor
                     yield return fieldValue.Field.FindEnumOption(fieldValue.EnumValue)?.Label;
                     break;
 
+                case FieldType.Enums:
+                    foreach (string label in FieldValueEnumsElement.GetSelectedLabels(fieldValue))
+                        yield return label;
+                    break;
+
                 case FieldType.Entry:
                 case FieldType.Entries:
                     foreach (Entry referenced in FieldValueUtility.GetReferencedEntries(fieldValue))
@@ -131,6 +137,7 @@ namespace PebblePouch.Lore.Editor
                     break;
 
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                     yield return fieldValue.ObjectValue != null ? fieldValue.ObjectValue.name : null;
                     break;
 
@@ -140,6 +147,10 @@ namespace PebblePouch.Lore.Editor
 
                 case FieldType.Scene:
                     yield return Path.GetFileNameWithoutExtension(fieldValue.ScenePath);
+                    break;
+
+                case FieldType.Folder:
+                    yield return Path.GetFileName(fieldValue.FolderPath);
                     break;
             }
         }

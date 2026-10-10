@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace PebblePouch.Lore.Editor
 {
-    // Finds ScriptableObject Fields whose type cannot be resolved: the class was deleted, or renamed in a way the
-    // automatic repair (script GUID, see ScriptableObjectTypeService.RepairTypeName) cannot follow, or no type is set.
+    // Finds ScriptableObject / Object Fields whose type cannot be resolved: the class was deleted, or renamed in a way
+    // the automatic repair (script GUID, see ScriptableObjectTypeService.RepairTypeName) cannot follow, or no type is set.
     // Only Fields used by Categories count as integrity issues; the Field Library marks unused ones too.
     public sealed class FieldTypeIntegrityAnalyzer
     {
@@ -11,7 +11,7 @@ namespace PebblePouch.Lore.Editor
         public static bool HasMissingType(Field field)
         {
             return field != null &&
-                   field.Type == FieldType.ScriptableObject &&
+                   ScriptableObjectTypeService.HasObjectType(field.Type) &&
                    field.ObjectType == null;
         }
 

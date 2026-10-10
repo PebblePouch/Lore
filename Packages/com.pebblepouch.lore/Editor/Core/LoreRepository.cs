@@ -116,14 +116,15 @@ namespace PebblePouch.Lore.Editor
 
             SyncProjectIndex();
 
-            SyncScenePaths();
+            SyncAssetPaths();
 
             LoreDataVersion.Increment();
         }
 
-        // Scene values also store the scene's path (games cannot read SceneAssets): fills it for older values and
-        // follows moved/renamed scenes. Derived data, so no Modified timestamp change (SetDirty only).
-        private void SyncScenePaths()
+        // Scene and Folder values also store the asset's path (games cannot read SceneAssets or folder assets): fills
+        // it for older values and follows moved/renamed scenes and folders. Derived data, so no Modified timestamp
+        // change (SetDirty only).
+        private void SyncAssetPaths()
         {
             foreach (Entry entry in _entries)
             {
@@ -131,26 +132,35 @@ namespace PebblePouch.Lore.Editor
 
                 foreach (FieldValue fieldValue in entry.Fields)
                 {
-                    if (fieldValue == null ||
-                        fieldValue.Type != FieldType.Scene)
-                    {
+                    if (fieldValue == null)
                         continue;
+
+                    switch (fieldValue.Type)
+                    {
+                        case FieldType.Scene:
+                            changed |=
+                                fieldValue.SetScenePath(
+                                    GetAssetPath(fieldValue.SceneValue));
+                            break;
+
+                        case FieldType.Folder:
+                            changed |=
+                                fieldValue.SetFolderPath(
+                                    GetAssetPath(fieldValue.FolderValue));
+                            break;
                     }
-
-                    string path =
-                        fieldValue.SceneValue != null
-                            ? AssetDatabase.GetAssetPath(fieldValue.SceneValue)
-                            : string.Empty;
-
-                    changed |=
-                        fieldValue.SetScenePath(
-                            path);
                 }
 
                 if (changed)
                     EditorUtility.SetDirty(entry);
             }
         }
+
+        // Empty for no or deleted assets.
+        private static string GetAssetPath(UnityEngine.Object asset) =>
+            asset != null
+                ? AssetDatabase.GetAssetPath(asset)
+                : string.Empty;
 
         // Runtime index on the Project (what games can reach): Categories in order, Entries grouped like the
         // browser. Not a content change, so the Project's Modified timestamp stays (SetDirty, like reordering).

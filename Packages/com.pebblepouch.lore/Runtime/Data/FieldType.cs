@@ -27,5 +27,21 @@ namespace PebblePouch.Lore
 
         // An AudioClip (.wav, .mp3, .ogg, ...).
         Audio = 12,
+
+        // A Color (with alpha); black when empty.
+        Color = 13,
+
+        // Several options of the Field (see Field.EnumOptions); values store the option IDs.
+        Enums = 14,
+
+        // Reference to an asset of any other Unity type chosen per Field (see Field.ObjectType), e.g. Texture2D,
+        // Material or a component on a prefab.
+        Object = 15,
+
+        // A Vector2 or Vector3, chosen per Field (see Field.VectorDimension).
+        Vector = 16,
+
+        // A project folder; games read its path (see FieldValue.GetFolderPath).
+        Folder = 17,
     }
 }

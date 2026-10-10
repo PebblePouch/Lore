@@ -23,6 +23,9 @@ namespace PebblePouch.Lore.Editor
 
         public ButtonDefinition Open;
 
+        // Field / Tag Library menus: show the Entries that use the item.
+        public ButtonDefinition References;
+
         // Audio Fields: preview playback.
         public ButtonDefinition Play;
         public ButtonDefinition Stop;

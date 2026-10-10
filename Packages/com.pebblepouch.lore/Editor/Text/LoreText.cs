@@ -41,6 +41,7 @@ namespace PebblePouch.Lore.Editor
             public static readonly string ChangeFieldType = "Change Field Type";
             public static readonly string EditEnumOptions = "Edit Enum Options";
             public static readonly string EditAllowedCategories = "Edit Allowed Categories";
+            public static readonly string EditVectorDimension = "Edit Vector Dimension";
             public static readonly string RemoveBrokenField = "Remove Broken Field";
             public static readonly string ReplaceBrokenField = "Replace Broken Field";
 
@@ -171,11 +172,25 @@ namespace PebblePouch.Lore.Editor
             public static readonly string Url = "URL";
             public static readonly string ScriptableObject = "ScriptableObject";
             public static readonly string Enum = "Enum";
+            public static readonly string Enums = "Enums";
             public static readonly string Entries = "Entries";
             public static readonly string Audio = "Audio";
+            public static readonly string Color = "Color";
+            public static readonly string Folder = "Folder";
+            public static readonly string Object = "Object";
+            public static readonly string Vector = "Vector";
 
-            // ScriptableObject Fields with their type: "DialogDefinition (SO)" ({0} type, {1} suffix)
+            // Vector Fields with their dimension (tables, Field cards): "Vector2", "Vector3"
+            public static readonly string Vector2 = "Vector2";
+            public static readonly string Vector3 = "Vector3";
+
+            // Vector values: labels of the number fields.
+            public static readonly string[] VectorComponents = { "X", "Y", "Z" };
+
+            // ScriptableObject / Object Fields with their type: "DialogDefinition (SO)", "Texture2D (OBJ)"
+            // ({0} type, {1} suffix)
             public static readonly string ScriptableObjectSuffix = "(SO)";
+            public static readonly string ObjectSuffix = "(OBJ)";
             public static readonly string WithObjectType = "{0} {1}";
 
             public static string Get(FieldType type)
@@ -193,8 +208,13 @@ namespace PebblePouch.Lore.Editor
                     FieldType.Url => Url,
                     FieldType.ScriptableObject => ScriptableObject,
                     FieldType.Enum => Enum,
+                    FieldType.Enums => Enums,
                     FieldType.Entries => Entries,
                     FieldType.Audio => Audio,
+                    FieldType.Color => Color,
+                    FieldType.Folder => Folder,
+                    FieldType.Object => Object,
+                    FieldType.Vector => Vector,
                     _ => type.ToString()
                 };
             }
@@ -244,7 +264,7 @@ namespace PebblePouch.Lore.Editor
             #endregion
 
             #region Field Types
-            public static readonly string ObjectTypeRequired = "Choose a ScriptableObject type.";
+            public static readonly string ObjectTypeRequired = "Choose a type.";
             public static readonly string EnumOptionsRequired = "Add at least one option.";
             public static readonly string EnumOptionNameRequired = "Every option needs a name.";
             public static readonly string EnumOptionExists = "The option '{0}' exists twice.";
@@ -412,6 +432,8 @@ namespace PebblePouch.Lore.Editor
             public static readonly string InvalidBool = "'{0}' is not TRUE or FALSE.";
             public static readonly string InvalidInteger = "'{0}' is not a whole number.";
             public static readonly string InvalidFloat = "'{0}' is not a number (use . as decimal point).";
+            public static readonly string InvalidColor = "'{0}' is not a color (use #RRGGBB or #RRGGBBAA).";
+            public static readonly string InvalidVector = "'{0}' is not a vector (use x;y or x;y;z with . as decimal point).";
             public static readonly string UnknownOption = "'{0}' is not an option of this Field.";
             public static readonly string SingleEntryOnly = "this Field holds one Entry, but the cell lists several.";
             public static readonly string EntryNotFound = "there is no Entry '{0}' in the Categories this Field allows.";
@@ -636,9 +658,12 @@ namespace PebblePouch.Lore.Editor
             // Enum value that is not set.
             public static readonly string EnumNotSet = "—";
 
+            // Enums value: selected options joined ("Fire, Ice").
+            public static readonly string EnumsSeparator = ", ";
+
             public static readonly string ObjectTypeMissing = "Type '{0}' not found";
             public static readonly string ObjectTypeNotSet = "No type chosen";
-            public static readonly string ObjectTypeFixTooltip = "Choose the ScriptableObject type in the Field Library.";
+            public static readonly string ObjectTypeFixTooltip = "Choose the type in the Field Library.";
 
             public static readonly string ReorderFieldsDisabledTooltip = "Fix broken Fields before reordering";
             #endregion
@@ -742,28 +767,53 @@ namespace PebblePouch.Lore.Editor
             public static readonly string FieldTitlePlaceholder = "New Field";
             public static readonly string TagTitlePlaceholder = "New Tag";
 
-            public static readonly string References = "References";
             public static readonly string UseCategoryGlyph = "Use Category Glyph";
 
             // Content browser filter label: "References: Field"
             public static readonly string ReferencesFilter = "References: {0}";
 
-            // ScriptableObject Fields: type selection in the Field card.
+            // ScriptableObject / Object Fields: type selection in the Field card.
             public static readonly string ObjectTypePlaceholder = "Choose type";
             public static readonly string ObjectTypeDropdownTitle = "ScriptableObject Types";
             public static readonly string ObjectTypeEmpty = "No ScriptableObject classes found in your scripts.";
+            public static readonly string ObjectTypeDropdownTitleObject = "Object Types";
+            public static readonly string ObjectTypeEmptyObject = "No asset types found.";
 
             // Dropdown item: "DialogDefinition  (MyGame.Dialog, abstract)"
             public static readonly string ObjectTypeDetails = "{0}  ({1})";
             public static readonly string ObjectTypeDetailSeparator = ", ";
             public static readonly string ObjectTypeAbstract = "abstract";
 
-            // Field card of a ScriptableObject Field whose type cannot be resolved (type label in red).
+            // Object type dropdown: groups by function (see ObjectTypeGroups).
+            public static readonly string ObjectTypeGroupUsed = "Used in Lore";
+            public static readonly string ObjectTypeGroupProject = "Project";
+            public static readonly string ObjectTypeGroup2D = "2D";
+            public static readonly string ObjectTypeGroupAnimation = "Animation";
+            public static readonly string ObjectTypeGroupAudioVideo = "Audio & Video";
+            public static readonly string ObjectTypeGroupEffects = "Effects";
+            public static readonly string ObjectTypeGroupInput = "Input";
+            public static readonly string ObjectTypeGroupMaterials = "Materials & Shaders";
+            public static readonly string ObjectTypeGroupNavigation = "Navigation";
+            public static readonly string ObjectTypeGroupPhysics = "Physics";
+            public static readonly string ObjectTypeGroupPhysics2D = "Physics 2D";
+            public static readonly string ObjectTypeGroupRendering = "Rendering";
+            public static readonly string ObjectTypeGroupTerrain = "Terrain";
+            public static readonly string ObjectTypeGroupText = "Text";
+            public static readonly string ObjectTypeGroupTextures = "Textures";
+            public static readonly string ObjectTypeGroupUI = "UI";
+            public static readonly string ObjectTypeGroupGeneral = "General";
+
+            // Field card of a ScriptableObject / Object Field whose type cannot be resolved (type label in red).
             public static readonly string ObjectTypeMissingTooltip = "Type '{0}' not found. Choose the type again.";
 
             // Entry / Entries Fields: which Categories can be picked.
             public static readonly string AllowedCategoriesLabel = "Categories";
             public static readonly string AllowedCategoriesAll = "All Categories";
+
+            // Vector Fields: dimension selector in the Field card.
+            public static readonly string VectorDimensionLabel = "Dimension";
+            public static readonly string VectorDimension2 = "2D (x, y)";
+            public static readonly string VectorDimension3 = "3D (x, y, z)";
 
             // Enum Fields: option editor in the Field card.
             public static readonly string EnumOptionsEmpty = "No options yet.";
@@ -782,6 +832,11 @@ namespace PebblePouch.Lore.Editor
             // {0} current type, {1} new type, {2} Entry count ("3 Entries")
             public static readonly string FieldTypeChangeWarning =
                 "Changing field type <b>{0}</b> to <b>{1}</b> will clear the set field value in <b>{2}</b>.";
+
+            // Enums → Enum, Entries → Entry: {0} current type, {1} new type, {2} Entry count ("3 Entries")
+            public static readonly string FieldTypeChangeToSingleWarning =
+                "Changing field type <b>{0}</b> to <b>{1}</b> keeps single values, but clears the field value in " +
+                "<b>{2}</b> with several values.";
 
             public static readonly string FieldDeleteUnusedWarning =
                 "This will <b>delete</b> the Field <b>permanently</b>. The Field is currently <b>not in use</b>.";
@@ -878,7 +933,7 @@ namespace PebblePouch.Lore.Editor
             public static readonly string BrokenEntryReferencesFilter = "Broken Entry References";
             public static readonly string MissingUnityReferencesFilter = "Missing Unity References";
             public static readonly string BrokenFieldDefinitionsFilter = "Broken Field Definitions";
-            public static readonly string MissingObjectTypesFilter = "Missing ScriptableObject Types";
+            public static readonly string MissingObjectTypesFilter = "Missing Object Types";
             public static readonly string BrokenDescriptionLinksFilter = "Broken Description Links";
             public static readonly string StandaloneCategoriesFilter = "Standalone Categories";
             public static readonly string IsolatedCategoriesFilter = "Isolated Categories";

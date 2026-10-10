@@ -478,6 +478,16 @@ namespace PebblePouch.Lore.Editor
                     }
                     break;
 
+                case FieldType.Color:
+                    if (!CsvFormat.TryParseColor(trimmed, out value.Color))
+                        issue = LoreText.Csv.InvalidColor;
+                    break;
+
+                case FieldType.Vector:
+                    if (!CsvFormat.TryParseVector(trimmed, field.VectorDimension, out value.Vector))
+                        issue = LoreText.Csv.InvalidVector;
+                    break;
+
                 case FieldType.Enum:
                     value.EnumOptionId = string.Empty;
 
@@ -491,6 +501,27 @@ namespace PebblePouch.Lore.Editor
                             value.EnumOptionId = option.Id;
                         else
                             issue = LoreText.Csv.UnknownOption;
+                    }
+                    break;
+
+                case FieldType.Enums:
+                    value.EnumOptionIds = new List<string>();
+
+                    foreach (string label in SplitList(cell))
+                    {
+                        EnumOption option = field.EnumOptions.FirstOrDefault(candidate =>
+                            candidate != null &&
+                            string.Equals(candidate.Label, label, StringComparison.OrdinalIgnoreCase));
+
+                        if (option == null)
+                        {
+                            issue = LoreText.Csv.UnknownOption;
+                            trimmed = label;
+                            break;
+                        }
+
+                        if (!value.EnumOptionIds.Contains(option.Id))
+                            value.EnumOptionIds.Add(option.Id);
                     }
                     break;
 
@@ -524,7 +555,9 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.GameObject:
                 case FieldType.Sprite:
                 case FieldType.Scene:
+                case FieldType.Folder:
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                 case FieldType.Audio:
                     if (trimmed.Length > 0)
                         issue = ResolveAsset(field, trimmed, out value.Asset);
@@ -696,8 +729,13 @@ namespace PebblePouch.Lore.Editor
             {
                 FieldType.GameObject => new List<UnityEngine.Object> { mainAsset as GameObject },
                 FieldType.Scene => new List<UnityEngine.Object> { mainAsset as SceneAsset },
+                FieldType.Folder => new List<UnityEngine.Object>
+                {
+                    AssetDatabase.IsValidFolder(path) ? mainAsset : null
+                },
                 FieldType.Audio => new List<UnityEngine.Object> { mainAsset as AudioClip },
                 FieldType.Sprite => AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().Cast<UnityEngine.Object>().ToList(),
+                FieldType.Object => GetObjectCandidates(field.ObjectType, path, mainAsset, name),
                 _ => AssetDatabase.LoadAllAssetsAtPath(path)
                     .OfType<ScriptableObject>()
                     .Where(candidate => field.ObjectType == null || field.ObjectType.IsInstanceOfType(candidate))
@@ -729,6 +767,32 @@ namespace PebblePouch.Lore.Editor
             return null;
         }
 
+        // Object Fields: the assets of the Field's type at the path (none while the type is missing). Component types:
+        // the prefab root's component, else the components of that type in the prefab (named by their GameObject).
+        private static List<UnityEngine.Object> GetObjectCandidates(
+            System.Type objectType,
+            string path,
+            UnityEngine.Object mainAsset,
+            string name)
+        {
+            if (objectType == null)
+                return new List<UnityEngine.Object>();
+
+            if (typeof(Component).IsAssignableFrom(objectType) &&
+                mainAsset is GameObject root &&
+                (name == null || name == root.name))
+            {
+                Component component = root.GetComponent(objectType);
+
+                if (component != null)
+                    return new List<UnityEngine.Object> { component };
+            }
+
+            return AssetDatabase.LoadAllAssetsAtPath(path)
+                .Where(objectType.IsInstanceOfType)
+                .ToList();
+        }
+
         // Empty cells clear values, except broken references: they stay (the export writes them as empty cells).
         private static bool IsFieldChange(
             Entry entry,
@@ -755,6 +819,18 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.Float:
                     return !value.Float.Equals(current?.FloatValue ?? 0f);
 
+                // Compared as exported (8-bit channels), so an unchanged export reads back as unchanged.
+                case FieldType.Color:
+                    return CsvFormat.FormatColor(value.Color) !=
+                           CsvFormat.FormatColor(current?.ColorValue ?? UnityEngine.Color.black);
+
+                // 2D Fields compare x and y only (the import keeps the stored z).
+                case FieldType.Vector:
+                    return CsvFormat.FormatVector(value.Vector, field.VectorDimension) !=
+                           CsvFormat.FormatVector(
+                               current?.VectorValue ?? UnityEngine.Vector3.zero,
+                               field.VectorDimension);
+
                 case FieldType.Enum:
                     string currentOptionId = current?.EnumValue ?? string.Empty;
 
@@ -766,6 +842,16 @@ namespace PebblePouch.Lore.Editor
                     }
 
                     return value.EnumOptionId != currentOptionId;
+
+                // Compared as sets of existing options (removed options stay, see the importer).
+                case FieldType.Enums:
+                    List<string> currentOptionIds =
+                        (current?.EnumValues ?? (IReadOnlyList<string>)Array.Empty<string>())
+                        .Where(optionId => field.FindEnumOption(optionId) != null)
+                        .ToList();
+
+                    return value.EnumOptionIds.Count != currentOptionIds.Count ||
+                           value.EnumOptionIds.Any(optionId => !currentOptionIds.Contains(optionId));
 
                 case FieldType.Entry:
                 case FieldType.Entries:
@@ -797,6 +883,7 @@ namespace PebblePouch.Lore.Editor
                 FieldType.GameObject => value.GameObjectValue,
                 FieldType.Sprite => value.SpriteValue,
                 FieldType.Scene => value.SceneValue,
+                FieldType.Folder => value.FolderValue,
                 _ => value.ObjectValue,
             };
         }

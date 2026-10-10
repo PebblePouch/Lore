@@ -34,7 +34,16 @@ namespace PebblePouch.Lore
         [SerializeField, HideInInspector]
         private string _scenePath;
 
-        // ScriptableObject fields: any object of the Field's ObjectType (or a subclass). Audio fields: the AudioClip.
+        // Folder fields: the folder asset (editor-only DefaultAsset, like scenes) and its path ("Assets/Art/Wolves"),
+        // kept in sync by the editor (also when the folder is moved/renamed), so games can read it in builds.
+        [SerializeField, HideInInspector]
+        private UnityEngine.Object _folderValue;
+
+        [SerializeField, HideInInspector]
+        private string _folderPath;
+
+        // ScriptableObject and Object fields: any object of the Field's ObjectType (or a subclass). Audio fields: the
+        // AudioClip.
         [SerializeField, HideInInspector]
         private UnityEngine.Object _objectValue;
 
@@ -46,6 +55,10 @@ namespace PebblePouch.Lore
         [SerializeField, HideInInspector]
         private string _enumValue;
 
+        // Enums fields: the IDs of the selected options (no duplicates). Read in the Field's option order.
+        [SerializeField, HideInInspector]
+        private System.Collections.Generic.List<string> _enumValues = new();
+
         [SerializeField, HideInInspector]
         private bool _boolValue;
 
@@ -54,6 +67,13 @@ namespace PebblePouch.Lore
 
         [SerializeField, HideInInspector]
         private float _floatValue;
+
+        [SerializeField, HideInInspector]
+        private Color _colorValue = Color.black;
+
+        // Vector fields: always a Vector3; 2D Fields (Field.VectorDimension) use x and y (z is kept but not shown).
+        [SerializeField, HideInInspector]
+        private Vector3 _vectorValue;
         #endregion
 
         #region Properties
@@ -78,11 +98,18 @@ namespace PebblePouch.Lore
 
         internal string ScenePath => _scenePath;
 
+        internal UnityEngine.Object FolderValue => _folderValue;
+
+        internal string FolderPath => _folderPath ?? string.Empty;
+
         internal UnityEngine.Object ObjectValue => _objectValue;
 
         internal AudioClip AudioClipValue => _objectValue as AudioClip;
 
         internal string EnumValue => _enumValue ?? string.Empty;
+
+        // Raw list (may contain removed options, stored order); games use GetEnums.
+        internal IReadOnlyList<string> EnumValues => _enumValues ??= new();
 
         // Raw list (may contain missing Entries); games use GetEntries.
         internal System.Collections.Generic.IReadOnlyList<Entry> EntriesValue => _entriesValue ??= new();
@@ -92,6 +119,14 @@ namespace PebblePouch.Lore
         internal int IntValue => _intValue;
 
         internal float FloatValue => _floatValue;
+
+        internal Color ColorValue => _colorValue;
+
+        // The value as the Field shows it: z is 0 for 2D Fields.
+        internal Vector3 VectorValue =>
+            _field != null && _field.VectorDimension == 2
+                ? new Vector3(_vectorValue.x, _vectorValue.y, 0f)
+                : _vectorValue;
         #endregion
 
         #region Typed Access
@@ -117,6 +152,19 @@ namespace PebblePouch.Lore
         public float GetFloat() => Get(FieldType.Float, _floatValue, 0f);
 
         public bool TryGetFloat(out float value) => TryGet(FieldType.Float, _floatValue, out value);
+
+        public Color GetColor() => Get(FieldType.Color, _colorValue, Color.black);
+
+        public bool TryGetColor(out Color value) => TryGet(FieldType.Color, _colorValue, out value);
+
+        // Vector fields of both dimensions: GetVector2 drops z, GetVector3 of a 2D Field has z = 0.
+        public Vector2 GetVector2() => Get(FieldType.Vector, (Vector2)VectorValue, Vector2.zero);
+
+        public bool TryGetVector2(out Vector2 value) => TryGet(FieldType.Vector, (Vector2)VectorValue, out value);
+
+        public Vector3 GetVector3() => Get(FieldType.Vector, VectorValue, Vector3.zero);
+
+        public bool TryGetVector3(out Vector3 value) => TryGet(FieldType.Vector, VectorValue, out value);
 
         public Entry GetEntry() => Get(FieldType.Entry, AsReference(_entryValue), null);
 
@@ -157,6 +205,17 @@ namespace PebblePouch.Lore
             return found;
         }
 
+        // Folder path ("Assets/Art/Wolves"); empty when no folder is set.
+        public string GetFolderPath() => Get(FieldType.Folder, FolderPath, string.Empty);
+
+        public bool TryGetFolderPath(out string value)
+        {
+            value = string.Empty;
+
+            return TryGet(FieldType.Folder, FolderPath, out value) &&
+                   !string.IsNullOrEmpty(value);
+        }
+
         // ScriptableObject fields. T can be the Field's type or any base/derived type: a value that is not a T
         // returns null (Get… with a warning, TryGet… false).
         public ScriptableObject GetScriptableObject() => GetScriptableObject<ScriptableObject>();
@@ -164,26 +223,26 @@ namespace PebblePouch.Lore
         public T GetScriptableObject<T>()
             where T : ScriptableObject
         {
-            if (!IsType(FieldType.ScriptableObject))
-            {
-                WarnWrongType(FieldType.ScriptableObject);
+            return GetTypedObject<T>(FieldType.ScriptableObject);
+        }
 
-                return null;
-            }
+        // Object fields (Texture2D, Material, a component on a prefab, ...). T works like for ScriptableObject fields.
+        public UnityEngine.Object GetObject() => GetObject<UnityEngine.Object>();
 
-            UnityEngine.Object value = AsReference(_objectValue);
+        public T GetObject<T>()
+            where T : UnityEngine.Object
+        {
+            return GetTypedObject<T>(FieldType.Object);
+        }
 
-            if (value == null)
-                return null;
+        public bool TryGetObject<T>(out T value)
+            where T : UnityEngine.Object
+        {
+            value = IsType(FieldType.Object)
+                ? AsReference(_objectValue) as T
+                : null;
 
-            if (value is T typed)
-                return typed;
-
-            LoreRuntimeLog.WarnOnce(
-                $"Field '{_field.Title}' holds a {value.GetType().Name}, not a {typeof(T).Name}.",
-                _field);
-
-            return null;
+            return value != null;
         }
 
         // Enum fields: the label of the selected option ("Rare"); empty when nothing (or a removed option) is set.
@@ -240,6 +299,50 @@ namespace PebblePouch.Lore
                     : -1;
 
             return index >= 0;
+        }
+
+        // Enums fields: the labels of the selected options in the Field's option order, without removed options
+        // (new list per call).
+        public IReadOnlyList<string> GetEnums()
+        {
+            if (!IsType(FieldType.Enums))
+            {
+                WarnWrongType(FieldType.Enums);
+
+                return Array.Empty<string>();
+            }
+
+            return GetSelectedEnumLabels();
+        }
+
+        // False on a wrong type and when nothing is selected.
+        public bool TryGetEnums(out IReadOnlyList<string> labels)
+        {
+            labels =
+                IsType(FieldType.Enums)
+                    ? GetSelectedEnumLabels()
+                    : Array.Empty<string>();
+
+            return labels.Count > 0;
+        }
+
+        // Enums fields: true when the option with this label is selected (labels are matched ignoring case).
+        public bool HasEnum(string label)
+        {
+            if (!IsType(FieldType.Enums))
+            {
+                WarnWrongType(FieldType.Enums);
+
+                return false;
+            }
+
+            foreach (string selected in GetSelectedEnumLabels())
+            {
+                if (string.Equals(selected, label, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            return false;
         }
 
         // Entries fields: the referenced Entries in order, without deleted/missing ones (new list per call).
@@ -316,11 +419,130 @@ namespace PebblePouch.Lore
             return true;
         }
 
+        internal void SetFolder(
+            UnityEngine.Object value,
+            string path)
+        {
+            _folderValue = value;
+
+            _folderPath =
+                value != null
+                    ? path ?? string.Empty
+                    : string.Empty;
+        }
+
+        // Folder moved/renamed: updates the stored path. Returns true if it changed.
+        internal bool SetFolderPath(string path)
+        {
+            path ??= string.Empty;
+
+            if (FolderPath == path)
+                return false;
+
+            _folderPath = path;
+
+            return true;
+        }
+
         internal void SetObject(UnityEngine.Object value) => _objectValue = value;
 
         internal void SetAudioClip(AudioClip value) => _objectValue = value;
 
         internal void SetEnum(string optionId) => _enumValue = optionId ?? string.Empty;
+
+        // Enums fields. Returns true if the list changed.
+        internal bool AddEnumValue(string optionId)
+        {
+            _enumValues ??= new();
+
+            if (string.IsNullOrEmpty(optionId) ||
+                _enumValues.Contains(optionId))
+            {
+                return false;
+            }
+
+            _enumValues.Add(optionId);
+
+            return true;
+        }
+
+        internal bool RemoveEnumValue(string optionId) => _enumValues != null && _enumValues.Remove(optionId);
+
+        internal void SetEnumValues(IEnumerable<string> optionIds)
+        {
+            _enumValues = new List<string>();
+
+            foreach (string optionId in optionIds)
+                AddEnumValue(optionId);
+        }
+
+        // Removes the given options (removed from the Field). Returns the number removed.
+        internal int RemoveEnumValues(ICollection<string> optionIds) =>
+            _enumValues?.RemoveAll(optionIds.Contains) ?? 0;
+
+        // Field type change Enum ↔ Enums or Entry ↔ Entries: moves the value (broken references too). Values that
+        // do not fit (several values into a single-value type) and all other type changes clear the value.
+        // Returns true if the value was kept.
+        internal bool ConvertValue(
+            FieldType from,
+            FieldType to)
+        {
+            if (from == FieldType.Enum && to == FieldType.Enums)
+            {
+                string optionId = EnumValue;
+
+                Clear();
+
+                AddEnumValue(optionId);
+
+                return true;
+            }
+
+            if (from == FieldType.Enums && to == FieldType.Enum && EnumValues.Count <= 1)
+            {
+                string optionId =
+                    EnumValues.Count == 1
+                        ? EnumValues[0]
+                        : string.Empty;
+
+                Clear();
+
+                _enumValue = optionId;
+
+                return true;
+            }
+
+            if (from == FieldType.Entry && to == FieldType.Entries)
+            {
+                Entry entry = _entryValue;
+
+                Clear();
+
+                // Deleted Entries stay as broken references (not null in C#).
+                if (!ReferenceEquals(entry, null))
+                    _entriesValue.Add(entry);
+
+                return true;
+            }
+
+            if (from == FieldType.Entries && to == FieldType.Entry && EntriesValue.Count <= 1)
+            {
+                Entry entry =
+                    EntriesValue.Count == 1
+                        ? EntriesValue[0]
+                        : null;
+
+                Clear();
+
+                _entryValue = entry;
+
+                return true;
+            }
+
+            Clear();
+
+            return false;
+        }
 
         // Entries fields. Returns true if the list changed.
         internal bool AddListEntry(Entry entry)
@@ -377,6 +599,17 @@ namespace PebblePouch.Lore
 
         internal void SetFloat(float value) => _floatValue = value;
 
+        internal void SetColor(Color value) => _colorValue = value;
+
+        // 2D Fields keep the stored z (switching the Field back to 3D shows it again).
+        internal void SetVector(Vector3 value)
+        {
+            _vectorValue =
+                _field != null && _field.VectorDimension == 2
+                    ? new Vector3(value.x, value.y, _vectorValue.z)
+                    : value;
+        }
+
         internal void Clear()
         {
             _stringValue = string.Empty;
@@ -391,17 +624,29 @@ namespace PebblePouch.Lore
 
             _scenePath = string.Empty;
 
+            _folderValue = null;
+
+            _folderPath = string.Empty;
+
             _objectValue = null;
 
             _enumValue = string.Empty;
 
-            _entriesValue?.Clear();
+            _enumValues ??= new();
+            _enumValues.Clear();
+
+            _entriesValue ??= new();
+            _entriesValue.Clear();
 
             _boolValue = false;
 
             _intValue = 0;
 
             _floatValue = 0f;
+
+            _colorValue = Color.black;
+
+            _vectorValue = Vector3.zero;
         }
         #endregion
 
@@ -420,6 +665,29 @@ namespace PebblePouch.Lore
             }
 
             return entries;
+        }
+
+        private IReadOnlyList<string> GetSelectedEnumLabels()
+        {
+            var labels = new List<string>();
+
+            if (_field == null ||
+                _enumValues == null ||
+                _enumValues.Count == 0)
+            {
+                return labels;
+            }
+
+            foreach (EnumOption option in _field.EnumOptions)
+            {
+                if (option != null &&
+                    _enumValues.Contains(option.Id))
+                {
+                    labels.Add(option.Label);
+                }
+            }
+
+            return labels;
         }
 
         private EnumOption GetEnumOption() =>
@@ -456,6 +724,32 @@ namespace PebblePouch.Lore
                 : default;
 
             return matches;
+        }
+
+        // ScriptableObject and Object fields: the value as T; null (with a warning) when it is no T.
+        private T GetTypedObject<T>(FieldType type)
+            where T : UnityEngine.Object
+        {
+            if (!IsType(type))
+            {
+                WarnWrongType(type);
+
+                return null;
+            }
+
+            UnityEngine.Object value = AsReference(_objectValue);
+
+            if (value == null)
+                return null;
+
+            if (value is T typed)
+                return typed;
+
+            LoreRuntimeLog.WarnOnce(
+                $"Field '{_field.Title}' holds a {value.GetType().Name}, not a {typeof(T).Name}.",
+                _field);
+
+            return null;
         }
 
         private bool TryGetReference<T>(

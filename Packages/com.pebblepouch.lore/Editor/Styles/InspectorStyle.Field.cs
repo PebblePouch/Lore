@@ -253,6 +253,21 @@ namespace PebblePouch.Lore.Editor
             active = { textColor = LorePalette.Text },
         };
 
+        // Vector value: "X [1.5]  Y [2]  Z [0]" (one number field per component, see VectorFieldDrawer).
+        public const float FieldValueVectorLabelWidth = 14f;
+        public const float FieldValueVectorSpacing = 4f;
+
+        public static readonly GUIStyle FieldValueVectorLabel = new GUIStyle(EditorStyles.label)
+        {
+            padding = new RectOffset(0, 0, 0, 0),
+            margin = new RectOffset(0, 0, 0, 0),
+
+            fontSize = LoreTypography.Small,
+            alignment = TextAnchor.MiddleLeft,
+
+            normal = { textColor = LorePalette.TextMuted },
+        };
+
         // Enum value: looks like the text fields (Unity's popup background stands out); own arrow on the right.
         public static readonly GUIStyle FieldValueEnum = new GUIStyle(FieldValueText)
         {

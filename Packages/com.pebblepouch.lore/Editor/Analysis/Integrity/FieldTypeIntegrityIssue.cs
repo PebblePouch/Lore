@@ -1,6 +1,6 @@
 namespace PebblePouch.Lore.Editor
 {
-    // A ScriptableObject Field of a Category whose type cannot be resolved (see FieldTypeIntegrityAnalyzer).
+    // A ScriptableObject / Object Field of a Category whose type cannot be resolved (see FieldTypeIntegrityAnalyzer).
     public sealed class FieldTypeIntegrityIssue
     {
         #region Properties

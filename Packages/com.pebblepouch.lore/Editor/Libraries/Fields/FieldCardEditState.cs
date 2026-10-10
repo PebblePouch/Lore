@@ -7,7 +7,7 @@ namespace PebblePouch.Lore.Editor
         public string Glyph { get; set; }
         public FieldType Type { get; set; }
 
-        // ScriptableObject Fields: chosen type (Field.GetTypeName form) and its script GUID.
+        // ScriptableObject / Object Fields: chosen type (Field.GetTypeName form) and its script GUID.
         public string ObjectTypeName { get; set; }
         public string ObjectScriptGuid { get; set; }
 
@@ -17,7 +17,10 @@ namespace PebblePouch.Lore.Editor
         // Entry / Entries Fields: allowed Categories being edited (empty = all; applied on save).
         public System.Collections.Generic.List<Category> AllowedCategories { get; } = new();
 
-        // Set when ScriptableObject was just chosen: the card opens the type dropdown on its next draw.
+        // Vector Fields: 2 or 3 (applied on save; never clears values).
+        public int VectorDimension { get; set; }
+
+        // Set when ScriptableObject or Object was just chosen: the card opens the type dropdown on its next draw.
         public bool ObjectTypePickerRequested { get; set; }
 
         public string Feedback { get; set; }
@@ -32,6 +35,7 @@ namespace PebblePouch.Lore.Editor
             Type = field.Type;
             ObjectTypeName = field.ObjectTypeName;
             ObjectScriptGuid = field.ObjectScriptGuid;
+            VectorDimension = field.VectorDimension;
 
             foreach (EnumOption option in field.EnumOptions)
             {

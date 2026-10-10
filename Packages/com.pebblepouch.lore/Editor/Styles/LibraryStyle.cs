@@ -161,7 +161,8 @@ namespace PebblePouch.Lore.Editor
             active = { textColor = LorePalette.TextMuted },
         };
 
-        // Entry / Entries Fields: "Categories  [All Categories ▾]" (same row height as the Enum options).
+        // Entry / Entries Fields: "Categories  [All Categories ▾]" (same row height as the Enum options); also the
+        // "Dimension" row of Vector Fields.
         public const float AllowedCategoriesLabelWidth = 80f;
 
         public static readonly GUIStyle AllowedCategoriesLabel = new()

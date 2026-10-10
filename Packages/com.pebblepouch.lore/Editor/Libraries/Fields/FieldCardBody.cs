@@ -198,9 +198,10 @@ namespace PebblePouch.Lore.Editor
                 return 0f;
             }
 
-            // Type settings (edit mode: Enum options or allowed Categories), then the feedback line.
+            // Type settings (edit mode: Enum options, allowed Categories or Vector dimension), then the feedback line.
             return EnumOptionsEditor.GetHeight(state)
                    + AllowedCategoriesEditor.GetHeight(state)
+                   + VectorDimensionEditor.GetHeight(state)
                    + (string.IsNullOrWhiteSpace(state.Feedback)
                        ? 0f
                        : LibraryStyle.FeedbackHeight);
@@ -246,6 +247,19 @@ namespace PebblePouch.Lore.Editor
                 rect.yMin += categoriesHeight;
             }
 
+            float dimensionHeight =
+                VectorDimensionEditor.GetHeight(
+                    state);
+
+            if (dimensionHeight > 0f)
+            {
+                VectorDimensionEditor.Draw(
+                    new Rect(rect.x, rect.y, rect.width, dimensionHeight),
+                    state);
+
+                rect.yMin += dimensionHeight;
+            }
+
             if (string.IsNullOrWhiteSpace(
                     state.Feedback))
             {
@@ -289,7 +303,7 @@ namespace PebblePouch.Lore.Editor
                 item.Title,
                 LibraryStyle.Title);
 
-            // Missing ScriptableObject type: red, the tooltip explains the fix.
+            // Missing ScriptableObject / Object type: red, the tooltip explains the fix.
             bool missingType =
                 FieldTypeIntegrityAnalyzer.HasMissingType(
                     item.Field);
@@ -412,27 +426,30 @@ namespace PebblePouch.Lore.Editor
             state.Title = result.Value;
         }
 
-        // Field type selector. ScriptableObject Fields show "DialogDefinition (SO)", right-aligned like the viewer:
-        // "(SO)" is the type selector, the type name opens the searchable type dropdown.
+        // Field type selector. ScriptableObject / Object Fields show "DialogDefinition (SO)" / "Texture2D (OBJ)",
+        // right-aligned like the viewer: the suffix is the type selector, the type name opens the searchable type
+        // dropdown.
         private void DrawType(
             Rect rect,
             FieldLibraryItem item,
             FieldCardEditState state)
         {
-            if (state.Type != FieldType.ScriptableObject)
+            if (!ScriptableObjectTypeService.HasObjectType(state.Type))
             {
                 GetTypeEditor(item.Field).Draw(
                     rect,
                     state.Type,
                     LibraryStyle.Metadata,
                     type => SelectType(state, type),
-                    LoreText.FieldTypes.Get);
+                    LoreText.FieldTypes.Get,
+                    groups: FieldTypeMenu.Groups);
 
                 return;
             }
 
             string suffix =
-                LoreText.FieldTypes.ScriptableObjectSuffix;
+                ScriptableObjectTypeService.GetObjectTypeSuffix(
+                    state.Type);
 
             string objectTypeText =
                 GetObjectTypeText(
@@ -470,7 +487,8 @@ namespace PebblePouch.Lore.Editor
                 LibraryStyle.Metadata,
                 type => SelectType(state, type),
                 LoreText.FieldTypes.Get,
-                suffix);
+                suffix,
+                FieldTypeMenu.Groups);
 
             DrawObjectType(
                 new Rect(
@@ -488,10 +506,19 @@ namespace PebblePouch.Lore.Editor
             FieldCardEditState state,
             FieldType type)
         {
-            // Choosing ScriptableObject opens the type dropdown right away (on the card's next draw).
-            if (type == FieldType.ScriptableObject &&
-                state.Type != FieldType.ScriptableObject)
+            // Choosing ScriptableObject or Object opens the type dropdown right away (on the card's next draw). A type
+            // that does not fit the new Field type (ScriptableObject class for an Object Field) is dropped.
+            if (ScriptableObjectTypeService.HasObjectType(type) &&
+                state.Type != type)
             {
+                if (!ScriptableObjectTypeService.IsCandidate(
+                        type,
+                        state.ObjectTypeName))
+                {
+                    state.ObjectTypeName = string.Empty;
+                    state.ObjectScriptGuid = string.Empty;
+                }
+
                 state.ObjectTypePickerRequested = true;
             }
 
@@ -551,6 +578,7 @@ namespace PebblePouch.Lore.Editor
             state.ObjectTypePickerRequested = false;
 
             new ScriptableObjectTypeDropdown(
+                    state.Type,
                     type =>
                     {
                         state.ObjectTypeName = Field.GetTypeName(type);
@@ -661,8 +689,8 @@ namespace PebblePouch.Lore.Editor
                 return false;
             }
 
-            // A ScriptableObject Field needs its type (also blocks saving after the type was lost).
-            if (state.Type == FieldType.ScriptableObject &&
+            // A ScriptableObject / Object Field needs its type (also blocks saving after the type was lost).
+            if (ScriptableObjectTypeService.HasObjectType(state.Type) &&
                 string.IsNullOrEmpty(state.ObjectTypeName))
             {
                 state.Feedback = LoreText.Validation.ObjectTypeRequired;
@@ -711,10 +739,10 @@ namespace PebblePouch.Lore.Editor
                 return false;
             }
 
-            // Removed options that are in use clear values (only when the type stays Enum; a type change clears
-            // everything and was confirmed above).
-            if (state.Type == FieldType.Enum &&
-                field.Type == FieldType.Enum &&
+            // Removed options that are in use clear values (only when the type keeps options, e.g. Enum → Enums; a
+            // confirmed type change that clears values skips this).
+            if (FieldValueUtility.HasEnumOptions(state.Type) &&
+                FieldValueUtility.HasEnumOptions(field.Type) &&
                 !typeChangeApproved)
             {
                 (IReadOnlyList<string> removedLabels, int affectedEntryCount) =
@@ -742,7 +770,8 @@ namespace PebblePouch.Lore.Editor
                     state.ObjectTypeName,
                     state.ObjectScriptGuid,
                     state.EnumOptions,
-                    state.AllowedCategories);
+                    state.AllowedCategories,
+                    state.VectorDimension);
 
             if (!updated)
                 return false;
@@ -848,10 +877,10 @@ namespace PebblePouch.Lore.Editor
         #endregion
 
         #region Helpers
-        // Enum Fields need at least one option; names must be set and unique (case-insensitive).
+        // Enum / Enums Fields need at least one option; names must be set and unique (case-insensitive).
         private static string ValidateEnumOptions(FieldCardEditState state)
         {
-            if (state.Type != FieldType.Enum)
+            if (!FieldValueUtility.HasEnumOptions(state.Type))
                 return null;
 
             if (state.EnumOptions.Count == 0)
@@ -894,7 +923,9 @@ namespace PebblePouch.Lore.Editor
         {
             return LoreText.Common.Paragraphs(
                 string.Format(
-                    LoreText.Library.FieldTypeChangeWarning,
+                    report.KeepsValues
+                        ? LoreText.Library.FieldTypeChangeToSingleWarning
+                        : LoreText.Library.FieldTypeChangeWarning,
                     report.CurrentLabel,
                     report.NewLabel,
                     LoreText.Common.EntryCount.Format(report.AffectedEntryCount)),

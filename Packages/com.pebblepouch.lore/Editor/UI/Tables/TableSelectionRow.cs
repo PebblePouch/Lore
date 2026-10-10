@@ -246,8 +246,54 @@ namespace PebblePouch.Lore.Editor
                     break;
                 }
 
+                case FieldType.Color:
+                {
+                    EditorGUI.BeginChangeCheck();
+
+                    Color color = EditorGUI.ColorField(line, GUIContent.none, value.ColorValue, true, true, false);
+
+                    if (EditorGUI.EndChangeCheck())
+                        Apply(entries, field, target => target.SetColor(color), LoreText.Undo.EditFieldValue);
+
+                    break;
+                }
+
+                // One number field per component: a change sets only that component for all (keeps the others).
+                case FieldType.Vector:
+                {
+                    int component =
+                        VectorFieldDrawer.Draw(
+                            line,
+                            field.VectorDimension,
+                            value.VectorValue,
+                            ControlNamePrefix + field.Id,
+                            true,
+                            index => shared.Mixed && HasMixedComponent(entries, field, index),
+                            out float number);
+
+                    if (component >= 0)
+                    {
+                        Apply(
+                            entries,
+                            field,
+                            target =>
+                            {
+                                Vector3 vector = target.VectorValue;
+                                vector[component] = number;
+                                target.SetVector(vector);
+                            },
+                            LoreText.Undo.EditFieldValue);
+                    }
+
+                    break;
+                }
+
                 case FieldType.Enum:
                     DrawEnum(line, entries, field, value);
+                    break;
+
+                case FieldType.Enums:
+                    DrawEnums(line, entries, field, shared);
                     break;
 
                 case FieldType.GameObject:
@@ -305,6 +351,7 @@ namespace PebblePouch.Lore.Editor
                 }
 
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                 {
                     // Missing type: nothing to pick (the cells of the rows show the fix hint).
                     if (field.ObjectType == null)
@@ -322,6 +369,18 @@ namespace PebblePouch.Lore.Editor
 
                     if (EditorGUI.EndChangeCheck())
                         Apply(entries, field, target => target.SetObject(asset), LoreText.Undo.EditFieldValue);
+
+                    break;
+                }
+
+                case FieldType.Folder:
+                {
+                    if (FieldValueFolderElement.DrawField(line, value.FolderValue, out DefaultAsset folder))
+                    {
+                        string path = FieldValueFolderElement.GetPath(folder);
+
+                        Apply(entries, field, target => target.SetFolder(folder, path), LoreText.Undo.EditFieldValue);
+                    }
 
                     break;
                 }
@@ -402,6 +461,95 @@ namespace PebblePouch.Lore.Editor
 
                 Apply(entries, field, target => target.SetEnum(optionId), LoreText.Undo.EditFieldValue);
             }
+        }
+
+        // Same look as the Enums cells (shared options, or "—" when mixed). Menu: "Fire (2/3)" per option, ticked when
+        // all have it; a click adds the option to the rest, or removes it from all when all have it.
+        private static void DrawEnums(
+            Rect rect,
+            IReadOnlyList<Entry> entries,
+            Field field,
+            SharedValue shared)
+        {
+            string text =
+                shared.Mixed
+                    ? LoreText.Inspector.TableMixedValue
+                    : FieldValueEnumsElement.GetText(shared.Value);
+
+            if (GUI.Button(rect, new GUIContent(text, text), InspectorStyle.FieldValueEnum))
+                ShowEnumsMenu(rect, entries, field);
+
+            if (Event.current.type == EventType.Repaint)
+            {
+                GUI.Label(
+                    new Rect(
+                        rect.xMax - InspectorStyle.FieldValueEnumArrowWidth,
+                        rect.y,
+                        InspectorStyle.FieldValueEnumArrowWidth,
+                        rect.height),
+                    InspectorStyle.FieldValueEnumArrow,
+                    InspectorStyle.FieldValueEnumArrowContent);
+            }
+        }
+
+        private static void ShowEnumsMenu(
+            Rect rect,
+            IReadOnlyList<Entry> entries,
+            Field field)
+        {
+            List<FieldValue> values =
+                entries
+                    .Where(entry => entry != null)
+                    .Select(entry => entry.TryGetValue(field, out FieldValue value) ? value : null)
+                    .Where(value => value != null)
+                    .ToList();
+
+            var menu = new GenericMenu();
+
+            foreach (EnumOption option in field.EnumOptions)
+            {
+                if (option == null)
+                    continue;
+
+                string optionId = option.Id;
+
+                int count =
+                    values.Count(value => FieldValueEnumsElement.Contains(value.EnumValues, optionId));
+
+                bool all = count == values.Count;
+
+                menu.AddItem(
+                    new GUIContent(
+                        string.Format(
+                            LoreText.Inspector.TableSelectionChip,
+                            FieldValueEnumElement.GetMenuLabel(option),
+                            count,
+                            values.Count)),
+                    all,
+                    () =>
+                    {
+                        if (all)
+                        {
+                            Apply(
+                                entries,
+                                field,
+                                target => target.RemoveEnumValue(optionId),
+                                LoreText.Undo.EditFieldValue,
+                                target => FieldValueEnumsElement.Contains(target.EnumValues, optionId));
+                        }
+                        else
+                        {
+                            Apply(
+                                entries,
+                                field,
+                                target => target.AddEnumValue(optionId),
+                                LoreText.Undo.EditFieldValue,
+                                target => !FieldValueEnumsElement.Contains(target.EnumValues, optionId));
+                        }
+                    });
+            }
+
+            menu.DropDown(rect);
         }
 
         // Shared Entry card (or "—"); click: pick in the Entry Library for all selected Entries.
@@ -979,6 +1127,39 @@ namespace PebblePouch.Lore.Editor
             return listed;
         }
 
+        // Vector Fields: true when the selected Entries differ in this component (only asked for mixed values).
+        private static bool HasMixedComponent(
+            IReadOnlyList<Entry> entries,
+            Field field,
+            int component)
+        {
+            bool found = false;
+            float first = 0f;
+
+            foreach (Entry entry in entries)
+            {
+                if (entry == null ||
+                    !entry.TryGetValue(field, out FieldValue value))
+                {
+                    continue;
+                }
+
+                float current = value.VectorValue[component];
+
+                if (!found)
+                {
+                    first = current;
+                    found = true;
+                }
+                else if (current != first)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private static bool HasSameValue(
             FieldValue a,
             FieldValue b,
@@ -999,9 +1180,19 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.Boolean:
                     return a.BoolValue == b.BoolValue;
 
+                case FieldType.Color:
+                    return a.ColorValue == b.ColorValue;
+
+                case FieldType.Vector:
+                    return a.VectorValue == b.VectorValue;
+
                 // A removed option counts as not set (as in the popup).
                 case FieldType.Enum:
                     return field.GetEnumOptionIndex(a.EnumValue) == field.GetEnumOptionIndex(b.EnumValue);
+
+                // Same selected options (order and removed options do not matter).
+                case FieldType.Enums:
+                    return FieldValueEnumsElement.GetText(a) == FieldValueEnumsElement.GetText(b);
 
                 case FieldType.Entry:
                     return a.EntryValue == b.EntryValue;
@@ -1016,11 +1207,15 @@ namespace PebblePouch.Lore.Editor
                     return a.SpriteValue == b.SpriteValue;
 
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                 case FieldType.Audio:
                     return a.ObjectValue == b.ObjectValue;
 
                 case FieldType.Scene:
                     return (a.ScenePath ?? string.Empty) == (b.ScenePath ?? string.Empty);
+
+                case FieldType.Folder:
+                    return a.FolderPath == b.FolderPath;
 
                 default:
                     return true;

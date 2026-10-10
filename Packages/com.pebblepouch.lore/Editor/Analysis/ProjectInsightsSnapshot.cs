@@ -19,7 +19,7 @@ namespace PebblePouch.Lore.Editor
         public int MissingReferenceCount { get; }
         public int MissingUnityReferenceCount { get; }
 
-        // ScriptableObject Fields (used by Categories) whose type cannot be resolved.
+        // ScriptableObject / Object Fields (used by Categories) whose type cannot be resolved.
         public int MissingObjectTypeCount { get; }
 
         // All descriptions (Project, Categories, Entries) and the Project description alone.

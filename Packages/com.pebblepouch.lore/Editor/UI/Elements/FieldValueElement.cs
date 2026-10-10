@@ -66,7 +66,7 @@ namespace PebblePouch.Lore.Editor
         #endregion
 
         #region Helpers
-        private string GetControlName()
+        protected string GetControlName()
         {
             string entryId =
                 _entry != null
@@ -101,6 +101,19 @@ namespace PebblePouch.Lore.Editor
             LoreUndo.Record(
                 _entry,
                 LoreText.Undo.EditFieldValue);
+        }
+
+        // Call before changing the value of a control that changes continuously (color picker, dragging):
+        // consecutive changes of this value become one undo step.
+        protected void RecordContinuousChange()
+        {
+            if (_entry == null)
+                return;
+
+            LoreUndo.RecordTyping(
+                _entry,
+                LoreText.Undo.EditFieldValue,
+                GetControlName());
         }
 
         protected void Save()

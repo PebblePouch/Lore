@@ -43,7 +43,8 @@ namespace PebblePouch.Lore.Editor
                 categories.Any(category => category.RequiredFields.Count > 0));
         }
 
-        // Required Fields (per Category) that are still empty. Booleans never count: false is a valid value.
+        // Required Fields (per Category) that are still empty. Booleans, Colors and Vectors never count
+        // (see FieldValueUtility.CanBeMissing).
         public bool HasMissingRequiredValues(Entry entry)
         {
             if (entry?.Category == null)
@@ -64,7 +65,7 @@ namespace PebblePouch.Lore.Editor
         {
             return entry?.Category != null &&
                    fieldValue?.Field != null &&
-                   fieldValue.Field.Type != FieldType.Boolean &&
+                   FieldValueUtility.CanBeMissing(fieldValue.Field.Type) &&
                    entry.Category.IsRequired(fieldValue.Field) &&
                    !FieldValueUtility.IsPopulated(
                        fieldValue,

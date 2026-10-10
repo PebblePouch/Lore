@@ -1195,7 +1195,7 @@ namespace PebblePouch.Lore.Editor
             LoreRepaintService.Repaint();
         }
 
-        // Categories using a ScriptableObject Field with a missing type; selects the first and reveals that Field.
+        // Categories using a ScriptableObject / Object Field with a missing type; selects the first and reveals that Field.
         private void ShowMissingObjectTypes()
         {
             ContentBrowserRequestService.RequestCategoryFilter(

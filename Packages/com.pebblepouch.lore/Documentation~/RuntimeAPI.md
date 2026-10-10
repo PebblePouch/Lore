@@ -88,7 +88,7 @@ Basic properties:
 | `LoreProject` | `Title`, `Description`, `Links` (`Label`, `Url`), `TagLibrary` |
 | `Category` | `Id`, `Title`, `Glyph`, `Color`, `Description`, `Fields`, `RequiredFields` / `IsRequired(field)` |
 | `Entry` | `Id`, `Title`, `Glyph` (falls back to the Category glyph), `Subtitle`, `Description`, `Category`, `Fields`, `TagIds` |
-| `Field` | `Id`, `Title`, `Type`, `Glyph`, `ObjectType` (ScriptableObject fields), `EnumOptions` (Enum fields: `Id`, `Label`), `AllowedCategories` (Entry / Entries fields, empty = all) |
+| `Field` | `Id`, `Title`, `Type`, `Glyph`, `ObjectType` (ScriptableObject and Object fields), `EnumOptions` (Enum fields: `Id`, `Label`), `AllowedCategories` (Entry / Entries fields, empty = all) |
 | all | `Created`, `Modified` (UTC) |
 
 ---
@@ -174,20 +174,28 @@ int hp3 = entry.GetInt("Health");
 | GameObject | `GetGameObject()` / `TryGetGameObject(out)` | `GetGameObject(key)` | `null` |
 | Sprite | `GetSprite()` / `TryGetSprite(out)` | `GetSprite(key)` | `null` |
 | Scene | `GetScenePath()`, `GetSceneName()` / `TryGet…(out)` | `GetScenePath(key)`, `GetSceneName(key)` | `""` |
+| Folder | `GetFolderPath()` / `TryGetFolderPath(out)` | `GetFolderPath(key)` | `""` |
 | ScriptableObject | `GetScriptableObject<T>()` / `TryGetScriptableObject<T>(out)` | `GetScriptableObject<T>(key)` | `null` |
+| Object | `GetObject<T>()` / `TryGetObject<T>(out)` | `GetObject<T>(key)` | `null` |
 | Enum | `GetEnum()`, `GetEnumIndex()` / `TryGetEnum(out)`, `TryGetEnumIndex(out)` | `GetEnum(key)`, `GetEnumIndex(key)` | `""` / `-1` |
+| Enums | `GetEnums()`, `HasEnum(label)` / `TryGetEnums(out)` | `GetEnums(key)`, `HasEnum(key, label)` | empty list / `false` |
 | Entries | `GetEntries()` / `TryGetEntries(out)` | `GetEntries(key)` | empty list |
 | Audio | `GetAudioClip()` / `TryGetAudioClip(out)` | `GetAudioClip(key)` | `null` |
+| Color | `GetColor()` / `TryGetColor(out)` | `GetColor(key)` | black |
+| Vector | `GetVector2()`, `GetVector3()` / `TryGetVector2(out)`, `TryGetVector3(out)` | `GetVector2(key)`, `GetVector3(key)` | zero |
 
 `value.Field` and `value.Type` tell which Field and type a value has (useful when iterating `entry.Fields`).
-For ScriptableObject fields, `field.ObjectType` is the type chosen in Lore (`null` if that type no longer exists).
+For ScriptableObject and Object fields, `field.ObjectType` is the type chosen in Lore (`null` if that type no longer
+exists).
+Vector fields work with both getters: `field.VectorDimension` is 2 or 3; `GetVector2` drops z, `GetVector3` of a 2D
+field returns z = 0.
 
 ### Rules
 
 - **Types are strict.** `GetInt` only reads Integer fields, `GetText` only Text fields (not URLs).
 - **`Get…` never throws.** On a missing Field or wrong type it returns the default value and logs a warning.
 - **`TryGet…` never warns.** It returns `false` on a wrong type; for references (Entry, GameObject, Sprite, Audio,
-  ScriptableObject) and scenes also when the value is empty, so the out value is safe to use:
+  ScriptableObject, Object) and scenes and folders also when the value is empty, so the out value is safe to use:
 
   ```csharp
   if (entry.TryGetValue("Portrait", out FieldValue value) &&
@@ -199,6 +207,8 @@ For ScriptableObject fields, `field.ObjectType` is the type chosen in Lore (`nul
 
 - **Scenes** are returned as path (`Assets/Scenes/Forest.unity`) or name (`Forest`); both work with
   `SceneManager.LoadScene` as long as the scene is in the build's scene list.
+- **Folders** are returned as path (`Assets/Art/Wolves`). Folder assets do not exist in builds: use the path, e.g.
+  for your own asset lookups or Addressables labels/keys.
 - **ScriptableObjects** are read with your own type:
 
   ```csharp
@@ -208,6 +218,16 @@ For ScriptableObject fields, `field.ObjectType` is the type chosen in Lore (`nul
   `T` can be the type chosen in Lore, a base class or a subclass. A value that is not a `T` returns `null`
   (`Get…` with a warning, `TryGet…` returns `false`). Without `T`, `GetScriptableObject()` returns the
   value as `ScriptableObject`.
+- **Object fields** hold an asset of any other Unity type chosen in Lore (Texture2D, Material, AnimationClip, ...) and
+  are read the same way, with the same rules for `T`:
+
+  ```csharp
+  Material skin = entry.GetObject<Material>("Skin");
+  Rigidbody body = entry.GetObject<Rigidbody>("Physics Template");
+  ```
+
+  For a component type (e.g. `Rigidbody`) the value is that component on a prefab. Without `T`, `GetObject()`
+  returns the value as `UnityEngine.Object`.
 - **Enum fields** return the label of the selected option (`"Rare"`); `GetEnumIndex` returns its position in the
   Field's option list (`0` = first option), e.g. for ranks or sorting. An Enum value that is empty or points to a removed
   option counts as not set.
@@ -304,7 +324,7 @@ So when a scene loads that references the Project, Unity loads:
 
 - every Entry (through the Project index), with its Category and Fields: mostly text, small,
 - every asset referenced by a field value: **Sprites** (their textures), **GameObjects** (prefabs with meshes,
-  materials, textures, audio), **AudioClips**, **ScriptableObjects** (and whatever they reference).
+  materials, textures, audio), **AudioClips**, **ScriptableObjects** and **Objects** (and whatever they reference).
 
 All of it stays in memory while something references the Project.
 

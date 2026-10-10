@@ -140,10 +140,15 @@ public class LoreRuntimeSample : MonoBehaviour
             FieldType.GameObject => value.TryGetGameObject(out GameObject prefab) ? prefab.name : "(none)",
             FieldType.Sprite => value.TryGetSprite(out Sprite sprite) ? sprite.name : "(none)",
             FieldType.Scene => value.TryGetSceneName(out string scene) ? $"{scene} ({value.GetScenePath()})" : "(none)",
+            FieldType.Folder => value.TryGetFolderPath(out string folder) ? folder : "(none)",
             FieldType.ScriptableObject => value.TryGetScriptableObject(out ScriptableObject asset) ? $"{asset.name} ({asset.GetType().Name})" : "(none)",
+            FieldType.Object => value.TryGetObject(out UnityEngine.Object obj) ? $"{obj.name} ({obj.GetType().Name})" : "(none)",
             FieldType.Enum => value.TryGetEnum(out string option) ? $"{option} (#{value.GetEnumIndex()})" : "(none)",
+            FieldType.Enums => value.TryGetEnums(out var options) ? string.Join(", ", options) : "(none)",
             FieldType.Entries => value.TryGetEntries(out var listed) ? string.Join(", ", System.Linq.Enumerable.Select(listed, linked => linked.Title)) : "(none)",
             FieldType.Audio => value.TryGetAudioClip(out AudioClip clip) ? clip.name : "(none)",
+            FieldType.Color => "#" + ColorUtility.ToHtmlStringRGBA(value.GetColor()),
+            FieldType.Vector => value.Field.VectorDimension == 2 ? value.GetVector2().ToString() : value.GetVector3().ToString(),
             _ => $"({value.Type})"
         };
     }

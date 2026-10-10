@@ -17,11 +17,15 @@ namespace PebblePouch.Lore.Editor
         private readonly FieldValueGameObjectElement _objectElement = new();
         private readonly FieldValueSpriteElement _spriteElement = new();
         private readonly FieldValueSceneElement _sceneElement = new();
+        private readonly FieldValueFolderElement _folderElement = new();
         private readonly FieldValueUrlElement _urlElement = new();
         private readonly FieldValueScriptableObjectElement _scriptableObjectElement = new();
         private readonly FieldValueEnumElement _enumElement = new();
+        private readonly FieldValueEnumsElement _enumsElement = new();
         private readonly FieldValueEntriesElement _entriesElement = new();
         private readonly FieldValueAudioElement _audioElement = new();
+        private readonly FieldValueColorElement _colorElement = new();
+        private readonly FieldValueVectorElement _vectorElement = new();
         #endregion
 
         #region Public API
@@ -109,6 +113,12 @@ namespace PebblePouch.Lore.Editor
                     _sceneElement.Draw(rect);
                     break;
 
+                case FieldType.Folder:
+                    _folderElement.SetEntry(_entry);
+                    _folderElement.SetFieldValue(_fieldValue);
+                    _folderElement.Draw(rect);
+                    break;
+
                 case FieldType.Url:
                     _urlElement.SetEntry(_entry);
                     _urlElement.SetFieldValue(_fieldValue);
@@ -116,6 +126,7 @@ namespace PebblePouch.Lore.Editor
                     break;
 
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                     _scriptableObjectElement.SetEntry(_entry);
                     _scriptableObjectElement.SetFieldValue(_fieldValue);
                     _scriptableObjectElement.Draw(rect);
@@ -125,6 +136,12 @@ namespace PebblePouch.Lore.Editor
                     _enumElement.SetEntry(_entry);
                     _enumElement.SetFieldValue(_fieldValue);
                     _enumElement.Draw(rect);
+                    break;
+
+                case FieldType.Enums:
+                    _enumsElement.SetEntry(_entry);
+                    _enumsElement.SetFieldValue(_fieldValue);
+                    _enumsElement.Draw(rect);
                     break;
 
                 case FieldType.Entries:
@@ -137,6 +154,18 @@ namespace PebblePouch.Lore.Editor
                     _audioElement.SetEntry(_entry);
                     _audioElement.SetFieldValue(_fieldValue);
                     _audioElement.Draw(rect);
+                    break;
+
+                case FieldType.Color:
+                    _colorElement.SetEntry(_entry);
+                    _colorElement.SetFieldValue(_fieldValue);
+                    _colorElement.Draw(rect);
+                    break;
+
+                case FieldType.Vector:
+                    _vectorElement.SetEntry(_entry);
+                    _vectorElement.SetFieldValue(_fieldValue);
+                    _vectorElement.Draw(rect);
                     break;
             }
         }

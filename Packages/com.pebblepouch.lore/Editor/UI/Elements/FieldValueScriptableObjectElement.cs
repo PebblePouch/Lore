@@ -3,8 +3,9 @@ using UnityEngine;
 
 namespace PebblePouch.Lore.Editor
 {
-    // ScriptableObject value: an object field restricted to the Field's type (Unity's picker lists matching assets,
-    // subclasses included). Without a usable type (none chosen, or the class was deleted/renamed) a hint replaces it.
+    // ScriptableObject / Object value: an object field restricted to the Field's type (Unity's picker lists matching
+    // assets, subclasses included; component types list prefabs with that component). Without a usable type (none
+    // chosen, or the class was deleted/renamed) a hint replaces it.
     public sealed class FieldValueScriptableObjectElement : FieldValueElement
     {
         #region Draw

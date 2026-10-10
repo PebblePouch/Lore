@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PebblePouch.Lore.Editor
 {
-    // Options of an Enum Field, below its card while it is edited: one row per option (drag handle, name, remove),
+    // Options of an Enum / Enums Field, below its card while it is edited: one row per option (drag handle, name, remove),
     // then "Add Option". Works on the card's edit state; FieldService.UpdateField applies the list on save.
     public sealed class EnumOptionsEditor
     {
@@ -29,7 +29,7 @@ namespace PebblePouch.Lore.Editor
         public static float GetHeight(FieldCardEditState state)
         {
             if (state == null ||
-                state.Type != FieldType.Enum)
+                !FieldValueUtility.HasEnumOptions(state.Type))
             {
                 return 0f;
             }

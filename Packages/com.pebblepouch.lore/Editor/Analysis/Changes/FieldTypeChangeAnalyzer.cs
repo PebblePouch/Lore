@@ -5,7 +5,7 @@ namespace PebblePouch.Lore.Editor
     public sealed class FieldTypeChangeAnalyzer
     {
         #region Public API
-        // newObjectTypeName: the ScriptableObject type for ScriptableObject Fields (otherwise ignored).
+        // newObjectTypeName: the type for ScriptableObject / Object Fields (otherwise ignored).
         public FieldTypeChangeReport Analyze(
             Field field,
             FieldType newType,
@@ -42,9 +42,10 @@ namespace PebblePouch.Lore.Editor
                             entry.Fields.Any(
                                 fieldValue =>
                                     fieldValue.Field == field &&
-                                    FieldValueUtility.IsPopulated(
+                                    FieldValueUtility.LosesValue(
                                         fieldValue,
-                                        field.Type)));
+                                        field.Type,
+                                        newType)));
 
             return new FieldTypeChangeReport(
                 field,

@@ -7,8 +7,8 @@ read everything at runtime.
 ## Installation
 
 - **Git URL:** Package Manager > + > *Install package from git URL…* >
-  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.2.0`
-  (the `#0.2.0` tag pins a version; without it, the package follows the latest state of `main`).
+  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.0`
+  (the `#0.3.0` tag pins a version; without it, the package follows the latest state of `main`).
 - **From disk:** Package Manager > + > *Install package from disk…* > select this folder's `package.json`.
 
 Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.
@@ -28,6 +28,18 @@ and three ways to start:
 
 You can move the data folder anywhere under `Assets` and rename the Project asset; Lore finds the data through it.
 A Unity project holds one Lore Project; if it contains more, Lore helps you export and remove the extra ones.
+
+## Field types
+
+Fields are defined once in the **Field Library** and added to Categories; every Entry of a Category fills them.
+
+| Group | Types |
+|---|---|
+| Basic | Text, URL, Boolean, Integer, Float, Vector (2D/3D), Color |
+| Choice | Enum (one option), Enums (several options), Entry (one Entry), Entries (several Entries) |
+| Unity | GameObject, Sprite, Audio, Scene, Folder, ScriptableObject (your class), Object (any other asset type, e.g. Texture2D, Material or a prefab's component) |
+
+Entry/Entries Fields can be limited to Categories; Categories can mark Fields as required.
 
 ## Example Project
 
@@ -53,7 +65,8 @@ preview before anything changes. See `Documentation~/CSV.md`.
 **Tools > Lore > Export Project…** packs the Lore data (data folder, Libraries, generated Field constants) into a
 `.unitypackage`; **Tools > Lore > Import Project…** (or a double-click on the file) imports it into another Unity
 project with Lore installed, ideally one without Lore data yet. Field values that point to game assets (prefabs,
-sprites, audio clips, scenes, ScriptableObjects) only work if those assets exist there too; the export can include them.
+sprites, audio clips, scenes, folders, ScriptableObjects, other assets) only work if those assets exist there too; the
+export can include them.
 Project Settings > Lore are not part of the package.
 
 ## Runtime API

@@ -204,8 +204,25 @@ namespace PebblePouch.Lore.Editor
                     fieldValue.SetFloat(value.Float);
                     break;
 
+                case FieldType.Color:
+                    fieldValue.SetColor(value.Color);
+                    break;
+
+                case FieldType.Vector:
+                    fieldValue.SetVector(value.Vector);
+                    break;
+
                 case FieldType.Enum:
                     fieldValue.SetEnum(value.EnumOptionId);
+                    break;
+
+                // Removed options stay (broken values are never removed silently).
+                case FieldType.Enums:
+                    fieldValue.SetEnumValues(
+                        value.EnumOptionIds.Concat(
+                            fieldValue.EnumValues
+                                .Where(optionId => field.FindEnumOption(optionId) == null)
+                                .ToList()));
                     break;
 
                 case FieldType.Entry:
@@ -232,7 +249,16 @@ namespace PebblePouch.Lore.Editor
                             : string.Empty);
                     break;
 
+                case FieldType.Folder:
+                    fieldValue.SetFolder(
+                        value.Asset,
+                        value.Asset != null
+                            ? AssetDatabase.GetAssetPath(value.Asset)
+                            : string.Empty);
+                    break;
+
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                     fieldValue.SetObject(value.Asset);
                     break;
 

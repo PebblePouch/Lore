@@ -4,6 +4,44 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-10-10
+
+### Added
+
+- Field type Color: a color with alpha, black when empty (never counts as a missing required value). Edited with
+  Unity's color picker on the Entry page, in Tabular Editing and bulk editing; CSV as `#RRGGBBAA`; sorts by hue.
+  Runtime API: `GetColor` / `TryGetColor`.
+- Field type Vector: a Vector2 or Vector3, chosen per Field in the Field card ("Dimension"; switching keeps the
+  values, a 2D Field keeps the stored z). Shown as "Vector2" / "Vector3"; never counts as a missing required value.
+  Edited as X/Y/Z number fields on the Entry page, in Tabular Editing and bulk editing (a change sets only that
+  component for all selected Entries); CSV as `x;y` / `x;y;z`; sorts by x, then y, then z. Runtime API:
+  `GetVector2` / `GetVector3` (both work for either dimension) and `Field.VectorDimension`.
+- Field type Enums: several options of the Field (same option editor as Enum), kept in option order. Edited with a
+  dropdown that ticks options; bulk editing adds an option to all selected Entries or removes it from all; CSV as
+  option names separated by `|`; searchable; an empty selection counts as a missing required value. Runtime API:
+  `GetEnums` / `TryGetEnums` / `HasEnum`.
+- Field type Folder: a project folder (other assets are not accepted). Stores the folder and its path, which follows
+  moved/renamed folders; a deleted folder is a missing reference (integrity). In Tabular Editing, bulk editing,
+  CSV (folder path), search (folder name) and sorting (path) like the other asset types. Runtime API:
+  `GetFolderPath` / `TryGetFolderPath`.
+- Field type Object: an asset of any other Unity type, chosen per Field like the ScriptableObject type (the picker
+  opens right away; shown as e.g. "Texture2D (OBJ)"). Offers Unity's own types (Texture2D, Material,
+  AnimationClip, abstract bases like Texture, components like Rigidbody, which pick prefabs) and the project's
+  classes; types with a Field type of their own (GameObject, Sprite, AudioClip, the ScriptableObject classes) are left
+  out. A missing type and a deleted asset are integrity issues, like for ScriptableObject Fields. In Tabular Editing,
+  bulk editing, CSV (asset path), search and sorting like the other asset types. Runtime API: `GetObject<T>` /
+  `TryGetObject<T>`.
+  The type picker groups the types by function (Animation, Physics, Rendering, Textures, UI, ...), with the types
+  already used by Object Fields and the project's own types on top; the search covers all groups.
+- Field and Tag Library menus: "References" has a glyph (🔗), like the other menu items.
+
+### Changed
+
+- The Field type menu is grouped (Basic, Choice, Unity) with separators between the groups.
+- Changing a Field between Enum and Enums or between Entry and Entries keeps the values: a single value becomes a
+  list, a list with one value becomes the single value. Only lists with several values are cleared (the confirmation
+  says how many Entries). Switching Enum ↔ Enums keeps the options.
+
 ## [0.2.1] - 2026-10-10
 
 ### Added

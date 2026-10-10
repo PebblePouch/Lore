@@ -1380,9 +1380,42 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.Boolean:
                     return fieldValue.BoolValue;
 
+                // By hue, then saturation, then brightness (a tuple compares element by element).
+                case FieldType.Color:
+                    Color.RGBToHSV(fieldValue.ColorValue, out float hue, out float saturation, out float brightness);
+                    return (hue, saturation, brightness);
+
+                // By x, then y, then z.
+                case FieldType.Vector:
+                    Vector3 vector = fieldValue.VectorValue;
+                    return (vector.x, vector.y, vector.z);
+
                 case FieldType.Enum:
                     int index = _sortField.GetEnumOptionIndex(fieldValue.EnumValue);
                     return index >= 0 ? (object)index : null;
+
+                // By the first selected option (in option order), then by count.
+                case FieldType.Enums:
+                    int first = -1;
+                    int selected = 0;
+
+                    for (int i = 0; i < _sortField.EnumOptions.Count; i++)
+                    {
+                        EnumOption option = _sortField.EnumOptions[i];
+
+                        if (option == null ||
+                            !FieldValueEnumsElement.Contains(fieldValue.EnumValues, option.Id))
+                        {
+                            continue;
+                        }
+
+                        if (first < 0)
+                            first = i;
+
+                        selected++;
+                    }
+
+                    return first >= 0 ? (object)(first, selected) : null;
 
                 case FieldType.Entry:
                     return fieldValue.EntryValue != null ? fieldValue.EntryValue.Title : null;
@@ -1398,6 +1431,7 @@ namespace PebblePouch.Lore.Editor
                     return fieldValue.SpriteValue != null ? fieldValue.SpriteValue.name : null;
 
                 case FieldType.ScriptableObject:
+                case FieldType.Object:
                 case FieldType.Audio:
                     return fieldValue.ObjectValue != null ? fieldValue.ObjectValue.name : null;
 
@@ -1405,6 +1439,10 @@ namespace PebblePouch.Lore.Editor
                     return string.IsNullOrEmpty(fieldValue.ScenePath)
                         ? null
                         : System.IO.Path.GetFileNameWithoutExtension(fieldValue.ScenePath);
+
+                // By path, so folders sort by their place in the project.
+                case FieldType.Folder:
+                    return string.IsNullOrEmpty(fieldValue.FolderPath) ? null : fieldValue.FolderPath;
 
                 default:
                     return null;

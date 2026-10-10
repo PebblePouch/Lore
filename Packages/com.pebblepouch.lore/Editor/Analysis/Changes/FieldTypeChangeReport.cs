@@ -1,6 +1,7 @@
 namespace PebblePouch.Lore.Editor
 {
-    // A Field type change, including a changed ScriptableObject type (both clear the set values).
+    // A Field type change, including a changed ScriptableObject type (both clear the set values, except the
+    // changes that keep them, see KeepsValues).
     public sealed class FieldTypeChangeReport
     {
         #region Properties
@@ -18,6 +19,12 @@ namespace PebblePouch.Lore.Editor
         public bool IsChanged { get; }
 
         public int AffectedEntryCount { get; }
+
+        // Enum ↔ Enums, Entry ↔ Entries: values are kept; only lists with several values are cleared.
+        public bool KeepsValues =>
+            FieldValueUtility.KeepsValues(
+                CurrentType,
+                NewType);
 
         public bool HasDataLoss =>
             AffectedEntryCount > 0;
@@ -57,7 +64,7 @@ namespace PebblePouch.Lore.Editor
 
             IsChanged =
                 currentType != newType ||
-                newType == FieldType.ScriptableObject &&
+                ScriptableObjectTypeService.HasObjectType(newType) &&
                 (currentObjectTypeName ?? string.Empty) != (newObjectTypeName ?? string.Empty);
 
             AffectedEntryCount =

@@ -109,6 +109,12 @@ namespace PebblePouch.Lore
 
         public float GetFloat(FieldKey field) => GetValue(field)?.GetFloat() ?? 0f;
 
+        public Color GetColor(FieldKey field) => GetValue(field)?.GetColor() ?? Color.black;
+
+        public Vector2 GetVector2(FieldKey field) => GetValue(field)?.GetVector2() ?? Vector2.zero;
+
+        public Vector3 GetVector3(FieldKey field) => GetValue(field)?.GetVector3() ?? Vector3.zero;
+
         public Entry GetEntry(FieldKey field) => GetValue(field)?.GetEntry();
 
         public GameObject GetGameObject(FieldKey field) => GetValue(field)?.GetGameObject();
@@ -119,11 +125,18 @@ namespace PebblePouch.Lore
 
         public string GetScenePath(FieldKey field) => GetValue(field)?.GetScenePath() ?? string.Empty;
 
+        public string GetFolderPath(FieldKey field) => GetValue(field)?.GetFolderPath() ?? string.Empty;
+
         public string GetSceneName(FieldKey field) => GetValue(field)?.GetSceneName() ?? string.Empty;
 
         public string GetEnum(FieldKey field) => GetValue(field)?.GetEnum() ?? string.Empty;
 
         public int GetEnumIndex(FieldKey field) => GetValue(field)?.GetEnumIndex() ?? -1;
+
+        public IReadOnlyList<string> GetEnums(FieldKey field) =>
+            GetValue(field)?.GetEnums() ?? (IReadOnlyList<string>)System.Array.Empty<string>();
+
+        public bool HasEnum(FieldKey field, string label) => GetValue(field)?.HasEnum(label) ?? false;
 
         public IReadOnlyList<Entry> GetEntries(FieldKey field) =>
             GetValue(field)?.GetEntries() ?? (IReadOnlyList<Entry>)System.Array.Empty<Entry>();
@@ -134,6 +147,14 @@ namespace PebblePouch.Lore
             where T : ScriptableObject
         {
             return GetValue(field)?.GetScriptableObject<T>();
+        }
+
+        public UnityEngine.Object GetObject(FieldKey field) => GetValue(field)?.GetObject();
+
+        public T GetObject<T>(FieldKey field)
+            where T : UnityEngine.Object
+        {
+            return GetValue(field)?.GetObject<T>();
         }
         #endregion
 

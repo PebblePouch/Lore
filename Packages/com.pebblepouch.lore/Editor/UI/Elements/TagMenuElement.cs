@@ -79,7 +79,7 @@ namespace PebblePouch.Lore.Editor
 
             items.Add(
                 new LoreMenuItem(
-                    LoreText.Library.References,
+                    LoreEditorTheme.Current.References,
                     ShowReferences,
                     separatorBefore: true));
 

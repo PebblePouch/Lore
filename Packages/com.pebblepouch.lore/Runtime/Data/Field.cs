@@ -13,7 +13,7 @@ namespace PebblePouch.Lore
         [SerializeField, HideInInspector]
         private string _glyph;
 
-        // Object fields (ScriptableObject): the allowed type; subclasses are allowed too.
+        // Object fields (ScriptableObject, Object): the allowed type; subclasses are allowed too.
         // Stored as "Namespace.Type, Assembly" (no version), so it survives recompiles and Unity upgrades.
         [SerializeField, HideInInspector]
         private string _objectTypeName;
@@ -37,6 +37,10 @@ namespace PebblePouch.Lore
         // Entry / Entries fields: the Categories whose Entries can be picked (empty = all Categories).
         [SerializeField, HideInInspector]
         private System.Collections.Generic.List<Category> _allowedCategories = new();
+
+        // Vector fields: 2 (Vector2) or 3 (Vector3).
+        [SerializeField, HideInInspector]
+        private int _vectorDimension = 3;
         #endregion
 
         #region Properties
@@ -78,6 +82,9 @@ namespace PebblePouch.Lore
         // Entry / Entries fields: Categories whose Entries can be picked; empty = all Categories.
         public System.Collections.Generic.IReadOnlyList<Category> AllowedCategories => _allowedCategories ??= new();
 
+        // Vector fields: 2 (Vector2) or 3 (Vector3).
+        public int VectorDimension => _vectorDimension == 2 ? 2 : 3;
+
         // True when Entries of this Category can be picked (no restriction, or the Category is allowed).
         public bool AllowsCategory(Category category)
         {
@@ -106,6 +113,8 @@ namespace PebblePouch.Lore
         }
 
         internal void SetType(FieldType type) => _type = type;
+
+        internal void SetVectorDimension(int dimension) => _vectorDimension = dimension == 2 ? 2 : 3;
 
         internal void SetGlyph(string glyph)
         {

@@ -52,6 +52,10 @@ MonoBehaviour:
     Name: Open
     Glyph: "↗️"
     Tooltip: Open Link
+  References:
+    Name: References
+    Glyph: "\U0001F517"
+    Tooltip: Show the Entries that use it
   Play:
     Name: Play
     Glyph: "▶️"

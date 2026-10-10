@@ -168,6 +168,13 @@ namespace PebblePouch.Lore.Editor
                 EditorUtility.SetDirty(duplicate);
             }
 
+            if (source.VectorDimension != duplicate.VectorDimension)
+            {
+                duplicate.SetVectorDimension(source.VectorDimension);
+
+                EditorUtility.SetDirty(duplicate);
+            }
+
             if (source.AllowedCategories.Count > 0)
             {
                 duplicate.SetAllowedCategories(source.AllowedCategories);
@@ -222,7 +229,8 @@ namespace PebblePouch.Lore.Editor
             string objectTypeName = null,
             string objectScriptGuid = null,
             IReadOnlyList<EnumOptionDraft> enumOptions = null,
-            IReadOnlyList<Category> allowedCategories = null)
+            IReadOnlyList<Category> allowedCategories = null,
+            int vectorDimension = 0)
         {
             LoreOperationResult validation = ValidateUpdate(field, newName);
 
@@ -237,9 +245,9 @@ namespace PebblePouch.Lore.Editor
                 }
             }
 
-            // Enum options: only for Enum Fields, and only when the edited list differs.
+            // Enum options: only for Enum / Enums Fields, and only when the edited list differs.
             bool optionsChanged =
-                type == FieldType.Enum &&
+                FieldValueUtility.HasEnumOptions(type) &&
                 enumOptions != null &&
                 !HasSameEnumOptions(field, enumOptions);
 
@@ -254,18 +262,25 @@ namespace PebblePouch.Lore.Editor
                     field.AllowedCategories,
                     targetCategories);
 
+            // Vector dimension: only for Vector Fields (0 = keep); never clears values.
+            bool dimensionChanged =
+                type == FieldType.Vector &&
+                vectorDimension != 0 &&
+                vectorDimension != field.VectorDimension;
+
             bool clearsSetValues =
                 RecordFieldUndo(
                     field,
                     glyph,
                     type,
-                    type == FieldType.ScriptableObject
+                    ScriptableObjectTypeService.HasObjectType(type)
                         ? objectTypeName ?? string.Empty
                         : string.Empty,
                     optionsChanged
                         ? enumOptions
                         : null,
-                    categoriesChanged);
+                    categoriesChanged,
+                    dimensionChanged);
 
             bool changed = false;
 
@@ -276,8 +291,8 @@ namespace PebblePouch.Lore.Editor
                 changed = true;
             }
 
-            // Only ScriptableObject Fields keep a ScriptableObject type.
-            if (type != FieldType.ScriptableObject)
+            // Only ScriptableObject / Object Fields keep a type.
+            if (!ScriptableObjectTypeService.HasObjectType(type))
             {
                 objectTypeName = string.Empty;
                 objectScriptGuid = string.Empty;
@@ -285,20 +300,25 @@ namespace PebblePouch.Lore.Editor
 
             objectTypeName ??= string.Empty;
 
-            // A changed ScriptableObject type clears the values like a type change.
+            // A changed ScriptableObject / Object type clears the values like a type change.
             bool typeChanged =
                 field.Type != type ||
                 field.ObjectTypeName != objectTypeName;
 
             if (typeChanged)
             {
+                FieldType previousType = field.Type;
+
                 field.SetType(type);
 
                 field.SetObjectType(
                     objectTypeName,
                     objectScriptGuid);
 
-                new FieldValueSyncService().ClearValues(field);
+                // Enum ↔ Enums and Entry ↔ Entries keep the values that fit; everything else clears them.
+                new FieldValueSyncService().ConvertValues(
+                    field,
+                    previousType);
 
                 changed = true;
             }
@@ -315,6 +335,13 @@ namespace PebblePouch.Lore.Editor
             if (categoriesChanged)
             {
                 field.SetAllowedCategories(targetCategories);
+
+                changed = true;
+            }
+
+            if (dimensionChanged)
+            {
+                field.SetVectorDimension(vectorDimension);
 
                 changed = true;
             }
@@ -535,7 +562,8 @@ namespace PebblePouch.Lore.Editor
             FieldType type,
             string objectTypeName,
             IReadOnlyList<EnumOptionDraft> changedOptions,
-            bool categoriesChanged)
+            bool categoriesChanged,
+            bool dimensionChanged)
         {
             bool typeChanged =
                 field.Type != type ||
@@ -554,9 +582,11 @@ namespace PebblePouch.Lore.Editor
                     return false;
                 }
 
-                // Glyph and allowed Categories never clear values: one undoable step.
+                // Glyph, allowed Categories and Vector dimension never clear values: one undoable step.
                 if (categoriesChanged)
                     LoreUndo.Record(field, LoreText.Undo.EditAllowedCategories);
+                else if (dimensionChanged)
+                    LoreUndo.Record(field, LoreText.Undo.EditVectorDimension);
                 else if (field.Glyph != glyph)
                     LoreUndo.Record(field, LoreText.Undo.ChangeGlyph);
 
@@ -609,7 +639,7 @@ namespace PebblePouch.Lore.Editor
                             entry.Fields.Any(
                                 fieldValue =>
                                     fieldValue.Field == field &&
-                                    removedIds.Contains(fieldValue.EnumValue)));
+                                    UsesAny(fieldValue, removedIds)));
 
             return (removedLabels, affectedEntryCount);
         }
@@ -687,18 +717,32 @@ namespace PebblePouch.Lore.Editor
 
                 foreach (FieldValue fieldValue in entry.Fields)
                 {
-                    if (fieldValue.Field == field &&
-                        removedIds.Contains(fieldValue.EnumValue))
+                    if (fieldValue.Field != field ||
+                        !UsesAny(fieldValue, removedIds))
                     {
+                        continue;
+                    }
+
+                    if (removedIds.Contains(fieldValue.EnumValue))
                         fieldValue.SetEnum(string.Empty);
 
-                        cleared = true;
-                    }
+                    fieldValue.RemoveEnumValues(removedIds);
+
+                    cleared = true;
                 }
 
                 if (cleared)
                     LoreChangeTracker.MarkModified(entry);
             }
+        }
+
+        // Enum value or one of the Enums values is one of the given options.
+        private static bool UsesAny(
+            FieldValue fieldValue,
+            HashSet<string> optionIds)
+        {
+            return optionIds.Contains(fieldValue.EnumValue) ||
+                   fieldValue.EnumValues.Any(optionIds.Contains);
         }
 
         // Adding/removing a Field changes the Category and syncs its Entries' field values: one undo step.
