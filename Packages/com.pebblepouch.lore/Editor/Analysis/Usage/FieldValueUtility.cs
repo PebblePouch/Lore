@@ -68,6 +68,9 @@ namespace PebblePouch.Lore.Editor
                 FieldType.ScriptableObject =>
                     fieldValue.ObjectValue != null,
 
+                FieldType.Audio =>
+                    fieldValue.AudioClipValue != null,
+
                 // Deleted or missing Entries do not count.
                 FieldType.Entries =>
                     fieldValue.EntriesValue.Any(entry => entry != null),

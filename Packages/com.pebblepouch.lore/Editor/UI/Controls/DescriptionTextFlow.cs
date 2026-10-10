@@ -6,7 +6,8 @@ using UnityEngine;
 
 namespace PebblePouch.Lore.Editor
 {
-    // Draws description text with [[Entry]] links in a word-wrapped flow (view mode only).
+    // Draws description text with [[Entry]] links and Markdown emphasis (**bold**, *italic*, see
+    // DescriptionEmphasisParser) in a word-wrapped flow (view mode only).
     // Resolved links show "Glyph Title" in link blue and navigate on click.
     // Broken links show their label with a strikethrough: in yellow when a repair candidate exists
     // (DescriptionLinkRepair), otherwise in red. Clicking a broken link opens the repair menu
@@ -30,6 +31,7 @@ namespace PebblePouch.Lore.Editor
             public readonly TokenKind Kind;
             public readonly string Text;
             public readonly Entry Entry;
+            public readonly FontStyle FontStyle;
 
             // Links only: the stored target and the link's position in the text (for repairs).
             public readonly string Target;
@@ -38,16 +40,23 @@ namespace PebblePouch.Lore.Editor
             public Token(
                 TokenKind kind,
                 string text,
+                FontStyle fontStyle,
                 Entry entry = null,
                 string target = null,
                 int linkIndex = -1)
             {
                 Kind = kind;
                 Text = text;
+                FontStyle = fontStyle;
                 Entry = entry;
                 Target = target;
                 LinkIndex = linkIndex;
             }
+
+            // Words and links; consecutive ones without a space between ("**big**,") wrap together.
+            public bool IsText =>
+                Kind != TokenKind.Space &&
+                Kind != TokenKind.NewLine;
         }
 
         // Repair menu: textChanged receives the repaired description text.
@@ -123,6 +132,9 @@ namespace PebblePouch.Lore.Editor
         // Non-wrapping copies of text styles: the flow wraps per word itself. With wordWrap on,
         // a word drawn in its measured rect can wrap its last letter onto the next row.
         private static readonly Dictionary<GUIStyle, GUIStyle> NoWrapStyles = new();
+
+        // Bold / italic copies of text and link styles.
+        private static readonly Dictionary<(GUIStyle, FontStyle), GUIStyle> FontStyles = new();
 
         // Performance: tokens, word sizes and repair candidates are computed once per text, style and width, not on
         // every OnGUI call (Draw and CalcHeight share the layout). Links resolve against the current data, so the
@@ -236,8 +248,21 @@ namespace PebblePouch.Lore.Editor
             float x = 0f;
             float y = 0f;
 
+            // First placed token of the current run of glued text tokens (see Token.IsText).
+            int groupStart = 0;
+            bool previousIsText = false;
+
             foreach (Token token in Tokenize(text))
             {
+                bool glued =
+                    previousIsText &&
+                    token.IsText;
+
+                previousIsText = token.IsText;
+
+                if (!glued)
+                    groupStart = layout.Tokens.Count;
+
                 if (token.Kind == TokenKind.NewLine)
                 {
                     x = 0f;
@@ -249,6 +274,7 @@ namespace PebblePouch.Lore.Editor
                 GUIStyle style =
                     GetStyle(
                         token.Kind,
+                        token.FontStyle,
                         textStyle);
 
                 float width =
@@ -272,8 +298,22 @@ namespace PebblePouch.Lore.Editor
                 if (x > 0f &&
                     x + width > maxWidth)
                 {
-                    x = 0f;
+                    x =
+                        WrapGroup(
+                            layout,
+                            groupStart,
+                            y,
+                            lineHeight);
+
                     y += lineHeight;
+
+                    // The group alone is still too wide: break inside it.
+                    if (x > 0f &&
+                        x + width > maxWidth)
+                    {
+                        x = 0f;
+                        y += lineHeight;
+                    }
                 }
 
                 Rect tokenRect =
@@ -297,6 +337,50 @@ namespace PebblePouch.Lore.Editor
             layout.Height = y + lineHeight;
 
             return layout;
+        }
+
+        // Moves the glued tokens already placed on row y (from groupStart) to the start of the next row, so
+        // "**big**," wraps as one word. Returns x after the moved tokens (0 when nothing moved).
+        private static float WrapGroup(
+            FlowLayout layout,
+            int groupStart,
+            float y,
+            float lineHeight)
+        {
+            if (groupStart >= layout.Tokens.Count)
+                return 0f;
+
+            Rect first = layout.Tokens[groupStart].Rect;
+
+            if (first.x <= 0f ||
+                !Mathf.Approximately(first.y, y))
+            {
+                return 0f;
+            }
+
+            float x = 0f;
+
+            for (int i = groupStart; i < layout.Tokens.Count; i++)
+            {
+                PlacedToken placed = layout.Tokens[i];
+
+                Rect rect =
+                    new(
+                        placed.Rect.x - first.x,
+                        y + lineHeight,
+                        placed.Rect.width,
+                        placed.Rect.height);
+
+                layout.Tokens[i] =
+                    new PlacedToken(
+                        placed.Token,
+                        rect,
+                        placed.Style);
+
+                x = rect.xMax;
+            }
+
+            return x;
         }
 
         private static void DrawToken(
@@ -427,15 +511,21 @@ namespace PebblePouch.Lore.Editor
 
         private static GUIStyle GetStyle(
             TokenKind kind,
+            FontStyle fontStyle,
             GUIStyle textStyle)
         {
-            return kind switch
-            {
-                TokenKind.Link => InspectorStyle.DescriptionLinkContent,
-                TokenKind.BrokenLink => InspectorStyle.DescriptionBrokenLinkContent,
-                TokenKind.RepairableLink => InspectorStyle.DescriptionRepairableLinkContent,
-                _ => textStyle
-            };
+            GUIStyle style =
+                kind switch
+                {
+                    TokenKind.Link => InspectorStyle.DescriptionLinkContent,
+                    TokenKind.BrokenLink => InspectorStyle.DescriptionBrokenLinkContent,
+                    TokenKind.RepairableLink => InspectorStyle.DescriptionRepairableLinkContent,
+                    _ => textStyle
+                };
+
+            return GetFontStyle(
+                style,
+                fontStyle);
         }
         #endregion
 
@@ -459,6 +549,42 @@ namespace PebblePouch.Lore.Editor
             }
 
             return noWrapStyle;
+        }
+
+        private static GUIStyle GetFontStyle(
+            GUIStyle style,
+            FontStyle fontStyle)
+        {
+            if (fontStyle == FontStyle.Normal)
+                return style;
+
+            if (!FontStyles.TryGetValue(
+                    (style, fontStyle),
+                    out GUIStyle fontStyleCopy))
+            {
+                fontStyleCopy =
+                    new GUIStyle(style)
+                    {
+                        fontStyle = fontStyle
+                    };
+
+                FontStyles[(style, fontStyle)] = fontStyleCopy;
+            }
+
+            return fontStyleCopy;
+        }
+
+        private static FontStyle GetFontStyle(DescriptionRun run)
+        {
+            if (run.IsBold && run.IsItalic)
+                return FontStyle.BoldAndItalic;
+
+            if (run.IsBold)
+                return FontStyle.Bold;
+
+            return run.IsItalic
+                ? FontStyle.Italic
+                : FontStyle.Normal;
         }
 
         // A lone " " can measure as ~0 depending on the text backend; measure it in context instead.
@@ -494,23 +620,33 @@ namespace PebblePouch.Lore.Editor
 
             int linkIndex = 0;
 
-            foreach (DescriptionSegment segment in DescriptionLinkParser.Parse(text))
+            // Emphasis never splits a link, so each link lies completely inside one run.
+            foreach (DescriptionRun run in DescriptionEmphasisParser.Parse(text))
             {
-                if (segment.IsLink)
+                FontStyle fontStyle =
+                    GetFontStyle(
+                        run);
+
+                foreach (DescriptionSegment segment in DescriptionLinkParser.Parse(run.Text))
                 {
-                    tokens.Add(
-                        CreateLinkToken(
-                            segment.Text,
-                            linkIndex));
+                    if (segment.IsLink)
+                    {
+                        tokens.Add(
+                            CreateLinkToken(
+                                segment.Text,
+                                linkIndex,
+                                fontStyle));
 
-                    linkIndex++;
+                        linkIndex++;
 
-                    continue;
+                        continue;
+                    }
+
+                    AddTextTokens(
+                        tokens,
+                        segment.Text,
+                        fontStyle);
                 }
-
-                AddTextTokens(
-                    tokens,
-                    segment.Text);
             }
 
             return tokens;
@@ -518,7 +654,8 @@ namespace PebblePouch.Lore.Editor
 
         private static Token CreateLinkToken(
             string target,
-            int linkIndex)
+            int linkIndex,
+            FontStyle fontStyle)
         {
             Entry entry =
                 DescriptionLinkResolver.Resolve(
@@ -537,6 +674,7 @@ namespace PebblePouch.Lore.Editor
                         : TokenKind.BrokenLink,
                     DescriptionLinkResolver.GetLabel(
                         target),
+                    fontStyle,
                     target: target,
                     linkIndex: linkIndex);
             }
@@ -549,12 +687,14 @@ namespace PebblePouch.Lore.Editor
             return new Token(
                 TokenKind.Link,
                 label,
+                fontStyle,
                 entry);
         }
 
         private static void AddTextTokens(
             List<Token> tokens,
-            string text)
+            string text,
+            FontStyle fontStyle)
         {
             int start = 0;
 
@@ -584,7 +724,8 @@ namespace PebblePouch.Lore.Editor
                             TokenKind.Word,
                             text.Substring(
                                 start,
-                                i - start)));
+                                i - start),
+                            fontStyle));
                 }
 
                 if (!atEnd)
@@ -594,14 +735,16 @@ namespace PebblePouch.Lore.Editor
                         tokens.Add(
                             new Token(
                                 TokenKind.NewLine,
-                                string.Empty));
+                                string.Empty,
+                                fontStyle));
                     }
                     else if (character != '\r')
                     {
                         tokens.Add(
                             new Token(
                                 TokenKind.Space,
-                                character.ToString()));
+                                character.ToString(),
+                                fontStyle));
                     }
                 }
 

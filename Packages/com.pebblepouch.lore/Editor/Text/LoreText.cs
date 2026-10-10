@@ -172,6 +172,7 @@ namespace PebblePouch.Lore.Editor
             public static readonly string ScriptableObject = "ScriptableObject";
             public static readonly string Enum = "Enum";
             public static readonly string Entries = "Entries";
+            public static readonly string Audio = "Audio";
 
             // ScriptableObject Fields with their type: "DialogDefinition (SO)" ({0} type, {1} suffix)
             public static readonly string ScriptableObjectSuffix = "(SO)";
@@ -193,6 +194,7 @@ namespace PebblePouch.Lore.Editor
                     FieldType.ScriptableObject => ScriptableObject,
                     FieldType.Enum => Enum,
                     FieldType.Entries => Entries,
+                    FieldType.Audio => Audio,
                     _ => type.ToString()
                 };
             }

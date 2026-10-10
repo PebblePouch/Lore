@@ -24,5 +24,8 @@ namespace PebblePouch.Lore
 
         // Several Entry references in one Field (ordered, no duplicates), e.g. "Allies", "Appears in".
         Entries = 11,
+
+        // An AudioClip (.wav, .mp3, .ogg, ...).
+        Audio = 12,
     }
 }

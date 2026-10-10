@@ -143,6 +143,7 @@ public class LoreRuntimeSample : MonoBehaviour
             FieldType.ScriptableObject => value.TryGetScriptableObject(out ScriptableObject asset) ? $"{asset.name} ({asset.GetType().Name})" : "(none)",
             FieldType.Enum => value.TryGetEnum(out string option) ? $"{option} (#{value.GetEnumIndex()})" : "(none)",
             FieldType.Entries => value.TryGetEntries(out var listed) ? string.Join(", ", System.Linq.Enumerable.Select(listed, linked => linked.Title)) : "(none)",
+            FieldType.Audio => value.TryGetAudioClip(out AudioClip clip) ? clip.name : "(none)",
             _ => $"({value.Type})"
         };
     }

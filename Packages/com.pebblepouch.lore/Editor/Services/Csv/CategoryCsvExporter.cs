@@ -231,6 +231,7 @@ namespace PebblePouch.Lore.Editor
                     return FormatAsset(value.SceneValue, ref brokenReferenceCount);
 
                 case FieldType.ScriptableObject:
+                case FieldType.Audio:
                     return FormatAsset(value.ObjectValue, ref brokenReferenceCount);
 
                 default:

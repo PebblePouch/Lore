@@ -34,7 +34,7 @@ semicolons.
 | Enum | Option name |
 | Entry | Entry title; `Category/Title` if the title exists in several Categories the Field allows |
 | Entries | Titles separated by `\|`: `Wolf\|Bear` |
-| GameObject, Sprite, Scene, ScriptableObject | Asset path: `Assets/Prefabs/Wolf.prefab`; one of several Sprites (or ScriptableObjects) in a file: `Assets/Art/Sheet.png#Wolf_0` |
+| GameObject, Sprite, Scene, ScriptableObject, Audio | Asset path: `Assets/Prefabs/Wolf.prefab`; one of several Sprites (or ScriptableObjects) in a file: `Assets/Art/Sheet.png#Wolf_0` |
 
 Broken references (deleted Entries, missing assets, deleted Enum options) are written as empty cells; the console
 tells how many.

@@ -204,11 +204,12 @@ namespace PebblePouch.Lore.Editor
                     ? settings.PlaceholderContent
                     : settings.ViewerContent;
 
-            // Read-only texts (Welcome page) have no Lore links; "[[" there is plain text, and the link flow draws
-            // word by word, which would break rich text tags.
-            bool hasLinks =
+            // Links and Markdown emphasis need the description flow. Read-only texts (Welcome page) have neither;
+            // "[[" or "*" there is plain text, and the flow draws word by word, which would break rich text tags.
+            bool useFlow =
                 !readOnly &&
-                DescriptionLinkParser.ContainsLinks(text);
+                (DescriptionLinkParser.ContainsLinks(text) ||
+                 DescriptionEmphasisParser.ContainsMarkers(text));
 
             // Another text (e.g. another Entry): start at the top again.
             if (displayText != _viewerText)
@@ -224,7 +225,7 @@ namespace PebblePouch.Lore.Editor
             float textHeight =
                 GetViewerTextHeight(
                     displayText,
-                    hasLinks,
+                    useFlow,
                     style,
                     textWidth);
 
@@ -239,7 +240,7 @@ namespace PebblePouch.Lore.Editor
                 textHeight =
                     GetViewerTextHeight(
                         displayText,
-                        hasLinks,
+                        useFlow,
                         style,
                         textWidth);
 
@@ -268,7 +269,7 @@ namespace PebblePouch.Lore.Editor
                         ? textHeight
                         : rect.height - settings.VerticalInset * 2);
 
-            if (hasLinks)
+            if (useFlow)
             {
                 // Links consume their own clicks, so a link click never starts editing
                 // (broken links open the repair menu when the caller can save repaired text).
@@ -490,11 +491,11 @@ namespace PebblePouch.Lore.Editor
 
         private static float GetViewerTextHeight(
             string text,
-            bool hasLinks,
+            bool useFlow,
             GUIStyle style,
             float width)
         {
-            return hasLinks
+            return useFlow
                 ? DescriptionTextFlow.CalcHeight(
                     text,
                     style,

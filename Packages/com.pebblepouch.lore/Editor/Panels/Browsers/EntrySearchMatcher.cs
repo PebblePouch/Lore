@@ -52,23 +52,27 @@ namespace PebblePouch.Lore.Editor
             if (string.IsNullOrEmpty(description))
                 return false;
 
+            // Markdown emphasis markers are not shown, so "**big** wolf" matches "big wolf".
+            description =
+                DescriptionEmphasisParser.StripMarkers(
+                    description);
+
             if (!DescriptionLinkParser.ContainsLinks(description))
                 return MatchesText(description, search);
 
             // Stored links are "[[id|Title]]": match what the user sees (the current Entry title), never the ID.
+            var shown = new System.Text.StringBuilder(description.Length);
+
             foreach (DescriptionSegment segment in DescriptionLinkParser.Parse(description))
             {
-                string text =
+                shown.Append(
                     segment.IsLink
                         ? DescriptionLinkResolver.Resolve(segment.Text)?.Title
                           ?? DescriptionLinkResolver.GetLabel(segment.Text)
-                        : segment.Text;
-
-                if (MatchesText(text, search))
-                    return true;
+                        : segment.Text);
             }
 
-            return false;
+            return MatchesText(shown.ToString(), search);
         }
 
         private static bool MatchesFieldValues(
@@ -128,6 +132,10 @@ namespace PebblePouch.Lore.Editor
 
                 case FieldType.ScriptableObject:
                     yield return fieldValue.ObjectValue != null ? fieldValue.ObjectValue.name : null;
+                    break;
+
+                case FieldType.Audio:
+                    yield return fieldValue.AudioClipValue != null ? fieldValue.AudioClipValue.name : null;
                     break;
 
                 case FieldType.Scene:

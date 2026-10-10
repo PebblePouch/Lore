@@ -55,10 +55,21 @@ namespace PebblePouch.Lore.Editor
         }
 
         // Ctrl+Home / Ctrl+End (with Shift: select) in the focused text control: Unity's text editing has no mapping
-        // for them on Windows. Call at the start of OnGUI, before any control can use the key.
+        // for them on Windows. End (with Shift: select): see HandleLineEndKey. Call at the start of OnGUI, before any
+        // control can use the key.
         public static void HandleTextBoundaryKeys()
         {
             Event current = Event.current;
+
+            if (current.type == EventType.KeyDown &&
+                !current.control &&
+                !current.alt &&
+                current.keyCode == KeyCode.End)
+            {
+                HandleLineEndKey(current);
+
+                return;
+            }
 
             if (current.type != EventType.KeyDown ||
                 !current.control ||
@@ -96,6 +107,56 @@ namespace PebblePouch.Lore.Editor
         #endregion
 
         #region Helpers
+        // Unity's line end can land on the start of the next row (after the line break, or after the space where a
+        // wrapped row ends), so End visibly jumps one row down. Moves like Unity does, then steps back onto the row.
+        // macOS keeps Unity's own End behavior.
+        private static void HandleLineEndKey(Event current)
+        {
+            if (Application.platform == RuntimePlatform.OSXEditor ||
+                !EditorGUIUtility.editingTextField ||
+                !TryGetFocusedEditor(out TextEditor editor) ||
+                editor.style == null)
+            {
+                return;
+            }
+
+            int origin = editor.cursorIndex;
+
+            if (current.shift)
+                editor.SelectGraphicalLineEnd();
+            else
+                editor.MoveGraphicalLineEnd();
+
+            int target = editor.cursorIndex;
+
+            if (target > origin)
+            {
+                GUIContent content = new(editor.text);
+
+                float originY =
+                    editor.style.GetCursorPixelPosition(
+                        editor.position,
+                        content,
+                        origin).y;
+
+                float targetY =
+                    editor.style.GetCursorPixelPosition(
+                        editor.position,
+                        content,
+                        target).y;
+
+                if (targetY > originY + 0.5f)
+                    target--;
+            }
+
+            editor.cursorIndex = target;
+
+            if (!current.shift)
+                editor.selectIndex = target;
+
+            current.Use();
+        }
+
         private static bool TryGetFocusedEditor(out TextEditor editor)
         {
             editor = null;

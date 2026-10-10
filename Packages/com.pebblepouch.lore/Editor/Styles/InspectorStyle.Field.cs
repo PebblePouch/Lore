@@ -222,6 +222,9 @@ namespace PebblePouch.Lore.Editor
         // URL value: gap between the text field and the open button (button uses FieldButtonColumnWidth / FieldButton).
         public const float FieldValueUrlButtonSpacing = 4f;
 
+        // Audio value: gap between the clip field and the play/stop button.
+        public const float FieldValueAudioButtonSpacing = 4f;
+
         public static readonly GUIStyle FieldValueText = new GUIStyle(EditorStyles.textField)
         {
             padding = new RectOffset(3, 3, 0, 0),

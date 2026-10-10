@@ -131,6 +131,7 @@ namespace PebblePouch.Lore.Editor
                 FieldType.Sprite => "_spriteValue",
                 FieldType.Scene => "_sceneValue",
                 FieldType.ScriptableObject => "_objectValue",
+                FieldType.Audio => "_objectValue",
                 _ => null
             };
         }

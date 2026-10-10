@@ -4,7 +4,9 @@
       "version": "file:com.pebblepouch.lore",
       "depth": 0,
       "source": "embedded",
-      "dependencies": {}
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0"
+      }
     },
     "com.unity.burst": {
       "version": "1.8.25",

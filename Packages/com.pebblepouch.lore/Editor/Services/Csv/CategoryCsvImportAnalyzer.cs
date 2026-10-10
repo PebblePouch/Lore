@@ -525,6 +525,7 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.Sprite:
                 case FieldType.Scene:
                 case FieldType.ScriptableObject:
+                case FieldType.Audio:
                     if (trimmed.Length > 0)
                         issue = ResolveAsset(field, trimmed, out value.Asset);
                     break;
@@ -695,6 +696,7 @@ namespace PebblePouch.Lore.Editor
             {
                 FieldType.GameObject => new List<UnityEngine.Object> { mainAsset as GameObject },
                 FieldType.Scene => new List<UnityEngine.Object> { mainAsset as SceneAsset },
+                FieldType.Audio => new List<UnityEngine.Object> { mainAsset as AudioClip },
                 FieldType.Sprite => AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().Cast<UnityEngine.Object>().ToList(),
                 _ => AssetDatabase.LoadAllAssetsAtPath(path)
                     .OfType<ScriptableObject>()

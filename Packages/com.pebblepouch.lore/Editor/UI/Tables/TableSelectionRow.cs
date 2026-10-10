@@ -286,6 +286,24 @@ namespace PebblePouch.Lore.Editor
                     break;
                 }
 
+                case FieldType.Audio:
+                {
+                    EditorGUI.BeginChangeCheck();
+
+                    AudioClip clip =
+                        (AudioClip)EditorGUI.ObjectField(
+                            line,
+                            GUIContent.none,
+                            value.AudioClipValue,
+                            typeof(AudioClip),
+                            false);
+
+                    if (EditorGUI.EndChangeCheck())
+                        Apply(entries, field, target => target.SetAudioClip(clip), LoreText.Undo.EditFieldValue);
+
+                    break;
+                }
+
                 case FieldType.ScriptableObject:
                 {
                     // Missing type: nothing to pick (the cells of the rows show the fix hint).
@@ -998,6 +1016,7 @@ namespace PebblePouch.Lore.Editor
                     return a.SpriteValue == b.SpriteValue;
 
                 case FieldType.ScriptableObject:
+                case FieldType.Audio:
                     return a.ObjectValue == b.ObjectValue;
 
                 case FieldType.Scene:

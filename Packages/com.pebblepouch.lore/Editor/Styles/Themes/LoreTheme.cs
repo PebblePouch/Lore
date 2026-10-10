@@ -23,6 +23,10 @@ namespace PebblePouch.Lore.Editor
 
         public ButtonDefinition Open;
 
+        // Audio Fields: preview playback.
+        public ButtonDefinition Play;
+        public ButtonDefinition Stop;
+
         public ButtonDefinition ExportCsv;
         public ButtonDefinition ImportCsv;
 

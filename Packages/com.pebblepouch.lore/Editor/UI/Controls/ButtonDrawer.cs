@@ -141,6 +141,34 @@ namespace PebblePouch.Lore.Editor
                 style);
         }
 
+        public static bool Play(
+            Rect rect,
+            Action action,
+            DisplayMode mode = DisplayMode.GlyphName,
+            GUIStyle style = null)
+        {
+            return Draw(
+                rect,
+                LoreEditorTheme.Current.Play,
+                action,
+                mode,
+                style);
+        }
+
+        public static bool Stop(
+            Rect rect,
+            Action action,
+            DisplayMode mode = DisplayMode.GlyphName,
+            GUIStyle style = null)
+        {
+            return Draw(
+                rect,
+                LoreEditorTheme.Current.Stop,
+                action,
+                mode,
+                style);
+        }
+
         public static bool Delete(
             Action action,
             DisplayMode mode = DisplayMode.GlyphName,

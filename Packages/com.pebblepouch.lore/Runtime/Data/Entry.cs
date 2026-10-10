@@ -115,6 +115,8 @@ namespace PebblePouch.Lore
 
         public Sprite GetSprite(FieldKey field) => GetValue(field)?.GetSprite();
 
+        public AudioClip GetAudioClip(FieldKey field) => GetValue(field)?.GetAudioClip();
+
         public string GetScenePath(FieldKey field) => GetValue(field)?.GetScenePath() ?? string.Empty;
 
         public string GetSceneName(FieldKey field) => GetValue(field)?.GetSceneName() ?? string.Empty;

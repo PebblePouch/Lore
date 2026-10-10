@@ -53,7 +53,7 @@ preview before anything changes. See `Documentation~/CSV.md`.
 **Tools > Lore > Export Project…** packs the Lore data (data folder, Libraries, generated Field constants) into a
 `.unitypackage`; **Tools > Lore > Import Project…** (or a double-click on the file) imports it into another Unity
 project with Lore installed, ideally one without Lore data yet. Field values that point to game assets (prefabs,
-sprites, scenes, ScriptableObjects) only work if those assets exist there too; the export can include them.
+sprites, audio clips, scenes, ScriptableObjects) only work if those assets exist there too; the export can include them.
 Project Settings > Lore are not part of the package.
 
 ## Runtime API

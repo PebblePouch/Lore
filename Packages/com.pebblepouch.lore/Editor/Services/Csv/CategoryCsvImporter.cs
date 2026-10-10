@@ -235,6 +235,10 @@ namespace PebblePouch.Lore.Editor
                 case FieldType.ScriptableObject:
                     fieldValue.SetObject(value.Asset);
                     break;
+
+                case FieldType.Audio:
+                    fieldValue.SetAudioClip(value.Asset as AudioClip);
+                    break;
             }
         }
 

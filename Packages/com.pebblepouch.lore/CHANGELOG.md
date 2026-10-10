@@ -4,6 +4,26 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-10-10
+
+### Added
+
+- Markdown emphasis in descriptions: `**bold**` / `__bold__`, `*italic*` / `_italic_`. View mode shows the
+  formatting (also on links), edit mode keeps the markers; search ignores them.
+- Runtime API: `LoreProject.GetRichText` (bold/italic as `<b>`/`<i>` tags) and `DescriptionPart.IsBold` /
+  `IsItalic`. `GetPlainText`, `FormatDescription` and `ParseDescription` remove the markers.
+- Field type Audio: an AudioClip (.wav, .mp3, .ogg, …) with a play/stop button for a preview in the editor; in
+  Tabular Editing, bulk editing, CSV, search and integrity checks like the other asset types. Runtime API:
+  `GetAudioClip` / `TryGetAudioClip`. The package now depends on the built-in Audio module.
+- Default Glyph Library: 384 more glyphs (1047 in total), e.g. bathroom, clothes and shoes, activities, weather,
+  tools, medicine, music, sports, office, zodiac and signs. Existing Glyph Libraries keep their glyphs; select the
+  Glyph Library asset and use "Generate Default Glyph Library" to get the new list (it replaces the whole list).
+
+### Fixed
+
+- Text editing: End (and Shift+End) moves the caret to the end of the current row instead of the start of the
+  next one (Windows).
+
 ## [0.2.0] - 2026-10-08
 
 ### Added

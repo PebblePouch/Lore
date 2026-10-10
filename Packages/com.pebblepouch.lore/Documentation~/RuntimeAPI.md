@@ -177,6 +177,7 @@ int hp3 = entry.GetInt("Health");
 | ScriptableObject | `GetScriptableObject<T>()` / `TryGetScriptableObject<T>(out)` | `GetScriptableObject<T>(key)` | `null` |
 | Enum | `GetEnum()`, `GetEnumIndex()` / `TryGetEnum(out)`, `TryGetEnumIndex(out)` | `GetEnum(key)`, `GetEnumIndex(key)` | `""` / `-1` |
 | Entries | `GetEntries()` / `TryGetEntries(out)` | `GetEntries(key)` | empty list |
+| Audio | `GetAudioClip()` / `TryGetAudioClip(out)` | `GetAudioClip(key)` | `null` |
 
 `value.Field` and `value.Type` tell which Field and type a value has (useful when iterating `entry.Fields`).
 For ScriptableObject fields, `field.ObjectType` is the type chosen in Lore (`null` if that type no longer exists).
@@ -185,7 +186,7 @@ For ScriptableObject fields, `field.ObjectType` is the type chosen in Lore (`nul
 
 - **Types are strict.** `GetInt` only reads Integer fields, `GetText` only Text fields (not URLs).
 - **`Get…` never throws.** On a missing Field or wrong type it returns the default value and logs a warning.
-- **`TryGet…` never warns.** It returns `false` on a wrong type; for references (Entry, GameObject, Sprite,
+- **`TryGet…` never warns.** It returns `false` on a wrong type; for references (Entry, GameObject, Sprite, Audio,
   ScriptableObject) and scenes also when the value is empty, so the out value is safe to use:
 
   ```csharp
@@ -225,18 +226,27 @@ Descriptions (Project, Category, Entry) are stored with links in an internal for
 lore.GetPlainText(entry.Description);
 // "The Wolf hunts at night."  (links show the current Entry title)
 
-lore.FormatDescription(entry.Description, part => $"<b>{part.Text}</b>");
+lore.FormatDescription(entry.Description, part => $"<u>{part.Text}</u>");
 // Plain text as is, links formatted by you, e.g. clickable TextMeshPro links:
 lore.FormatDescription(entry.Description, part => $"<link={part.Entry?.Id}><u>{part.Text}</u></link>");
 
+lore.GetRichText(entry.Description);
+// "The <b>Wolf</b> hunts at <i>night</i>."  (bold/italic as rich text tags for TextMeshPro and uGUI)
+lore.GetRichText(entry.Description, part => $"<link={part.Entry?.Id}><u>{part.Text}</u></link>");
+
 foreach (DescriptionPart part in lore.ParseDescription(entry.Description))
 {
-    // part.Text, part.IsLink, part.Entry (linked Entry), part.IsBrokenLink
+    // part.Text, part.IsLink, part.Entry (linked Entry), part.IsBrokenLink, part.IsBold, part.IsItalic
 }
 ```
 
 Links follow renames (they resolve by ID). A link to a deleted Entry is a *broken link*: it keeps its last
 known title as `Text` and has no `Entry`. Glyphs are not part of the text.
+
+Descriptions may use Markdown emphasis: `**bold**` / `__bold__`, `*italic*` / `_italic_`, `***both***`.
+`GetPlainText`, `FormatDescription` and `ParseDescription` remove the markers (`ParseDescription` reports them as
+`IsBold` / `IsItalic`); only `GetRichText` turns them into tags. Emphasis does not cross line breaks, `_` inside a
+word (`snake_case`) is plain text, and `\*` / `\_` stand for the marker itself.
 
 ---
 
@@ -294,7 +304,7 @@ So when a scene loads that references the Project, Unity loads:
 
 - every Entry (through the Project index), with its Category and Fields: mostly text, small,
 - every asset referenced by a field value: **Sprites** (their textures), **GameObjects** (prefabs with meshes,
-  materials, textures, audio), **ScriptableObjects** (and whatever they reference).
+  materials, textures, audio), **AudioClips**, **ScriptableObjects** (and whatever they reference).
 
 All of it stays in memory while something references the Project.
 

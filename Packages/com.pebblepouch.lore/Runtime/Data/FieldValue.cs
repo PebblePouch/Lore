@@ -34,7 +34,7 @@ namespace PebblePouch.Lore
         [SerializeField, HideInInspector]
         private string _scenePath;
 
-        // ScriptableObject fields: any object of the Field's ObjectType (or a subclass).
+        // ScriptableObject fields: any object of the Field's ObjectType (or a subclass). Audio fields: the AudioClip.
         [SerializeField, HideInInspector]
         private UnityEngine.Object _objectValue;
 
@@ -79,6 +79,8 @@ namespace PebblePouch.Lore
         internal string ScenePath => _scenePath;
 
         internal UnityEngine.Object ObjectValue => _objectValue;
+
+        internal AudioClip AudioClipValue => _objectValue as AudioClip;
 
         internal string EnumValue => _enumValue ?? string.Empty;
 
@@ -127,6 +129,10 @@ namespace PebblePouch.Lore
         public Sprite GetSprite() => Get(FieldType.Sprite, AsReference(_spriteValue), null);
 
         public bool TryGetSprite(out Sprite value) => TryGetReference(FieldType.Sprite, _spriteValue, out value);
+
+        public AudioClip GetAudioClip() => Get(FieldType.Audio, AsReference(AudioClipValue), null);
+
+        public bool TryGetAudioClip(out AudioClip value) => TryGetReference(FieldType.Audio, AudioClipValue, out value);
 
         // Scene path for SceneManager.LoadScene (the scene must be in the build's scene list).
         public string GetScenePath() => Get(FieldType.Scene, _scenePath ?? string.Empty, string.Empty);
@@ -311,6 +317,8 @@ namespace PebblePouch.Lore
         }
 
         internal void SetObject(UnityEngine.Object value) => _objectValue = value;
+
+        internal void SetAudioClip(AudioClip value) => _objectValue = value;
 
         internal void SetEnum(string optionId) => _enumValue = optionId ?? string.Empty;
 

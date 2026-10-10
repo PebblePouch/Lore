@@ -52,6 +52,14 @@ MonoBehaviour:
     Name: Open
     Glyph: "↗️"
     Tooltip: Open Link
+  Play:
+    Name: Play
+    Glyph: "▶️"
+    Tooltip: Play Audio
+  Stop:
+    Name: Stop
+    Glyph: "⏹️"
+    Tooltip: Stop Audio
   ExportCsv:
     Name: "Export CSV…"
     Glyph: "\U0001F4E4"

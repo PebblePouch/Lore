@@ -21,6 +21,7 @@ namespace PebblePouch.Lore.Editor
         private readonly FieldValueScriptableObjectElement _scriptableObjectElement = new();
         private readonly FieldValueEnumElement _enumElement = new();
         private readonly FieldValueEntriesElement _entriesElement = new();
+        private readonly FieldValueAudioElement _audioElement = new();
         #endregion
 
         #region Public API
@@ -130,6 +131,12 @@ namespace PebblePouch.Lore.Editor
                     _entriesElement.SetEntry(_entry);
                     _entriesElement.SetFieldValue(_fieldValue);
                     _entriesElement.Draw(rect);
+                    break;
+
+                case FieldType.Audio:
+                    _audioElement.SetEntry(_entry);
+                    _audioElement.SetFieldValue(_fieldValue);
+                    _audioElement.Draw(rect);
                     break;
             }
         }

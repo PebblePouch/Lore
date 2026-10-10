@@ -1398,6 +1398,7 @@ namespace PebblePouch.Lore.Editor
                     return fieldValue.SpriteValue != null ? fieldValue.SpriteValue.name : null;
 
                 case FieldType.ScriptableObject:
+                case FieldType.Audio:
                     return fieldValue.ObjectValue != null ? fieldValue.ObjectValue.name : null;
 
                 case FieldType.Scene:

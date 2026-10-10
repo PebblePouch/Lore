@@ -186,6 +186,7 @@ namespace PebblePouch.Lore
         #region Descriptions
         // Descriptions (Project, Category, Entry) are stored with [[id|Title]] links; these methods turn them into
         // text for games. Links resolve like in the editor: by ID, or by title for links that were never pinned.
+        // Markdown emphasis (**bold** / __bold__, *italic* / _italic_) is removed, except by GetRichText.
 
         // "The Wolf hunts at night." (links replaced by the current Entry title)
         public string GetPlainText(string description)
@@ -201,50 +202,58 @@ namespace PebblePouch.Lore
             string description,
             Func<DescriptionPart, string> formatLink)
         {
-            if (!DescriptionLinkParser.ContainsLinks(description))
-                return description ?? string.Empty;
+            return Format(
+                description,
+                formatLink,
+                richText: false);
+        }
 
-            var builder = new System.Text.StringBuilder();
-
-            foreach (DescriptionPart part in ParseDescription(description))
-            {
-                builder.Append(
-                    part.IsLink && formatLink != null
-                        ? formatLink(part)
-                        : part.Text);
-            }
-
-            return builder.ToString();
+        // Like FormatDescription, with bold and italic as rich text tags (<b>, <i>) for TextMeshPro and uGUI.
+        public string GetRichText(
+            string description,
+            Func<DescriptionPart, string> formatLink = null)
+        {
+            return Format(
+                description,
+                formatLink,
+                richText: true);
         }
 
         public List<DescriptionPart> ParseDescription(string description)
         {
             var parts = new List<DescriptionPart>();
 
-            foreach (DescriptionSegment segment in DescriptionLinkParser.Parse(description))
+            foreach (DescriptionRun run in DescriptionEmphasisParser.Parse(description))
             {
-                if (!segment.IsLink)
+                foreach (DescriptionSegment segment in DescriptionLinkParser.Parse(run.Text))
                 {
+                    if (!segment.IsLink)
+                    {
+                        parts.Add(
+                            new DescriptionPart(
+                                segment.Text,
+                                false,
+                                null,
+                                run.IsBold,
+                                run.IsItalic));
+
+                        continue;
+                    }
+
+                    Entry entry =
+                        ResolveLink(
+                            segment.Text);
+
                     parts.Add(
                         new DescriptionPart(
-                            segment.Text,
-                            false,
-                            null));
-
-                    continue;
+                            entry != null
+                                ? entry.Title
+                                : DescriptionLinkParser.GetLabel(segment.Text),
+                            true,
+                            entry,
+                            run.IsBold,
+                            run.IsItalic));
                 }
-
-                Entry entry =
-                    ResolveLink(
-                        segment.Text);
-
-                parts.Add(
-                    new DescriptionPart(
-                        entry != null
-                            ? entry.Title
-                            : DescriptionLinkParser.GetLabel(segment.Text),
-                        true,
-                        entry));
             }
 
             return parts;
@@ -400,6 +409,45 @@ namespace PebblePouch.Lore
         #endregion
 
         #region Helpers
+        private string Format(
+            string description,
+            Func<DescriptionPart, string> formatLink,
+            bool richText)
+        {
+            if (!DescriptionLinkParser.ContainsLinks(description) &&
+                !DescriptionEmphasisParser.ContainsMarkers(description))
+            {
+                return description ?? string.Empty;
+            }
+
+            var builder = new System.Text.StringBuilder();
+
+            foreach (DescriptionPart part in ParseDescription(description))
+            {
+                bool bold = richText && part.IsBold;
+                bool italic = richText && part.IsItalic;
+
+                if (bold)
+                    builder.Append("<b>");
+
+                if (italic)
+                    builder.Append("<i>");
+
+                builder.Append(
+                    part.IsLink && formatLink != null
+                        ? formatLink(part)
+                        : part.Text);
+
+                if (italic)
+                    builder.Append("</i>");
+
+                if (bold)
+                    builder.Append("</b>");
+            }
+
+            return builder.ToString();
+        }
+
         // Same rules as the editor (DescriptionLinkResolver): pinned links strictly by ID,
         // other links by title (optionally "Category/Title").
         private Entry ResolveLink(string target)
