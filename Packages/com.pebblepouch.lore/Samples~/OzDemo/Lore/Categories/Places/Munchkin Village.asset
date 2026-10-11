@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Munchkin Village
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 4afa4d10-195b-4b78-8315-5517131fcf9c
-  _createdTicks: 639272563459099418
-  _modifiedTicks: 639272563511155314
+  _id: d4610800-66f9-4cd3-a263-8147f1a76207
+  _createdTicks: 639273194269535691
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3D8\uFE0F"
   _subtitle: Where the house came down
-  _description: Round blue houses with domes for roofs, in the east of Oz. [[e77fbaef-2953-4c5c-bcad-ca0cbb1fef5c|Boq]]
-    lives here, and the [[3cbd0685-ef92-4b23-a0b9-dac72c467ecb|Silver Shoes]] were
+  _description: Round blue houses with domes for roofs, in the east of Oz. [[7bc582ca-603e-40c2-b872-78b3d1e8fcdc|Boq]]
+    lives here, and the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver Shoes]] were
     found here.
   _sortOrder: 1
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 66161abe-0f1b-4478-9481-457ae85e99c6
+    _enumValue: b7dadc1a-cba7-4b61-aba7-fa4841e63b91
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: 2a608bdd7d0975849af4225ddfffc497, type: 3}
-    _scenePath: Assets/Samples/Lore/0.3.0/Oz Demo/Scenes/Locations/Munchkin Village.unity
+    _scenePath: Assets/Samples/Lore/0.3.4/Oz Demo/Scenes/Locations/Munchkin Village.unity
     _folderValue: {fileID: 0}
     _folderPath: 
     _objectValue: {fileID: 0}
@@ -169,4 +169,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 8b17c662-d7ca-4d07-8a8e-1ebce46581b1
+  - 3737b046-c7f4-4fdf-84f5-e1933e4aee59

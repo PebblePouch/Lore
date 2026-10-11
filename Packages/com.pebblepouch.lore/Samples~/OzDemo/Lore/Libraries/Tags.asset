@@ -13,33 +13,33 @@ MonoBehaviour:
   m_Name: Tags
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.TagCollection
   _tags:
-  - _id: 9c97f94e-7ac9-471a-bfbc-9ad701564b29
+  - _id: db981fa8-449d-4128-9a45-1f92b0ce5c1c
     _title: Witch
     _color: {r: 0.5, g: 0.25, b: 0.7, a: 1}
-  - _id: 4cc49fe2-d43e-4970-afd3-7d012c69598b
+  - _id: 70d0131c-3d60-4017-ab2f-0d057370db67
     _title: Companion
     _color: {r: 0.2, g: 0.6, b: 0.3, a: 1}
-  - _id: ca97c1fd-9a2e-4efc-8836-09fd311d7080
+  - _id: 68f53bdb-773a-44d6-95ee-74b5faf95e99
     _title: Animal
     _color: {r: 0.6, g: 0.4, b: 0.2, a: 1}
-  - _id: 7bfb42de-1228-43ad-b784-200475ade4bc
+  - _id: 3fa761a7-6250-4618-9713-c9ee1954e640
     _title: Magic
     _color: {r: 0.2, g: 0.55, b: 0.8, a: 1}
-  - _id: 24bb0e67-43dc-4781-bb21-89570e53451c
+  - _id: a6942445-ddaa-4e46-a8ab-776e6c2e57eb
     _title: Ruler
     _color: {r: 0.85, g: 0.65, b: 0.1, a: 1}
-  - _id: c125b128-40b1-46ca-bf89-aeb35087174d
+  - _id: 43821641-03ab-4757-bfd0-adf5a062dfbd
     _title: Kansas
     _color: {r: 0.55, g: 0.55, b: 0.55, a: 1}
-  - _id: 8b17c662-d7ca-4d07-8a8e-1ebce46581b1
+  - _id: 3737b046-c7f4-4fdf-84f5-e1933e4aee59
     _title: Munchkin
     _color: {r: 0.25, g: 0.4, b: 0.85, a: 1}
-  - _id: 78b6a0ac-dbf9-4e93-8a7e-e0c1dfb831e2
+  - _id: a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
     _title: Danger
     _color: {r: 0.8, g: 0.2, b: 0.2, a: 1}
-  - _id: 8658dcf9-37eb-4c79-b1a3-62ac567fd0f8
+  - _id: b4159f6f-824a-414e-a8e0-905f31b748e6
     _title: Gift
     _color: {r: 0.9, g: 0.45, b: 0.65, a: 1}
-  - _id: dc765760-0a24-4dae-8f47-9e7e9ac44afc
+  - _id: f696cc8f-8296-41a4-be9d-dca26837b454
     _title: Tool
     _color: {r: 0.45, g: 0.5, b: 0.45, a: 1}

@@ -1,8 +1,8 @@
 {
   "name": "com.pebblepouch.lore",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "displayName": "Lore",
-  "description": "Worldbuilding inside the Unity Editor: organize your game's lore in Categories, Entries and Fields, link Entries in descriptions, track integrity and content health, and read everything at runtime through a small read-only API.",
+  "description": "Worldbuilding inside the Unity Editor: organize your game's lore in Categories, Entries and Fields, link Entries in descriptions, track integrity and content health, and read everything at runtime through a small API that can also change values while the game runs.",
   "unity": "6000.0",
   "author": {
     "name": "Pebble Pouch",
@@ -27,7 +27,7 @@
     },
     {
       "displayName": "Oz Demo",
-      "description": "A complete demo Lore Project: The Wonderful Wizard of Oz as the lore of a small game. Import it only into a project without a Lore Project of its own; delete the imported sample folder before you create your own.",
+      "description": "A complete demo Lore Project: The Wonderful Wizard of Oz as the lore of a small game. Includes a playable scene (Oz Demo) that uses the Runtime API. Import it only into a project without a Lore Project of its own; delete the imported sample folder before you create your own.",
       "path": "Samples~/OzDemo"
     }
   ]

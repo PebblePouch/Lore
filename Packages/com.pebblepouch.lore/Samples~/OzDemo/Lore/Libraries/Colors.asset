@@ -313,3 +313,4 @@ MonoBehaviour:
   - _color: {r: 0.35, g: 0.35, b: 0.35, a: 1}
     _title: '#595959'
     _category: White
+  _catalogVersion: 1

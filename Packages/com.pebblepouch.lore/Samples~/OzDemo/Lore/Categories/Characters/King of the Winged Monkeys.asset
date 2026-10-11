@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: King of the Winged Monkeys
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 6c4219ce-5251-4fed-a923-637b84b2fb8a
-  _createdTicks: 639272563457592396
-  _modifiedTicks: 639272563511155314
+  _id: 5f78a4af-f20f-4136-91f0-27f932211441
+  _createdTicks: 639273194268286701
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F412\uFE0F"
   _subtitle: Bound to the Golden Cap
-  _description: He and his band must obey whoever owns the [[a0c40bef-c846-429d-9180-278488ee1ae5|Golden
-    Cap]], three times each. They serve the [[ff5f930a-90ca-414d-88d2-e61557e01160|Wicked
-    Witch of the West]] until [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]]
+  _description: He and his band must obey whoever owns the [[b20111ba-0457-4d69-ae5e-8728d64388ce|Golden
+    Cap]], three times each. They serve the [[4d91631d-e833-4bd5-a4c5-477a0fe8b0dc|Wicked
+    Witch of the West]] until [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]]
     wins the Cap.
   _sortOrder: 12
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: ed7cd275-d9ca-4b60-86e0-4415d1d67791
+    _enumValue: d8c31537-9ec7-4598-a768-215a24f830e4
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -45,6 +45,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 4fde004efe2f45d42b71ccd9cf46c422, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -189,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 6831808718574436586, guid: 4275ec689de073c4e8737f05c6d76d38, type: 3}
+    _gameObjectValue: {fileID: 782298275814200424, guid: 4275ec689de073c4e8737f05c6d76d38, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -241,5 +259,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - ca97c1fd-9a2e-4efc-8836-09fd311d7080
-  - 7bfb42de-1228-43ad-b784-200475ade4bc
+  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
+  - 3fa761a7-6250-4618-9713-c9ee1954e640

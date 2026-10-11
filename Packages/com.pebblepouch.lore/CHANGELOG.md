@@ -4,7 +4,24 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.3.4] - 2026-10-11
+
+### Added
+
+- Oz Demo sample: a playable scene, **Oz Demo** (`Scenes/Oz Demo.unity`), that shows Lore at runtime. Dorothy travels
+  the map of Oz, picks up Items, talks to Characters and completes the Quests of the book. The whole game state lives
+  in Lore Fields (`Set…` through `LoreState`), so Save / Load is one `LoreState.SaveToJson()` / `LoadFromJson()`; values
+  changed at runtime are marked in the view. Drawn with IMGUI, so it needs no UI packages; works with the built-in
+  render pipeline and URP.
+- Oz Demo sample: generated Field constants (`OzFields`) used by the demo scripts.
+
+### Changed
+
+- Oz Demo data: new Fields `Location` (Characters, shared with Items and Quests: the player's position) and
+  `Completed` (Quests). Values describe the start of the game: the Wicked Witch of the West is alive, and the Silver
+  Shoes, the Bucket of Water and the Wizard's gifts are not owned by the party yet.
+
+## [0.3.3] - 2026-10-11
 
 ### Changed
 

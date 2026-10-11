@@ -8,7 +8,9 @@ work with tags. Lore content is edited in the Lore window; games can change some
 Namespace: `PebblePouch.Lore` · Assembly: `PebblePouch.Lore` (referenced automatically by `Assembly-CSharp`;
 assemblies with their own `.asmdef` add `PebblePouch.Lore` to their references).
 
-A complete example is the **Runtime API** sample: Package Manager > Lore > Samples > Import.
+A complete example is the **Runtime API** sample: Package Manager > Lore > Samples > Import. The **Oz Demo** sample
+uses the API in a small playable game (scene `Scenes/Oz Demo.unity`, rules in `Scripts/OzJourney.cs`): finding
+Entries, typed values, generated Field constants, descriptions, runtime changes and save games.
 
 ---
 

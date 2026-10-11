@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Oz, the Great and Terrible
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 7eb16235-e75e-478b-ad67-91e628752e8c
-  _createdTicks: 639272563455759819
-  _modifiedTicks: 639272563511155314
+  _id: 44894351-a941-4cc5-ad67-ab7f35ec15af
+  _createdTicks: 639273194266621584
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F3A9\uFE0F"
   _subtitle: The Wizard of the Emerald City
-  _description: Rules the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald City]] and
+  _description: Rules the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald City]] and
     appears to every visitor in a different shape. In truth he is a *humbug*, a balloonist
     from Omaha who drifted into Oz and was taken for a great wizard. He leaves in
-    his [[539d1f4f-0db4-4f06-b83f-208a3c05696b|Balloon]].
+    his [[73ad0f40-eb72-4e11-a1c5-3fffae4709e6|Balloon]].
   _sortOrder: 5
   _fields:
   - _field: {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: a1652bc7-2e6a-4cef-8e3d-7039c433cc38
+    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -45,6 +45,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 4a0d97c4f9bb4c141b461cac3956069c, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -190,7 +208,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 3766896496333284256, guid: 0d2e8a82cbd6cac4a82acd5033342ebb, type: 3}
+    _gameObjectValue: {fileID: 2773775167848099981, guid: 0d2e8a82cbd6cac4a82acd5033342ebb, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -242,4 +260,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 24bb0e67-43dc-4781-bb21-89570e53451c
+  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb

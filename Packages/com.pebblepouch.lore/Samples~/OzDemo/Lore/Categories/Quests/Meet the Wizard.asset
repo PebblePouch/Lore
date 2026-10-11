@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Meet the Wizard
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 3befa03f-3659-4cf2-8054-e36dd255eeb0
-  _createdTicks: 639272563464544614
-  _modifiedTicks: 639272563511165479
+  _id: 06fc5dd7-4d25-4920-9ac2-5ec134ea4043
+  _createdTicks: 639273194274670678
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
   _glyph: 
   _subtitle: Chapters 10 and 11
-  _description: 'Each friend sees [[7eb16235-e75e-478b-ad67-91e628752e8c|Oz, the
+  _description: 'Each friend sees [[44894351-a941-4cc5-ad67-ab7f35ec15af|Oz, the
     Great and Terrible]] alone, and each sees him in a different shape. His price:
-    kill the [[ff5f930a-90ca-414d-88d2-e61557e01160|Wicked Witch of the West]].'
+    kill the [[4d91631d-e833-4bd5-a4c5-477a0fe8b0dc|Wicked Witch of the West]].'
   _sortOrder: 3
   _fields:
   - _field: {fileID: 11400000, guid: 489df0844b845b24db67f903f9fedfc1, type: 2}
@@ -155,5 +155,23 @@ MonoBehaviour:
     _floatValue: 0
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 46a94bd87460f0242a1cd6e00c930ddf, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 24bb0e67-43dc-4781-bb21-89570e53451c
+  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb

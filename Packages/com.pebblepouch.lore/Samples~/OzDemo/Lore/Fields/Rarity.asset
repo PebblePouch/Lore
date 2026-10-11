@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Rarity
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: b9b4ba34-2aaa-412e-9620-6d20f55051b6
-  _createdTicks: 639272563442576349
-  _modifiedTicks: 639272563443206845
+  _id: f424a3ac-fd5c-49cb-a843-0c5ef151f47c
+  _createdTicks: 639273194253749108
+  _modifiedTicks: 639273194254357505
   _type: 10
   _glyph: "\U0001F48E\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions:
-  - _id: 3bbdcb88-5406-44f3-9c1a-91db188ea1de
+  - _id: ae68a113-581c-4be2-a1e7-b3d2827cd80f
     _label: Common
-  - _id: 642afe3f-69f5-4a0c-81ea-7aaf1869e010
+  - _id: 5d63b975-ec8b-4f44-ba08-9dd5b5187bc7
     _label: Rare
-  - _id: b656b907-01af-4765-97aa-c1ccab0751ef
+  - _id: 294d08de-496b-4f1b-850d-e2882d0ac906
     _label: Magical
-  - _id: 408634a8-e722-4a97-bad2-bc2e2e11937f
+  - _id: ad21367d-7141-45a7-9e6b-378718947139
     _label: Unique
   _allowedCategories: []
   _vectorDimension: 3

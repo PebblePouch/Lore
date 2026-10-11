@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Follow the Yellow Brick Road
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 10a446aa-216d-49bc-bd9f-f5c6fe423d93
-  _createdTicks: 639272563464035116
-  _modifiedTicks: 639272563511165479
+  _id: f6a73ddf-1013-4fc0-b50e-760dad6df211
+  _createdTicks: 639273194274199037
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
   _glyph: 
   _subtitle: Chapters 3 to 7
-  _description: On the way to the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald
-    City]], [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] meets the [[507cd04b-cb2f-4fbe-aa08-4037a1d120c8|Scarecrow]],
-    the [[5fa1b2c9-d6af-4624-a28a-bb96064706e6|Tin Woodman]] and the [[cebed64d-0745-4442-a719-09ba8e20401e|Cowardly
+  _description: On the way to the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald
+    City]], [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] meets the [[758f6dde-27cb-482c-9255-91e3e88dc13c|Scarecrow]],
+    the [[87ffe15e-ce6a-48dc-82e2-828a5d144ad9|Tin Woodman]] and the [[cb3601f7-26ab-4ee0-b7a4-dc18a9182ddc|Cowardly
     Lion]].
   _sortOrder: 1
   _fields:
@@ -156,5 +156,23 @@ MonoBehaviour:
     _floatValue: 0
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 46a94bd87460f0242a1cd6e00c930ddf, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 4cc49fe2-d43e-4970-afd3-7d012c69598b
+  - 70d0131c-3d60-4017-ab2f-0d057370db67

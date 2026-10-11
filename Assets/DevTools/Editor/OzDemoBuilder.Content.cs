@@ -60,6 +60,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 {
                     ["Kind"] = "Human",
                     ["Home"] = "Kansas Farm",
+                    ["Location"] = "Kansas Farm",
                     ["Wish"] = "To go home to Aunt Em and Uncle Henry.",
                     ["Weaknesses"] = new[] { "Poppies" },
                     ["Allies"] = new[] { "Toto", "Scarecrow", "Tin Woodman", "Cowardly Lion" },
@@ -214,7 +215,7 @@ namespace PebblePouch.Lore.Editor.Dev
                     ["Home"] = "Witch's Castle",
                     ["Weaknesses"] = new[] { "Water", "Darkness" },
                     ["Allies"] = new[] { "King of the Winged Monkeys" },
-                    ["Alive"] = false,
+                    ["Alive"] = true,
                     ["Health"] = 300,
                     ["Height"] = 1.5f,
                     ["Dialogue"] = "Melting",
@@ -541,7 +542,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Rarity"] = "Unique",
-                    ["Owner"] = "Dorothy Gale",
+                    ["Owner"] = "Wicked Witch of the East",
                     ["Location"] = "Munchkin Village",
                     ["Value"] = 1000,
                 },
@@ -601,7 +602,6 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Rarity"] = "Common",
-                    ["Owner"] = "Dorothy Gale",
                     ["Location"] = "Witch's Castle",
                     ["Value"] = 1,
                 },
@@ -617,7 +617,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Rarity"] = "Magical",
-                    ["Owner"] = "Scarecrow",
+                    ["Owner"] = "Oz, the Great and Terrible",
                     ["Location"] = "Emerald City",
                     ["Value"] = 0,
                 },
@@ -631,7 +631,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Rarity"] = "Magical",
-                    ["Owner"] = "Tin Woodman",
+                    ["Owner"] = "Oz, the Great and Terrible",
                     ["Location"] = "Emerald City",
                     ["Value"] = 0,
                 },
@@ -645,7 +645,7 @@ namespace PebblePouch.Lore.Editor.Dev
                 Values =
                 {
                     ["Rarity"] = "Magical",
-                    ["Owner"] = "Cowardly Lion",
+                    ["Owner"] = "Oz, the Great and Terrible",
                     ["Location"] = "Emerald City",
                     ["Value"] = 0,
                 },

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Silver Shoes
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 3cbd0685-ef92-4b23-a0b9-dac72c467ecb
-  _createdTicks: 639272563461471499
-  _modifiedTicks: 639272563511155314
+  _id: 2e4de19b-3763-415b-8e68-19fefeeab4ee
+  _createdTicks: 639273194271797523
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F462\uFE0F"
   _subtitle: Three knocks of the heels
-  _description: Once worn by the [[35199687-7412-4596-9c07-e7916de182a9|Wicked Witch
+  _description: Once worn by the [[0014940d-d5cf-4f17-862b-eba235e5a4de|Wicked Witch
     of the East]]. Whoever knocks the heels together three times can go anywhere
-    in three steps. Only [[892f668e-60c1-4771-9d58-d72eab998d00|Glinda]] knows their
+    in three steps. Only [[421c74df-00d1-4c92-ae7e-c2fd33777f17|Glinda]] knows their
     secret.
   _sortOrder: 0
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 408634a8-e722-4a97-bad2-bc2e2e11937f
+    _enumValue: ad21367d-7141-45a7-9e6b-378718947139
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
     _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: f361c22cbd427e54b83e0d563c2678c6, type: 2}
     _stringValue: 
-    _entryValue: {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
+    _entryValue: {fileID: 11400000, guid: e985470f5ba84514aa5d3d3ddb6bc1a9, type: 2}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 8595550337731644467, guid: 4e7fdee5e9fbacf4e864768ca973c286, type: 3}
+    _gameObjectValue: {fileID: 3654453034799602563, guid: 4e7fdee5e9fbacf4e864768ca973c286, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -151,4 +151,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 7bfb42de-1228-43ad-b784-200475ade4bc
+  - 3fa761a7-6250-4618-9713-c9ee1954e640

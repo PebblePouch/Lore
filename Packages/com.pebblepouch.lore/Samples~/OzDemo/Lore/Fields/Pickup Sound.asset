@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Pickup Sound
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 55ec4962-2bd4-4da1-a685-9443e9071c99
-  _createdTicks: 639272563446380307
-  _modifiedTicks: 639272563446380307
+  _id: e468722d-ec86-4818-8342-bc9bf8e1e568
+  _createdTicks: 639273194257010340
+  _modifiedTicks: 639273194257010340
   _type: 12
   _glyph: "\U0001F514\uFE0F"
   _objectTypeName: 

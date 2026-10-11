@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Glinda
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 892f668e-60c1-4771-9d58-d72eab998d00
-  _createdTicks: 639272563456011297
-  _modifiedTicks: 639272563511155314
+  _id: 421c74df-00d1-4c92-ae7e-c2fd33777f17
+  _createdTicks: 639273194266846137
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F9DA\uFE0F"
   _subtitle: The Good Witch of the South
-  _description: The most powerful of the witches. She rules the Quadlings from [[0185e89b-fbd0-40a6-a066-8b886f3534be|Glinda's
-    Palace]] and tells [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] the
-    secret of the [[3cbd0685-ef92-4b23-a0b9-dac72c467ecb|Silver Shoes]].
+  _description: The most powerful of the witches. She rules the Quadlings from [[b606e1b3-60af-4057-a923-5ae43cc3f60b|Glinda's
+    Palace]] and tells [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] the
+    secret of the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver Shoes]].
   _sortOrder: 6
   _fields:
   - _field: {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: b9988e90-e829-4537-b671-3f379fc8eeda
+    _enumValue: 0d9bfb90-448b-476e-b78b-f8298f9e8a8b
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -44,6 +44,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 6d845ad69f39904449d63e6dcca49ae1, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -189,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 1151183020271900471, guid: 5f27af8175e2a3c4484beae86a029b38, type: 3}
+    _gameObjectValue: {fileID: 3527341280133302158, guid: 5f27af8175e2a3c4484beae86a029b38, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -241,6 +259,6 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 9c97f94e-7ac9-471a-bfbc-9ad701564b29
-  - 7bfb42de-1228-43ad-b784-200475ade4bc
-  - 24bb0e67-43dc-4781-bb21-89570e53451c
+  - db981fa8-449d-4128-9a45-1f92b0ce5c1c
+  - 3fa761a7-6250-4618-9713-c9ee1954e640
+  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb

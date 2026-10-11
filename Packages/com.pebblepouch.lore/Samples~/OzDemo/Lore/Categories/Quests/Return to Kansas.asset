@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Return to Kansas
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: aee6b570-4ec4-4b42-968b-826fed1a572d
-  _createdTicks: 639272563465355703
-  _modifiedTicks: 639272563511165479
+  _id: 6963cef9-199a-4a35-a13d-1074362bdcc0
+  _createdTicks: 639273194275398669
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
   _glyph: 
   _subtitle: Chapters 18 to 24
-  _description: The [[539d1f4f-0db4-4f06-b83f-208a3c05696b|Balloon]] leaves without
-    her, so [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] travels south to
-    [[892f668e-60c1-4771-9d58-d72eab998d00|Glinda]], who knows what the [[3cbd0685-ef92-4b23-a0b9-dac72c467ecb|Silver
+  _description: The [[73ad0f40-eb72-4e11-a1c5-3fffae4709e6|Balloon]] leaves without
+    her, so [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] travels south to
+    [[421c74df-00d1-4c92-ae7e-c2fd33777f17|Glinda]], who knows what the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver
     Shoes]] can do.
   _sortOrder: 6
   _fields:
@@ -156,6 +156,24 @@ MonoBehaviour:
     _floatValue: 0
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 46a94bd87460f0242a1cd6e00c930ddf, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - c125b128-40b1-46ca-bf89-aeb35087174d
-  - 7bfb42de-1228-43ad-b784-200475ade4bc
+  - 43821641-03ab-4757-bfd0-adf5a062dfbd
+  - 3fa761a7-6250-4618-9713-c9ee1954e640

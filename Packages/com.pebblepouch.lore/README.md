@@ -7,8 +7,8 @@ read everything at runtime.
 ## Installation
 
 - **Git URL:** Package Manager > + > *Install package from git URL…* >
-  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.2`
-  (the `#0.3.2` tag pins a version; without it, the package follows the latest state of `main`).
+  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.4`
+  (the `#0.3.4` tag pins a version; without it, the package follows the latest state of `main`).
 - **From disk:** Package Manager > + > *Install package from disk…* > select this folder's `package.json`.
 
 Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.
@@ -47,6 +47,10 @@ The **Oz Demo** sample turns "The Wonderful Wizard of Oz" into the lore of a sma
 description links and field values from colors and map positions to sprites, textures, sounds, prefabs, scenes and
 ScriptableObjects. Import it from the Welcome page or Package Manager > Lore > Samples, into a Unity project without a
 Lore Project of its own. Delete the imported sample folder (`Assets/Samples/Lore/…`) before you start your own Lore.
+
+Open its **Oz Demo** scene (`Scenes/Oz Demo.unity`) and press Play to see the runtime side: Dorothy travels the map of
+Oz, picks up Items and completes the Quests of the book. The whole game state lives in Lore Fields, changed at runtime
+and saved with one call; the scripts (`Scripts/OzJourney.cs` for the rules) show the Runtime API in a small game.
 
 ## Tabular Editing & bulk editing
 

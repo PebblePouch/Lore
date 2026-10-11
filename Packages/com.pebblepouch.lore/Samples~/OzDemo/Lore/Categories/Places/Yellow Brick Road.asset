@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Yellow Brick Road
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 22517d6a-af9c-4981-8a3e-d8094cd6507c
-  _createdTicks: 639272563459361094
-  _modifiedTicks: 639272563511155314
+  _id: b1203b36-0cef-4107-9678-716a0ddbf578
+  _createdTicks: 639273194269792769
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F463\uFE0F"
   _subtitle: The road to the Emerald City
-  _description: Leads from the [[4afa4d10-195b-4b78-8315-5517131fcf9c|Munchkin Village]]
-    to the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald City]], past the [[357ea1cd-74bf-410f-a1a4-f3210c673bd5|Scarecrow's
-    Cornfield]] and through the [[5f1c8c7f-e38d-43c7-9e1f-218f4d2a3b6f|Tin Woodman's
+  _description: Leads from the [[d4610800-66f9-4cd3-a263-8147f1a76207|Munchkin Village]]
+    to the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald City]], past the [[e40fea6d-99ae-4dd4-8af1-1f7cbd1dd3eb|Scarecrow's
+    Cornfield]] and through the [[aff1ca7b-f460-47b0-a9c9-988afb3b57a5|Tin Woodman's
     Forest]].
   _sortOrder: 2
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 66161abe-0f1b-4478-9481-457ae85e99c6
+    _enumValue: b7dadc1a-cba7-4b61-aba7-fa4841e63b91
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -169,4 +169,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 8b17c662-d7ca-4d07-8a8e-1ebce46581b1
+  - 3737b046-c7f4-4fdf-84f5-e1933e4aee59

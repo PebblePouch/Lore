@@ -304,6 +304,23 @@ namespace PebblePouch.Lore.Editor
         #endregion
 
         #region Source
+        // Source for a class of the current Fields with the given names, independent of the settings (e.g. for
+        // constants that ship with a sample). Nothing is written.
+        internal static string BuildSource(
+            string namespaceName,
+            string className)
+        {
+            List<Constant> constants = BuildConstants(
+                FindFields(),
+                className,
+                out _);
+
+            return BuildSource(
+                constants,
+                namespaceName,
+                className);
+        }
+
         private static string BuildExpectedSource(
             LoreSettings settings,
             out int count,

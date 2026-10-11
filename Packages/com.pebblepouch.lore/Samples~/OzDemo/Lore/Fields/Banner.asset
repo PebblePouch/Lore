@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Banner
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 227b1696-fe57-4102-8bd2-be0512758f2d
-  _createdTicks: 639272563437817342
-  _modifiedTicks: 639272563438465556
+  _id: 15a2f8c7-b470-41cc-a12a-971240e5067e
+  _createdTicks: 639273194249323062
+  _modifiedTicks: 639273194249932785
   _type: 15
   _glyph: "\U0001F6A9\uFE0F"
   _objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule

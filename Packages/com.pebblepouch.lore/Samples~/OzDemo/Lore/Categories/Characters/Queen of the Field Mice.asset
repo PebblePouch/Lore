@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Queen of the Field Mice
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 4fc76d3c-1120-407c-9c00-6776ab4c6793
-  _createdTicks: 639272563457327861
-  _modifiedTicks: 639272563511155314
+  _id: c39ea5f1-fd44-4576-a991-9a4cd3635a38
+  _createdTicks: 639273194268051345
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F42D\uFE0F"
   _subtitle: Saved from a wildcat
-  _description: The [[5fa1b2c9-d6af-4624-a28a-bb96064706e6|Tin Woodman]] saves her
-    from a wildcat. In return her mice pull the sleeping [[cebed64d-0745-4442-a719-09ba8e20401e|Cowardly
-    Lion]] out of the [[ba69a581-8516-409c-b993-4802f3562380|Deadly Poppy Field]]
+  _description: The [[87ffe15e-ce6a-48dc-82e2-828a5d144ad9|Tin Woodman]] saves her
+    from a wildcat. In return her mice pull the sleeping [[cb3601f7-26ab-4ee0-b7a4-dc18a9182ddc|Cowardly
+    Lion]] out of the [[14e60d30-456d-4c5e-98e2-d72c25d73df4|Deadly Poppy Field]]
     on a little wooden truck.
   _sortOrder: 11
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: dcaed794-6905-4d4f-a523-a64a16061a9b
+    _enumValue: 71fb20cc-2070-4249-8880-49f95b68fb5a
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -43,6 +43,24 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
@@ -189,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 9066056515023184508, guid: b6a17fc427cc7da4c9541d4e551f1f60, type: 3}
+    _gameObjectValue: {fileID: 4867585984387138072, guid: b6a17fc427cc7da4c9541d4e551f1f60, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -241,5 +259,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - ca97c1fd-9a2e-4efc-8836-09fd311d7080
-  - 24bb0e67-43dc-4781-bb21-89570e53451c
+  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
+  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b57f865bf957a4d9e538b7b6f1f870, type: 3}
   m_Name: Lore
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.LoreProject
-  _id: 801348c8-9972-4383-b539-04b5af719b9c
-  _createdTicks: 639272563408831126
-  _modifiedTicks: 639272563521029038
+  _id: 2162cdc4-453d-4dd7-9c8b-bae4c1d25ad4
+  _createdTicks: 639273194220482517
+  _modifiedTicks: 639273194327122228
   _title: The Wonderful Wizard of Oz
   _glyph: "\U0001F32A\uFE0F"
   _description: 'A demo for Lore: the world of L. Frank Baum''s novel "The Wonderful
@@ -27,8 +27,8 @@ MonoBehaviour:
     broken**, so Health and Integrity have something to show.
 
 
-    Start with [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy
-    Gale]], or follow the story from its first Quest, [[ea56a44b-1fac-4d8f-a604-1e5eb58cfc5e|The
+    Start with [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy
+    Gale]], or follow the story from its first Quest, [[cba6fa15-fd99-4b9d-8c48-62926d74c5c1|The
     Council with the Munchkins]].'
   _links:
   - _label: The book on Project Gutenberg

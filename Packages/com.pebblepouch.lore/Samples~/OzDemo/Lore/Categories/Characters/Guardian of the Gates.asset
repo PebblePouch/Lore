@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Guardian of the Gates
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 5f62807d-75b6-47c5-b7e1-ec61252c307c
-  _createdTicks: 639272563457860544
-  _modifiedTicks: 639272563511155314
+  _id: a29e6d0c-83c1-4e8b-bb4b-013379b33ce2
+  _createdTicks: 639273194268524315
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F482\uFE0F"
   _subtitle: Keeper of the green spectacles
-  _description: Lets visitors into the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald
-    City]] and locks [[d271e3b5-a999-4e3e-b7f1-222dfd78dc15|Green Spectacles]] on
+  _description: Lets visitors into the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald
+    City]] and locks [[3fc679ee-021c-404c-97dd-577d912129ec|Green Spectacles]] on
     their eyes, so the brightness of the city will not blind them.
   _sortOrder: 13
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: a1652bc7-2e6a-4cef-8e3d-7039c433cc38
+    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -44,6 +44,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 4a0d97c4f9bb4c141b461cac3956069c, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -189,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 2075671950621221027, guid: d043620cbd12003408f6dd886f2b1282, type: 3}
+    _gameObjectValue: {fileID: 3002637306200871927, guid: d043620cbd12003408f6dd886f2b1282, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 

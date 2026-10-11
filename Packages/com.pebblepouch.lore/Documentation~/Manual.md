@@ -17,7 +17,7 @@ A new Lore in ten minutes:
 9. **Look at the Project page.** Insights count your content, Health shows what is unfinished, Integrity shows what is broken.
 10. **Use it in your game.** See "Using Lore in Your Game" at the end of this manual.
 
-Want to see a finished Lore first? **📖 Create Example Project** imports "The Wonderful Wizard of Oz" as the lore of a small game. Delete its sample folder (Assets/Samples/Lore/…) before you start your own Lore: a Unity project holds one Lore Project.
+Want to see a finished Lore first? **📖 Create Example Project** imports "The Wonderful Wizard of Oz" as the lore of a small game. Its **Oz Demo** scene (in the sample's Scenes folder) is a small playable game built on that Lore: open it and press Play. Delete its sample folder (Assets/Samples/Lore/…) before you start your own Lore: a Unity project holds one Lore Project.
 
 ## The Lore Window
 
@@ -130,7 +130,7 @@ Your game reads Lore through an API in the namespace PebblePouch.Lore. Give a Mo
 - **Inspector fields:** Entry, Category and Field fields in your own scripts get a searchable picker, drag & drop, and double-click to open in Lore. The LoreFilter attribute limits them to a Category or a Field type.
 - **Descriptions:** read them as plain text or as rich text with bold, italic and links.
 
-The full reference is Documentation~/RuntimeAPI.md in the package; the **Runtime API** sample (Package Manager > Lore > Samples) shows it in a script.
+The full reference is Documentation~/RuntimeAPI.md in the package; the **Runtime API** sample (Package Manager > Lore > Samples) shows it in a script, and the **Oz Demo** scene of the example project uses it in a small game.
 
 ## Keyboard Shortcuts
 

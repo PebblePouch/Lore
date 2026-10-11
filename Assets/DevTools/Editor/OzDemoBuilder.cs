@@ -30,6 +30,19 @@ namespace PebblePouch.Lore.Editor.Dev
         private const string LoreFolderName = "Lore";
         private const string ProjectAssetName = "Lore.asset";
 
+        // Inside Scripts/ so the sample assembly (OzDemo.asmdef) compiles the constants with the demo scripts.
+        private const string GeneratedFolder = "Scripts/Generated";
+        private const string FieldConstantsNamespace = "PebblePouch.Lore.Samples.OzDemo";
+        private const string FieldConstantsClassName = "OzFields";
+
+        private const string DemoScenePath = "Scenes/Oz Demo.unity";
+        private const string DemoObjectName = "Oz Demo";
+        private const string JourneyTypeName = "PebblePouch.Lore.Samples.OzDemo.OzJourney, PebblePouch.Lore.Samples.OzDemo";
+        private const string JourneyViewTypeName = "PebblePouch.Lore.Samples.OzDemo.OzJourneyView, PebblePouch.Lore.Samples.OzDemo";
+        private const string JourneyLoreProperty = "_lore";
+
+        private static readonly Color DemoBackground = new(0.12f, 0.16f, 0.14f);
+
         private static readonly Dictionary<string, Category> Categories = new();
         private static readonly Dictionary<string, Field> Fields = new();
         private static readonly Dictionary<string, TagDefinition> Tags = new();
@@ -85,6 +98,8 @@ namespace PebblePouch.Lore.Editor.Dev
                 CreateAssets(sampleRoot);
                 FillEntries();
                 LinkProjectDescription();
+                GenerateFieldConstants(sampleRoot);
+                CreateDemoScene(sampleRoot);
 
                 Debug.Log($"[Lore Dev] Oz Demo built in {loreRoot}.");
             }
@@ -124,18 +139,19 @@ namespace PebblePouch.Lore.Editor.Dev
             foreach (string folder in new[]
                      {
                          LoreFolderName, ArtFolder, AudioFolder, PrefabsFolder, DialoguesFolder, LocationScenesFolder,
+                         GeneratedFolder, DemoScenePath,
                      })
             {
                 string source = System.IO.Path.Combine(sampleRoot, folder);
                 string destination = System.IO.Path.Combine(target, folder);
 
-                if (System.IO.Directory.Exists(destination))
+                if (System.IO.Directory.Exists(destination) || System.IO.File.Exists(destination))
                     FileUtil.DeleteFileOrDirectory(destination);
 
                 if (System.IO.File.Exists(destination + ".meta"))
                     FileUtil.DeleteFileOrDirectory(destination + ".meta");
 
-                if (!System.IO.Directory.Exists(source))
+                if (!System.IO.Directory.Exists(source) && !System.IO.File.Exists(source))
                     continue;
 
                 System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(destination) ?? target);
@@ -289,6 +305,89 @@ namespace PebblePouch.Lore.Editor.Dev
             LoreChangeTracker.MarkModified(project);
         }
 
+        // OzFields: keys by Field ID for the demo scripts, independent of the project's own constants settings.
+        // Not deleted before a rebuild: the demo scripts need it to compile (rebuilt Fields get new IDs, same names).
+        private static void GenerateFieldConstants(string sampleRoot)
+        {
+            string path = $"{sampleRoot}/{GeneratedFolder}/{FieldConstantsClassName}.cs";
+
+            FolderService.EnsureFolderPath($"{sampleRoot}/{GeneratedFolder}");
+
+            System.IO.File.WriteAllText(
+                path,
+                FieldConstantsService.BuildSource(FieldConstantsNamespace, FieldConstantsClassName),
+                new System.Text.UTF8Encoding(false));
+
+            AssetDatabase.ImportAsset(path);
+        }
+
+        // The playable scene: a camera and one GameObject with OzJourney + OzJourneyView, referencing the Project.
+        // Built from an empty scene (camera added by hand), so it carries no render-pipeline components and opens
+        // in any project. Saved over the previous scene, so its GUID stays stable.
+        private static void CreateDemoScene(string sampleRoot)
+        {
+            Type journeyType = Type.GetType(JourneyTypeName, false);
+            Type viewType = Type.GetType(JourneyViewTypeName, false);
+
+            if (journeyType == null || viewType == null)
+            {
+                Debug.LogWarning("[Lore Dev] OzJourney / OzJourneyView not found (copy the scripts first): scene skipped.");
+
+                return;
+            }
+
+            for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++)
+            {
+                if (string.IsNullOrEmpty(UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).path))
+                {
+                    Debug.LogWarning("[Lore Dev] Save or close the untitled scene first: Oz Demo scene skipped.");
+
+                    return;
+                }
+            }
+
+            string path = $"{sampleRoot}/{DemoScenePath}";
+
+            EnsureParentFolder(path);
+
+            UnityEngine.SceneManagement.Scene scene = UnityEditor.SceneManagement.EditorSceneManager.NewScene(
+                UnityEditor.SceneManagement.NewSceneSetup.EmptyScene,
+                UnityEditor.SceneManagement.NewSceneMode.Additive);
+
+            try
+            {
+                var cameraObject = new GameObject("Main Camera") { tag = "MainCamera" };
+                var camera = cameraObject.AddComponent<Camera>();
+
+                // Hears the pickup sounds of OzJourney's AudioSource.
+                cameraObject.AddComponent<AudioListener>();
+
+                camera.clearFlags = CameraClearFlags.SolidColor;
+                camera.backgroundColor = DemoBackground;
+
+                var demo = new GameObject(DemoObjectName);
+
+                UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(cameraObject, scene);
+                UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(demo, scene);
+
+                Component journey = demo.AddComponent(journeyType);
+
+                demo.AddComponent(viewType);
+
+                var serialized = new SerializedObject(journey);
+
+                serialized.FindProperty(JourneyLoreProperty).objectReferenceValue = LoreRepository.Instance.Project;
+                serialized.ApplyModifiedPropertiesWithoutUndo();
+
+                if (!UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene, path))
+                    throw new InvalidOperationException($"Could not save scene {path}.");
+            }
+            finally
+            {
+                UnityEditor.SceneManagement.EditorSceneManager.CloseScene(scene, true);
+            }
+        }
+
         private static void CreateTags()
         {
             CreateTag("Witch", new Color(0.50f, 0.25f, 0.70f));
@@ -337,6 +436,7 @@ namespace PebblePouch.Lore.Editor.Dev
             CreateField("Characters", "Kind", FieldType.Enum, "Silhouette",
                 Options("Human", "Witch", "Animal", "Enchanted", "Creature"));
             CreateField("Characters", "Home", FieldType.Entry, "House", Allow("Places"));
+            CreateField("Characters", "Location", FieldType.Entry, "Round Map Pin", Allow("Places"));
             CreateField("Characters", "Wish", FieldType.Text, "Thought Bubble");
             CreateField("Characters", "Weaknesses", FieldType.Enums, "Shield",
                 Options("Water", "Fire", "Rain", "Poppies", "Darkness"));
@@ -360,7 +460,7 @@ namespace PebblePouch.Lore.Editor.Dev
             CreateField("Places", "Dangerous", FieldType.Boolean, "Warning");
             CreateField("Places", "Scene", FieldType.Scene, "Clapperboard");
 
-            // Items (Prefab is shared with Characters)
+            // Items (Location and Prefab are shared with Characters)
             CreateField("Items", "Rarity", FieldType.Enum, "Gem", Options("Common", "Rare", "Magical", "Unique"));
             CreateField("Items", "Owner", FieldType.Entry, "Receive", Allow("Characters"));
             CreateField("Items", "Location", FieldType.Entry, "Round Map Pin", Allow("Places"));
@@ -369,7 +469,7 @@ namespace PebblePouch.Lore.Editor.Dev
             CreateField("Items", "Pickup Sound", FieldType.Audio, "Bell");
             CreateField("Items", "Prefab", FieldType.GameObject, "Package");
 
-            // Quests (Location is shared with Items)
+            // Quests (Location is shared with Characters and Items; Completed is changed by the demo scene at runtime)
             CreateField("Quests", "Chapter", FieldType.Integer, "Open Book");
             CreateField("Quests", "Quest Giver", FieldType.Entry, "Speaking Head", Allow("Characters"));
             CreateField("Quests", "Party", FieldType.Entries, "Footprints", Allow("Characters"));
@@ -377,6 +477,7 @@ namespace PebblePouch.Lore.Editor.Dev
             CreateField("Quests", "Rewards", FieldType.Entries, "Wrapped Gift", Allow("Items"));
             CreateField("Quests", "Next Quest", FieldType.Entry, "Right", Allow("Quests"));
             CreateField("Quests", "Main Quest", FieldType.Boolean, "Star");
+            CreateField("Quests", "Completed", FieldType.Boolean, "Check Mark");
 
             SetRequired("Characters", "Kind", "Home");
             SetRequired("Places", "Region");

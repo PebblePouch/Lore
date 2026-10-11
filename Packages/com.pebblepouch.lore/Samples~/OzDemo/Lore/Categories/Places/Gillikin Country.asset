@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Gillikin Country
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 9005acff-75a4-44b0-a428-296a8e710d12
-  _createdTicks: 639272563461203983
-  _modifiedTicks: 639272563511155314
+  _id: f31cca0d-363c-4483-82c3-3227e04a776e
+  _createdTicks: 639273194271557315
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3D4\uFE0F"
   _subtitle: The purple north
-  _description: The north of Oz, home of the [[126d0495-5f1a-42dc-952a-bf6c9e2c9595|Good
+  _description: The north of Oz, home of the [[03edb354-6491-4fb1-b9db-e8a5191116d3|Good
     Witch of the North]].
   _sortOrder: 9
   _fields:
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 05245826-c89a-413a-9f8b-3d6ac2540a84
+    _enumValue: 1f522794-5820-486b-afcd-5c070573a40b
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -168,4 +168,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 7bfb42de-1228-43ad-b784-200475ade4bc
+  - 3fa761a7-6250-4618-9713-c9ee1954e640

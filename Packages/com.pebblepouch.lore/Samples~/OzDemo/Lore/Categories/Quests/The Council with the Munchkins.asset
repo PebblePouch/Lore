@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: The Council with the Munchkins
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: ea56a44b-1fac-4d8f-a604-1e5eb58cfc5e
-  _createdTicks: 639272563463762976
-  _modifiedTicks: 639272563511165479
+  _id: cba6fa15-fd99-4b9d-8c48-62926d74c5c1
+  _createdTicks: 639273194273951666
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
   _glyph: 
   _subtitle: Chapter 2
-  _description: '[[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] wakes up in
-    the land of the Munchkins. The [[126d0495-5f1a-42dc-952a-bf6c9e2c9595|Good Witch
-    of the North]] sends her to the Wizard and gives her the [[3cbd0685-ef92-4b23-a0b9-dac72c467ecb|Silver
+  _description: '[[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] wakes up in
+    the land of the Munchkins. The [[03edb354-6491-4fb1-b9db-e8a5191116d3|Good Witch
+    of the North]] sends her to the Wizard and gives her the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver
     Shoes]].'
   _sortOrder: 0
   _fields:
@@ -153,6 +153,24 @@ MonoBehaviour:
     _floatValue: 0
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 46a94bd87460f0242a1cd6e00c930ddf, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 8b17c662-d7ca-4d07-8a8e-1ebce46581b1
-  - 9c97f94e-7ac9-471a-bfbc-9ad701564b29
+  - 3737b046-c7f4-4fdf-84f5-e1933e4aee59
+  - db981fa8-449d-4128-9a45-1f92b0ce5c1c

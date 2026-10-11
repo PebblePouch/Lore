@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Scarecrow
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 507cd04b-cb2f-4fbe-aa08-4037a1d120c8
-  _createdTicks: 639272563454988726
-  _modifiedTicks: 639272563511155314
+  _id: 758f6dde-27cb-482c-9255-91e3e88dc13c
+  _createdTicks: 639273194265910279
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F33D\uFE0F"
   _subtitle: Hopes for brains
-  _description: Stuffed with straw and set up in a [[357ea1cd-74bf-410f-a1a4-f3210c673bd5|Scarecrow's
-    Cornfield]] to frighten the crows, who were not frightened at all. [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy
-    Gale]] lifts him off his pole, and he joins her to ask the Wizard for [[7d0c4945-95e4-406c-bb58-b25ba6010a16|Brains]].
-    Later he rules the [[81773492-1f02-4ad4-9a99-9d831db56088|Emerald City]].
+  _description: Stuffed with straw and set up in a [[e40fea6d-99ae-4dd4-8af1-1f7cbd1dd3eb|Scarecrow's
+    Cornfield]] to frighten the crows, who were not frightened at all. [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy
+    Gale]] lifts him off his pole, and he joins her to ask the Wizard for [[76e18d10-2bf0-4a20-91ef-ad04491e3893|Brains]].
+    Later he rules the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald City]].
   _sortOrder: 2
   _fields:
   - _field: {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 96b3f4c7-4f45-42af-9a7e-a0cd90bef667
+    _enumValue: 22d45237-3b6d-4215-b4d7-b005b5846a35
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -45,6 +45,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: e5cab09675a052a449be1dfe8b163337, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -91,7 +109,7 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - c9f007bb-7bed-4256-9f11-6f00ecaaf4d5
+    - f6327009-3872-4afd-876d-a500c44de447
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -193,7 +211,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 969085480804687071, guid: 9f53b837bd9b2484091209ddd86d3e82, type: 3}
+    _gameObjectValue: {fileID: 6154528989426033372, guid: 9f53b837bd9b2484091209ddd86d3e82, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -245,5 +263,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 4cc49fe2-d43e-4970-afd3-7d012c69598b
-  - 24bb0e67-43dc-4781-bb21-89570e53451c
+  - 70d0131c-3d60-4017-ab2f-0d057370db67
+  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Kansas Farm
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: acf20060-43b1-47ec-be19-57d2cf572e8f
-  _createdTicks: 639272563458822953
-  _modifiedTicks: 639272563511155314
+  _id: 9d92c402-09c4-4ba7-8bd3-7b0bb913adcc
+  _createdTicks: 639273194269265173
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3E0\uFE0F"
   _subtitle: A small house on the gray prairie
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 6cf45379-3635-4696-8eb3-6e7170201e39
+    _enumValue: c2090a6b-5bd9-4a81-b896-27c17da22cea
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: f712dee565cd04b418d163a7c6a6b07c, type: 3}
-    _scenePath: Assets/Samples/Lore/0.3.0/Oz Demo/Scenes/Locations/Kansas Farm.unity
+    _scenePath: Assets/Samples/Lore/0.3.4/Oz Demo/Scenes/Locations/Kansas Farm.unity
     _folderValue: {fileID: 0}
     _folderPath: 
     _objectValue: {fileID: 0}
@@ -171,4 +171,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - c125b128-40b1-46ca-bf89-aeb35087174d
+  - 43821641-03ab-4757-bfd0-adf5a062dfbd

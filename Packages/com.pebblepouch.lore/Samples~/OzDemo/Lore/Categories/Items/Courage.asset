@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Courage
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: e68faf30-df73-453c-bddf-8d383f699162
-  _createdTicks: 639272563463247080
-  _modifiedTicks: 639272563511165479
+  _id: 49e93e91-2e01-4f55-a77d-7deda9d66e74
+  _createdTicks: 639273194273470891
+  _modifiedTicks: 639273194317801392
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F9EA\uFE0F"
   _subtitle: A green drink
-  _description: Poured from a square green bottle for the [[cebed64d-0745-4442-a719-09ba8e20401e|Cowardly
+  _description: Poured from a square green bottle for the [[cb3601f7-26ab-4ee0-b7a4-dc18a9182ddc|Cowardly
     Lion]]. Courage is always inside.
   _sortOrder: 7
   _fields:
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: b656b907-01af-4765-97aa-c1ccab0751ef
+    _enumValue: 294d08de-496b-4f1b-850d-e2882d0ac906
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     _vectorValue: {x: 0, y: 0, z: 0}
   - _field: {fileID: 11400000, guid: f361c22cbd427e54b83e0d563c2678c6, type: 2}
     _stringValue: 
-    _entryValue: {fileID: 11400000, guid: 774fc032a3997e244979a6b6ae3867ea, type: 2}
+    _entryValue: {fileID: 11400000, guid: 92acfce3b0a3e6b46a1fe8623fcd1d40, type: 2}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 4216079231663640308, guid: dfe8a30beebeab34d865ca19833fefb1, type: 3}
+    _gameObjectValue: {fileID: 3411513329082101339, guid: dfe8a30beebeab34d865ca19833fefb1, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -149,4 +149,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 8658dcf9-37eb-4c79-b1a3-62ac567fd0f8
+  - b4159f6f-824a-414e-a8e0-905f31b748e6

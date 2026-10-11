@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Boq
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: e77fbaef-2953-4c5c-bcad-ca0cbb1fef5c
-  _createdTicks: 639272563457052928
-  _modifiedTicks: 639272563511155314
+  _id: 7bc582ca-603e-40c2-b872-78b3d1e8fcdc
+  _createdTicks: 639273194267795951
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F468\uFE0F"
   _subtitle: A rich Munchkin
-  _description: Gives [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] supper
-    and a bed on her first night in Oz, in his blue house in the [[4afa4d10-195b-4b78-8315-5517131fcf9c|Munchkin
+  _description: Gives [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] supper
+    and a bed on her first night in Oz, in his blue house in the [[d4610800-66f9-4cd3-a263-8147f1a76207|Munchkin
     Village]].
   _sortOrder: 10
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: a1652bc7-2e6a-4cef-8e3d-7039c433cc38
+    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -44,6 +44,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: b41fe06b536f49a40bc49f530dcc119d, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -188,7 +206,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 2789237870822836600, guid: 165d765eb2ac54b49962c6c5a0cf38e7, type: 3}
+    _gameObjectValue: {fileID: 6392386638827973971, guid: 165d765eb2ac54b49962c6c5a0cf38e7, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -240,4 +258,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 8b17c662-d7ca-4d07-8a8e-1ebce46581b1
+  - 3737b046-c7f4-4fdf-84f5-e1933e4aee59

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Toto
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 96ad4c10-f5e2-4a6c-8d22-26d10fc4d14f
-  _createdTicks: 639272563454744060
-  _modifiedTicks: 639272563511155314
+  _id: 53b4ef1b-67db-4541-90e7-2eb2323dc66e
+  _createdTicks: 639273194265671963
+  _modifiedTicks: 639273194317791371
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F436\uFE0F"
   _subtitle: Dorothy's little black dog
   _description: A small black dog with long silky hair and merry little eyes. He
-    keeps [[74be2f99-978f-4a21-9eca-fc675e81362d|Dorothy Gale]] from being sad, and
-    at the end it is Toto who knocks over the screen that hides [[7eb16235-e75e-478b-ad67-91e628752e8c|Oz,
+    keeps [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] from being sad, and
+    at the end it is Toto who knocks over the screen that hides [[44894351-a941-4cc5-ad67-ab7f35ec15af|Oz,
     the Great and Terrible]].
   _sortOrder: 1
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: dcaed794-6905-4d4f-a523-a64a16061a9b
+    _enumValue: 71fb20cc-2070-4249-8880-49f95b68fb5a
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -45,6 +45,24 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: 7782bbdd1ddf2f64cb5d82bf65145329, type: 2}
     _stringValue: 
     _entryValue: {fileID: 11400000, guid: 76836327adc90f445b1921fb06e1f79e, type: 2}
+    _gameObjectValue: {fileID: 0}
+    _spriteValue: {fileID: 0}
+    _sceneValue: {fileID: 0}
+    _scenePath: 
+    _folderValue: {fileID: 0}
+    _folderPath: 
+    _objectValue: {fileID: 0}
+    _entriesValue: []
+    _enumValue: 
+    _enumValues: []
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _colorValue: {r: 0, g: 0, b: 0, a: 1}
+    _vectorValue: {x: 0, y: 0, z: 0}
+  - _field: {fileID: 11400000, guid: 38653df878d894c40aa0eb79f2a882a3, type: 2}
+    _stringValue: 
+    _entryValue: {fileID: 0}
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
@@ -91,7 +109,7 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - 9ec1df49-9763-48a6-b537-d713546558a4
+    - 403f930f-c58c-44b8-9d91-b3a80efa1149
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -191,7 +209,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 3789656040994539283, guid: 6b9447b6a3fae9c47a147c9b1535237f, type: 3}
+    _gameObjectValue: {fileID: 125289654184318879, guid: 6b9447b6a3fae9c47a147c9b1535237f, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -243,6 +261,6 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 4cc49fe2-d43e-4970-afd3-7d012c69598b
-  - ca97c1fd-9a2e-4efc-8836-09fd311d7080
-  - c125b128-40b1-46ca-bf89-aeb35087174d
+  - 70d0131c-3d60-4017-ab2f-0d057370db67
+  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
+  - 43821641-03ab-4757-bfd0-adf5a062dfbd
