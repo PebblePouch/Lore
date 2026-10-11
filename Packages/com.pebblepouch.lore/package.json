@@ -22,7 +22,7 @@
   "samples": [
     {
       "displayName": "Runtime API",
-      "description": "A MonoBehaviour that reads a Lore Project at runtime: Categories, Entries, typed field values, descriptions and tags.",
+      "description": "One MonoBehaviour that uses a Lore Project at runtime: Categories, Entries, typed field values, field keys, descriptions, tags, and runtime changes with save/load.",
       "path": "Samples~/RuntimeAPI"
     },
     {

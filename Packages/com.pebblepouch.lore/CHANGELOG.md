@@ -4,6 +4,14 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Runtime API sample: one script with a region per feature (Project & Categories, Entries & field values, field
+  keys, descriptions, tags, runtime changes incl. save/load), each part switchable in the Inspector. Covers all field
+  types and `LoreState`; the defaults (Scarecrow, Health, Witch) match the Oz Demo.
+
 ## [0.3.2] - 2026-10-11
 
 ### Added
