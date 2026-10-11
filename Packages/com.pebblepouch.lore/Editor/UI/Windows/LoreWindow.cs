@@ -112,6 +112,9 @@ namespace PebblePouch.Lore.Editor
 
             _showWelcome = LoreRepository.Instance.Project == null;
 
+            // LIBRARY UPDATE: asks once after a Lore update with new default Libraries (waits for compile/import).
+            LibraryUpdateService.CheckWhenReady();
+
             // LISTENERS
             SelectionService.CategoryChanged += OnCategoryChanged;
             SelectionService.EntryChanged += OnEntryChanged;

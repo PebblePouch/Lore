@@ -7,12 +7,89 @@ namespace PebblePouch.Lore.Editor
     public sealed class ColorLibraryCollection : ScriptableObject
     {
         #region Fields
+        // Raise whenever the default colors change: older assets then offer a Library update (LibraryUpdateService).
+        public const int CatalogVersion = 1;
+
         [SerializeField, HideInInspector]
         private List<ColorDefinition> _colors = new();
+
+        // Catalog version the asset was generated or last updated with (0 = before catalog versions existed).
+        [SerializeField, HideInInspector]
+        private int _catalogVersion;
         #endregion
 
         #region Properties
         public IReadOnlyList<ColorDefinition> Colors => _colors;
+
+        public bool IsCatalogOutdated => _catalogVersion < CatalogVersion;
+        #endregion
+
+        #region Catalog
+        public void MarkCatalogCurrent()
+        {
+            _catalogVersion = CatalogVersion;
+        }
+
+        // Adds the default colors this asset does not have yet (matched by color and title) at their default
+        // position; existing colors stay unchanged, colors that are not (or no longer) defaults move to the end.
+        // Returns how many were added.
+        public int AppendMissingDefaults()
+        {
+            ColorLibraryCollection defaults = CreateInstance<ColorLibraryCollection>();
+
+            try
+            {
+                defaults.GenerateDefaultCollection();
+
+                Dictionary<string, ColorDefinition> existing = new();
+
+                foreach (ColorDefinition color in _colors)
+                    existing.TryAdd(GetKey(color), color);
+
+                List<ColorDefinition> merged = new();
+                HashSet<string> defaultKeys = new();
+                int added = 0;
+
+                foreach (ColorDefinition color in defaults._colors)
+                {
+                    string key = GetKey(color);
+
+                    if (!defaultKeys.Add(key))
+                        continue;
+
+                    if (existing.TryGetValue(key, out ColorDefinition own))
+                    {
+                        merged.Add(own);
+                    }
+                    else
+                    {
+                        merged.Add(color);
+                        added++;
+                    }
+                }
+
+                foreach (ColorDefinition color in _colors)
+                {
+                    if (!defaultKeys.Contains(GetKey(color)))
+                        merged.Add(color);
+                }
+
+                _colors = merged;
+
+                MarkCatalogCurrent();
+
+                return added;
+            }
+            finally
+            {
+                DestroyImmediate(defaults);
+            }
+        }
+
+        private static string GetKey(ColorDefinition color)
+        {
+            return ColorUtility.ToHtmlStringRGBA(color.Color) + "|" + color.Title;
+        }
         #endregion
 
         #region Helpers
@@ -34,6 +111,8 @@ namespace PebblePouch.Lore.Editor
         public void GenerateDefaultCollection()
         {
             _colors.Clear();
+
+            MarkCatalogCurrent();
 
             AddPalette("Red", Color.red);
             AddPalette("Orange", new Color(1.0f, 0.5f, 0.0f));
@@ -88,4 +167,4 @@ namespace PebblePouch.Lore.Editor
         #endregion
 #endif
     }
-}
+}

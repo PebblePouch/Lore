@@ -861,6 +861,28 @@ namespace PebblePouch.Lore.Editor
             public static readonly string GenerateDefaultGlyphLibrary = "Generate Default Glyph Library";
             public static readonly string GenerateDefaultColorLibrary = "Generate Default Color Library";
             #endregion
+
+            #region Library Update (dialog after a Lore update with new default Libraries)
+            public static readonly string GlyphLibraryName = "Glyph Library";
+            public static readonly string ColorLibraryName = "Color Library";
+
+            public static readonly string UpdateDialogTitle = "Lore Library Update";
+
+            // {0} = outdated Libraries joined by JoinList ("Glyph Library and Color Library")
+            public static readonly string UpdateDialogMessage =
+                "A new Lore version was installed with changes to the {0}. Please decide how to proceed with the " +
+                "existing Libraries.\n\n" +
+                "Update all libraries: replaces them with the shipped version. This might overwrite changes you " +
+                "made to the Libraries.\n\n" +
+                "Append only new: adds only new Library entries shipped by Lore.\n\n" +
+                "Skip library updates: no changes. You might miss out on new Library entries.";
+
+            public static readonly string UpdateAllButton = "Update all libraries";
+            public static readonly string AppendOnlyNewButton = "Append only new";
+            public static readonly string SkipUpdatesButton = "Skip library updates";
+
+            public static readonly string UpdateLibraries = "Update Libraries";
+            #endregion
         }
 
         public static class Insights

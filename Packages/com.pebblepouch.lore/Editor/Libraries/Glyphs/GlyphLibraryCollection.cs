@@ -7,12 +7,82 @@ namespace PebblePouch.Lore.Editor
     public sealed class GlyphLibraryCollection : ScriptableObject
     {
         #region Fields
+        // Raise whenever the default glyphs change: older assets then offer a Library update (LibraryUpdateService).
+        public const int CatalogVersion = 1;
+
         [SerializeField, HideInInspector]
         private List<GlyphDefinition> _glyphs = new();
+
+        // Catalog version the asset was generated or last updated with (0 = before catalog versions existed).
+        [SerializeField, HideInInspector]
+        private int _catalogVersion;
         #endregion
 
         #region Properties
         public IReadOnlyList<GlyphDefinition> Glyphs => _glyphs;
+
+        public bool IsCatalogOutdated => _catalogVersion < CatalogVersion;
+        #endregion
+
+        #region Catalog
+        public void MarkCatalogCurrent()
+        {
+            _catalogVersion = CatalogVersion;
+        }
+
+        // Adds the default glyphs this asset does not have yet (matched by glyph string) at their default position;
+        // existing glyphs stay unchanged, glyphs that are not (or no longer) defaults move to the end. Returns how
+        // many were added.
+        public int AppendMissingDefaults()
+        {
+            GlyphLibraryCollection defaults = CreateInstance<GlyphLibraryCollection>();
+
+            try
+            {
+                defaults.GenerateDefaultCollection();
+
+                Dictionary<string, GlyphDefinition> existing = new();
+
+                foreach (GlyphDefinition glyph in _glyphs)
+                    existing.TryAdd(glyph.Glyph, glyph);
+
+                List<GlyphDefinition> merged = new();
+                HashSet<string> defaultGlyphs = new();
+                int added = 0;
+
+                foreach (GlyphDefinition glyph in defaults._glyphs)
+                {
+                    if (!defaultGlyphs.Add(glyph.Glyph))
+                        continue;
+
+                    if (existing.TryGetValue(glyph.Glyph, out GlyphDefinition own))
+                    {
+                        merged.Add(own);
+                    }
+                    else
+                    {
+                        merged.Add(glyph);
+                        added++;
+                    }
+                }
+
+                foreach (GlyphDefinition glyph in _glyphs)
+                {
+                    if (!defaultGlyphs.Contains(glyph.Glyph))
+                        merged.Add(glyph);
+                }
+
+                _glyphs = merged;
+
+                MarkCatalogCurrent();
+
+                return added;
+            }
+            finally
+            {
+                DestroyImmediate(defaults);
+            }
+        }
         #endregion
 
         #region Helpers
@@ -36,6 +106,8 @@ namespace PebblePouch.Lore.Editor
         public void GenerateDefaultCollection()
         {
             _glyphs.Clear();
+
+            MarkCatalogCurrent();
 
             // Glyphs: https://unicode.org/emoji/charts/full-emoji-list.html
 

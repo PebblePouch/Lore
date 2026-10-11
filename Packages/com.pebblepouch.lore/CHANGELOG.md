@@ -4,6 +4,15 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Library update after a Lore update: when a new version ships changed default Glyph or Color Libraries, opening the
+  Lore window asks once how to proceed with the existing Libraries: "Update all libraries" (regenerate), "Append
+  only new" (adds missing defaults at their default position, keeps everything else) or "Skip library updates"
+  (no changes). Never asks while Unity compiles, imports or is in Play mode; new Libraries are created up to date.
+
 ## [0.3.0] - 2026-10-10
 
 ### Added
