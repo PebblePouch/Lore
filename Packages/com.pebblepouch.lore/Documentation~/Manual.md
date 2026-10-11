@@ -1,6 +1,6 @@
 # Lore Manual
 
-Lore keeps the world of your game in one place, right inside the Unity Editor: Categories, Entries, Fields, Tags and the links between them. Your game reads it at runtime through a small read-only API.
+Lore keeps the world of your game in one place, right inside the Unity Editor: Categories, Entries, Fields, Tags and the links between them. Your game reads it at runtime through a small API.
 
 ## First Steps
 
@@ -123,8 +123,9 @@ A Category's ⋮ menu exports its Entries as a CSV file for spreadsheets (📤) 
 
 ## Using Lore in Your Game
 
-Your game reads Lore through a read-only API in the namespace PebblePouch.Lore. Give a MonoBehaviour a field of type LoreProject, assign your Project asset, then look up Categories and Entries and read their values, e.g. entry.GetInt("Health").
+Your game reads Lore through an API in the namespace PebblePouch.Lore. Give a MonoBehaviour a field of type LoreProject, assign your Project asset, then look up Categories and Entries and read their values, e.g. entry.GetInt("Health").
 
+- **Runtime changes:** the game can change Text, Boolean, Integer, Float, Vector, Color, Enum and Entry values while it runs, e.g. entry.SetInt("Health", 3), and save them with LoreState.SaveToJson. The Lore assets never change; changes are cleared when Play mode starts and ends.
 - **Field constants:** Tools > Lore > Generate Field Constants creates a class with one key per Field, so your code uses LoreFields.Health instead of a name in quotes and keeps working when you rename Fields. Settings are in Project Settings > Lore.
 - **Inspector fields:** Entry, Category and Field fields in your own scripts get a searchable picker, drag & drop, and double-click to open in Lore. The LoreFilter attribute limits them to a Category or a Field type.
 - **Descriptions:** read them as plain text or as rich text with bold, italic and links.

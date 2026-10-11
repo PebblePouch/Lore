@@ -2,7 +2,8 @@
 
 Lore data lives in ScriptableObjects (Project, Categories, Entries, Fields). The Runtime API lets game code
 **read** that data: find Entries, read field values with the right type, turn descriptions into text and
-work with tags. All data changes go through the Lore window; the API is read-only.
+work with tags. Lore content is edited in the Lore window; games can change some field values at runtime
+(see [4. Changing values at runtime](#4-changing-values-at-runtime)) without touching the assets.
 
 Namespace: `PebblePouch.Lore` · Assembly: `PebblePouch.Lore` (referenced automatically by `Assembly-CSharp`;
 assemblies with their own `.asmdef` add `PebblePouch.Lore` to their references).
@@ -35,7 +36,7 @@ public class Bestiary : MonoBehaviour
 
 The Project is the entry point for everything else. Whatever references the Project includes **all Lore data**
 in a build, including assets referenced by field values (Sprites, GameObjects, …). It also **loads** all of it
-when the referencing scene loads; see [9. Memory & loading](#9-memory--loading) before using Lore with many heavy
+when the referencing scene loads; see [10. Memory & loading](#10-memory--loading) before using Lore with many heavy
 assets.
 
 Single Entries can also be referenced directly (`[SerializeField] private Entry wolf;`); lookups such as tags
@@ -237,7 +238,103 @@ field returns z = 0.
 
 ---
 
-## 4. Descriptions
+## 4. Changing values at runtime
+
+Games can change field values while they run, e.g. health that drops, an item that changes its owner or a quest
+that becomes active. Changes are kept in memory by `LoreState`; the Lore assets never change.
+
+```csharp
+Entry scarecrow = lore.FindEntryByTitle("Scarecrow");
+
+scarecrow.SetInt("Health", 3);
+scarecrow.GetInt("Health");           // 3: getters return the changed value, otherwise the value from Lore
+scarecrow.GetOriginalInt("Health");   // the value from Lore, also while changed
+scarecrow.IsOriginal("Health");       // false: the value was changed
+scarecrow.ResetToOriginal("Health");  // back to the value from Lore
+```
+
+Just use `Set…` and `Get…`: a `Get…` always returns a value, changed or not. `GetOriginal…` is only needed when you
+explicitly want the value from Lore.
+
+### Writable field types
+
+| Field type | Set | Original |
+|---|---|---|
+| Text | `SetText(key, text)` | `GetOriginalText(key)` |
+| Boolean | `SetBool(key, value)` | `GetOriginalBool(key)` |
+| Integer | `SetInt(key, value)` | `GetOriginalInt(key)` |
+| Float | `SetFloat(key, value)` | `GetOriginalFloat(key)` |
+| Vector | `SetVector2(key, value)`, `SetVector3(key, value)` | `GetOriginalVector2(key)`, `GetOriginalVector3(key)` |
+| Color | `SetColor(key, color)` | `GetOriginalColor(key)` |
+| Enum | `SetEnum(key, label)` | `GetOriginalEnum(key)`, `GetOriginalEnumIndex(key)` |
+| Entry | `SetEntry(key, entry)` | `GetOriginalEntry(key)` |
+
+Every `Set…` has a `TrySet…` that returns `false` instead of warning. Other field types (assets, scenes, folders,
+URLs, Enums, Entries) are read-only.
+
+```csharp
+silverShoes.SetEntry("Owner", dorothy);           // Dorothy takes the Silver Shoes
+winkieCountry.SetEntry("Ruler", tinWoodman);
+emeraldCity.SetColor("Color", Color.gray);        // the green glasses come off
+scarecrow.SetText("Wish", "Granted");
+goldenCap.SetEnum("Rarity", "Unique");
+```
+
+### Rules
+
+- **Same keys and types as reading.** `SetInt` only changes Integer fields. A missing Field or wrong type changes
+  nothing and logs a warning (`TrySet…`: returns `false`, no warning).
+- **Changes belong to the Entry and Field**, not to the key: a change made by name is read by reference or ID too.
+- **Setting the original value removes the change**, so `IsOriginal` is `true` again.
+- **Enum fields** take the option label (case-insensitive); an unknown label is rejected, `null` or `""` sets no
+  option. A changed option that is later removed from the Field counts as not set.
+- **Entry fields** only accept Entries of Categories the Field allows (`AllowedCategories`); `null` sets no Entry.
+- **Vector fields**: `SetVector2` keeps the current z of a 3D field; 2D fields always keep z = 0.
+- **Only the typed `Get…` shortcuts see changes.** `entry.GetValue(key)` / `TryGetValue` and the `FieldValue`
+  getters always return the value from Lore.
+- **Play mode:** all changes are cleared when Play mode starts and ends, so the Lore window always shows the values
+  from Lore.
+
+### LoreState
+
+`LoreState` holds the changes of all Entries:
+
+| Member | Purpose |
+|---|---|
+| `LoreState.HasChanges` | `true` while any value is changed |
+| `LoreState.ResetAllToOriginal()` | Removes all changes (e.g. "New Game") |
+| `LoreState.Changed` | Event `(Entry entry, Field field)` after a value changed; both `null` when many values changed at once (reset all, load) |
+| `LoreState.SaveToJson(prettyPrint = false)` | All changes as JSON |
+| `LoreState.LoadFromJson(json)` | Replaces all changes with the saved ones |
+
+```csharp
+LoreState.Changed += (entry, field) => RefreshHud();   // entry/field null: refresh everything
+```
+
+### Save games
+
+`SaveToJson` returns a string; where it goes is up to the game (file, PlayerPrefs, your own save system):
+
+```csharp
+string path = Path.Combine(Application.persistentDataPath, "lore.json");
+
+File.WriteAllText(path, LoreState.SaveToJson());           // save
+
+if (File.Exists(path))
+    LoreState.LoadFromJson(File.ReadAllText(path));        // load
+```
+
+- Saves use Entry, Field and option IDs, so renaming in Lore never breaks them. Numbers are written the same way
+  on every system (independent of the language settings).
+- Changes of Entries or Fields that no longer exist (deleted after an update) are kept but not used, so saving
+  again loses nothing.
+- `LoadFromJson` returns `false` for invalid JSON and keeps the current changes. `null` or `""` loads "no changes".
+- **Entry values** are found by ID among the loaded Entries. Reference the Lore Project in the scene that loads
+  the save, so all Entries are loaded; otherwise `GetEntry` may return `null` (with a warning).
+
+---
+
+## 5. Descriptions
 
 Descriptions (Project, Category, Entry) are stored with links in an internal form (`[[id|Title]]`). Don't show
 `Description` directly; use the Project to turn it into text:
@@ -270,7 +367,7 @@ word (`snake_case`) is plain text, and `\*` / `\_` stand for the marker itself.
 
 ---
 
-## 5. Tags
+## 6. Tags
 
 ```csharp
 lore.GetTags(entry);              // List<TagDefinition> (Title, Color, Id), in the Entry's order
@@ -283,7 +380,7 @@ An unknown tag title logs a warning (`HasTag` returns `false`, `GetEntriesWithTa
 
 ---
 
-## 6. Warnings
+## 7. Warnings
 
 Missing Fields, wrong field types and unknown tags log a warning prefixed with `[Lore]`:
 
@@ -293,7 +390,7 @@ Missing Fields, wrong field types and unknown tags log a warning prefixed with `
 
 ---
 
-## 7. Data maintained by the Editor
+## 8. Data maintained by the Editor
 
 Some runtime data is derived and kept up to date automatically by the Lore window; it never needs manual work:
 
@@ -307,7 +404,7 @@ These updates don't change any Created/Modified timestamps.
 
 ---
 
-## 8. Performance notes
+## 9. Performance notes
 
 - `FindEntry` / `FindCategory` (by ID) use a dictionary built on first use: fast.
 - Title and name lookups (`FindEntryByTitle`, `FindField`, field values by name) compare strings over the
@@ -317,7 +414,7 @@ These updates don't change any Created/Modified timestamps.
 
 ---
 
-## 9. Memory & loading
+## 10. Memory & loading
 
 Lore field values are **direct references**. In Unity, loading an object also loads everything it references.
 So when a scene loads that references the Project, Unity loads:

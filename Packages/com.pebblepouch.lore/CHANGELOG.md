@@ -4,7 +4,28 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.3.2] - 2026-10-11
+
+### Added
+
+- Runtime changes of field values: `entry.SetText` / `SetBool` / `SetInt` / `SetFloat` / `SetVector2` /
+  `SetVector3` / `SetColor` / `SetEnum` (by option label) / `SetEntry` (and `TrySet…`) change a value while the game
+  runs, without touching the Lore assets. `SetEntry` only accepts Entries of Categories the Field allows. The getters (`GetInt`, …) return
+  the changed value, otherwise the value from Lore; `GetOriginal…` always returns the value from Lore,
+  `IsOriginal` tells whether a value was changed, `ResetToOriginal` undoes a change. `LoreState` holds all
+  changes: `HasChanges`, `ResetAllToOriginal`, `Changed` event. Changes are cleared at the start and end of Play
+  mode.
+- Save games for runtime changes: `LoreState.SaveToJson()` returns all changes as JSON (keyed by Entry and Field
+  IDs, so renames are safe), `LoadFromJson(json)` replaces the current changes with them. Changes of Entries or
+  Fields that no longer exist are kept but not used; invalid JSON is rejected (returns `false`) and keeps the current
+  changes.
+
+### Changed
+
+- The Library update dialog now states that glyphs and colors already assigned to Categories, Entries, Fields and
+  tags are never affected by the choice.
+
+## [0.3.1] - 2026-10-11
 
 ### Added
 

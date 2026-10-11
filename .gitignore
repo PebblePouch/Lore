@@ -50,3 +50,7 @@ Thumbs.db.meta
 /Assets/Lore.meta
 /Assets/Samples/
 /Assets/Samples.meta
+
+# [ Claude Code (local instructions) ] #
+/CLAUDE.md
+/.claude/

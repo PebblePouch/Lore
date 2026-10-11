@@ -875,7 +875,8 @@ namespace PebblePouch.Lore.Editor
                 "Update all libraries: replaces them with the shipped version. This might overwrite changes you " +
                 "made to the Libraries.\n\n" +
                 "Append only new: adds only new Library entries shipped by Lore.\n\n" +
-                "Skip library updates: no changes. You might miss out on new Library entries.";
+                "Skip library updates: no changes. You might miss out on new Library entries.\n\n" +
+                "No matter what choice you make, already assigned glyphs/colors will not be impacted.";
 
             public static readonly string UpdateAllButton = "Update all libraries";
             public static readonly string AppendOnlyNewButton = "Append only new";

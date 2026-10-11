@@ -2,14 +2,14 @@
 
 Worldbuilding inside the Unity Editor. Lore organizes your game's lore in **Categories**, **Entries** and
 **Fields**, links Entries in descriptions, keeps an eye on integrity and content health, and lets your game
-read everything at runtime through a small read-only API.
+read everything at runtime through a small API (and change values like health or ownership while it runs).
 
 ## Installation
 
 Package Manager > + > *Install package from git URL…* >
 `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore`
 
-This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.3.0`); all versions are listed
+This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.3.2`); all versions are listed
 under [Tags](https://github.com/PebblePouch/Lore/tags).
 
 Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.

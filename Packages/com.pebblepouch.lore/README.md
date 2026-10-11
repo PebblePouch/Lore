@@ -7,8 +7,8 @@ read everything at runtime.
 ## Installation
 
 - **Git URL:** Package Manager > + > *Install package from git URL…* >
-  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.0`
-  (the `#0.3.0` tag pins a version; without it, the package follows the latest state of `main`).
+  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.2`
+  (the `#0.3.2` tag pins a version; without it, the package follows the latest state of `main`).
 - **From disk:** Package Manager > + > *Install package from disk…* > select this folder's `package.json`.
 
 Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.
@@ -71,7 +71,8 @@ Project Settings > Lore are not part of the package.
 
 ## Runtime API
 
-Game code reads Lore data through a small read-only API (namespace `PebblePouch.Lore`). See
+Game code reads Lore data through a small API (namespace `PebblePouch.Lore`) and can change some field values at
+runtime (with save/load), without touching the Lore assets. See
 `Documentation~/RuntimeAPI.md` and the **Runtime API** sample (Package Manager > Lore > Samples).
 
 ## License

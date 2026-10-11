@@ -695,7 +695,7 @@ namespace PebblePouch.Lore
                 ? _field.FindEnumOption(_enumValue)
                 : null;
 
-        private bool IsType(FieldType type) =>
+        internal bool IsType(FieldType type) =>
             _field != null &&
             _field.Type == type;
 
@@ -782,7 +782,7 @@ namespace PebblePouch.Lore
                 : System.IO.Path.GetFileNameWithoutExtension(path);
         }
 
-        private void WarnWrongType(FieldType expected)
+        internal void WarnWrongType(FieldType expected)
         {
             if (_field == null)
             {
