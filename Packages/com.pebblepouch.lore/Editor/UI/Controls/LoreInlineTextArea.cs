@@ -146,13 +146,9 @@ namespace PebblePouch.Lore.Editor
         {
             // Release focus like Escape does; otherwise the closed text area keeps keyboard focus
             // and keyboard shortcuts (e.g. Backspace = Back) stay blocked until the next click.
+            // May run outside OnGUI (e.g. on selection change).
             if (_isEditing)
-            {
-                GUIUtility.keyboardControl = 0;
-
-                EditorGUIUtility.editingTextField =
-                    false;
-            }
+                LoreGUIFocus.Release();
 
             _endReason =
                 LoreInlineEditEndReason.Commit;

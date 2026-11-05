@@ -167,6 +167,21 @@ namespace PebblePouch.Lore.Editor
         #region Unity
         private void OnGUI()
         {
+            // Focus releases requested outside this OnGUI (e.g. undo) apply here, to this window only.
+            LoreGUIFocus.BeginWindowGUI();
+
+            try
+            {
+                DrawWindowGUI();
+            }
+            finally
+            {
+                LoreGUIFocus.EndWindowGUI();
+            }
+        }
+
+        private void DrawWindowGUI()
+        {
             LoreHover.BeginGUI();
 
             RepaintOnHoverChange();

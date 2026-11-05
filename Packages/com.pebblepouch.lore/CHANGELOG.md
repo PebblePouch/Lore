@@ -4,6 +4,16 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.5] - 2026-11-05
+
+### Fixed
+
+- Lore no longer affects text input in other editor windows: undoing a Lore step from another window (e.g. the
+  Inspector) no longer takes the keyboard focus from the field being edited there, and ending a Lore edit while
+  another window has the keyboard no longer ends text editing in that window.
+- Lore edits repaint only the views that show Lore data (Lore windows, Inspectors, Project Settings) instead of every
+  editor view.
+
 ## [0.3.4] - 2026-10-11
 
 ### Added

@@ -52,13 +52,14 @@ namespace PebblePouch.Lore.Editor
         }
 
         // Undo/redo: ends all inline editing and releases keyboard focus, so no input keeps showing (or saves) its
-        // buffered text over the restored value.
+        // buffered text over the restored value. Runs in the undo callback: the release applies to the Lore window
+        // only (LoreGUIFocus.Release), not to the window the undo came from.
         public static void StopAllEditing()
         {
             foreach (LoreInlineTextField field in _fields)
                 field?.StopEditingFromService();
 
-            GUIUtility.keyboardControl = 0;
+            LoreGUIFocus.Release();
         }
 
         public static void RequestEditing(LoreInlineTextField field)

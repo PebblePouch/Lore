@@ -562,9 +562,8 @@ namespace PebblePouch.Lore.Editor
             _feedback = string.Empty;
             _focusControlPending = null;
 
-            // Static properties only: may run outside OnGUI (e.g. on selection change).
-            GUIUtility.keyboardControl = 0;
-            EditorGUIUtility.editingTextField = false;
+            // May run outside OnGUI (e.g. on selection change).
+            LoreGUIFocus.Release();
         }
 
         // Enter commits, Escape cancels (handled before the text fields see the keys).
