@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Quest Giver
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 9c0e14f3-89bc-4a76-a809-5f14996e7c53
-  _createdTicks: 639273194258628985
-  _modifiedTicks: 639273194259223414
+  _id: 88993621-0265-4315-b024-c3eaf15fef34
+  _createdTicks: 639304141563215840
+  _modifiedTicks: 639304141563858158
   _type: 1
   _glyph: "\U0001F5E3\uFE0F"
   _objectTypeName: 

@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Weaknesses
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: f759ccc8-716a-45b2-95d5-a85bd34c0d2b
-  _createdTicks: 639273194241755713
-  _modifiedTicks: 639273194242362167
+  _id: 9eacd9a4-9d36-45d3-a8a3-49eb10776107
+  _createdTicks: 639304141544000155
+  _modifiedTicks: 639304141544704019
   _type: 14
   _glyph: "\U0001F6E1\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions:
-  - _id: 04d7dbda-6796-4353-ac4c-d12bc99e133e
+  - _id: 4ee2957e-7f6d-4954-ae2c-dc5ba9d1c9e8
     _label: Water
-  - _id: f6327009-3872-4afd-876d-a500c44de447
+  - _id: 8164e9f9-d0b9-44ef-8388-d37089c39e85
     _label: Fire
-  - _id: 67226976-8b46-4154-8b60-dcc00b1a6a08
+  - _id: a736eff4-7cc2-4ac4-81f1-915d2c5d4abd
     _label: Rain
-  - _id: 403f930f-c58c-44b8-9d91-b3a80efa1149
+  - _id: 1a57fe31-3362-4be2-8b2c-ca64b4315af5
     _label: Poppies
-  - _id: ecb78f8e-f091-47b7-831f-9f8fcf2a7a02
+  - _id: 208bcba6-d3d9-4dfc-8862-7f9b61c92b6b
     _label: Darkness
   _allowedCategories: []
   _vectorDimension: 3

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Scarecrow's Cornfield
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: e40fea6d-99ae-4dd4-8af1-1f7cbd1dd3eb
-  _createdTicks: 639273194270037418
-  _modifiedTicks: 639273194317801392
+  _id: 2fba8332-0d5e-4efb-baa5-1817978f32f5
+  _createdTicks: 639304141575849151
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F33D\uFE0F"
   _subtitle: Crows welcome
-  _description: A field of ripe corn beside the [[b1203b36-0cef-4107-9678-716a0ddbf578|Yellow
-    Brick Road]], guarded by the [[758f6dde-27cb-482c-9255-91e3e88dc13c|Scarecrow]].
+  _description: A field of ripe corn beside the [[4c7e8bfe-2089-411e-87e2-11fb62bda33d|Yellow
+    Brick Road]], guarded by the [[ee41e80d-2956-479b-b6eb-dc5abc1ac98a|Scarecrow]].
   _sortOrder: 3
   _fields:
   - _field: {fileID: 11400000, guid: 419368dbf1388304bb96247032c6ee7d, type: 2}
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: b7dadc1a-cba7-4b61-aba7-fa4841e63b91
+    _enumValue: 2dad3d16-4bc2-4cba-adfa-7e505fc22dc3
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -168,4 +168,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 3737b046-c7f4-4fdf-84f5-e1933e4aee59
+  - bf26e5aa-80ca-4f3a-9dc8-80888a3167dc

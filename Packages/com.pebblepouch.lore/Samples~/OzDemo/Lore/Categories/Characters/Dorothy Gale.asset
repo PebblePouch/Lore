@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Dorothy Gale
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: bff2dcff-df4c-46a2-a793-2f30f4a6a243
-  _createdTicks: 639273194265409640
-  _modifiedTicks: 639273194317791371
+  _id: fcbf3650-903d-4ed3-a6f8-79e222116920
+  _createdTicks: 639304141570769900
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F467\uFE0F"
   _subtitle: A little girl from Kansas
-  _description: 'Lives on the gray Kansas prairie with [[89b89506-901b-4b79-b60a-bde5d03059f1|Aunt
-    Em]], [[87784a10-585d-4189-8540-416bd35e1891|Uncle Henry]] and her dog [[53b4ef1b-67db-4541-90e7-2eb2323dc66e|Toto]].
+  _description: 'Lives on the gray Kansas prairie with [[da3f88b3-2cfe-4218-a168-bd00d2d3ca58|Aunt
+    Em]], [[e464a289-8457-452a-92b6-264c22c68d39|Uncle Henry]] and her dog [[d14761ac-e898-4090-aa24-430e2e2d8379|Toto]].
     A cyclone carries her house into the land of the Munchkins, where it falls on
-    the [[0014940d-d5cf-4f17-862b-eba235e5a4de|Wicked Witch of the East]]. To find
-    her way home she follows the [[b1203b36-0cef-4107-9678-716a0ddbf578|Yellow Brick
-    Road]] to the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald City]].
+    the [[f1b14b32-9a15-43bf-a44d-25040e68113a|Wicked Witch of the East]]. To find
+    her way home she follows the [[4c7e8bfe-2089-411e-87e2-11fb62bda33d|Yellow Brick
+    Road]] to the [[7d7db0c4-2516-4f3e-9975-1c9765bdffb8|Emerald City]].
 
 
     *The
@@ -41,7 +41,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
+    _enumValue: 6905c35f-b6e3-4ee8-aff4-ed1bf7a99e12
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - 403f930f-c58c-44b8-9d91-b3a80efa1149
+    - 1a57fe31-3362-4be2-8b2c-ca64b4315af5
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 8360339810517497003, guid: 0ce8ec3be0184e84e9dda5c36b02fe7e, type: 3}
+    _gameObjectValue: {fileID: 4696114927608255654, guid: 0ce8ec3be0184e84e9dda5c36b02fe7e, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -270,5 +270,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 70d0131c-3d60-4017-ab2f-0d057370db67
-  - 43821641-03ab-4757-bfd0-adf5a062dfbd
+  - 37ace69d-348e-4c96-82b8-c9ea140d495f
+  - db96fe0e-8ea3-464f-b750-795f68154515

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Uncle Henry
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 87784a10-585d-4189-8540-416bd35e1891
-  _createdTicks: 639273194269022281
-  _modifiedTicks: 639273194317791371
+  _id: e464a289-8457-452a-92b6-264c22c68d39
+  _createdTicks: 639304141574757199
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F474\uFE0F"
   _subtitle: Dorothy's uncle
@@ -32,7 +32,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
+    _enumValue: 6905c35f-b6e3-4ee8-aff4-ed1bf7a99e12
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 562295446146688185, guid: 0ab746f2febec384b944fa1a4b1e885a, type: 3}
+    _gameObjectValue: {fileID: 8095986569216717766, guid: 0ab746f2febec384b944fa1a4b1e885a, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -257,4 +257,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 43821641-03ab-4757-bfd0-adf5a062dfbd
+  - db96fe0e-8ea3-464f-b750-795f68154515

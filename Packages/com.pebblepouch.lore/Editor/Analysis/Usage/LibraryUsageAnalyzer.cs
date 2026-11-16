@@ -128,15 +128,31 @@ namespace PebblePouch.Lore.Editor
                 fields);
         }
 
+        // Library colors are assigned to Categories and Tags (Color field values are free colors, not counted).
         public bool IsColorUsed(Color color)
         {
-            return _repository
-                .Categories
-                .Any(
-                    category =>
-                        category != null &&
-                        category.Color ==
-                        color);
+            bool usedByCategory =
+                _repository
+                    .Categories
+                    .Any(
+                        category =>
+                            category != null &&
+                            category.Color ==
+                            color);
+
+            if (usedByCategory)
+                return true;
+
+            // Also called without Analyze (Library "unused" filter): fetch the Tag Library then.
+            _tagCollection ??= new TagLibraryService().GetCollection();
+
+            return _tagCollection != null &&
+                   _tagCollection.Tags
+                       .Any(
+                           tag =>
+                               tag != null &&
+                               tag.Color ==
+                               color);
         }
         #endregion
 

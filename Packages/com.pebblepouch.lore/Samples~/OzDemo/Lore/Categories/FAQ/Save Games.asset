@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Save Games
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 28328622-2a5d-44b1-bd4c-0e92be50437b
+  _createdTicks: 639304141582804347
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\U0001F4BE\uFE0F"
+  _subtitle: Where is my save game?
+  _description: 'Save writes all runtime changes, as returned by LoreState.SaveToJson,
+    to Oz Demo.json in Application.persistentDataPath (on Windows: AppData/LocalLow/YourCompany/YourProduct).
+    Load reads it back, New Game discards all changes.
+
+
+    The Lore assets themselves
+    never change while the game runs, so the Lore window always shows the start of
+    the game.'
+  _sortOrder: 3
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

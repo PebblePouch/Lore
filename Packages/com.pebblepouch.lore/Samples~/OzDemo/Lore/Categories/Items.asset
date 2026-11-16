@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
   m_Name: Items
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
-  _id: 892bc996-ab64-4581-8534-ad4736ad51b4
-  _createdTicks: 639273194234842684
-  _modifiedTicks: 639273194264622396
+  _id: a6b99bf3-5f6d-41ee-a933-35c8097c5e09
+  _createdTicks: 639304141534145495
+  _modifiedTicks: 639304141569936156
   _glyph: "\U0001F392\uFE0F"
-  _color: {r: 0.8, g: 0.6, b: 0.1, a: 1}
+  _color: {r: 0.77777773, g: 0.71677554, b: 0.012200436, a: 1}
   _description: Things the player can find, earn or be given.
   _sortOrder: 2
   _fields:

@@ -7,12 +7,12 @@ read everything at runtime.
 ## Installation
 
 - **Git URL:** Package Manager > + > *Install package from git URL…* >
-  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.5`
-  (the `#0.3.5` tag pins a version; without it, the package follows the latest state of `main`).
+  `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore#0.3.6`
+  (the `#0.3.6` tag pins a version; without it, the package follows the latest state of `main`).
 - **From disk:** Package Manager > + > *Install package from disk…* > select this folder's `package.json`.
 
-Tested with Unity 6000.2 and 6000.6 on Windows. Requires Unity 6000.2 or newer; other Unity versions and operating systems
-(macOS, Linux) are supported on a best-effort basis.
+Tested with Unity 6000.2 and 6000.6 on Windows. Lore installs on Unity 6000.0 or newer, but other Unity versions and
+operating systems (macOS, Linux) are untested and supported on a best-effort basis.
 
 Before updating Lore or Unity, commit your project to version control or back up your Lore data (the data folder,
 `Assets/Lore` by default, and your Libraries).

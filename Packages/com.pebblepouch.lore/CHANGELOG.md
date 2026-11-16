@@ -4,7 +4,7 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.3.6] - 2026-11-16
 
 ### Added
 
@@ -16,8 +16,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- Lore now requires Unity 6000.2 or newer (`package.json` previously allowed 6000.0, which was never tested). The
-  READMEs state the tested setup: Unity 6000.2 and 6000.6 on Windows.
+- The READMEs state the tested setup: Unity 6000.2 and 6000.6 on Windows. Lore still installs on Unity 6000.0 or
+  newer; other Unity versions and operating systems are untested and supported on a best-effort basis.
+- Oz Demo: Categories and Tags use colors from the Color Library.
+- Oz Demo: new Category **FAQ** with answers to questions that come up while exploring the demo (starting your own
+  Lore, the marked Entries, playing and saving, undo, hotkeys, text formatting, runtime scripts, build size).
+
+### Fixed
+
+- Insights and the Color Library's "unused" filter now count colors used by Tags, not only by Categories.
 
 ## [0.3.5] - 2026-11-05
 

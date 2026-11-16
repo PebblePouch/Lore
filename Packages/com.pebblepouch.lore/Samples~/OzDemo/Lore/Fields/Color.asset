@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Color
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: a36536e3-a470-4159-a1b4-4266838acaee
-  _createdTicks: 639273194248524435
-  _modifiedTicks: 639273194248524435
+  _id: 2b7f77b1-2ae5-4fcc-890d-69347b66e7e1
+  _createdTicks: 639304141551482847
+  _modifiedTicks: 639304141551482847
   _type: 13
   _glyph: "\U0001F58C\uFE0F"
   _objectTypeName: 

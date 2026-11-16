@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Next Quest
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 1c1482ad-3067-4ae3-bf09-7da97dd4e24f
-  _createdTicks: 639273194261213987
-  _modifiedTicks: 639273194262023594
+  _id: 10c609f3-12ca-41c8-9aac-b9a1d782de98
+  _createdTicks: 639304141566049298
+  _modifiedTicks: 639304141566985845
   _type: 1
   _glyph: "\U0001F449\uFE0F"
   _objectTypeName: 

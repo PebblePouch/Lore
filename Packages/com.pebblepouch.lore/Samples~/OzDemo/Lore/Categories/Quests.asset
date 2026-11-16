@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
   m_Name: Quests
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
-  _id: 296a2678-36e8-4c2e-8ba6-549333c34c9f
-  _createdTicks: 639273194236764526
-  _modifiedTicks: 639273194265011897
+  _id: 5a862abb-6bc0-470c-a208-9bf64348c4b9
+  _createdTicks: 639304141536296278
+  _modifiedTicks: 639304141570360118
   _glyph: "\U0001F4DC\uFE0F"
-  _color: {r: 0.7, g: 0.25, b: 0.2, a: 1}
+  _color: {r: 0.7111111, g: 0, b: 0, a: 1}
   _description: The main story, one Quest per part of the book. Quests chain through
     their Next Quest Field.
   _sortOrder: 3

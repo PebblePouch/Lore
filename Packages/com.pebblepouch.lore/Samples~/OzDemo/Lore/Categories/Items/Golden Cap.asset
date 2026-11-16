@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Golden Cap
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: b20111ba-0457-4d69-ae5e-8728d64388ce
-  _createdTicks: 639273194272044517
-  _modifiedTicks: 639273194317801392
+  _id: f49fc573-16e3-4e9f-af2f-0765f661f274
+  _createdTicks: 639304141578025768
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F451\uFE0F"
   _subtitle: Three wishes of the Winged Monkeys
-  _description: Its owner can call the Winged Monkeys three times. The [[5f78a4af-f20f-4136-91f0-27f932211441|King
+  _description: Its owner can call the Winged Monkeys three times. The [[066faba0-3e5b-46be-8aa8-c13ba35d33d3|King
     of the Winged Monkeys]] tells its story.
   _sortOrder: 1
   _fields:
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: ad21367d-7141-45a7-9e6b-378718947139
+    _enumValue: a719dc95-e040-4202-8b1e-564756e95647
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 5533551992429533125, guid: ad77d96f7d8c6fe44943f90bd77558d2, type: 3}
+    _gameObjectValue: {fileID: 3112126128108274626, guid: ad77d96f7d8c6fe44943f90bd77558d2, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -149,4 +149,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3

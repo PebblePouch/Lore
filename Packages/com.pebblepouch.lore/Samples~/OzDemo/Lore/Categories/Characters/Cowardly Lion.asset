@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Cowardly Lion
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: cb3601f7-26ab-4ee0-b7a4-dc18a9182ddc
-  _createdTicks: 639273194266387350
-  _modifiedTicks: 639273194317791371
+  _id: 1f3bde9e-b7b4-4f25-84b5-bb07bc7708e2
+  _createdTicks: 639304141571818886
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F981\uFE0F"
   _subtitle: Hopes for courage
   _description: Roars at everyone so they run away, and is afraid of all of them.
     He carries the friends across the ditches of the forest but falls asleep in the
-    [[14e60d30-456d-4c5e-98e2-d72c25d73df4|Deadly Poppy Field]]. Later he becomes
+    [[62922082-a360-4023-8d2f-0a4761d2d265|Deadly Poppy Field]]. Later he becomes
     King of the Beasts.
   _sortOrder: 4
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 71fb20cc-2070-4249-8880-49f95b68fb5a
+    _enumValue: eb36e48a-c0d7-428b-b72a-c9bec1f1b01f
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - 403f930f-c58c-44b8-9d91-b3a80efa1149
+    - 1a57fe31-3362-4be2-8b2c-ca64b4315af5
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 2184181680216010004, guid: c17f2e4c4e66e0a43b711c52224c33fe, type: 3}
+    _gameObjectValue: {fileID: 1868630023981684723, guid: c17f2e4c4e66e0a43b711c52224c33fe, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -263,6 +263,6 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 70d0131c-3d60-4017-ab2f-0d057370db67
-  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
-  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb
+  - 37ace69d-348e-4c96-82b8-c9ea140d495f
+  - d24b9aae-ca4e-48e4-962a-fdc9452c9142
+  - 7efe01aa-1204-4725-8535-4756d8813f2b

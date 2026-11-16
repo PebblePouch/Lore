@@ -390,16 +390,17 @@ namespace PebblePouch.Lore.Editor.Dev
 
         private static void CreateTags()
         {
-            CreateTag("Witch", new Color(0.50f, 0.25f, 0.70f));
-            CreateTag("Companion", new Color(0.20f, 0.60f, 0.30f));
-            CreateTag("Animal", new Color(0.60f, 0.40f, 0.20f));
-            CreateTag("Magic", new Color(0.20f, 0.55f, 0.80f));
-            CreateTag("Ruler", new Color(0.85f, 0.65f, 0.10f));
-            CreateTag("Kansas", new Color(0.55f, 0.55f, 0.55f));
-            CreateTag("Munchkin", new Color(0.25f, 0.40f, 0.85f));
-            CreateTag("Danger", new Color(0.80f, 0.20f, 0.20f));
-            CreateTag("Gift", new Color(0.90f, 0.45f, 0.65f));
-            CreateTag("Tool", new Color(0.45f, 0.50f, 0.45f));
+            CreateTag("Witch", "#6400C8");
+            CreateTag("Companion", "#00A300");
+            CreateTag("Animal", "#904800");
+            CreateTag("Magic", "#B500B5");
+            CreateTag("Ruler", "#D6C503");
+            CreateTag("Kansas", "#888888");
+            CreateTag("Munchkin", "#0000ED");
+            CreateTag("Danger", "#DA0000");
+            CreateTag("Gift", "#ED5FA6");
+            CreateTag("Tool", "#696969");
+            CreateTag("Help", "#00B7B7");
         }
         #endregion
 
@@ -410,27 +411,35 @@ namespace PebblePouch.Lore.Editor.Dev
             CreateCategory(
                 "Characters",
                 "Mage",
-                new Color(0.18f, 0.45f, 0.75f),
+                "#0000DA",
                 "Everyone Dorothy meets on her way through Oz, friend or foe.");
 
             CreateCategory(
                 "Places",
                 "Castle",
-                new Color(0.15f, 0.55f, 0.30f),
+                "#009000",
                 "Locations of the game, from the gray Kansas prairie to the Emerald City. Every Place belongs to " +
                 "one region of Oz, and every region has its own color and banner.");
 
             CreateCategory(
                 "Items",
                 "Backpack",
-                new Color(0.80f, 0.60f, 0.10f),
+                "#C6B703",
                 "Things the player can find, earn or be given.");
 
             CreateCategory(
                 "Quests",
                 "Scroll",
-                new Color(0.70f, 0.25f, 0.20f),
+                "#B50000",
                 "The main story, one Quest per part of the book. Quests chain through their Next Quest Field.");
+
+            // Help for demo users, no Fields (content in OzDemoBuilder.Content, Category "FAQ").
+            CreateCategory(
+                "FAQ",
+                "Question",
+                "#00A7A7",
+                "Questions you may have while exploring the demo. Not part of Oz, and also an example that Lore " +
+                "works for notes about your project, not only for the world of your game.");
 
             // Characters
             CreateField("Characters", "Kind", FieldType.Enum, "Silhouette",
@@ -499,13 +508,13 @@ namespace PebblePouch.Lore.Editor.Dev
             return glyph.Glyph;
         }
 
-        private static void CreateTag(string title, Color color)
+        private static void CreateTag(string title, string colorTitle)
         {
             var service = new TagLibraryService();
 
             TagDefinition tag = service.CreateTag(title);
 
-            service.UpdateColor(tag, color);
+            service.UpdateColor(tag, LibraryColor(colorTitle));
 
             Tags[title] = tag;
         }
@@ -513,7 +522,7 @@ namespace PebblePouch.Lore.Editor.Dev
         private static void CreateCategory(
             string name,
             string glyphTitle,
-            Color color,
+            string colorTitle,
             string description)
         {
             var service = new CategoryService();
@@ -524,10 +533,27 @@ namespace PebblePouch.Lore.Editor.Dev
                 throw new InvalidOperationException($"Could not create Category '{name}'.");
 
             service.UpdateGlyph(category, Glyph(glyphTitle));
-            service.UpdateColor(category, color);
+            service.UpdateColor(category, LibraryColor(colorTitle));
             service.UpdateDescription(category, description);
 
             Categories[name] = category;
+        }
+
+        // Categories and Tags take their colors from the Color Library (like picking in the editor), chosen by title
+        // (hex code), so the demo's Colors Insight counts them as used. Nearest-color matching picked cyan for the
+        // demo's muted blues and greens: the default Library has only saturated hues.
+        private static Color LibraryColor(string title)
+        {
+            ColorDefinition color =
+                new ColorLibraryService()
+                    .GetCollection()?
+                    .Colors
+                    .FirstOrDefault(definition => definition.Title == title);
+
+            if (color == null)
+                throw new InvalidOperationException($"Color '{title}' is not in the Color Library.");
+
+            return color.Color;
         }
 
         // A Field name used again adds the existing Field (shared Fields); glyph and configure apply only once.

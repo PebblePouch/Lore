@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Ruler
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 5f73f3d0-1d60-48e6-b73a-0ffa6ffe0a8a
-  _createdTicks: 639273194250755557
-  _modifiedTicks: 639273194251550650
+  _id: 60cd5579-951c-4dba-9296-d49abeaf6e62
+  _createdTicks: 639304141553993184
+  _modifiedTicks: 639304141554877696
   _type: 1
   _glyph: "\U0001F451\uFE0F"
   _objectTypeName: 

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Balloon
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 73ad0f40-eb72-4e11-a1c5-3fffae4709e6
-  _createdTicks: 639273194273727639
-  _modifiedTicks: 639273194317801392
+  _id: 25e61f09-7a72-4f4c-8b36-2090e2008db9
+  _createdTicks: 639304141579904630
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F388\uFE0F"
   _subtitle: Made of green silk
-  _description: Sewn from strips of silk, it carries [[44894351-a941-4cc5-ad67-ab7f35ec15af|Oz,
-    the Great and Terrible]] away from the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald
-    City]]. It leaves without [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]].
+  _description: Sewn from strips of silk, it carries [[65b6d1a1-296d-475f-baab-d3e054f15e99|Oz,
+    the Great and Terrible]] away from the [[7d7db0c4-2516-4f3e-9975-1c9765bdffb8|Emerald
+    City]]. It leaves without [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]].
   _sortOrder: 8
   _fields:
   - _field: {fileID: 11400000, guid: 1f1d65ec568392d4090afe5305c2c2cf, type: 2}
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 5d63b975-ec8b-4f44-ba08-9dd5b5187bc7
+    _enumValue: 85748b6c-93ac-438d-b8be-b720bc144628
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 2825863555094341692, guid: b81da3284ddf3df428ee3bc04b359ab5, type: 3}
+    _gameObjectValue: {fileID: 6373498268337891042, guid: b81da3284ddf3df428ee3bc04b359ab5, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -150,4 +150,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - f696cc8f-8296-41a4-be9d-dca26837b454
+  - f736b4a6-7440-4279-b705-3dbb1b1e45c4

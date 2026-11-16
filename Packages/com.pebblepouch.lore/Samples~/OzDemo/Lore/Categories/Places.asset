@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
   m_Name: Places
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
-  _id: 2e0e7e42-c638-4796-89ee-6b995cc1049a
-  _createdTicks: 639273194232929900
-  _modifiedTicks: 639273194264256153
+  _id: 75ebe29d-b339-401b-ad16-a6ee55910f99
+  _createdTicks: 639304141532011947
+  _modifiedTicks: 639304141569547703
   _glyph: "\U0001F3F0\uFE0F"
-  _color: {r: 0.15, g: 0.55, b: 0.3, a: 1}
+  _color: {r: 0, g: 0.56666666, b: 0, a: 1}
   _description: Locations of the game, from the gray Kansas prairie to the Emerald
     City. Every Place belongs to one region of Oz, and every region has its own color
     and banner.

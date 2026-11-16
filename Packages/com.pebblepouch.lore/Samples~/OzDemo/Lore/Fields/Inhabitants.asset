@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Inhabitants
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: a0a4721b-fdb8-4719-bc4f-865c47df017e
-  _createdTicks: 639273194251565841
-  _modifiedTicks: 639273194252350680
+  _id: a4ce4438-4ba1-4fe9-8e7f-52f56db3ccca
+  _createdTicks: 639304141554877696
+  _modifiedTicks: 639304141555795173
   _type: 11
   _glyph: "\U0001F465\uFE0F"
   _objectTypeName: 

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Tin Woodman's Forest
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: aff1ca7b-f460-47b0-a9c9-988afb3b57a5
-  _createdTicks: 639273194270274328
-  _modifiedTicks: 639273194317801392
+  _id: 02c826e6-48fe-404e-bd9c-419e7eba3ca1
+  _createdTicks: 639304141576108485
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F332\uFE0F"
   _subtitle: Dark woods and Kalidahs
-  _description: Thick woods where the [[87ffe15e-ce6a-48dc-82e2-828a5d144ad9|Tin
-    Woodman]] stood rusted for a year, and where the [[cb3601f7-26ab-4ee0-b7a4-dc18a9182ddc|Cowardly
+  _description: Thick woods where the [[2068ec5f-e108-487b-a58a-19fa835fb595|Tin
+    Woodman]] stood rusted for a year, and where the [[1f3bde9e-b7b4-4f25-84b5-bb07bc7708e2|Cowardly
     Lion]] jumps out at the travelers. Beyond the great ditches live the Kalidahs.
   _sortOrder: 4
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: b7dadc1a-cba7-4b61-aba7-fa4841e63b91
+    _enumValue: 2dad3d16-4bc2-4cba-adfa-7e505fc22dc3
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -170,4 +170,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
+  - ad26b9c0-9ca6-4756-897b-7d97c99011a5

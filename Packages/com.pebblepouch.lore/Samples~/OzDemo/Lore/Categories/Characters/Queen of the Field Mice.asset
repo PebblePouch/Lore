@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Queen of the Field Mice
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: c39ea5f1-fd44-4576-a991-9a4cd3635a38
-  _createdTicks: 639273194268051345
-  _modifiedTicks: 639273194317791371
+  _id: ff9df0b3-e5a4-465b-a23d-046f33812363
+  _createdTicks: 639304141573694337
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F42D\uFE0F"
   _subtitle: Saved from a wildcat
-  _description: The [[87ffe15e-ce6a-48dc-82e2-828a5d144ad9|Tin Woodman]] saves her
-    from a wildcat. In return her mice pull the sleeping [[cb3601f7-26ab-4ee0-b7a4-dc18a9182ddc|Cowardly
-    Lion]] out of the [[14e60d30-456d-4c5e-98e2-d72c25d73df4|Deadly Poppy Field]]
+  _description: The [[2068ec5f-e108-487b-a58a-19fa835fb595|Tin Woodman]] saves her
+    from a wildcat. In return her mice pull the sleeping [[1f3bde9e-b7b4-4f25-84b5-bb07bc7708e2|Cowardly
+    Lion]] out of the [[62922082-a360-4023-8d2f-0a4761d2d265|Deadly Poppy Field]]
     on a little wooden truck.
   _sortOrder: 11
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 71fb20cc-2070-4249-8880-49f95b68fb5a
+    _enumValue: eb36e48a-c0d7-428b-b72a-c9bec1f1b01f
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 4867585984387138072, guid: b6a17fc427cc7da4c9541d4e551f1f60, type: 3}
+    _gameObjectValue: {fileID: 625284452636397071, guid: b6a17fc427cc7da4c9541d4e551f1f60, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -259,5 +259,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
-  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb
+  - d24b9aae-ca4e-48e4-962a-fdc9452c9142
+  - 7efe01aa-1204-4725-8535-4756d8813f2b

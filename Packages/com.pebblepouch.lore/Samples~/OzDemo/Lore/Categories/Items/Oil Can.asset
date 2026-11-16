@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Oil Can
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: a912f6ee-05b5-4d79-acb8-c893881f0fcb
-  _createdTicks: 639273194272525762
-  _modifiedTicks: 639273194317801392
+  _id: 5baeae8a-7cdd-45d5-878b-dbaf86dd5fd5
+  _createdTicks: 639304141578545159
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F6E2\uFE0F"
   _subtitle: Against rust
-  _description: Keeps the joints of the [[87ffe15e-ce6a-48dc-82e2-828a5d144ad9|Tin
+  _description: Keeps the joints of the [[2068ec5f-e108-487b-a58a-19fa835fb595|Tin
     Woodman]] moving. Rain is his worst enemy.
   _sortOrder: 3
   _fields:
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: ae68a113-581c-4be2-a1e7-b3d2827cd80f
+    _enumValue: d639dd88-b859-4853-a1a7-33e1972d4755
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 2870106053523845022, guid: ad5c5e82de3098f42b6119dd6dd28363, type: 3}
+    _gameObjectValue: {fileID: 3125757379355921186, guid: ad5c5e82de3098f42b6119dd6dd28363, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -149,4 +149,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - f696cc8f-8296-41a4-be9d-dca26837b454
+  - f736b4a6-7440-4279-b705-3dbb1b1e45c4

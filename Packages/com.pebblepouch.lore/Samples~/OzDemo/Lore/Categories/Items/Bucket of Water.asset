@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Bucket of Water
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: fa6c9114-85e7-4821-b6f5-009d4ee2d9eb
-  _createdTicks: 639273194272763790
-  _modifiedTicks: 639273194317801392
+  _id: c43dd545-39fc-494e-9f09-c8678552ff0d
+  _createdTicks: 639304141578802143
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001FAA3\uFE0F"
   _subtitle: Thrown in anger
-  _description: '[[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] throws it
-    over the [[4d91631d-e833-4bd5-a4c5-477a0fe8b0dc|Wicked Witch of the West]] when
-    the Witch steals one of the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver Shoes]].'
+  _description: '[[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]] throws it
+    over the [[be9e56ee-6d1f-425c-bb06-5f87fd88d22e|Wicked Witch of the West]] when
+    the Witch steals one of the [[ea4cb543-34a9-48d6-9037-6af7bf319ac6|Silver Shoes]].'
   _sortOrder: 4
   _fields:
   - _field: {fileID: 11400000, guid: 1f1d65ec568392d4090afe5305c2c2cf, type: 2}
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: ae68a113-581c-4be2-a1e7-b3d2827cd80f
+    _enumValue: d639dd88-b859-4853-a1a7-33e1972d4755
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 22666185571837535, guid: 01fb310f288f07648b8d184e1a15cbdc, type: 3}
+    _gameObjectValue: {fileID: 2293656535346669030, guid: 01fb310f288f07648b8d184e1a15cbdc, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -150,4 +150,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - f696cc8f-8296-41a4-be9d-dca26837b454
+  - f736b4a6-7440-4279-b705-3dbb1b1e45c4

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Hotkeys
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: a9fa1649-1161-4bac-8a9a-f229d8f93cd1
+  _createdTicks: 639304141583617109
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\u2328\uFE0F"
+  _subtitle: Which hotkeys does Lore support, and can I change them?
+  _description: '**Ctrl+F / Cmd+F** Quick Search, **Alt+Left / Backspace** and **Alt+Right**
+    back and forward, **arrow keys** move through the Contents (Left jumps back to
+    them), **Insert** new Category, new Entry or duplicate, **F2** rename, **Delete**
+    delete (asks first), **+** open the matching Library, **Page Up / Page Down /
+    Home / End** scroll the page, **Escape** finish editing, clear the search or
+    close a Library.
+
+
+    The Lore hotkeys are fixed.'
+  _sortOrder: 6
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

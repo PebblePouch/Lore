@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Escape the Poppy Field
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 8cbc5398-9c85-42f4-9e37-89e690d35198
-  _createdTicks: 639273194274427981
-  _modifiedTicks: 639273194317801392
+  _id: 4b20bde0-363f-4f07-b23a-36f96350954f
+  _createdTicks: 639304141580694886
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
   _glyph: 
   _subtitle: Chapters 8 and 9
-  _description: Get the sleeping friends out of the [[14e60d30-456d-4c5e-98e2-d72c25d73df4|Deadly
-    Poppy Field]], with the help of the [[c39ea5f1-fd44-4576-a991-9a4cd3635a38|Queen
+  _description: Get the sleeping friends out of the [[62922082-a360-4023-8d2f-0a4761d2d265|Deadly
+    Poppy Field]], with the help of the [[ff9df0b3-e5a4-465b-a23d-046f33812363|Queen
     of the Field Mice]].
   _sortOrder: 2
   _fields:
@@ -171,5 +171,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
-  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
+  - ad26b9c0-9ca6-4756-897b-7d97c99011a5
+  - d24b9aae-ca4e-48e4-962a-fdc9452c9142

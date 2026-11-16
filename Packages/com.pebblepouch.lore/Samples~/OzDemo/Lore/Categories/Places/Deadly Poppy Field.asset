@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Deadly Poppy Field
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 14e60d30-456d-4c5e-98e2-d72c25d73df4
-  _createdTicks: 639273194270540137
-  _modifiedTicks: 639273194317801392
+  _id: 62922082-a360-4023-8d2f-0a4761d2d265
+  _createdTicks: 639304141576381560
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F33C\uFE0F"
   _subtitle: Sleep forever
   _description: Scarlet poppies whose scent puts anyone who breathes it to sleep.
-    The [[758f6dde-27cb-482c-9255-91e3e88dc13c|Scarecrow]] and the [[87ffe15e-ce6a-48dc-82e2-828a5d144ad9|Tin
-    Woodman]] do not breathe, so they carry [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy
+    The [[ee41e80d-2956-479b-b6eb-dc5abc1ac98a|Scarecrow]] and the [[2068ec5f-e108-487b-a58a-19fa835fb595|Tin
+    Woodman]] do not breathe, so they carry [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy
     Gale]] out.
   _sortOrder: 5
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2307c88d-3712-411f-83e1-ec1a4e4e9e61
+    _enumValue: 1723a72e-c7d6-4a8c-8f14-629eb5f803f8
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -170,5 +170,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
+  - ad26b9c0-9ca6-4756-897b-7d97c99011a5
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3

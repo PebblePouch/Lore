@@ -20,6 +20,8 @@ namespace PebblePouch.Lore.Editor.Dev
     // Portrait, Icon, Prefab and Pickup Sound are generated for every Character and Item, Color and Banner follow the
     // Region of every Place (see OzDemoBuilder.Assets). Map Position: Oz is 100 × 100 with the Emerald City in the
     // middle (east = +x, north = +y); Kansas is not on the map.
+    // FAQ: help for demo users (no Fields). Lore names are file names (no "?"), so the title is the topic and the
+    // subtitle the question; every FAQ Entry is complete (Tag "Help", notes) to add no Health issues.
     internal static partial class OzDemoBuilder
     {
         #region Types
@@ -791,6 +793,125 @@ namespace PebblePouch.Lore.Editor.Dev
                     ["Rewards"] = new[] { "Silver Shoes" },
                     ["Main Quest"] = true,
                 },
+            },
+
+            // FAQ (no Fields; title = question, subtitle = short answer, description = full answer)
+            new("FAQ", "Starting Fresh")
+            {
+                Subtitle = "How can I start fresh with my own Lore?",
+                Glyph = "Seedling",
+                Tags = new[] { "Help" },
+                Description =
+                    "A Unity project holds **one** Lore Project, and right now that is this demo. Delete the sample " +
+                    "folder Assets/Samples/Lore (it contains the whole demo), then open Tools > Lore > Open Lore: " +
+                    "the Welcome page lets you start your own Lore.\n\nYou can import the demo again at any time " +
+                    "from Package Manager > Lore > Samples, but only while you have no Lore Project of your own.",
+            },
+            new("FAQ", "Yellow and Red Marks")
+            {
+                Subtitle = "Why are some Entries marked yellow or red?",
+                Glyph = "Warning",
+                Tags = new[] { "Help" },
+                Description =
+                    "**Yellow** means unfinished content (Health), **red** means broken data (Integrity). The demo " +
+                    "contains a few of both on purpose: [[Queen of the Field Mice]] has no Home although it is " +
+                    "required, [[Guardian of the Gates]] has no Tags, [[Uncle Henry]] has no notes, the [[Yellow " +
+                    "Brick Road]] has no Inhabitants, and [[Glinda's Palace]] links to the Hammer-Heads, an Entry " +
+                    "nobody has written yet.\n\nClick a Health or Integrity item on the Project page to show the " +
+                    "affected Entries in the Contents.",
+            },
+            new("FAQ", "Playing the Demo")
+            {
+                Subtitle = "How do I play the demo?",
+                Glyph = "Joystick",
+                Tags = new[] { "Help" },
+                Description =
+                    "Open Scenes/Oz Demo.unity in the sample folder and press Play. [[Dorothy Gale]] starts at the " +
+                    "[[Kansas Farm]]; click a place on the map to travel, pick up Items and complete the Quests of " +
+                    "the book.\n\nThe whole game state lives in Lore Fields, changed at runtime through the Runtime " +
+                    "API. Values that differ from the Lore data are marked in the view.",
+            },
+            new("FAQ", "Save Games")
+            {
+                Subtitle = "Where is my save game?",
+                Glyph = "Floppy Disk",
+                Tags = new[] { "Help" },
+                Description =
+                    "Save writes all runtime changes, as returned by LoreState.SaveToJson, to Oz Demo.json in " +
+                    "Application.persistentDataPath (on Windows: AppData/LocalLow/YourCompany/YourProduct). Load reads " +
+                    "it back, New Game discards all changes.\n\nThe Lore assets themselves never change while the " +
+                    "game runs, so the Lore window always shows the start of the game.",
+            },
+            new("FAQ", "Editing the Demo")
+            {
+                Subtitle = "Can I edit the demo?",
+                Glyph = "Pencil",
+                Tags = new[] { "Help" },
+                Description =
+                    "The demo is a normal Lore Project: rename Entries, add Fields, change values and see how the " +
+                    "game reacts. Importing the sample again replaces your changes with the original demo.",
+            },
+            new("FAQ", "Undoing Deletes")
+            {
+                Subtitle = "Why can't I undo a deleted Entry or Category?",
+                Glyph = "Wastebasket",
+                Tags = new[] { "Help" },
+                Description =
+                    "Entries and Categories are asset files. Creating, duplicating, renaming and deleting them are " +
+                    "file operations, and like in Unity's Project window they cannot be undone. Lore always asks " +
+                    "before it deletes something and tells you how many references will break.\n\nEdits of values, " +
+                    "notes, Tags and Fields **can** be undone with Ctrl+Z. To be safe against deleting by mistake, " +
+                    "keep your project in version control (e.g. Git or Unity Version Control) and commit regularly.",
+            },
+            new("FAQ", "Hotkeys")
+            {
+                Subtitle = "Which hotkeys does Lore support, and can I change them?",
+                Glyph = "Keyboard",
+                Tags = new[] { "Help" },
+                Description =
+                    "**Ctrl+F / Cmd+F** Quick Search, **Alt+Left / Backspace** and **Alt+Right** back and forward, " +
+                    "**arrow keys** move through the Contents (Left jumps back to them), **Insert** new Category, " +
+                    "new Entry or duplicate, **F2** rename, **Delete** delete (asks first), **+** open the matching " +
+                    "Library, **Page Up / Page Down / Home / End** scroll the page, **Escape** finish editing, clear " +
+                    "the search or close a Library.\n\nThe Lore hotkeys are fixed.",
+            },
+            new("FAQ", "Text Formatting")
+            {
+                Subtitle = "Is BB code supported, and where?",
+                Glyph = "Memo",
+                Tags = new[] { "Help" },
+                Description =
+                    "Lore has no BB code. Its descriptions and notes support a small Markdown-like syntax instead: " +
+                    "two asterisks or underscores around a text make it **bold**, one makes it *italic*, and two " +
+                    "opening square brackets insert a link to an Entry, like [[Toto]].\n\nThis works in the " +
+                    "descriptions of the Project and Categories and in the notes of Entries; Text Fields stay plain " +
+                    "text. In your game, LoreProject.FormatDescription turns the formatting into Unity rich text.",
+            },
+            new("FAQ", "Runtime Scripts")
+            {
+                Subtitle = "Where are the scripts to access Lore data at runtime?",
+                Glyph = "Toolbox",
+                Tags = new[] { "Help" },
+                Description =
+                    "The Runtime API comes with the package (Packages/Lore/Runtime); there is nothing to copy. Give " +
+                    "a MonoBehaviour a field of type LoreProject or Entry, assign the asset, and read values, e.g. " +
+                    "entry.GetInt(\"Health\").\n\nExamples: the Scripts folder of this demo (OzJourney.cs has the " +
+                    "game rules, Generated/OzFields.cs the generated Field constants) and the Runtime API sample " +
+                    "(Package Manager > Lore > Samples). The full reference is Documentation~/RuntimeAPI.md in the " +
+                    "package.",
+            },
+            new("FAQ", "Build Size")
+            {
+                Subtitle = "Does Lore data bloat my game build?",
+                Glyph = "Package",
+                Tags = new[] { "Help" },
+                Description =
+                    "The Lore window and all editor tools never end up in a build. A build only contains Lore data " +
+                    "that a scene references: a LoreProject reference brings in all Entries, a single Entry " +
+                    "reference only that Entry. Entries themselves are mostly text and small.\n\nWhat can get big " +
+                    "are the assets field values point to (Sprites, prefabs, audio clips): they load together with " +
+                    "the Entry. Reference the Project only where you need lookups, and single Entries elsewhere. " +
+                    "Details: \"Memory & loading\" in Documentation~/RuntimeAPI.md.",
             },
         };
         #endregion

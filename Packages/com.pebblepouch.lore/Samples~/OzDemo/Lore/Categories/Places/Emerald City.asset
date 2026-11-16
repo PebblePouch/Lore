@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Emerald City
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 9d4c77c2-5244-4449-b2ef-0ed428ada08e
-  _createdTicks: 639273194270791361
-  _modifiedTicks: 639273194317801392
+  _id: 7d7db0c4-2516-4f3e-9975-1c9765bdffb8
+  _createdTicks: 639304141576657783
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3D9\uFE0F"
   _subtitle: Everything is green
-  _description: The city of [[44894351-a941-4cc5-ad67-ab7f35ec15af|Oz, the Great
-    and Terrible]], glowing green behind its walls. Everybody wears [[3fc679ee-021c-404c-97dd-577d912129ec|Green
+  _description: The city of [[65b6d1a1-296d-475f-baab-d3e054f15e99|Oz, the Great
+    and Terrible]], glowing green behind its walls. Everybody wears [[21ad584b-cb16-4587-b7b6-6f7b177588b7|Green
     Spectacles]] here, which may be why it looks so green.
   _sortOrder: 6
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2307c88d-3712-411f-83e1-ec1a4e4e9e61
+    _enumValue: 1723a72e-c7d6-4a8c-8f14-629eb5f803f8
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: 7691bf1da03f41149a49f933e9ccf57e, type: 3}
-    _scenePath: Assets/Samples/Lore/0.3.4/Oz Demo/Scenes/Locations/Emerald City.unity
+    _scenePath: Assets/Samples/Lore/0.3.5/Oz Demo/Scenes/Locations/Emerald City.unity
     _folderValue: {fileID: 0}
     _folderPath: 
     _objectValue: {fileID: 0}
@@ -170,4 +170,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3

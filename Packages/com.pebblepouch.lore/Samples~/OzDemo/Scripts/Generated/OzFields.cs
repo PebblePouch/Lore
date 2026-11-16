@@ -9,102 +9,102 @@ namespace PebblePouch.Lore.Samples.OzDemo
     public static class OzFields
     {
         /// <summary>Alive · Boolean · Characters</summary>
-        public static readonly FieldKey Alive = FieldKey.FromId("a4f1f1b0-1b04-4c1d-a754-fd4c2c45be93", "Alive");
+        public static readonly FieldKey Alive = FieldKey.FromId("cbd57039-6c4c-48f1-98ca-8be208504926", "Alive");
 
         /// <summary>Allies · Entries · Characters</summary>
-        public static readonly FieldKey Allies = FieldKey.FromId("4f1ecd63-b0c0-4667-975d-041602cfa689", "Allies");
+        public static readonly FieldKey Allies = FieldKey.FromId("60cb9af4-7c88-47eb-a9a8-aa9f6b7aff1b", "Allies");
 
         /// <summary>Banner · Texture2D (OBJ) · Places</summary>
-        public static readonly FieldKey Banner = FieldKey.FromId("15a2f8c7-b470-41cc-a12a-971240e5067e", "Banner");
+        public static readonly FieldKey Banner = FieldKey.FromId("14f504fa-2efd-4719-85bd-0962a7f550d3", "Banner");
 
         /// <summary>Chapter · Integer · Quests</summary>
-        public static readonly FieldKey Chapter = FieldKey.FromId("704cffac-f3e2-4120-97b8-0d3b61ca3880", "Chapter");
+        public static readonly FieldKey Chapter = FieldKey.FromId("b5c8df6d-78f1-4c95-bc2b-6713636d1cd6", "Chapter");
 
         /// <summary>Color · Color · Places</summary>
-        public static readonly FieldKey Color = FieldKey.FromId("a36536e3-a470-4159-a1b4-4266838acaee", "Color");
+        public static readonly FieldKey Color = FieldKey.FromId("2b7f77b1-2ae5-4fcc-890d-69347b66e7e1", "Color");
 
         /// <summary>Completed · Boolean · Quests</summary>
-        public static readonly FieldKey Completed = FieldKey.FromId("2b19a32c-4e86-4580-baa1-cc86efc82643", "Completed");
+        public static readonly FieldKey Completed = FieldKey.FromId("76d8e5bd-f376-41ee-91a9-1ddb89437c3b", "Completed");
 
         /// <summary>Dangerous · Boolean · Places</summary>
-        public static readonly FieldKey Dangerous = FieldKey.FromId("2c85b3e1-cf78-4564-a187-fbee5057e4eb", "Dangerous");
+        public static readonly FieldKey Dangerous = FieldKey.FromId("275f6eb8-6e51-4946-bb6d-9c1b0a28dfe3", "Dangerous");
 
         /// <summary>Dialogue · OzDialogue (SO) · Characters</summary>
-        public static readonly FieldKey Dialogue = FieldKey.FromId("d8b6c4b6-3084-4226-ac35-93baa1342df7", "Dialogue");
+        public static readonly FieldKey Dialogue = FieldKey.FromId("4f7010de-f29f-44f5-a643-fe092541f3bf", "Dialogue");
 
         /// <summary>Health · Integer · Characters</summary>
-        public static readonly FieldKey Health = FieldKey.FromId("ea6617e8-5a56-4374-be81-d5a30e4a7f00", "Health");
+        public static readonly FieldKey Health = FieldKey.FromId("be377eb1-1bfa-45f4-a88e-759e02336faf", "Health");
 
         /// <summary>Height · Float · Characters</summary>
-        public static readonly FieldKey Height = FieldKey.FromId("db54b25a-0c04-4e15-9185-58f80a515598", "Height");
+        public static readonly FieldKey Height = FieldKey.FromId("29c665e0-b3d7-4ddf-b896-d4f3e0fe97a6", "Height");
 
         /// <summary>Home · Entry · Characters</summary>
-        public static readonly FieldKey Home = FieldKey.FromId("204f2e1d-9d0f-4044-ba86-a4f3bd840350", "Home");
+        public static readonly FieldKey Home = FieldKey.FromId("30524640-9e76-47f0-b8bf-7c22820d882e", "Home");
 
         /// <summary>Icon · Sprite · Items</summary>
-        public static readonly FieldKey Icon = FieldKey.FromId("114db983-854c-48b1-8d87-510aa67c8037", "Icon");
+        public static readonly FieldKey Icon = FieldKey.FromId("b0857769-bf1d-40a8-ae0f-9b03502e117a", "Icon");
 
         /// <summary>Inhabitants · Entries · Places</summary>
-        public static readonly FieldKey Inhabitants = FieldKey.FromId("a0a4721b-fdb8-4719-bc4f-865c47df017e", "Inhabitants");
+        public static readonly FieldKey Inhabitants = FieldKey.FromId("a4ce4438-4ba1-4fe9-8e7f-52f56db3ccca", "Inhabitants");
 
         /// <summary>Kind · Enum · Characters</summary>
-        public static readonly FieldKey Kind = FieldKey.FromId("2fe949e8-90be-4125-9dc7-5a75f5b5bdc6", "Kind");
+        public static readonly FieldKey Kind = FieldKey.FromId("b9340837-8df6-4402-ba82-d53cc62aa9ac", "Kind");
 
         /// <summary>Location · Entry · Characters, Items, Quests</summary>
-        public static readonly FieldKey Location = FieldKey.FromId("e8eb603d-aa13-45e4-9b05-767d7e5a280a", "Location");
+        public static readonly FieldKey Location = FieldKey.FromId("7831656e-5227-4c36-ae39-685e96278996", "Location");
 
         /// <summary>Main Quest · Boolean · Quests</summary>
-        public static readonly FieldKey MainQuest = FieldKey.FromId("123f772b-f612-46ce-bf46-8a19fa61175c", "Main Quest");
+        public static readonly FieldKey MainQuest = FieldKey.FromId("fb540a3b-8803-461d-9c03-f9865e70e1cf", "Main Quest");
 
         /// <summary>Map Position · Vector2 · Places</summary>
-        public static readonly FieldKey MapPosition = FieldKey.FromId("4aaae401-1cfc-42f5-a16b-491559f17f39", "Map Position");
+        public static readonly FieldKey MapPosition = FieldKey.FromId("0c415247-3ea6-4c55-bf8a-0f2b0edaeb4e", "Map Position");
 
         /// <summary>Next Quest · Entry · Quests</summary>
-        public static readonly FieldKey NextQuest = FieldKey.FromId("1c1482ad-3067-4ae3-bf09-7da97dd4e24f", "Next Quest");
+        public static readonly FieldKey NextQuest = FieldKey.FromId("10c609f3-12ca-41c8-9aac-b9a1d782de98", "Next Quest");
 
         /// <summary>Owner · Entry · Items</summary>
-        public static readonly FieldKey Owner = FieldKey.FromId("ba0a1dcc-078a-4b96-abf9-f06408f61ce0", "Owner");
+        public static readonly FieldKey Owner = FieldKey.FromId("124931dc-f3c1-4d25-ba16-bae65f8201db", "Owner");
 
         /// <summary>Party · Entries · Quests</summary>
-        public static readonly FieldKey Party = FieldKey.FromId("40d47432-c501-42f8-80a8-62c09198921c", "Party");
+        public static readonly FieldKey Party = FieldKey.FromId("b3f212a3-4678-49e1-9ae1-20a26f37335f", "Party");
 
         /// <summary>Pickup Sound · Audio · Items</summary>
-        public static readonly FieldKey PickupSound = FieldKey.FromId("e468722d-ec86-4818-8342-bc9bf8e1e568", "Pickup Sound");
+        public static readonly FieldKey PickupSound = FieldKey.FromId("1e03187a-4717-43a3-beea-557ebe4a5ee5", "Pickup Sound");
 
         /// <summary>Portrait · Sprite · Characters</summary>
-        public static readonly FieldKey Portrait = FieldKey.FromId("1ed75c3b-6f11-45db-8646-71943f35dc06", "Portrait");
+        public static readonly FieldKey Portrait = FieldKey.FromId("3cc76fee-c2df-44ef-9ef4-f2c24da11726", "Portrait");
 
         /// <summary>Prefab · GameObject · Characters, Items</summary>
-        public static readonly FieldKey Prefab = FieldKey.FromId("3fadfcc0-9c9e-484d-a8c3-2d60265030f2", "Prefab");
+        public static readonly FieldKey Prefab = FieldKey.FromId("ee5f08a5-5526-461a-955b-6d140a26b259", "Prefab");
 
         /// <summary>Quest Giver · Entry · Quests</summary>
-        public static readonly FieldKey QuestGiver = FieldKey.FromId("9c0e14f3-89bc-4a76-a809-5f14996e7c53", "Quest Giver");
+        public static readonly FieldKey QuestGiver = FieldKey.FromId("88993621-0265-4315-b024-c3eaf15fef34", "Quest Giver");
 
         /// <summary>Rarity · Enum · Items</summary>
-        public static readonly FieldKey Rarity = FieldKey.FromId("f424a3ac-fd5c-49cb-a843-0c5ef151f47c", "Rarity");
+        public static readonly FieldKey Rarity = FieldKey.FromId("8a855b7a-fd71-4022-b96e-49b79a214266", "Rarity");
 
         /// <summary>Region · Enum · Places</summary>
-        public static readonly FieldKey Region = FieldKey.FromId("a6eb3abc-0780-435c-90c7-13855fd464f8", "Region");
+        public static readonly FieldKey Region = FieldKey.FromId("2a2c7a3c-1021-46fa-b2db-db4e74494f72", "Region");
 
         /// <summary>Rewards · Entries · Quests</summary>
-        public static readonly FieldKey Rewards = FieldKey.FromId("4a663f0b-0633-4df1-aa98-fe280bd16c2a", "Rewards");
+        public static readonly FieldKey Rewards = FieldKey.FromId("a19519c5-f691-4519-bef8-17da156397d7", "Rewards");
 
         /// <summary>Ruler · Entry · Places</summary>
-        public static readonly FieldKey Ruler = FieldKey.FromId("5f73f3d0-1d60-48e6-b73a-0ffa6ffe0a8a", "Ruler");
+        public static readonly FieldKey Ruler = FieldKey.FromId("60cd5579-951c-4dba-9296-d49abeaf6e62", "Ruler");
 
         /// <summary>Scene · Scene · Places</summary>
-        public static readonly FieldKey Scene = FieldKey.FromId("7d632fad-0593-4296-96e0-d84315182c7c", "Scene");
+        public static readonly FieldKey Scene = FieldKey.FromId("9f7abefa-a5f2-4d9a-8827-59d19dd4c017", "Scene");
 
         /// <summary>Value · Integer · Items</summary>
-        public static readonly FieldKey Value = FieldKey.FromId("99764ee3-79af-4486-be22-55f33c5a870a", "Value");
+        public static readonly FieldKey Value = FieldKey.FromId("ccd514cc-3386-4981-9796-df70b7502817", "Value");
 
         /// <summary>Weaknesses · Enums · Characters</summary>
-        public static readonly FieldKey Weaknesses = FieldKey.FromId("f759ccc8-716a-45b2-95d5-a85bd34c0d2b", "Weaknesses");
+        public static readonly FieldKey Weaknesses = FieldKey.FromId("9eacd9a4-9d36-45d3-a8a3-49eb10776107", "Weaknesses");
 
         /// <summary>Wiki · URL · Characters</summary>
-        public static readonly FieldKey Wiki = FieldKey.FromId("2d4c2c17-5455-4c1c-beec-eedb3f610585", "Wiki");
+        public static readonly FieldKey Wiki = FieldKey.FromId("85d5d047-c27a-46ab-99c1-3e134642d6fd", "Wiki");
 
         /// <summary>Wish · Text · Characters</summary>
-        public static readonly FieldKey Wish = FieldKey.FromId("18cd2423-f756-4fec-89fd-060f1fc33edf", "Wish");
+        public static readonly FieldKey Wish = FieldKey.FromId("5f41e608-f02a-4ea3-90e3-994abd645148", "Wish");
     }
 }

@@ -4,22 +4,49 @@ Worldbuilding inside the Unity Editor. Lore organizes your game's lore in **Cate
 **Fields**, links Entries in descriptions, keeps an eye on integrity and content health, and lets your game
 read everything at runtime through a small API (and change values like health or ownership while it runs).
 
+![An Entry page in the Lore window: field values, linked notes and Tags](Media/entry.jpg)
+
+## A look inside
+
+**Welcome:** start a new Lore, import an exported one, or explore the example Project first. The manual is built in.
+
+![The Welcome page with Create, Continue and Demo](Media/welcome.jpg)
+
+**Project:** the home page of your world, with links, integrity warnings and Insights about your content.
+
+![The Project page of the Oz Demo with Health, Categories, Entries and Library Insights](Media/home.jpg)
+
+**Category:** the Fields every Entry of the Category has (required ones marked ✱) and how it connects to others.
+
+![A Category page with its Fields and inbound/outbound Categories](Media/category.jpg)
+
+**Tabular Editing:** all Entries of a Category as a table, edited in place, with bulk editing for selected rows.
+
+![The Items Category with Tabular Editing: Entries as rows, Fields as columns](Media/editing.jpg)
+
+**Runtime:** the Oz Demo scene, a small game whose whole state lives in Lore Fields, read and changed through the
+Runtime API and saved with one call.
+
+![The Oz Demo in Play mode: map of Oz, the selected Place, Quests, inventory and journal](Media/runtime.jpg)
+
 ## Installation
 
 Package Manager > + > *Install package from git URL…* >
 `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore`
 
-This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.3.5`); all versions are listed
+This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.3.6`); all versions are listed
 under [Tags](https://github.com/PebblePouch/Lore/tags).
 
-Tested with Unity 6000.2 and 6000.6 on Windows. Requires Unity 6000.2 or newer; other Unity versions and operating systems
-(macOS, Linux) are supported on a best-effort basis.
+Tested with Unity 6000.2 and 6000.6 on Windows. Lore installs on Unity 6000.0 or newer, but other Unity versions and
+operating systems (macOS, Linux) are untested and supported on a best-effort basis.
 
 Before updating Lore or Unity, commit your project to version control or back up your Lore data (the data folder,
 `Assets/Lore` by default, and your Libraries).
 
 ## Documentation
 
+- [Manual](Packages/com.pebblepouch.lore/Documentation~/Manual.md): first steps and every feature (also shown on
+  the Welcome page)
 - [Package README](Packages/com.pebblepouch.lore/README.md): getting started and features
 - [Runtime API](Packages/com.pebblepouch.lore/Documentation~/RuntimeAPI.md): reading Lore data in your game
 - [CSV export & import](Packages/com.pebblepouch.lore/Documentation~/CSV.md)

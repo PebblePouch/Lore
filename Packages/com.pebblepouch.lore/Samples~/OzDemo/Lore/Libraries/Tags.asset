@@ -13,33 +13,36 @@ MonoBehaviour:
   m_Name: Tags
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.TagCollection
   _tags:
-  - _id: db981fa8-449d-4128-9a45-1f92b0ce5c1c
+  - _id: b7b82c7b-4344-4bff-bac6-ee6d0a4e88c4
     _title: Witch
-    _color: {r: 0.5, g: 0.25, b: 0.7, a: 1}
-  - _id: 70d0131c-3d60-4017-ab2f-0d057370db67
+    _color: {r: 0.39166665, g: 0, b: 0.7833333, a: 1}
+  - _id: 37ace69d-348e-4c96-82b8-c9ea140d495f
     _title: Companion
-    _color: {r: 0.2, g: 0.6, b: 0.3, a: 1}
-  - _id: 68f53bdb-773a-44d6-95ee-74b5faf95e99
+    _color: {r: 0, g: 0.6388889, b: 0, a: 1}
+  - _id: d24b9aae-ca4e-48e4-962a-fdc9452c9142
     _title: Animal
-    _color: {r: 0.6, g: 0.4, b: 0.2, a: 1}
-  - _id: 3fa761a7-6250-4618-9713-c9ee1954e640
+    _color: {r: 0.56666666, g: 0.28333333, b: 0, a: 1}
+  - _id: a8853af9-d5bf-43ec-acbf-1553d51cb1f3
     _title: Magic
-    _color: {r: 0.2, g: 0.55, b: 0.8, a: 1}
-  - _id: a6942445-ddaa-4e46-a8ab-776e6c2e57eb
+    _color: {r: 0.7111111, g: 0, b: 0.7111111, a: 1}
+  - _id: 7efe01aa-1204-4725-8535-4756d8813f2b
     _title: Ruler
-    _color: {r: 0.85, g: 0.65, b: 0.1, a: 1}
-  - _id: 43821641-03ab-4757-bfd0-adf5a062dfbd
+    _color: {r: 0.8388889, g: 0.7730937, b: 0.013159042, a: 1}
+  - _id: db96fe0e-8ea3-464f-b750-795f68154515
     _title: Kansas
-    _color: {r: 0.55, g: 0.55, b: 0.55, a: 1}
-  - _id: 3737b046-c7f4-4fdf-84f5-e1933e4aee59
+    _color: {r: 0.5333333, g: 0.5333333, b: 0.5333333, a: 1}
+  - _id: bf26e5aa-80ca-4f3a-9dc8-80888a3167dc
     _title: Munchkin
-    _color: {r: 0.25, g: 0.4, b: 0.85, a: 1}
-  - _id: a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
+    _color: {r: 0, g: 0, b: 0.92777777, a: 1}
+  - _id: ad26b9c0-9ca6-4756-897b-7d97c99011a5
     _title: Danger
-    _color: {r: 0.8, g: 0.2, b: 0.2, a: 1}
-  - _id: b4159f6f-824a-414e-a8e0-905f31b748e6
+    _color: {r: 0.85555553, g: 0, b: 0, a: 1}
+  - _id: 4be210c3-a228-42b9-8839-6b89be946971
     _title: Gift
-    _color: {r: 0.9, g: 0.45, b: 0.65, a: 1}
-  - _id: f696cc8f-8296-41a4-be9d-dca26837b454
+    _color: {r: 0.92777777, g: 0.37111112, b: 0.6494444, a: 1}
+  - _id: f736b4a6-7440-4279-b705-3dbb1b1e45c4
     _title: Tool
-    _color: {r: 0.45, g: 0.5, b: 0.45, a: 1}
+    _color: {r: 0.4111111, g: 0.4111111, b: 0.4111111, a: 1}
+  - _id: fda2339a-93e3-44ca-be68-614eb518545e
+    _title: Help
+    _color: {r: 0, g: 0.71666664, b: 0.71666664, a: 1}

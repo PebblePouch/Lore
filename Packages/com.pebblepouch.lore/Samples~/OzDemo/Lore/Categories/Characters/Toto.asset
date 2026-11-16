@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Toto
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 53b4ef1b-67db-4541-90e7-2eb2323dc66e
-  _createdTicks: 639273194265671963
-  _modifiedTicks: 639273194317791371
+  _id: d14761ac-e898-4090-aa24-430e2e2d8379
+  _createdTicks: 639304141571037550
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F436\uFE0F"
   _subtitle: Dorothy's little black dog
   _description: A small black dog with long silky hair and merry little eyes. He
-    keeps [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] from being sad, and
-    at the end it is Toto who knocks over the screen that hides [[44894351-a941-4cc5-ad67-ab7f35ec15af|Oz,
+    keeps [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]] from being sad, and
+    at the end it is Toto who knocks over the screen that hides [[65b6d1a1-296d-475f-baab-d3e054f15e99|Oz,
     the Great and Terrible]].
   _sortOrder: 1
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 71fb20cc-2070-4249-8880-49f95b68fb5a
+    _enumValue: eb36e48a-c0d7-428b-b72a-c9bec1f1b01f
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - 403f930f-c58c-44b8-9d91-b3a80efa1149
+    - 1a57fe31-3362-4be2-8b2c-ca64b4315af5
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 125289654184318879, guid: 6b9447b6a3fae9c47a147c9b1535237f, type: 3}
+    _gameObjectValue: {fileID: 5313715222164192550, guid: 6b9447b6a3fae9c47a147c9b1535237f, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -261,6 +261,6 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 70d0131c-3d60-4017-ab2f-0d057370db67
-  - 68f53bdb-773a-44d6-95ee-74b5faf95e99
-  - 43821641-03ab-4757-bfd0-adf5a062dfbd
+  - 37ace69d-348e-4c96-82b8-c9ea140d495f
+  - d24b9aae-ca4e-48e4-962a-fdc9452c9142
+  - db96fe0e-8ea3-464f-b750-795f68154515

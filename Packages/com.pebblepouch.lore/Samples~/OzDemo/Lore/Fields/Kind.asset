@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Kind
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 2fe949e8-90be-4125-9dc7-5a75f5b5bdc6
-  _createdTicks: 639273194238702543
-  _modifiedTicks: 639273194239305169
+  _id: b9340837-8df6-4402-ba82-d53cc62aa9ac
+  _createdTicks: 639304141540590566
+  _modifiedTicks: 639304141541309099
   _type: 10
   _glyph: "\U0001F464\uFE0F"
   _objectTypeName: 
   _objectScriptGuid: 
   _enumOptions:
-  - _id: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
+  - _id: 6905c35f-b6e3-4ee8-aff4-ed1bf7a99e12
     _label: Human
-  - _id: 0d9bfb90-448b-476e-b78b-f8298f9e8a8b
+  - _id: c852f218-408f-4c91-8db5-881130a0678b
     _label: Witch
-  - _id: 71fb20cc-2070-4249-8880-49f95b68fb5a
+  - _id: eb36e48a-c0d7-428b-b72a-c9bec1f1b01f
     _label: Animal
-  - _id: 22d45237-3b6d-4215-b4d7-b005b5846a35
+  - _id: bf1a8485-6912-4f93-bdee-ddb242c8837d
     _label: Enchanted
-  - _id: d8c31537-9ec7-4598-a768-215a24f830e4
+  - _id: 0f343b8d-447b-43d5-8a94-91e423c7f7b8
     _label: Creature
   _allowedCategories: []
   _vectorDimension: 3

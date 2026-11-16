@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Good Witch of the North
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 03edb354-6491-4fb1-b9db-e8a5191116d3
-  _createdTicks: 639273194267578859
-  _modifiedTicks: 639273194317791371
+  _id: b9b0ae12-dc06-4854-9663-ce87377480f2
+  _createdTicks: 639304141573154309
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F607\uFE0F"
   _subtitle: Friend of the Munchkins
-  _description: Greets [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] after
-    the house falls, gives her the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver
+  _description: Greets [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]] after
+    the house falls, gives her the [[ea4cb543-34a9-48d6-9037-6af7bf319ac6|Silver
     Shoes]] and a kiss on the forehead that no one dares to harm.
   _sortOrder: 9
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 0d9bfb90-448b-476e-b78b-f8298f9e8a8b
+    _enumValue: c852f218-408f-4c91-8db5-881130a0678b
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 6271009973161771666, guid: c7e05cd2f051f844cb01d60fbb266f1c, type: 3}
+    _gameObjectValue: {fileID: 5654483756682785965, guid: c7e05cd2f051f844cb01d60fbb266f1c, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -259,5 +259,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - db981fa8-449d-4128-9a45-1f92b0ce5c1c
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
+  - b7b82c7b-4344-4bff-bac6-ee6d0a4e88c4
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3

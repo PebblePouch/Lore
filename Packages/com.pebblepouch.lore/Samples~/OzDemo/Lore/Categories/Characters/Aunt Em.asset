@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Aunt Em
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 89b89506-901b-4b79-b60a-bde5d03059f1
-  _createdTicks: 639273194268780158
-  _modifiedTicks: 639273194317791371
+  _id: da3f88b3-2cfe-4218-a168-bd00d2d3ca58
+  _createdTicks: 639304141574492815
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F475\uFE0F"
   _subtitle: Dorothy's aunt
   _description: The sun and wind of the prairie have taken the sparkle from her eyes.
-    She waits for [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] at the [[9d92c402-09c4-4ba7-8bd3-7b0bb913adcc|Kansas
+    She waits for [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]] at the [[9af71760-1bb0-4dc8-a754-badc739e61bf|Kansas
     Farm]].
   _sortOrder: 14
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
+    _enumValue: 6905c35f-b6e3-4ee8-aff4-ed1bf7a99e12
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 1462779352036524804, guid: 04da39538f90d114fa4570ad816d41ca, type: 3}
+    _gameObjectValue: {fileID: 2529446140432771823, guid: 04da39538f90d114fa4570ad816d41ca, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -259,4 +259,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 43821641-03ab-4757-bfd0-adf5a062dfbd
+  - db96fe0e-8ea3-464f-b750-795f68154515

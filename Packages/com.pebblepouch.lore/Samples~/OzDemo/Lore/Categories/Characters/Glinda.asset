@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Glinda
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 421c74df-00d1-4c92-ae7e-c2fd33777f17
-  _createdTicks: 639273194266846137
-  _modifiedTicks: 639273194317791371
+  _id: a8d31f11-20ef-48af-b122-17193b00af0d
+  _createdTicks: 639304141572346146
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F9DA\uFE0F"
   _subtitle: The Good Witch of the South
-  _description: The most powerful of the witches. She rules the Quadlings from [[b606e1b3-60af-4057-a923-5ae43cc3f60b|Glinda's
-    Palace]] and tells [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] the
-    secret of the [[2e4de19b-3763-415b-8e68-19fefeeab4ee|Silver Shoes]].
+  _description: The most powerful of the witches. She rules the Quadlings from [[9fb065b5-0eee-49d9-b272-25c0c46292d5|Glinda's
+    Palace]] and tells [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]] the
+    secret of the [[ea4cb543-34a9-48d6-9037-6af7bf319ac6|Silver Shoes]].
   _sortOrder: 6
   _fields:
   - _field: {fileID: 11400000, guid: da7495f4dd4f6df44a82783896bb25be, type: 2}
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 0d9bfb90-448b-476e-b78b-f8298f9e8a8b
+    _enumValue: c852f218-408f-4c91-8db5-881130a0678b
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 3527341280133302158, guid: 5f27af8175e2a3c4484beae86a029b38, type: 3}
+    _gameObjectValue: {fileID: 2077948697465915778, guid: 5f27af8175e2a3c4484beae86a029b38, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -259,6 +259,6 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - db981fa8-449d-4128-9a45-1f92b0ce5c1c
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
-  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb
+  - b7b82c7b-4344-4bff-bac6-ee6d0a4e88c4
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3
+  - 7efe01aa-1204-4725-8535-4756d8813f2b

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b57f865bf957a4d9e538b7b6f1f870, type: 3}
   m_Name: Lore
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.LoreProject
-  _id: 2162cdc4-453d-4dd7-9c8b-bae4c1d25ad4
-  _createdTicks: 639273194220482517
-  _modifiedTicks: 639273194327122228
+  _id: 94d479aa-09dd-46b7-86a8-8f495cbfd9b1
+  _createdTicks: 639304141518610410
+  _modifiedTicks: 639304141644852301
+  _formatVersion: 1
   _title: The Wonderful Wizard of Oz
   _glyph: "\U0001F32A\uFE0F"
   _description: 'A demo for Lore: the world of L. Frank Baum''s novel "The Wonderful
@@ -27,8 +28,8 @@ MonoBehaviour:
     broken**, so Health and Integrity have something to show.
 
 
-    Start with [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy
-    Gale]], or follow the story from its first Quest, [[cba6fa15-fd99-4b9d-8c48-62926d74c5c1|The
+    Start with [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy
+    Gale]], or follow the story from its first Quest, [[7c46e33f-1afe-477a-935a-55fab7cc2965|The
     Council with the Munchkins]].'
   _links:
   - _label: The book on Project Gutenberg
@@ -40,6 +41,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   - {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   - {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
+  - {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
   _entries:
   - {fileID: 11400000, guid: 368f4167ad80d6c4d84b4da108ba3cb0, type: 2}
   - {fileID: 11400000, guid: 1d352d409d6074d4193b73893cef5748, type: 2}
@@ -83,4 +85,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 67d9da53063f07148b689025332633f1, type: 2}
   - {fileID: 11400000, guid: 24eb8638847c4914f9e4b3c998aa8391, type: 2}
   - {fileID: 11400000, guid: e1a06528a7e5c6843b663961cf229465, type: 2}
+  - {fileID: 11400000, guid: de00ea8c28daf44418a2d98ca8ea19cc, type: 2}
+  - {fileID: 11400000, guid: ffbe2838d74bdd445a68713d7d9fafff, type: 2}
+  - {fileID: 11400000, guid: e34e83416c36eea4d98ab53a77d37d04, type: 2}
+  - {fileID: 11400000, guid: a34b6b1cda64102439a4e2b920e87eaa, type: 2}
+  - {fileID: 11400000, guid: 2c6f49fd19aeb454489a929927459311, type: 2}
+  - {fileID: 11400000, guid: 3919ff0e4ae7d9046814c18c7767e734, type: 2}
+  - {fileID: 11400000, guid: 4a0ae39ccb6c6494ab387f500c8d4195, type: 2}
+  - {fileID: 11400000, guid: 789adc02a732e2b4e8d57d048faae9d9, type: 2}
+  - {fileID: 11400000, guid: fa7517a8b87231a4f830b2893365dbbf, type: 2}
+  - {fileID: 11400000, guid: 735ae6062a22edb4db2a1becee950d22, type: 2}
   _tagLibrary: {fileID: 11400000, guid: f1461177bb121f046b745d441850abee, type: 2}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Text Formatting
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 91ebb68e-152a-4466-a921-bdb5fcc70b84
+  _createdTicks: 639304141583861664
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\U0001F4DD\uFE0F"
+  _subtitle: Is BB code supported, and where?
+  _description: 'Lore has no BB code. Its descriptions and notes support a small
+    Markdown-like syntax instead: two asterisks or underscores around a text make
+    it **bold**, one makes it *italic*, and two opening square brackets insert a
+    link to an Entry, like [[d14761ac-e898-4090-aa24-430e2e2d8379|Toto]].
+
+
+    This
+    works in the descriptions of the Project and Categories and in the notes of Entries;
+    Text Fields stay plain text. In your game, LoreProject.FormatDescription turns
+    the formatting into Unity rich text.'
+  _sortOrder: 7
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

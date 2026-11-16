@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Boq
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 7bc582ca-603e-40c2-b872-78b3d1e8fcdc
-  _createdTicks: 639273194267795951
-  _modifiedTicks: 639273194317791371
+  _id: 8ba651fa-1e1c-44bd-a954-2e8e3fa51482
+  _createdTicks: 639304141573424406
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F468\uFE0F"
   _subtitle: A rich Munchkin
-  _description: Gives [[bff2dcff-df4c-46a2-a793-2f30f4a6a243|Dorothy Gale]] supper
-    and a bed on her first night in Oz, in his blue house in the [[d4610800-66f9-4cd3-a263-8147f1a76207|Munchkin
+  _description: Gives [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy Gale]] supper
+    and a bed on her first night in Oz, in his blue house in the [[10bb4a4d-2a3c-490f-8b43-62917524bc1c|Munchkin
     Village]].
   _sortOrder: 10
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
+    _enumValue: 6905c35f-b6e3-4ee8-aff4-ed1bf7a99e12
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 6392386638827973971, guid: 165d765eb2ac54b49962c6c5a0cf38e7, type: 3}
+    _gameObjectValue: {fileID: 628569546349996642, guid: 165d765eb2ac54b49962c6c5a0cf38e7, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -258,4 +258,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 3737b046-c7f4-4fdf-84f5-e1933e4aee59
+  - bf26e5aa-80ca-4f3a-9dc8-80888a3167dc

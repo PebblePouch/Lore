@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Runtime Scripts
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 754375fe-0a5f-458d-9bad-e2e5abef0e4b
+  _createdTicks: 639304141584123375
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\U0001F9F0\uFE0F"
+  _subtitle: Where are the scripts to access Lore data at runtime?
+  _description: 'The Runtime API comes with the package (Packages/Lore/Runtime);
+    there is nothing to copy. Give a MonoBehaviour a field of type LoreProject or
+    Entry, assign the asset, and read values, e.g. entry.GetInt("Health").
+
+
+    Examples:
+    the Scripts folder of this demo (OzJourney.cs has the game rules, Generated/OzFields.cs
+    the generated Field constants) and the Runtime API sample (Package Manager >
+    Lore > Samples). The full reference is Documentation~/RuntimeAPI.md in the package.'
+  _sortOrder: 8
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

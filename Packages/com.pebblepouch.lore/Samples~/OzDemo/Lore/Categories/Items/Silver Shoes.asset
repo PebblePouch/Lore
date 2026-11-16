@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Silver Shoes
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 2e4de19b-3763-415b-8e68-19fefeeab4ee
-  _createdTicks: 639273194271797523
-  _modifiedTicks: 639273194317801392
+  _id: ea4cb543-34a9-48d6-9037-6af7bf319ac6
+  _createdTicks: 639304141577733533
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F462\uFE0F"
   _subtitle: Three knocks of the heels
-  _description: Once worn by the [[0014940d-d5cf-4f17-862b-eba235e5a4de|Wicked Witch
+  _description: Once worn by the [[f1b14b32-9a15-43bf-a44d-25040e68113a|Wicked Witch
     of the East]]. Whoever knocks the heels together three times can go anywhere
-    in three steps. Only [[421c74df-00d1-4c92-ae7e-c2fd33777f17|Glinda]] knows their
+    in three steps. Only [[a8d31f11-20ef-48af-b122-17193b00af0d|Glinda]] knows their
     secret.
   _sortOrder: 0
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: ad21367d-7141-45a7-9e6b-378718947139
+    _enumValue: a719dc95-e040-4202-8b1e-564756e95647
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 3654453034799602563, guid: 4e7fdee5e9fbacf4e864768ca973c286, type: 3}
+    _gameObjectValue: {fileID: 8744235508276078054, guid: 4e7fdee5e9fbacf4e864768ca973c286, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -151,4 +151,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3

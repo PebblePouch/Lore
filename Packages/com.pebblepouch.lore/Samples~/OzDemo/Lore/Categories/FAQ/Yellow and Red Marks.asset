@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Yellow and Red Marks
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: f82c894e-d5e9-4115-a127-f379463a2f4a
+  _createdTicks: 639304141582281598
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\u26A0\uFE0F"
+  _subtitle: Why are some Entries marked yellow or red?
+  _description: '**Yellow** means unfinished content (Health), **red** means broken
+    data (Integrity). The demo contains a few of both on purpose: [[ff9df0b3-e5a4-465b-a23d-046f33812363|Queen
+    of the Field Mice]] has no Home although it is required, [[3a459606-102f-4c98-b75c-f326d4d3a440|Guardian
+    of the Gates]] has no Tags, [[e464a289-8457-452a-92b6-264c22c68d39|Uncle Henry]]
+    has no notes, the [[4c7e8bfe-2089-411e-87e2-11fb62bda33d|Yellow Brick Road]]
+    has no Inhabitants, and [[9fb065b5-0eee-49d9-b272-25c0c46292d5|Glinda''s Palace]]
+    links to the Hammer-Heads, an Entry nobody has written yet.
+
+
+    Click a Health
+    or Integrity item on the Project page to show the affected Entries in the Contents.'
+  _sortOrder: 1
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

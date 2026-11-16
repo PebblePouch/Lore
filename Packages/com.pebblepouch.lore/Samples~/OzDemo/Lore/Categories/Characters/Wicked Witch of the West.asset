@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Wicked Witch of the West
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 4d91631d-e833-4bd5-a4c5-477a0fe8b0dc
-  _createdTicks: 639273194267094114
-  _modifiedTicks: 639273194317791371
+  _id: be9e56ee-6d1f-425c-bb06-5f87fd88d22e
+  _createdTicks: 639304141572615935
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F9B9\uFE0F"
   _subtitle: Tyrant of the Winkies
   _description: Has only one eye, but it is as powerful as a telescope. She enslaves
-    the Winkies and commands the [[5f78a4af-f20f-4136-91f0-27f932211441|King of the
-    Winged Monkeys]] with the [[b20111ba-0457-4d69-ae5e-8728d64388ce|Golden Cap]].
+    the Winkies and commands the [[066faba0-3e5b-46be-8aa8-c13ba35d33d3|King of the
+    Winged Monkeys]] with the [[f49fc573-16e3-4e9f-af2f-0765f661f274|Golden Cap]].
     Water is the **only** thing she fears, apart from the dark.
   _sortOrder: 7
   _fields:
@@ -35,7 +35,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 0d9bfb90-448b-476e-b78b-f8298f9e8a8b
+    _enumValue: c852f218-408f-4c91-8db5-881130a0678b
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - 04d7dbda-6796-4353-ac4c-d12bc99e133e
-    - ecb78f8e-f091-47b7-831f-9f8fcf2a7a02
+    - 4ee2957e-7f6d-4954-ae2c-dc5ba9d1c9e8
+    - 208bcba6-d3d9-4dfc-8862-7f9b61c92b6b
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 48162819958852871, guid: e1b1d1ebb1124204caae614e08cdf5c7, type: 3}
+    _gameObjectValue: {fileID: 1870182014333561812, guid: e1b1d1ebb1124204caae614e08cdf5c7, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -262,7 +262,7 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - db981fa8-449d-4128-9a45-1f92b0ce5c1c
-  - 3fa761a7-6250-4618-9713-c9ee1954e640
-  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb
-  - a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
+  - b7b82c7b-4344-4bff-bac6-ee6d0a4e88c4
+  - a8853af9-d5bf-43ec-acbf-1553d51cb1f3
+  - 7efe01aa-1204-4725-8535-4756d8813f2b
+  - ad26b9c0-9ca6-4756-897b-7d97c99011a5

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d3447cce453e74288d16f1ba6960ff, type: 3}
   m_Name: Rewards
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Field
-  _id: 4a663f0b-0633-4df1-aa98-fe280bd16c2a
-  _createdTicks: 639273194260603258
-  _modifiedTicks: 639273194261208948
+  _id: a19519c5-f691-4519-bef8-17da156397d7
+  _createdTicks: 639304141565375562
+  _modifiedTicks: 639304141566049298
   _type: 11
   _glyph: "\U0001F381\uFE0F"
   _objectTypeName: 

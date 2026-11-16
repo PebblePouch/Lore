@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Green Spectacles
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 3fc679ee-021c-404c-97dd-577d912129ec
-  _createdTicks: 639273194272289963
-  _modifiedTicks: 639273194317801392
+  _id: 21ad584b-cb16-4587-b7b6-6f7b177588b7
+  _createdTicks: 639304141578286784
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: af4862abd81269544a72c632a03a4c8d, type: 2}
   _glyph: "\U0001F453\uFE0F"
   _subtitle: Locked on with a golden key
-  _description: Handed out by the [[a29e6d0c-83c1-4e8b-bb4b-013379b33ce2|Guardian
-    of the Gates]] to everyone who enters the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald
+  _description: Handed out by the [[3a459606-102f-4c98-b75c-f326d4d3a440|Guardian
+    of the Gates]] to everyone who enters the [[7d7db0c4-2516-4f3e-9975-1c9765bdffb8|Emerald
     City]].
   _sortOrder: 2
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: ae68a113-581c-4be2-a1e7-b3d2827cd80f
+    _enumValue: d639dd88-b859-4853-a1a7-33e1972d4755
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 2966687099365980446, guid: 22ebc4494a9a4324eb41eb947102a5d9, type: 3}
+    _gameObjectValue: {fileID: 7561654493312192069, guid: 22ebc4494a9a4324eb41eb947102a5d9, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -150,4 +150,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - b4159f6f-824a-414e-a8e0-905f31b748e6
+  - 4be210c3-a228-42b9-8839-6b89be946971

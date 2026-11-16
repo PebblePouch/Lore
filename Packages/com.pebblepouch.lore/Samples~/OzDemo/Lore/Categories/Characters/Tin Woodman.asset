@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Tin Woodman
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 87ffe15e-ce6a-48dc-82e2-828a5d144ad9
-  _createdTicks: 639273194266154999
-  _modifiedTicks: 639273194317791371
+  _id: 2068ec5f-e108-487b-a58a-19fa835fb595
+  _createdTicks: 639304141571555485
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001FA93\uFE0F"
   _subtitle: Hopes for a heart
   _description: Once a Munchkin woodman. An enchanted axe cut him piece by piece,
     and a tinsmith replaced every part with tin, but no one could give him back his
-    heart. Found rusted stiff in the [[aff1ca7b-f460-47b0-a9c9-988afb3b57a5|Tin Woodman's
-    Forest]]; he never goes anywhere without his [[a912f6ee-05b5-4d79-acb8-c893881f0fcb|Oil
+    heart. Found rusted stiff in the [[02c826e6-48fe-404e-bd9c-419e7eba3ca1|Tin Woodman's
+    Forest]]; he never goes anywhere without his [[5baeae8a-7cdd-45d5-878b-dbaf86dd5fd5|Oil
     Can]]. Later he rules the Winkies.
   _sortOrder: 3
   _fields:
@@ -36,7 +36,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 22d45237-3b6d-4215-b4d7-b005b5846a35
+    _enumValue: bf1a8485-6912-4f93-bdee-ddb242c8837d
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
     _entriesValue: []
     _enumValue: 
     _enumValues:
-    - 67226976-8b46-4154-8b60-dcc00b1a6a08
+    - a736eff4-7cc2-4ac4-81f1-915d2c5d4abd
     _boolValue: 0
     _intValue: 0
     _floatValue: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 578024738825934504, guid: 5df920d88c308834da759fabe147809c, type: 3}
+    _gameObjectValue: {fileID: 1647538839032335726, guid: 5df920d88c308834da759fabe147809c, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 
@@ -264,5 +264,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - 70d0131c-3d60-4017-ab2f-0d057370db67
-  - a6942445-ddaa-4e46-a8ab-776e6c2e57eb
+  - 37ace69d-348e-4c96-82b8-c9ea140d495f
+  - 7efe01aa-1204-4725-8535-4756d8813f2b

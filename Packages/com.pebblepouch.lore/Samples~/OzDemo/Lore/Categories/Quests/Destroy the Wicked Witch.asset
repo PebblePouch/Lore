@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Destroy the Wicked Witch
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: 53304fec-3985-4f9f-92f5-52dd1dadb16f
-  _createdTicks: 639273194274909257
-  _modifiedTicks: 639273194317801392
+  _id: 25e1126b-b03a-4793-a517-fe2de720e30a
+  _createdTicks: 639304141581239283
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 5c4eccbdc84339f4090dcc6680697c42, type: 2}
   _glyph: 
   _subtitle: Chapters 12 to 14
-  _description: Travel west to the [[bb0c0730-d018-444d-971f-1b47082a880b|Witch's
+  _description: Travel west to the [[acb5c074-8f57-4876-90dd-bb2cbbf86de7|Witch's
     Castle]]. The Witch sends wolves, crows, bees and finally the Winged Monkeys;
-    a [[fa6c9114-85e7-4821-b6f5-009d4ee2d9eb|Bucket of Water]] ends it.
+    a [[c43dd545-39fc-494e-9f09-c8678552ff0d|Bucket of Water]] ends it.
   _sortOrder: 4
   _fields:
   - _field: {fileID: 11400000, guid: 489df0844b845b24db67f903f9fedfc1, type: 2}
@@ -174,5 +174,5 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - db981fa8-449d-4128-9a45-1f92b0ce5c1c
-  - a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
+  - b7b82c7b-4344-4bff-bac6-ee6d0a4e88c4
+  - ad26b9c0-9ca6-4756-897b-7d97c99011a5

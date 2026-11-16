@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Playing the Demo
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: be15bfc8-4dbe-4e47-80cb-fe274acac1cc
+  _createdTicks: 639304141582545805
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\U0001F579\uFE0F"
+  _subtitle: How do I play the demo?
+  _description: 'Open Scenes/Oz Demo.unity in the sample folder and press Play. [[fcbf3650-903d-4ed3-a6f8-79e222116920|Dorothy
+    Gale]] starts at the [[9af71760-1bb0-4dc8-a754-badc739e61bf|Kansas Farm]]; click
+    a place on the map to travel, pick up Items and complete the Quests of the book.
+
+
+    The
+    whole game state lives in Lore Fields, changed at runtime through the Runtime
+    API. Values that differ from the Lore data are marked in the view.'
+  _sortOrder: 2
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

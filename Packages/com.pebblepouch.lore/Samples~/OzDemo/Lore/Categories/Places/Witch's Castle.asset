@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Witch's Castle
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: bb0c0730-d018-444d-971f-1b47082a880b
-  _createdTicks: 639273194271053654
-  _modifiedTicks: 639273194317801392
+  _id: acb5c074-8f57-4876-90dd-bb2cbbf86de7
+  _createdTicks: 639304141576921741
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 490fa10b5d8d0614099eb04f7634c316, type: 2}
   _glyph: "\U0001F3F0\uFE0F"
   _subtitle: In the yellow country of the Winkies
-  _description: The yellow castle of the [[4d91631d-e833-4bd5-a4c5-477a0fe8b0dc|Wicked
+  _description: The yellow castle of the [[be9e56ee-6d1f-425c-bb06-5f87fd88d22e|Wicked
     Witch of the West]], in the west of Oz. The final dungeon of the game.
   _sortOrder: 7
   _fields:
@@ -33,7 +33,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 634523fa-cbf5-4a47-a050-b07e3223dd74
+    _enumValue: 5015ff0d-bd0d-417d-b871-a95acbe9b5ac
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     _gameObjectValue: {fileID: 0}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 102900000, guid: 220d50a8c5a762e40ac092f14d1a6b57, type: 3}
-    _scenePath: Assets/Samples/Lore/0.3.4/Oz Demo/Scenes/Locations/Witch's Castle.unity
+    _scenePath: Assets/Samples/Lore/0.3.5/Oz Demo/Scenes/Locations/Witch's Castle.unity
     _folderValue: {fileID: 0}
     _folderPath: 
     _objectValue: {fileID: 0}
@@ -169,4 +169,4 @@ MonoBehaviour:
     _colorValue: {r: 0, g: 0, b: 0, a: 1}
     _vectorValue: {x: 0, y: 0, z: 0}
   _tagIds:
-  - a86af2d6-db5b-4ab2-b0fa-ba6f41729d7f
+  - ad26b9c0-9ca6-4756-897b-7d97c99011a5

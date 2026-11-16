@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Starting Fresh
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 329e9167-ff11-42ad-a93d-4b132a73c85a
+  _createdTicks: 639304141582026325
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\U0001F331\uFE0F"
+  _subtitle: How can I start fresh with my own Lore?
+  _description: 'A Unity project holds **one** Lore Project, and right now that is
+    this demo. Delete the sample folder Assets/Samples/Lore (it contains the whole
+    demo), then open Tools > Lore > Open Lore: the Welcome page lets you start your
+    own Lore.
+
+
+    You can import the demo again at any time from Package Manager
+    > Lore > Samples, but only while you have no Lore Project of your own.'
+  _sortOrder: 0
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

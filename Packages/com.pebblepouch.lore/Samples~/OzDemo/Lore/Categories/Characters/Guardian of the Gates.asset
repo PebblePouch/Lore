@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
   m_Name: Guardian of the Gates
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
-  _id: a29e6d0c-83c1-4e8b-bb4b-013379b33ce2
-  _createdTicks: 639273194268524315
-  _modifiedTicks: 639273194317791371
+  _id: 3a459606-102f-4c98-b75c-f326d4d3a440
+  _createdTicks: 639304141574234594
+  _modifiedTicks: 639304141632276278
   _category: {fileID: 11400000, guid: 8b7b72a809a05de42b9e4e1a9fc3d116, type: 2}
   _glyph: "\U0001F482\uFE0F"
   _subtitle: Keeper of the green spectacles
-  _description: Lets visitors into the [[9d4c77c2-5244-4449-b2ef-0ed428ada08e|Emerald
-    City]] and locks [[3fc679ee-021c-404c-97dd-577d912129ec|Green Spectacles]] on
+  _description: Lets visitors into the [[7d7db0c4-2516-4f3e-9975-1c9765bdffb8|Emerald
+    City]] and locks [[21ad584b-cb16-4587-b7b6-6f7b177588b7|Green Spectacles]] on
     their eyes, so the brightness of the city will not blind them.
   _sortOrder: 13
   _fields:
@@ -34,7 +34,7 @@ MonoBehaviour:
     _folderPath: 
     _objectValue: {fileID: 0}
     _entriesValue: []
-    _enumValue: 2b879563-9dc6-4d07-b595-ca3f04d6aa91
+    _enumValue: 6905c35f-b6e3-4ee8-aff4-ed1bf7a99e12
     _enumValues: []
     _boolValue: 0
     _intValue: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   - _field: {fileID: 11400000, guid: aeaf9e77354cebb4c8b38aa7139b0035, type: 2}
     _stringValue: 
     _entryValue: {fileID: 0}
-    _gameObjectValue: {fileID: 3002637306200871927, guid: d043620cbd12003408f6dd886f2b1282, type: 3}
+    _gameObjectValue: {fileID: 2561782619077110159, guid: d043620cbd12003408f6dd886f2b1282, type: 3}
     _spriteValue: {fileID: 0}
     _sceneValue: {fileID: 0}
     _scenePath: 

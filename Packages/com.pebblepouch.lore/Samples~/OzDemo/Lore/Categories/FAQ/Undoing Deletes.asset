@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0bde6d39cdc9a42a0ea995681e320e, type: 3}
+  m_Name: Undoing Deletes
+  m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Entry
+  _id: 4dbca313-3a0e-4190-8054-a1438a169b8e
+  _createdTicks: 639304141583344858
+  _modifiedTicks: 639304141632291430
+  _category: {fileID: 11400000, guid: 67eb6452bf5f2224083042268f30f622, type: 2}
+  _glyph: "\U0001F5D1\uFE0F"
+  _subtitle: Why can't I undo a deleted Entry or Category?
+  _description: 'Entries and Categories are asset files. Creating, duplicating, renaming
+    and deleting them are file operations, and like in Unity''s Project window they
+    cannot be undone. Lore always asks before it deletes something and tells you
+    how many references will break.
+
+
+    Edits of values, notes, Tags and Fields
+    **can** be undone with Ctrl+Z. To be safe against deleting by mistake, keep your
+    project in version control (e.g. Git or Unity Version Control) and commit regularly.'
+  _sortOrder: 5
+  _fields: []
+  _tagIds:
+  - fda2339a-93e3-44ca-be68-614eb518545e

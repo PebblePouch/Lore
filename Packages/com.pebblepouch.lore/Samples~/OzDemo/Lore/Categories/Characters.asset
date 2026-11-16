@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d7f8ead39df46ab15f4b1b1d482c, type: 3}
   m_Name: Characters
   m_EditorClassIdentifier: PebblePouch.Lore::PebblePouch.Lore.Category
-  _id: 84aa1ad6-166d-43fd-8231-e8eef6c90f9b
-  _createdTicks: 639273194230621229
-  _modifiedTicks: 639273194263873359
+  _id: 56ac5c99-c4cd-4b46-aed8-c15d52e1eb09
+  _createdTicks: 639304141529942609
+  _modifiedTicks: 639304141569152913
   _glyph: "\U0001F9D9\uFE0F"
-  _color: {r: 0.18, g: 0.45, b: 0.75, a: 1}
+  _color: {r: 0, g: 0, b: 0.85555553, a: 1}
   _description: Everyone Dorothy meets on her way through Oz, friend or foe.
   _sortOrder: 0
   _fields:
