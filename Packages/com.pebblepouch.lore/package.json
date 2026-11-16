@@ -3,7 +3,7 @@
   "version": "0.3.5",
   "displayName": "Lore",
   "description": "Worldbuilding inside the Unity Editor: organize your game's lore in Categories, Entries and Fields, link Entries in descriptions, track integrity and content health, and read everything at runtime through a small API that can also change values while the game runs.",
-  "unity": "6000.0",
+  "unity": "6000.2",
   "author": {
     "name": "Pebble Pouch",
     "email": "pebblepouchproductions@gmail.com"

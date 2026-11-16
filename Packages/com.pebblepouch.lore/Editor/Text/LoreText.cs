@@ -368,6 +368,15 @@ namespace PebblePouch.Lore.Editor
                 "folder first.";
         }
 
+        // Format version of the Lore data (LoreFormatUpgradeService).
+        public static class DataFormat
+        {
+            // "Lore: The Lore Project at Assets/Lore/Lore.asset was saved by a newer Lore version (data format 3; …"
+            public static readonly string NewerFormatWarning =
+                "Lore: The Lore Project at {0} was saved by a newer Lore version (data format {1}; this version " +
+                "knows up to format {2}). Update Lore before you edit it, or data of the newer version may be lost.";
+        }
+
         // CSV export / import of a Category's Entries.
         public static class Csv
         {

@@ -87,6 +87,9 @@ namespace PebblePouch.Lore.Editor
 
             Project = FindProject();
 
+            // Before anything reads the data: older formats are upgraded first.
+            LoreFormatUpgradeService.Upgrade(Project);
+
             _categories.Clear();
             _categories.AddRange(FindCategories());
 

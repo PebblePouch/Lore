@@ -26,6 +26,8 @@ namespace PebblePouch.Lore.Editor
 
             project.name = "Lore";
 
+            LoreFormatUpgradeService.StampCurrent(project);
+
             LoreChangeTracker.MarkCreated(project);
 
             AssetDatabase.CreateAsset(project, root + "/" + FolderService.ProjectAssetName);
@@ -260,6 +262,8 @@ namespace PebblePouch.Lore.Editor
             project = ScriptableObject.CreateInstance<LoreProject>();
 
             project.name = "Lore";
+
+            LoreFormatUpgradeService.StampCurrent(project);
 
             LoreChangeTracker.MarkCreated(project);
 

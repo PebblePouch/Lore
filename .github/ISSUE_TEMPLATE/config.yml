@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions, feature ideas, commercial license
+    url: https://github.com/PebblePouch/Lore#license
+    about: Please send these by email (address in the README) instead of opening an issue.

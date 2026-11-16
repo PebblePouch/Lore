@@ -11,9 +11,17 @@ namespace PebblePouch.Lore
         // Shown while the Project has no glyph of its own (also for Projects from before Project glyphs).
         // Same form as in the default Glyph library (with emoji variation selector), so the picker finds it.
         public const string DefaultGlyph = "\U0001F4DC\uFE0F"; // Scroll
+
+        // Layout of the Lore data written by this Lore version. Raise it with every data change that needs an
+        // upgrade of existing assets, and add the upgrade step in the editor (LoreFormatUpgradeService).
+        public const int CurrentFormatVersion = 1;
         #endregion
 
         #region Fields
+        // Format of this Project's data. 0 = written before format versions existed (same layout as format 1).
+        [SerializeField, HideInInspector]
+        private int _formatVersion;
+
         [SerializeField, HideInInspector]
         private string _title;
 
@@ -47,6 +55,8 @@ namespace PebblePouch.Lore
         #endregion
 
         #region Properties
+        public int FormatVersion => _formatVersion;
+
         public string Title => _title;
 
         public string Glyph => string.IsNullOrWhiteSpace(_glyph)
@@ -340,6 +350,11 @@ namespace PebblePouch.Lore
         #endregion
 
         #region Editor API
+        internal void SetFormatVersion(int formatVersion)
+        {
+            _formatVersion = formatVersion;
+        }
+
         internal void SetTitle(string title)
         {
             _title = title ?? string.Empty;

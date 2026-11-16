@@ -4,6 +4,21 @@ All notable changes to this package are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this package adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Data format version: the Project asset stores the format of its Lore data (`LoreProject.FormatVersion`, current:
+  `LoreProject.CurrentFormatVersion` = 1). Lore upgrades data from older versions automatically when it loads the
+  Project (also before builds, and for imported Projects and the Oz Demo). Data saved by a newer Lore version is
+  left untouched, with a warning in the Console to update Lore before editing it. Existing Projects are stamped with
+  format 1; nothing else changes.
+
+### Changed
+
+- Lore now requires Unity 6000.2 or newer (`package.json` previously allowed 6000.0, which was never tested). The
+  READMEs state the tested setup: Unity 6000.2 and 6000.6 on Windows.
+
 ## [0.3.5] - 2026-11-05
 
 ### Fixed

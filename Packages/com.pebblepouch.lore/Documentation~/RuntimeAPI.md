@@ -400,7 +400,9 @@ Some runtime data is derived and kept up to date automatically by the Lore windo
   changes.
 - **Scene paths**: Scene values also store the scene path (scene assets don't exist in builds), updated when a
   scene is moved or renamed.
-- **Before every build**, Lore refreshes both and saves the assets, so a build never contains stale data.
+- **Data format**: `project.FormatVersion` is the format of the Lore data (`LoreProject.CurrentFormatVersion` for
+  the installed Lore). Data from older Lore versions is upgraded automatically when the editor loads the Project.
+- **Before every build**, Lore refreshes all of this and saves the assets, so a build never contains stale data.
 
 These updates don't change any Created/Modified timestamps.
 

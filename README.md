@@ -12,7 +12,8 @@ Package Manager > + > *Install package from git URL…* >
 This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.3.5`); all versions are listed
 under [Tags](https://github.com/PebblePouch/Lore/tags).
 
-Tested with Unity 6000.2 and 6000.6. Other Unity 6 versions are supported on a best-effort basis.
+Tested with Unity 6000.2 and 6000.6 on Windows. Requires Unity 6000.2 or newer; other Unity versions and operating systems
+(macOS, Linux) are supported on a best-effort basis.
 
 Before updating Lore or Unity, commit your project to version control or back up your Lore data (the data folder,
 `Assets/Lore` by default, and your Libraries).

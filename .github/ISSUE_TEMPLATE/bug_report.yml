@@ -1,0 +1,84 @@
+name: Bug report
+description: Something in Lore does not work as described.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please check the
+        [open issues](https://github.com/PebblePouch/Lore/issues) first, maybe it is already known.
+        Feature ideas and questions are welcome too, but please send them by email (see the README).
+
+  - type: input
+    id: lore-version
+    attributes:
+      label: Lore version
+      description: Package Manager > Lore, or the tag in your Git URL.
+      placeholder: "0.4.0"
+    validations:
+      required: true
+
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      placeholder: "6000.2.13f1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - Lore window (editing in the Editor)
+        - Runtime API (game code, Play mode or build)
+        - CSV export / import
+        - Export / Import Project
+        - Oz Demo or Runtime API sample
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps that shows the problem. If it also happens with the Oz Demo, say so.
+      placeholder: |
+        1. Open Tools > Lore > Open Lore
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console messages
+      description: Errors or warnings from the Console, with the full stack trace (click the message, copy the text).
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: Screenshots, a short video, or details about your Lore data (number of Entries, field types).
