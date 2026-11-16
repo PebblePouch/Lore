@@ -34,7 +34,7 @@ Runtime API and saved with one call.
 Package Manager > + > *Install package from git URL…* >
 `https://github.com/PebblePouch/Lore.git?path=/Packages/com.pebblepouch.lore`
 
-This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.3.6`); all versions are listed
+This follows the latest state of `main`. To pin a version, append its tag (e.g. `#0.4.0`); all versions are listed
 under [Tags](https://github.com/PebblePouch/Lore/tags).
 
 Tested with Unity 6000.2 and 6000.6 on Windows. Lore installs on Unity 6000.0 or newer, but other Unity versions and
